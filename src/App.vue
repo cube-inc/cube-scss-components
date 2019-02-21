@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import Examples from "./components/Examples.vue"
+import Examples from './components/Examples.vue'
 import './scss/index.scss'
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
     Examples
   }
