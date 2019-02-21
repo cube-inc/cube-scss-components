@@ -1,0 +1,20 @@
+.panel {
+  border-radius: $component-border-radius;
+  border: $component-border-size solid $component-border-color;
+  header {
+    padding: $component-padding;
+    border-bottom: $component-border-size solid $component-border-color;
+    display: flex;
+    justify-content: space-between;
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+  }
+  main {
+    padding: $component-padding;
+  }
+  footer {
+    padding: $component-padding;
+    border-top: $component-border-size solid $component-border-color;
+  }
+}

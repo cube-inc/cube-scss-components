@@ -1,0 +1,60 @@
+.pagination {
+  display: flex;
+}
+.page-item {
+  outline: none;
+  position: relative;
+  display: block;
+  padding: $pagination-padding;
+  margin: 0 0 0 (-$pagination-border-width);
+  line-height: $pagination-line-height;
+  font-size: $pagination-font-size;
+  font-family: $pagination-font-family;
+  text-align: center;
+  color: $pagination-color;
+  background-color: $pagination-bg;
+  border: $pagination-border-width solid $pagination-border-color;
+  &:first-child {
+    margin-left: 0;
+    border-top-left-radius: $pagination-border-radius;
+    border-bottom-left-radius: $pagination-border-radius;
+  }
+  &:last-child {
+    border-top-right-radius: $pagination-border-radius;
+    border-bottom-right-radius: $pagination-border-radius;
+  }
+}
+.page-button {
+  transition:
+    all 250ms ease,
+    box-shadow 100ms ease
+  ;
+  &:hover:not(:disabled) {
+    z-index: 2;
+    color: $pagination-hover-color;
+    text-decoration: none;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border-color;
+  }
+  &:focus:not(:disabled) {
+    z-index: 2;
+    outline: $pagination-focus-outline;
+    box-shadow: $pagination-focus-box-shadow;
+  }
+  &:active:not(:disabled) {
+    box-shadow: .1em .1em .5em rgba(black,.15) inset;
+  }
+  .disabled,
+  &:disabled {
+    color: $pagination-color-disabled;
+  }
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+.page-info {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding-left: 0;
+  padding-right: 0;
+}

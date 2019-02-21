@@ -1,0 +1,156 @@
+.button {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: $component-border-radius-sm;
+  margin: 0;
+  padding: $button-padding;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: $button-font-weight;
+  line-height: inherit;
+  text-decoration: none;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 250ms ease, box-shadow 100ms ease;
+  &:hover {
+    text-decoration: none;
+  }
+  &:active:not(:disabled) {
+    box-shadow: .1em .1em .5em rgba(black,.15) inset;
+  }
+  &:focus:not(:disabled) {
+    box-shadow: $outline;
+  }
+  @include button-variant(
+    $text-color, $component-bg-color, $component-border-color,
+    $text-color, darken($component-bg-color,5%), darken($component-border-color,5%),
+    fade-out($text-color,.5), fade-out($component-bg-color,.6), fade-out($component-border-color,.6)
+  );
+  &.button-block {
+    display: block;
+    width: 100%;
+  }
+  &.block-xs {
+    @media (max-width: $screen-xs-max) {
+      display: block;
+      width: 100%;
+      & + & {
+        margin-left: 0;
+        margin-top: 1em;
+      }
+    }
+  }
+  &.button-primary,
+  &[type="submit"] {
+    @include button-variant(
+      $button-primary-color, $button-primary-bg-color, transparent,
+      $button-primary-color, darken($button-primary-bg-color,5%), transparent,
+      $button-primary-color, fade-out($button-primary-bg-color,.6), transparent
+    );
+  }
+  &.button-outline {
+    background-color: transparent;
+  }
+  &.button-text {
+    border-color: transparent;
+    background-color: transparent;
+    &:hover {
+      border-color: darken($component-bg-color,5%);
+      background-color: darken($component-bg-color,5%);
+    }
+  }
+  &.button-md {
+    font-size: $button-font-size-md;
+    padding: $button-padding-md;
+  }
+  &.button-transparent {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    &:hover {
+      background-color: rgba(white,.2);
+      color: white;
+      border-color: white;
+    }
+  }
+  .icon {
+    &:first-child:not(:last-child) {
+      margin-right: 1em;
+    }
+    &:last-child:not(:first-child) {
+      margin-left: 1em;
+    }
+  }
+}
+.button-link {
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+  background-color: transparent;
+  color: $link-color;
+  font-weight: inherit;
+  &:active:not(:disabled) {
+    box-shadow: none;
+  }
+  &:focus:not(:disabled) {
+    box-shadow: none;
+  }
+  &:hover:not(:disabled) {
+    text-decoration: underline;
+    color: $link-color;
+    background-color: transparent;
+  }
+}
+.button-list {
+  $button-list-gap: .2em;
+  margin: -$button-list-gap;
+  display: flex;
+  > .button,
+  > .button-group {
+    margin: $button-list-gap;
+  }
+}
+.button-list-center {
+  justify-content: center;
+}
+.button-list-right {
+  justify-content: flex-end;
+}
+.button-list-grow {
+  > .button {
+    flex-grow: 1;
+  }
+}
+.button-group {
+  display: inline-block;
+  white-space: nowrap;
+  display: flex;
+  > .button {
+    border-radius: 0;
+    + .button {
+      border-left-width: 0;
+    }
+    &:first-child {
+      border-top-left-radius: $component-border-radius;
+      border-bottom-left-radius: $component-border-radius;
+    }
+    &:last-child {
+      border-top-right-radius: $component-border-radius;
+      border-bottom-right-radius: $component-border-radius;
+    }
+    &.active {
+      color: $button-primary-color;
+      background-color: $button-primary-bg-color;
+      border-color: transparent;
+    }
+  }
+}
+.button-group-grow {
+  > .button {
+    flex-grow: 1;
+  }
+}

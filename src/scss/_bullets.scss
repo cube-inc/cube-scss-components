@@ -1,0 +1,18 @@
+$bullet-size: 10px !default;
+$bullet-border-radius: 50% !default;
+
+.bullet {
+  width: $bullet-size;
+  height: $bullet-size;
+  background-color: $gray;
+  border-radius: $bullet-border-radius;
+}
+.bullet-success {
+  background-color: $brand-success;
+}
+.bullet-warning {
+  background-color: $brand-warning;
+}
+.bullet-danger {
+  background-color: $brand-danger;
+}

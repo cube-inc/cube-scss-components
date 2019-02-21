@@ -1,0 +1,34 @@
+.label {
+  display: inline-block;
+  background-color: $component-bg-color-light;
+  line-height: 1em;
+  padding: $label-padding;
+  border-radius: $component-border-radius-sm;
+  font-size: $label-font-size;
+  vertical-align: middle;
+  & + .label {
+    margin-left: .4em;
+  }
+}
+.label-sm {
+  font-size: $font-size-sm;
+}
+.label-xs {
+  font-size: $font-size-xs;
+}
+.label-success {
+  background-color: $label-success-bg-color;
+  color: $label-success-color;
+}
+.label-info {
+  background-color: $label-info-bg-color;
+  color: $label-info-color;
+}
+.label-warning {
+  background-color: $label-warning-bg-color;
+  color: $label-warning-color;
+}
+.label-danger {
+  background-color: $label-danger-bg-color;
+  color: $label-danger-color;
+}

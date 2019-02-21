@@ -1,0 +1,96 @@
+.list-group {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  > li,
+  > a,
+  > .list-group-item {
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: $component-border-size solid $component-border-color;
+    overflow: hidden;
+    line-height: $line-height-base;
+    transition: all 250ms ease;
+    + li,
+    + a,
+    + .list-group-item {
+      margin-top: -1px;
+    }
+    &:first-child {
+      border-top-left-radius: $component-border-radius;
+      border-top-right-radius: $component-border-radius;
+    }
+    &:last-child {
+      border-bottom-left-radius: $component-border-radius;
+      border-bottom-right-radius: $component-border-radius;
+    }
+    > a {
+      display: block;
+      cursor: pointer;
+      color: inherit;
+      padding: 1px;
+      margin: -1px;
+      text-decoration: inherit;
+      transition: background-color 250ms ease;
+      &:hover {
+        color: inherit;
+        text-decoration: inherit;
+        background-color: darken($color: $component-bg-color, $amount: 3%);
+      }
+      &:focus {
+        text-shadow: inherit;
+        background-color: darken($color: $component-bg-color, $amount: 2%);
+      }
+    }
+  }
+}
+.list-group-item-header {
+  display: flex;
+  align-items: center;
+  margin: $component-padding;
+  box-sizing: border-box;
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  > .actions {
+    display: flex;
+    align-items: center;
+    &:first-child {
+      margin-right: .8em;
+    }
+    &:last-child {
+      margin-left: auto;
+    }
+    &.actions-top {
+      align-self: flex-start;
+    }
+    > a {
+      cursor: pointer;
+      color: $text-muted;
+      text-decoration: inherit;
+      transition: color 250ms ease;
+      &:hover {
+        color: $text-color;
+        text-decoration: inherit;
+      }
+    }
+    .icon {
+      display: inline-block;
+      width: 1em;
+      line-height: 1;
+      text-align: center;
+    }
+  }
+}
+.list-group-item-body {
+  margin: $component-padding;
+  box-sizing: border-box;
+}
+.list-group-item-footer {
+  margin: $component-padding;
+  box-sizing: border-box;
+}

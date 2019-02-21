@@ -1,0 +1,10 @@
+.gradient {
+  &.gradient-default {
+    background: linear-gradient(-72deg, #E07A83, #ce6b73);
+    color: white;
+  }
+  &.gradient-green {
+    background: linear-gradient(-61deg, #3EEB84, #3EC2A4);
+    color: white;
+  }
+}

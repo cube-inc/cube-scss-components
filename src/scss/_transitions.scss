@@ -1,0 +1,94 @@
+/**
+ * Fade
+ */
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 100ms ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/**
+ * Fade Slow
+ */
+.fade-slow-enter-active {
+  transition: all 500ms ease;
+}
+.fade-slow-leave-active {
+  transition: all 100ms ease;
+}
+
+.fade-slow-enter,
+.fade-slow-leave-to {
+  opacity: 0;
+}
+
+/**
+ * Fade Super Slow
+ */
+ .fade-super-slow-enter-active {
+  transition: all 2000ms ease;
+}
+.fade-super-slow-leave-active {
+  transition: all 100ms ease;
+}
+
+.fade-super-slow-enter,
+.fade-super-slow-leave-to {
+  opacity: 0;
+}
+
+/**
+ * Slide
+ * This animation works with grid to manage the overlap.
+ * The container MUST have the style display: grid;
+ */
+ $slide-size: 120px;
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 250ms ease;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.slide-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  transform: translateX($slide-size);
+}
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  transform: translateX(-$slide-size);
+}
+
+/**
+ * List
+ */
+.list-enter-active,
+.list-leave-active {
+  transition: all 250ms ease;
+  position: absolute;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(-25vw);
+}
+.list-move:not(.list-enter-active):not(.list-leave-active) {
+  transition: all 250ms ease 250ms;
+}
+
+/**
+ * ImagesLazy
+ */
+.image {
+  transition: all 500ms ease;
+  opacity: 1;
+  &.hidden {
+    opacity: 0;
+  }
+}
