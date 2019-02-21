@@ -1,24 +1,30 @@
 <template>
   <div id="app">
+    <Examples/>
   </div>
 </template>
 
 <script>
+import Examples from "./components/Examples.vue"
+import './scss/index.scss'
 
 export default {
   name: "app",
   components: {
+    Examples
   }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Avenir Next", "Roboto", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+  padding: 3em 2em;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 768px;
 }
 </style>
