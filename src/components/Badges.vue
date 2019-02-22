@@ -2,11 +2,11 @@
   <section id="Badges">
     <h2>Badges</h2>
     <Example>
-      This is a badge: <div class="badge">0</div><br>
-      This is a badge-success: <div class="badge badge-success">1</div><br>
-      This is a badge-info: <div class="badge badge-info">2</div><br>
-      This is a badge-warning: <div class="badge badge-warning">3</div><br>
-      This is a badge-danger: <div class="badge badge-danger">4</div>
+      <p>.badge <span class="badge">99</span></p>
+      <p>.badge-success <span class="badge badge-success">1</span></p>
+      <p>.badge-info <span class="badge badge-info">2</span></p>
+      <p>.badge-warning <span class="badge badge-warning">3</span></p>
+      <p>.badge-danger <span class="badge badge-danger">4</span></p>
     </Example>
   </section>
 </template>
