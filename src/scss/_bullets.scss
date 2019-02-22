@@ -1,18 +1,27 @@
 $bullet-size: 10px !default;
 $bullet-border-radius: 50% !default;
 
+$bullet-success-color: $brand-success !default;
+$bullet-info-color: $brand-info !default;
+$bullet-warning-color: $brand-warning !default;
+$bullet-danger-color: $brand-danger !default;
+
 .bullet {
+  display: inline-block;
   width: $bullet-size;
   height: $bullet-size;
   background-color: $gray;
   border-radius: $bullet-border-radius;
-}
-.bullet-success {
-  background-color: $brand-success;
-}
-.bullet-warning {
-  background-color: $brand-warning;
-}
-.bullet-danger {
-  background-color: $brand-danger;
+  &-success {
+    background-color: $brand-success;
+  }
+  &-info {
+    background-color: $brand-info;
+  }
+  &-warning {
+    background-color: $brand-warning;
+  }
+  &-danger {
+    background-color: $brand-danger;
+  }
 }

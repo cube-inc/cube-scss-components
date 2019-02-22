@@ -1,41 +1,61 @@
+$card-border-radius: $component-border-radius !default;
+$card-border-size: $component-border-size !default;
+$card-border-color: $component-border-color !default;
+$card-bg-color: $component-bg-color !default;
+$card-body-padding: $component-padding !default;
+
 .card {
-  border-radius: $component-border-radius;
-  border: $component-border-size solid $component-border-color;
-  background-color: $component-bg-color;
+  border-radius: $card-border-radius;
+  border: $card-border-size solid $card-border-color;
+  background-color: $card-bg-color;
   list-style: none;
   padding: 0;
   margin: 0;
   overflow: hidden;
   position: relative;
   z-index: 0; // with position: relative, avoid img transition issue with border-radius (overflow not hidden has expected)
-  .card-header,
-  > header {
+  &-header {
     position: relative;
-    > .card-image {
+    &-title {
+      padding: $card-body-padding;
+    }
+    &-image {
       display: inline-block;
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
-    > .card-image-overlay {
+    &-overlay {
       position: absolute;
+      display: flex;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
     }
   }
-  .card-body,
-  > main {
-    padding: $component-padding;
+  &-body {
+    padding: $card-body-padding;
   }
-  .card-footer,
-  > footer {
+  &-footer {
     box-sizing: border-box;
     padding: $component-padding;
     border-top: $component-border-size solid $component-border-color;
   }
+  &-borderless {
+    border: 0 none;
+    .card-footer {
+      border-top: 0 none;
+    }
+  }
+  &-list {
+    display: grid;
+    grid-gap: $card-list-grid-gap;
+    padding: 0;
+    margin: 0;
+  }
 }
+
 a.card {
   display: block;
   color: inherit;
@@ -43,18 +63,4 @@ a.card {
   &:hover {
     text-decoration: none;
   }
-}
-.card-borderless {
-  border: 0 none;
-  .card-footer,
-  > footer {
-    border-top: 0 none;
-  }
-}
-
-.card-list {
-  display: grid;
-  grid-gap: $card-list-grid-gap;
-  padding: 0;
-  margin: 0;
 }

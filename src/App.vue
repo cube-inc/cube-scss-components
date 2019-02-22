@@ -18,10 +18,6 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: "Avenir Next", "Roboto", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   padding: 3em 2em;
   margin: 0 auto;
   width: 100%;

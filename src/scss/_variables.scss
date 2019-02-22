@@ -1,148 +1,139 @@
 // Colors
-$outremer: #1a0078;
-$outremer-text: #1a004f;
-$indigo: #738cff;
-$grenadine: #ff405e;
-$citron: #ffe51f;
-$creme: #fffae5;
+$outremer: #1a0078 !default;
+$outremer-text: #1a004f !default;
+$indigo: #738cff !default;
+$grenadine: #ff405e !default;
+$citron: #ffe51f !default;
+$creme: #fffae5 !default;
 
 // Brand colors
-$brand-primary: $citron;
-$brand-secondary: $outremer-text;
-$brand-success: #3ECF8E;
-$brand-info: $indigo;
-$brand-warning: $citron;
-$brand-danger: $grenadine;
+$brand-primary: $citron !default;
+$brand-secondary: $outremer-text !default;
+$brand-success: #3ecf8e !default;
+$brand-info: $indigo !default;
+$brand-warning: $citron !default;
+$brand-danger: $grenadine !default;
 
 // Text
-$text-color: $brand-secondary;
-$text-muted: rgba($brand-secondary, .5);
-$text-danger: $brand-danger;
-$link-color: $grenadine;
+$text-color: $brand-secondary !default;
+$text-muted: rgba($brand-secondary, .5) !default;
+$text-danger: $brand-danger !default;
+$link-color: $grenadine !default;
 
 // Grays
-$gray-base: #555555;
-$gray-darker: $gray-base;
-$gray-dark: #979797;
-$gray: #AAAABE;
-$gray-light: #ddd9e3;
-$gray-lighter: #F8F8F8;
+$gray-base: #555555 !default;
+$gray-darker: $gray-base !default;
+$gray-dark: #979797 !default;
+$gray: #aaaabe !default;
+$gray-light: #ddd9e3 !default;
+$gray-lighter: #f8f8f8 !default;
 
 // Types
-$line-height-base: 1.5;
-$font-family-base: Gotham, sans-serif;
-$font-weight-base: normal;
-$font-weight-bold: bold;
-$font-size-base: 1em; // iOS zooms the page to show a larger input field if its font-size is less than 16px/1em.
-$font-size-sm: .8em;
-$font-size-xs: .6em;
+$line-height-base: 1.5 !default;
+$font-family-base: "Helvetica Neue", "Ubuntu", "Roboto", "Noto", "Segoe UI", "Arial", sans-serif !default;
+$font-weight-base: normal !default;
+$font-weight-bold: bold !default;
+$font-size-base: 1rem !default; // iOS zooms the page to show a larger input field if its font-size is less than 16px/1em.
+$font-size-sm: 12px !default;
+$font-size-xs: 9px !default;
 
-$headings-font-weight: $font-weight-bold;
-$headings-line-height: $line-height-base;
-$headings-margin-top: 0;
-$headings-margin-bottom: 1em;
+$headings-font-weight: $font-weight-bold !default;
+$headings-line-height: $line-height-base !default;
+$headings-margin-top: 0 !default;
+$headings-margin-bottom: 1em !default;
 
-$headings-h1-font-family: Archer, sans-serif;
-
-$font-size-h1: 2em;
-$font-size-h2: 1.4em;
-$font-size-h3: 1em;
-$font-size-h4: 1em;
-$font-size-h5: 1em;
-$font-size-h6: 1em;
+$font-size-h1: 2em !default;
+$font-size-h2: 1.4em !default;
+$font-size-h3: 1em !default;
+$font-size-h4: 1em !default;
+$font-size-h5: 1em !default;
+$font-size-h6: 1em !default;
 
 // Outline
-$outline-color: rgba($brand-secondary,.4);
-$outline: 0 0 1rem $outline-color;
+$outline-color: rgba($brand-secondary,.4) !default;
+$outline: 0 0 1rem $outline-color !default;
 
 // Component
-$component-border-size: 1px;
-$component-border-color: $gray-light;
-$component-bg-color: white;
-$component-bg-color-alt: $creme;
-$component-bg-color-light: #e6e6e6;
-$component-filter-saturate: 300%;
-$component-filter-blur: 20px;
-$component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur);
-$component-border-radius: 1px;
-$component-border-radius-sm: 0;
-$component-padding: .8rem 1rem;
+$component-border-size: 1px !default;
+$component-border-color: $gray-light !default;
+$component-bg-color: white !default;
+$component-bg-color-alt: $creme !default;
+$component-bg-color-light: #e6e6e6 !default;
+$component-filter-saturate: 300% !default;
+$component-filter-blur: 20px !default;
+$component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;
+$component-border-radius: 1px !default;
+$component-border-radius-sm: 0 !default;
+$component-padding: .8rem 1rem !default;
 
 // Breakpoints
-$screen-xs: 576px;
-$screen-xs-max: ($screen-xs - 1px);
+$screen-xs: 576px !default;
+$screen-xs-max: ($screen-xs - 1px) !default;
 
-$screen-sm: 768px;
-$screen-sm-max: ($screen-sm - 1px);
+$screen-sm: 768px !default;
+$screen-sm-max: ($screen-sm - 1px) !default;
 
-$screen-md: 992px;
-$screen-md-max: ($screen-md - 1px);
+$screen-md: 992px !default;
+$screen-md-max: ($screen-md - 1px) !default;
 
 // Z-index
-$z-index-menu: 10;
-$z-index-modal-backdrop: 20;
-$z-index-modal: 30;
-$z-index-error: 40;
-$z-index-route-loading: 100;
-
-// Tables
-$table-cell-padding-vertical: .3rem;
-$table-cell-padding-horizontal: .6rem;
-$table-cell-hover-bg-color: rgba($gray-lighter, .5);
-$table-cell-striped-bg-color: $gray-lighter;
-$table-border-color: $component-border-color;
+$z-index-menu: 10 !default;
+$z-index-modal-backdrop: 20 !default;
+$z-index-modal: 30 !default;
+$z-index-error: 40 !default;
+$z-index-route-loading: 100 !default;
 
 // Buttons
-$button-font-weight: $font-weight-bold;
-$button-padding: .8em 2em;
-$button-font-size-md: 80%;
-$button-padding-md: .4em 1em;
-$button-primary-color: $text-color;
-$button-primary-bg-color: $brand-primary;
+$button-font-weight: $font-weight-bold !default;
+$button-padding: .8em 2em !default;
+$button-font-size-md: 80% !default;
+$button-padding-md: .4em 1em !default;
+$button-primary-color: $text-color !default;
+$button-primary-bg-color: $brand-primary !default;
 
 // Pagination
-$pagination-bg: $component-bg-color;
-$pagination-border-color: $component-border-color;
-$pagination-border-width: 1px;
-$pagination-border-radius: $component-border-radius;
-$pagination-color: $text-color;
-$pagination-color-disabled: $text-muted;
-$pagination-focus-box-shadow: $outline;
-$pagination-focus-outline: $outline;
-$pagination-hover-bg: darken($component-bg-color,5%);
-$pagination-hover-border-color: darken($component-border-color,5%);
-$pagination-hover-color: $text-color;
-$pagination-line-height: inherit;
-$pagination-font-size: inherit;
-$pagination-font-family: inherit;
-$pagination-padding: .8em 1.6em;
+$pagination-bg: $component-bg-color !default;
+$pagination-border-color: $component-border-color !default;
+$pagination-border-width: 1px !default;
+$pagination-border-radius: $component-border-radius !default;
+$pagination-color: $text-color !default;
+$pagination-color-disabled: $text-muted !default;
+$pagination-focus-box-shadow: $outline !default;
+$pagination-focus-outline: $outline !default;
+$pagination-hover-bg: darken($component-bg-color,5%) !default;
+$pagination-hover-border-color: darken($component-border-color,5%) !default;
+$pagination-hover-color: $text-color !default;
+$pagination-line-height: inherit !default;
+$pagination-font-size: inherit !default;
+$pagination-font-family: inherit !default;
+$pagination-padding: .8em 1.6em !default;
 
 // Label
-$label-padding: .4em 1em;
-$label-font-size: inherit;
-$label-success-bg-color: $brand-success;
-$label-success-color: white;
-$label-info-bg-color: $brand-info;
-$label-info-color: white;
-$label-warning-bg-color: $brand-warning;
-$label-warning-color: white;
-$label-danger-bg-color: $brand-danger;
-$label-danger-color: white;
+$label-padding: .4em 1em !default;
+$label-font-size: inherit !default;
+$label-success-bg-color: $brand-success !default;
+$label-success-color: white !default;
+$label-info-bg-color: $brand-info !default;
+$label-info-color: white !default;
+$label-warning-bg-color: $brand-warning !default;
+$label-warning-color: white !default;
+$label-danger-bg-color: $brand-danger !default;
+$label-danger-color: white !default;
 
 // Cards
-$card-list-grid-gap: 10px;
+$card-list-grid-gap: 10px !default;
 
 // Modal
-$modal-backdrop-color: rgba(white, .8);
-$modal-backdrop-color-no-filter: rgba(white, .99);
-$modal-backdrop-filter: $component-backdrop-filter;
-$modal-bg-color: $component-bg-color;
-$modal-border-radius: $component-border-radius;
-$modal-box-shadow: 0 0.4rem 1rem rgba(black,.3);
-$modal-close-font-size: 1.5rem;
-$modal-close-button-size: 3.5rem;
-$modal-close-color: $text-muted;
+$modal-backdrop-color: rgba(white, .8) !default;
+$modal-backdrop-color-no-filter: rgba(white, .99) !default;
+$modal-backdrop-filter: $component-backdrop-filter !default;
+$modal-bg-color: $component-bg-color !default;
+$modal-border-radius: $component-border-radius !default;
+$modal-box-shadow: 0 0.4rem 1rem rgba(black,.3) !default;
+$modal-close-font-size: 1.5rem !default;
+$modal-close-button-size: 3.5rem !default;
+$modal-close-color: $text-muted !default;
 
 // Dialog
-$dialog-button-padding: .8em 1em;
-$dialog-button-color: $link-color;
+$dialog-button-padding: .8em 1em !default;
+$dialog-button-color: $link-color !default;

@@ -16,9 +16,11 @@ $form-switch-inner-padding: 2px !default;
 
 .form-group {
   margin-top: 2em;
+  padding: 0;
   display: block;
   position: relative;
   box-sizing: border-box;
+  border: 0 none;
 }
 
 .form-label {

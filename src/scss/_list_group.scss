@@ -1,3 +1,5 @@
+$list-group-bg-color: $component-bg-color !default;
+
 .list-group {
   margin: 0;
   padding: 0;
@@ -11,6 +13,7 @@
     padding: 0;
     display: block;
     border: $component-border-size solid $component-border-color;
+    background-color: $list-group-bg-color;
     overflow: hidden;
     line-height: $line-height-base;
     transition: all 250ms ease;
@@ -76,6 +79,9 @@
       &:hover {
         color: $text-color;
         text-decoration: inherit;
+      }
+      & + * {
+        margin-left: .8em;
       }
     }
     .icon {

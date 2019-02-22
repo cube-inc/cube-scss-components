@@ -142,6 +142,10 @@
       border-top-right-radius: $component-border-radius;
       border-bottom-right-radius: $component-border-radius;
     }
+    &:focus,
+    &:active {
+      z-index: 10;
+    }
     &.active {
       color: $button-primary-color;
       background-color: $button-primary-bg-color;

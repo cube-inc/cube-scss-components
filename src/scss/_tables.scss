@@ -2,12 +2,22 @@ $table-cell-padding-vertical: .3rem !default;
 $table-cell-padding-horizontal: .6rem !default;
 $table-cell-padding: $table-cell-padding-vertical $table-cell-padding-horizontal !default;
 $table-cell-hover-bg-color: rgba(#F8F8F8, .5) !default;
-$table-cell-striped-bg-color: #F8F8F8 !default;
-$table-border-color: #F8F8F8 !default;
+$table-cell-striped-bg-color: rgba(#eeeeee, .5) !default;
+$table-border-size: $component-border-size !default;
+$table-border-color: $component-border-color !default;
+$table-border-radius: $component-border-radius !default;
 
 .table {
   border-collapse: collapse;
   width: 100%;
+  > thead {
+    > tr {
+      > th {
+        text-align: left;
+        padding: $table-cell-padding;
+      }
+    }
+  }
   > tbody {
     > tr {
       border-top: 1px solid $table-border-color;
@@ -24,38 +34,66 @@ $table-border-color: #F8F8F8 !default;
       }
     }
   }
+  &-striped {
+    > tbody {
+      > tr:nth-of-type(odd) {
+        background-color: $table-cell-striped-bg-color;
+      }
+    }
+  }
+  &-bordered {
+    border: $table-border-size solid $table-border-color;
+    border-radius: $table-border-radius;
+    > thead {
+      > tr {
+        > th,
+        > td {
+          border: $table-border-size solid $table-border-color;
+        }
+      }
+    }
+    > tbody {
+      > tr {
+        > th,
+        > td {
+          border: $table-border-size solid $table-border-color;
+        }
+      }
+    }
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border: $table-border-size solid $table-border-color;
+        }
+      }
+    }
+  }
+  &-borderless {
+    > tbody {
+      > tr {
+        border-top: 0 none;
+        > th:first-child,
+        > td:first-child {
+          padding-left: 0;
+        }
+        > th:last-child,
+        > td:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  &-hover {
+    > tbody {
+      > tr:hover {
+        background-color: $table-cell-hover-bg-color;
+      }
+    }
+  }
 }
 .table-block {
   display: block;
-}
-.table-hover {
-  > tbody {
-    > tr:hover {
-      background-color: $table-cell-hover-bg-color;
-    }
-  }
-}
-.table-striped {
-  > tbody {
-    > tr:nth-of-type(odd) {
-      background-color: $table-cell-striped-bg-color;
-    }
-  }
-}
-.table-borderless {
-  > tbody {
-    > tr {
-      border-top: 0 none;
-      > th:first-child,
-      > td:first-child {
-        padding-left: 0;
-      }
-      > th:last-child,
-      > td:last-child {
-        padding-right: 0;
-      }
-    }
-  }
 }
 .table-transpose-xs {
   @media (max-width: $screen-xs-max) {

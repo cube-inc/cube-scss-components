@@ -1,4 +1,4 @@
-$font-family-base: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif !default;
+$font-family-base: "Helvetica Neue", "Ubuntu", "Roboto", "Noto", "Segoe UI", "Arial", sans-serif !default;
 $headings-font-family: $font-family-base !default;
 $headings-h1-font-family: $headings-font-family !default;
 $headings-h2-font-family: $headings-font-family !default;
@@ -14,11 +14,6 @@ html, body {
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   font-variant-numeric: lining-nums;
-}
-pre {
-  font-size: 12px;
-  margin: 0;
-  padding: 0;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $headings-font-family;
@@ -59,6 +54,10 @@ h6 {
   font-family: $headings-h6-font-family;
   font-size: $font-size-h6;
 }
+.lead {
+  font-size: 1.3em;
+  text-align: justify;
+}
 blockquote {
   appearance: none;
   display: block;
@@ -67,9 +66,10 @@ blockquote {
   padding: .2em .6em;
   border-left: 3px solid $brand-warning;
 }
-.lead {
-  font-size: 1.3em;
-  text-align: justify;
+pre {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 small, .small {
   font-size: $font-size-sm;
@@ -82,6 +82,9 @@ strong {
 }
 .text-success {
   color: $brand-success;
+}
+.text-info {
+  color: $brand-info;
 }
 .text-warning {
   color: $brand-warning;
