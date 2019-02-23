@@ -4,9 +4,6 @@
 
     <Example>
       <div class="card">
-        <header class="card-header">
-          <h1 class="card-header-title">Card header</h1>
-        </header>
         <main class="card-body">
           <h2>Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
@@ -51,19 +48,43 @@
       </div>
     </Example>
 
+    <h3>Card list</h3>
+    <Example>
+      <div class="card-list">
+        <div class="card">
+          <main class="card-body">
+            <h2>Card title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+            <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
+          </main>
+          <footer class="card-footer">This is a footer</footer>
+        </div>
+        <div class="card">
+          <main class="card-body">
+            <h2>Card title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+            <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
+          </main>
+          <footer class="card-footer">This is a footer</footer>
+        </div>
+      </div>
+    </Example>
+
   </section>
 </template>
 
 <style lang="scss" scoped>
 .card-header-image {
-  appearance: none;
   background-color: $brand-info;
-  border: 0 none;
 }
 .card-header-overlay {
   color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.card-list {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: auto;
 }
 </style>
