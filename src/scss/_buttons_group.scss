@@ -1,0 +1,23 @@
+.button {
+  &-group {
+    display: inline-block;
+    white-space: nowrap;
+    > .button {
+      border-radius: 0;
+      &:not(.button-outline):not(.button-filled):not(:hover):not(:focus):not(:active):not(:disabled) {
+        background-color: rgba($button-primary-color,.05);
+      }
+      + .button {
+        border-left-width: 0;
+      }
+      &:first-child {
+        border-top-left-radius: $component-border-radius;
+        border-bottom-left-radius: $component-border-radius;
+      }
+      &:last-child {
+        border-top-right-radius: $component-border-radius;
+        border-bottom-right-radius: $component-border-radius;
+      }
+    }
+  }
+}

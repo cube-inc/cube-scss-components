@@ -53,15 +53,15 @@ $outline: 0 0 1rem $outline-color !default;
 
 // Component
 $component-border-size: 1px !default;
-$component-border-color: $gray-light !default;
+$component-border-color: rgba(black, .2) !default;
 $component-bg-color: white !default;
 $component-bg-color-alt: $creme !default;
 $component-bg-color-light: #e6e6e6 !default;
 $component-filter-saturate: 300% !default;
 $component-filter-blur: 20px !default;
 $component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;
-$component-border-radius: 4px !default;
-$component-border-radius-sm: 2px !default;
+$component-border-radius: 6px !default;
+$component-border-radius-sm: 3px !default;
 $component-padding: .8rem 1rem !default;
 
 // Breakpoints

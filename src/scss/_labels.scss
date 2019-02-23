@@ -1,29 +1,36 @@
-$label-padding: .3em .6em !default;
-$label-font-size: inherit !default;
-$label-success-bg-color: $brand-success !default;
-$label-success-color: white !default;
-$label-info-bg-color: $brand-info !default;
-$label-info-color: white !default;
-$label-warning-bg-color: $brand-warning !default;
-$label-warning-color: $text-color !default;
-$label-danger-bg-color: $brand-danger !default;
-$label-danger-color: white !default;
+$label-padding: 3px 6px !default;
+$label-font-size: 80% !default;
+$label-font-size-sm: 70% !default;
+$label-font-size-xs: 60% !default;
+$label-font-weight: 500 !default;
+$label-text-transform: uppercase !default;
+$label-success-bg-color: rgba($brand-success, .1) !default;
+$label-success-color: $brand-success !default;
+$label-info-bg-color: rgba($brand-info, .1) !default;
+$label-info-color: $brand-info !default;
+$label-warning-bg-color: rgba($brand-warning, .1) !default;
+$label-warning-color: $brand-warning !default;
+$label-danger-bg-color: rgba($brand-danger, .1) !default;
+$label-danger-color: $brand-danger !default;
 
 .label {
-  display: inline-block;
-  background-color: $component-bg-color-light;
+  display: inline;
+  background-color: rgba($text-color, .1);
+  color: $text-color;
   line-height: 1em;
   padding: $label-padding;
   border-radius: $component-border-radius-sm;
   font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  text-transform: $label-text-transform;
   & + .label {
     margin-left: .4em;
   }
   &-sm {
-    font-size: $font-size-sm;
+    font-size: $label-font-size-sm;
   }
   &-xs {
-    font-size: $font-size-xs;
+    font-size: $label-font-size-xs;
   }
   &-success {
     background-color: $label-success-bg-color;

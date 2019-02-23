@@ -1,0 +1,8 @@
+$button-outline-border-color: $component-border-color !default;
+$button-outline-bg-color: transparent !default;
+.button {
+  &-outline {
+    border-color: $button-outline-border-color;
+    background-color: $button-outline-bg-color;
+  }
+}

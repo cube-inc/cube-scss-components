@@ -1,0 +1,20 @@
+$button-filled-color: white !default;
+$button-filled-bg-color: $button-primary-color !default;
+
+.button {
+  &-filled {
+    background-color: $button-filled-bg-color;
+    color: $button-filled-color;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      background-color: rgba($button-filled-bg-color, .8);
+    }
+    &:active:not(:disabled) {
+      background-color: rgba($button-filled-bg-color, .7);
+    }
+    &:disabled {
+      background-color: lighten(grayscale($button-filled-bg-color), 50%);
+      color: darken(grayscale($button-filled-bg-color), 25%);
+    }
+  }
+}
