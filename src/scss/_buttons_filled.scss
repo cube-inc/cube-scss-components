@@ -1,0 +1,9 @@
+.button-filled {
+  background-color: rgba(black,.2);
+  &:hover {
+    background-color: rgba(black,.05);
+  }
+  &:active:not(:disabled) {
+    background-color: rgba(black,.1);
+  }
+}

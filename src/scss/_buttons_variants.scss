@@ -1,0 +1,64 @@
+$button-padding-md: .4em 1em !default;
+$button-padding-large: .8em 3em !default;
+
+.button-primary {
+  color: $brand-primary;
+  &:hover {
+    background-color: rgba($brand-primary,.05);
+  }
+  &:active:not(:disabled) {
+    background-color: rgba($brand-primary,.1);
+  }
+  // &:focus:not(:disabled) {
+  //   box-shadow: $outline;
+  // }
+  &.button-filled {
+    color: white;
+    background-color: $brand-primary;
+    &:hover {
+      background-color: rgba($brand-primary,.8);
+    }
+    &:active:not(:disabled) {
+      background-color: rgba($brand-primary,.9);
+    }
+    // &:focus:not(:disabled) {
+    //   box-shadow: $outline;
+    // }
+  }
+}
+
+.button-white {
+  color: white;
+  &.button-outline {
+    color: white;
+    border-color: white;
+    &:hover {
+      background-color: rgba(white,.05);
+    }
+    &:active:not(:disabled) {
+      background-color: rgba(white,.1);
+    }
+  }
+}
+
+.button-danger {
+  color: $brand-danger;
+  &:hover {
+    background-color: rgba($brand-danger,.05);
+  }
+  &:active:not(:disabled) {
+    background-color: rgba($brand-danger,.1);
+  }
+  // &:focus:not(:disabled) {
+  //   box-shadow: $outline;
+  // }
+}
+
+.button-md {
+  font-size: .85;
+  padding: $button-padding-md;
+}
+
+.button-large {
+  padding: $button-padding-large;
+}
