@@ -71,7 +71,7 @@ function vnodeToString (vnode, level = 0) {
   if (isTag(vnode)) {
     return tagNodeToString(vnode, level)
   }
-  return textNodeToString(vnode, level)
+  return textNodeToString(vnode)
 }
 
 function tagNodeToString (vnode, level = 0) {
@@ -113,13 +113,17 @@ function childrenToString (vnode, level = 0) {
   const { children } = vnode
   if (children instanceof Array && children.length > 0) {
     if (isPreTag(vnode)) {
-      return children
-        .map(child => textNodeToString(child, true))
-        .join('\n')
+      return vnode.elm.innerHTML
     }
     if (children.some(child => isBlockElement(child))) {
       return '\n' + children
-        .map(child => indent(level + 1) + vnodeToString(child, level + 1) + '\n')
+        .map(child => {
+          return indent(level + 1) +
+          (isTag(child)
+            ? tagNodeToString(child, level + 1)
+            : textNodeToString(child, true)) +
+          '\n'
+        })
         .join('') +
         indent(level)
     }
