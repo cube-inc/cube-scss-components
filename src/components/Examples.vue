@@ -15,7 +15,7 @@
       <a href="#Panels">Panels</a>
       <a href="#Sliders">Sliders</a>
       <a href="#Tables">Tables</a>
-      <a href="#Types">Types</a>
+      <a href="#Types">Typography</a>
     </nav>
     <main>
       <Buttons/>
@@ -61,7 +61,7 @@ export default {
     Panels,
     Sliders,
     Tables,
-    Types,
+    Types
   }
 }
 </script>
