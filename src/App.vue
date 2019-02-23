@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 #app {
   width: 100%;
-  max-width: 768px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 1em;
 }
