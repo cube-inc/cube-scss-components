@@ -17,7 +17,6 @@
       <a href="#Labels">Labels</a>
       <a href="#ListGroup">List group</a>
       <a href="#Pagination">Pagination</a>
-      <a href="#Panels">Panels</a>
       <a href="#Sliders">Sliders</a>
       <a href="#Tables">Tables</a>
       <a href="#Types">Typography</a>
@@ -32,7 +31,6 @@
       <Labels/>
       <ListGroup/>
       <Pagination/>
-      <Panels/>
       <Sliders/>
       <Tables/>
       <Types/>
@@ -49,7 +47,6 @@ import Forms from './Forms.vue'
 import Labels from './Labels.vue'
 import ListGroup from './ListGroup.vue'
 import Pagination from './Pagination.vue'
-import Panels from './Panels.vue'
 import Sliders from './Sliders.vue'
 import Tables from './Tables.vue'
 import Types from './Types.vue'
@@ -64,7 +61,6 @@ export default {
     Labels,
     ListGroup,
     Pagination,
-    Panels,
     Sliders,
     Tables,
     Types
