@@ -1,10 +1,11 @@
-$button-font-size: .9em !default;
-$button-font-weight: $font-weight-bold !default;
+$button-font-family: inherit !default;
+$button-font-size: 13px !default;
+$button-font-weight: 500 !default;
 $button-text-transform: uppercase !default;
 $button-border-radius: $component-border-radius-sm !default;
-$button-padding: .8em 2em !default;
-$button-padding-md: .4em .6em !default;
-$button-padding-large: .8em 3em !default;
+$button-padding: 10px 20px !default;
+
+$button-primary-color: $brand-secondary !default;
 
 .button {
   cursor: pointer;
@@ -14,70 +15,33 @@ $button-padding-large: .8em 3em !default;
   box-sizing: border-box;
   margin: 0;
   padding: $button-padding;
+  min-width: 64px;
   border-radius: $button-border-radius;
   font-size: $button-font-size;
-  font-family: inherit;
+  font-family: $button-font-family;
   font-weight: $button-font-weight;
   text-transform: $button-text-transform;
   text-decoration: none;
   text-align: center;
-  color: inherit;
+  white-space: nowrap;
+  line-height: 1;
+  color: $button-primary-color;
   border: 1px solid transparent;
   background-color: transparent;
   transition: all 250ms ease, box-shadow 100ms ease;
-  &:hover {
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
     text-decoration: none;
-    background-color: rgba(black,.05);
+    background-color: rgba($button-primary-color,.1);
   }
   &:active:not(:disabled) {
-    background-color: rgba(black,.1);
+    background-color: rgba($button-primary-color,.2);
   }
   &:disabled {
     opacity: .5;
+    cursor: not-allowed;
   }
-  // &:focus:not(:disabled) {
-  //   box-shadow: $outline;
-  // }
   > * + * {
     padding-left: 1em;
-  }
-}
-
-/**
- * List
- */
-.button-list {
-  $button-list-gap: .2em;
-  margin: -$button-list-gap;
-  display: flex;
-  > .button,
-  > .button-group {
-    margin: $button-list-gap;
-  }
-}
-.button-list-right {
-  justify-content: flex-end;
-}
-.button-list-grow {
-  > .button {
-    flex-grow: 1;
-  }
-}
-.button-group {
-  display: inline-block;
-  white-space: nowrap;
-  > .button {
-    border-radius: 0;
-    + .button {
-      border-left-width: 0;
-    }
-    &:first-child {
-      border-top-left-radius: $component-border-radius;
-      border-bottom-left-radius: $component-border-radius;
-    }
-    &:last-child {
-      border-top-right-radius: $component-border-radius;
-      border-bottom-right-radius: $component-border-radius;
-    }
   }
 }

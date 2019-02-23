@@ -23,9 +23,9 @@
     </nav>
 
     <main>
-      <Buttons/>
       <Badges/>
       <Bullets/>
+      <Buttons/>
       <Cards/>
       <Forms/>
       <Labels/>
