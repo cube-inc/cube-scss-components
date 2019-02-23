@@ -50,6 +50,8 @@ $bg-color: rgba($brand-info, .05);
     linear-gradient(45deg, $bg-color 25%, transparent 25%, transparent 75%, $bg-color 75%);
   background-size: 10px 10px;
   background-position: 0 0, 5px 5px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .code {
   display: block;
