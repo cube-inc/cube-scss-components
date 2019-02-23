@@ -31,7 +31,6 @@
       <Tables/>
       <Types/>
     </main>
-    <footer>Cube Living, Inc. © 2019</footer>
   </section>
 </template>
 
@@ -81,8 +80,5 @@ section {
       background-color: darken($component-bg-color, 5%);
     }
   }
-}
-footer {
-  margin: 3em 0;
 }
 </style>
