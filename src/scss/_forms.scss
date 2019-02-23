@@ -22,8 +22,10 @@ $form-switch-inner-padding: 2px !default;
     position: relative;
     box-sizing: border-box;
     border: 0 none;
+    &:first-child {
+      margin-top: 0;
+    }
   }
-
   &-label {
     display: block;
     font-weight: $form-label-font-weight;
@@ -31,7 +33,6 @@ $form-switch-inner-padding: 2px !default;
     color: inherit;
     line-height: 2.2em;
   }
-
   &-control {
     transition: all .2s;
     outline: none;
