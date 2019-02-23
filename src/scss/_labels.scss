@@ -1,3 +1,14 @@
+$label-padding: .3em .6em !default;
+$label-font-size: inherit !default;
+$label-success-bg-color: $brand-success !default;
+$label-success-color: white !default;
+$label-info-bg-color: $brand-info !default;
+$label-info-color: white !default;
+$label-warning-bg-color: $brand-warning !default;
+$label-warning-color: $text-color !default;
+$label-danger-bg-color: $brand-danger !default;
+$label-danger-color: white !default;
+
 .label {
   display: inline-block;
   background-color: $component-bg-color-light;
@@ -5,30 +16,29 @@
   padding: $label-padding;
   border-radius: $component-border-radius-sm;
   font-size: $label-font-size;
-  vertical-align: middle;
   & + .label {
     margin-left: .4em;
   }
-}
-.label-sm {
-  font-size: $font-size-sm;
-}
-.label-xs {
-  font-size: $font-size-xs;
-}
-.label-success {
-  background-color: $label-success-bg-color;
-  color: $label-success-color;
-}
-.label-info {
-  background-color: $label-info-bg-color;
-  color: $label-info-color;
-}
-.label-warning {
-  background-color: $label-warning-bg-color;
-  color: $label-warning-color;
-}
-.label-danger {
-  background-color: $label-danger-bg-color;
-  color: $label-danger-color;
+  &-sm {
+    font-size: $font-size-sm;
+  }
+  &-xs {
+    font-size: $font-size-xs;
+  }
+  &-success {
+    background-color: $label-success-bg-color;
+    color: $label-success-color;
+  }
+  &-info {
+    background-color: $label-info-bg-color;
+    color: $label-info-color;
+  }
+  &-warning {
+    background-color: $label-warning-bg-color;
+    color: $label-warning-color;
+  }
+  &-danger {
+    background-color: $label-danger-bg-color;
+    color: $label-danger-color;
+  }
 }

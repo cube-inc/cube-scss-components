@@ -7,6 +7,7 @@
       <p>.label-info <span class="label label-info">Info</span></p>
       <p>.label-warning <span class="label label-warning">Warning</span></p>
       <p>.label-danger <span class="label label-danger">Danger</span></p>
+      <p><span class="label">Consecutive</span><span class="label">labels</span></p>
     </Example>
 
     <h3>Sizes</h3>
