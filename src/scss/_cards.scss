@@ -3,6 +3,7 @@ $card-border-size: $component-border-size !default;
 $card-border-color: $component-border-color !default;
 $card-bg-color: $component-bg-color !default;
 $card-body-padding: $component-padding !default;
+$card-list-grid-gap: 10px !default;
 
 .card {
   border-radius: $card-border-radius;

@@ -1,3 +1,10 @@
+$button-font-weight: $font-weight-bold !default;
+$button-padding: .8em 2em !default;
+$button-font-size-md: 80% !default;
+$button-padding-md: .4em 1em !default;
+$button-primary-color: $text-color !default;
+$button-primary-bg-color: $brand-primary !default;
+
 .button {
   outline: none;
   position: relative;

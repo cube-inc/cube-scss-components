@@ -1,3 +1,19 @@
+$pagination-bg: $component-bg-color !default;
+$pagination-border-color: $component-border-color !default;
+$pagination-border-width: 1px !default;
+$pagination-border-radius: $component-border-radius !default;
+$pagination-color: $text-color !default;
+$pagination-color-disabled: $text-muted !default;
+$pagination-focus-box-shadow: $outline !default;
+$pagination-focus-outline: $outline !default;
+$pagination-hover-bg: darken($component-bg-color,5%) !default;
+$pagination-hover-border-color: darken($component-border-color,5%) !default;
+$pagination-hover-color: $text-color !default;
+$pagination-line-height: inherit !default;
+$pagination-font-size: inherit !default;
+$pagination-font-family: inherit !default;
+$pagination-padding: .8em 1.6em !default;
+
 .pagination {
   display: flex;
   align-items: center;
