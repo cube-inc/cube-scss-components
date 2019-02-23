@@ -26,7 +26,7 @@ const blockElements = [
   'dl',
   'div',
   'fieldset',
-  'form',
+  'form', 'textarea', 'select', 'option',
   'hr',
   'noscript',
   'table',
@@ -40,7 +40,7 @@ export default function vnodesToString (vnodes) {
   return vnodes
     .map(vnode => {
       const html = vnodeToString(vnode)
-      return isBlockElements(vnode)
+      return isBlockElement(vnode)
         ? `${html}\n`
         : html
     })
@@ -51,17 +51,16 @@ function isTag (vnode) {
   return Boolean(vnode.tag)
 }
 
+function isPreTag (vnode) {
+  return ['pre', 'code'].indexOf(vnode.tag) > -1
+}
+
 function isVoidElement (vnode) {
   return voidElements.indexOf(vnode.tag) > -1
 }
 
-function isBlockElements (vnode) {
+function isBlockElement (vnode) {
   return blockElements.indexOf(vnode.tag) > -1
-}
-
-function isSelfClosing (vnode) {
-  return blockElements.indexOf(vnode.tag) === -1 &&
-    voidElements.indexOf(vnode.tag) === -1
 }
 
 function indent (level, string = '') {
@@ -71,9 +70,8 @@ function indent (level, string = '') {
 function vnodeToString (vnode, level = 0) {
   if (isTag(vnode)) {
     return tagNodeToString(vnode, level)
-  } else {
-    return textNodeToString(vnode, level)
   }
+  return textNodeToString(vnode, level)
 }
 
 function tagNodeToString (vnode, level = 0) {
@@ -87,10 +85,7 @@ function tagNodeToString (vnode, level = 0) {
   if (isVoidElement(vnode)) {
     return `<${tag}${classString}${attrs}>`
   }
-  if (!isSelfClosing(vnode) || children) {
-    return `<${tag}${classString}${attrs}>${children}</${tag}>`
-  }
-  return `<${tag}${classString}${attrs} />`
+  return `<${tag}${classString}${attrs}>${children}</${tag}>`
 }
 
 function staticClassToString (vnode) {
@@ -117,24 +112,35 @@ function attrsToString (vnode) {
 function childrenToString (vnode, level = 0) {
   const { children } = vnode
   if (children instanceof Array && children.length > 0) {
-    const firstChild = children[0]
-    const lastChild = children[children.length - 1]
-    const isContainer = isBlockElements(firstChild) || isBlockElements(lastChild)
-    return (isContainer ? `\n` : '') +
-      children
-        .map(child => {
-          return (isContainer ? indent(level + 1) : '') +
-            vnodeToString(child, level + 1) +
-            (isContainer ? `\n` : '')
-        })
+    if (isPreTag(vnode)) {
+      return children
+        .map(child => textNodeToString(child, true))
+        .join('\n')
+    }
+    if (children.some(child => isBlockElement(child))) {
+      return '\n' + children
+        .map(child => indent(level + 1) + vnodeToString(child, level + 1) + '\n')
         .join('') +
-        (isContainer ? `${indent(level)}` : '')
+        indent(level)
+    }
+    return children
+      .map(child => vnodeToString(child, level + 1))
+      .join('')
   }
   return ''
 }
 
-function textNodeToString (vnode) {
-  return vnode.text
-    .replace(/^\s+/, '')
-    .replace(/\s+/g, ' ')
+function textNodeToString (vnode, trim = false) {
+  const string = trim
+    ? vnode.text.trim()
+    : vnode.text.replace(/\s+/g, ' ')
+  return escapeHtml(string)
+}
+
+function escapeHtml (text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
 }
