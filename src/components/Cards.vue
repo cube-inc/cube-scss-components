@@ -5,14 +5,14 @@
     <Example>
       <div class="card">
         <header class="card-header">
-          <h1 class="card-header-title">Title</h1>
+          <h1 class="card-header-title">Card header</h1>
         </header>
         <main class="card-body">
-          <div>This is a body</div>
+          <h2>Card title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
-        <footer class="card-footer">
-          <div>This is a footer</div>
-        </footer>
+        <footer class="card-footer">This is a footer</footer>
       </div>
     </Example>
 
@@ -21,14 +21,17 @@
       <div class="card">
         <header class="card-header" style="height:180px;">
           <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          <div class="card-header-overlay">Image overlay</div>
+          <div class="card-header-overlay">
+            <h2>Image overlay</h2>
+            <div class="lead">With rich content</div>
+          </div>
         </header>
         <main class="card-body">
-          <div>This is a body</div>
+          <h2>Card title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
-        <footer class="card-footer">
-          <div>This is a footer</div>
-        </footer>
+        <footer class="card-footer">This is a footer</footer>
       </div>
     </Example>
 
@@ -40,11 +43,11 @@
           <div class="card-header-overlay">Image overlay</div>
         </header>
         <main class="card-body">
-          <div>This is a body</div>
+          <h2>Card title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
-        <footer class="card-footer">
-          <div>This is a footer</div>
-        </footer>
+        <footer class="card-footer">This is a footer</footer>
       </div>
     </Example>
 
@@ -59,6 +62,7 @@
 }
 .card-header-overlay {
   color: white;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

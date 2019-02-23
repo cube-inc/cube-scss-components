@@ -33,8 +33,8 @@ $line-height-base: 1.5 !default;
 $font-family-base: "Helvetica Neue", "Ubuntu", "Roboto", "Noto", "Segoe UI", "Arial", sans-serif !default;
 $font-weight-base: normal !default;
 $font-weight-bold: bold !default;
-$font-size-base: 1rem !default; // iOS zooms the page to show a larger input field if its font-size is less than 16px/1em.
-$font-size-sm: 12px !default;
+$font-size-base: 1em !default;
+$font-size-sm: 13px !default;
 $font-size-xs: 9px !default;
 
 $headings-font-weight: $font-weight-bold !default;

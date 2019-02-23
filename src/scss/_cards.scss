@@ -17,6 +17,7 @@ $card-body-padding: $component-padding !default;
   &-header {
     position: relative;
     &-title {
+      margin: 0;
       padding: $card-body-padding;
     }
     &-image {
@@ -32,10 +33,16 @@ $card-body-padding: $component-padding !default;
       right: 0;
       bottom: 0;
       left: 0;
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+      }
     }
   }
   &-body {
     padding: $card-body-padding;
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
   }
   &-footer {
     box-sizing: border-box;
@@ -55,7 +62,6 @@ $card-body-padding: $component-padding !default;
     margin: 0;
   }
 }
-
 a.card {
   display: block;
   color: inherit;
