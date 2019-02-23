@@ -7,6 +7,9 @@ $headings-h4-font-family: $headings-font-family !default;
 $headings-h5-font-family: $headings-font-family !default;
 $headings-h6-font-family: $headings-font-family !default;
 
+$headings-margin-top: 2em !default;
+$headings-margin-bottom: 1em !default;
+
 html, body {
   font-family: $font-family-base;
   color: $text-color;
@@ -22,9 +25,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: $headings-margin-top 0 $headings-margin-bottom 0;
   padding: 0;
   small, .small {
-    font-size: $font-size-xs;
+    font-size: 80%;
     font-weight: $font-weight-base;
-    vertical-align: middle;
+    vertical-align: text-bottom;
+  }
+  .small-block {
+    display: block;
   }
 }
 h1 {
@@ -66,10 +72,22 @@ blockquote {
   padding: .2em .6em;
   border-left: 3px solid $brand-warning;
 }
+code {
+  font-size: 90%;
+  word-break: break-word;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #e83e8c;
+  &.code-block {
+    font-size: 12px;
+    color: inherit;
+    white-space: pre-wrap;
+  }
+}
 pre {
-  font-size: 12px;
+  font-size: 90%;
   margin: 0;
   padding: 0;
+  white-space: pre-line;
 }
 small, .small {
   font-size: $font-size-sm;

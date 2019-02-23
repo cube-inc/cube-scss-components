@@ -39,8 +39,6 @@ $font-size-xs: 9px !default;
 
 $headings-font-weight: $font-weight-bold !default;
 $headings-line-height: $line-height-base !default;
-$headings-margin-top: 0 !default;
-$headings-margin-bottom: 1em !default;
 
 $font-size-h1: 2em !default;
 $font-size-h2: 1.4em !default;
@@ -62,8 +60,8 @@ $component-bg-color-light: #e6e6e6 !default;
 $component-filter-saturate: 300% !default;
 $component-filter-blur: 20px !default;
 $component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;
-$component-border-radius: 1px !default;
-$component-border-radius-sm: 0 !default;
+$component-border-radius: 4px !default;
+$component-border-radius-sm: 2px !default;
 $component-padding: .8rem 1rem !default;
 
 // Breakpoints

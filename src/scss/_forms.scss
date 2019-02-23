@@ -14,72 +14,74 @@ $form-switch-active-color: $form-control-color !default;
 $form-switch-size: floor(($font-size-base * $line-height-base)) !default;
 $form-switch-inner-padding: 2px !default;
 
-.form-group {
-  margin-top: 2em;
-  padding: 0;
-  display: block;
-  position: relative;
-  box-sizing: border-box;
-  border: 0 none;
-}
+.form {
+  &-group {
+    margin: 2em 0 0 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    border: 0 none;
+  }
 
-.form-label {
-  display: block;
-  font-weight: $form-label-font-weight;
-  cursor: pointer;
-  color: inherit;
-  line-height: 2.2em;
-}
+  &-label {
+    display: block;
+    font-weight: $form-label-font-weight;
+    cursor: pointer;
+    color: inherit;
+    line-height: 2.2em;
+  }
 
-.form-control {
-  transition: all .2s;
-  outline: none;
-  appearance: none;
-  box-shadow: none;
-  position: relative;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: $form-control-border-radius;
-  border: 1px solid $form-control-border-color;
-  background-color: $form-control-bg-color;
-  margin: 0;
-  padding: $form-control-padding;
-  font-size: $form-control-font-size;
-  font-family: $form-control-font-family;
-  font-weight: $form-control-font-weight;
-  color: $form-control-color;
-  &:focus:not(:disabled) {
-    box-shadow: $form-control-ouline;
-  }
-  &.disabled,
-  &:disabled,
-  &:read-only:not(select) {
-    cursor: default;
-    color: $form-control-muted-color;
-  }
-  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $form-control-muted-color;
-    opacity: 1; /* Firefox */
-  }
-  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $form-control-muted-color;
-  }
-  &::-ms-input-placeholder { /* Microsoft Edge */
-    color: $form-control-muted-color;
-  }
-  &.has-error,
-  &:invalid:not(:placeholder-shown):not(select) {
-    border-color: $form-control-danger-color;
+  &-control {
+    transition: all .2s;
+    outline: none;
+    appearance: none;
+    box-shadow: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: $form-control-border-radius;
+    border: 1px solid $form-control-border-color;
+    background-color: $form-control-bg-color;
+    margin: 0;
+    padding: $form-control-padding;
+    font-size: $form-control-font-size;
+    font-family: $form-control-font-family;
+    font-weight: $form-control-font-weight;
+    color: $form-control-color;
+    &:focus:not(:disabled):not(:read-only) {
+      box-shadow: $form-control-ouline;
+    }
+    &.disabled,
+    &:disabled,
+    &:read-only:not(select) {
+      cursor: default;
+      color: $form-control-muted-color;
+    }
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $form-control-muted-color;
+      opacity: 1; /* Firefox */
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $form-control-muted-color;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: $form-control-muted-color;
+    }
+    &.has-error,
+    &:invalid:not(:placeholder-shown):not(select) {
+      border-color: $form-control-danger-color;
+    }
   }
 }
 
 // Input number
-input[type=number] {
-    -moz-appearance: textfield;
+input[type=number].form-control {
+  -moz-appearance: textfield;
 }
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type=number].form-control::-webkit-inner-spin-button,
+input[type=number].form-control::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -87,6 +89,7 @@ input[type=number]::-webkit-outer-spin-button {
 // Textarea
 textarea.form-control {
   resize: vertical;
+  min-height: 3em;
 }
 
 // Select
@@ -131,7 +134,7 @@ input[type="radio"].form-control {
       background-color: $form-switch-active-color;
     }
   }
-  & + .text {
+  & + .form-text {
     font-weight: $form-control-font-weight;
     margin-left: .5em;
     vertical-align: middle;
