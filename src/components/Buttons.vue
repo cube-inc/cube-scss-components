@@ -17,7 +17,7 @@
     </Example>
 
     <h3>Button white</h3>
-    <Example class="example-dark">
+    <Example :dark="true">
       <div class="button-list">
         <button class="button button-white">White</button>
         <button class="button button-white button-outline">Outline</button>
