@@ -30,7 +30,7 @@ export default {
 #app {
   width: 100%;
   max-width: 768px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 1em;
 }
 footer {
