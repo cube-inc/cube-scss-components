@@ -16,16 +16,16 @@
           <div class="list-group-item-header">
             <div>With extra actions to the right</div>
             <div class="actions">
-              <a>Action #1</a>
-              <a>Action #2</a>
+              <a>Action 1</a>
+              <a>Action 2</a>
             </div>
           </div>
         </li>
         <li class="list-group-item">
           <div class="list-group-item-header">
             <div class="actions">
-              <a>Action #1</a>
-              <a>Action #2</a>
+              <a>Action 1</a>
+              <a>Action 2</a>
             </div>
             <div>With extra actions to the left</div>
           </div>
