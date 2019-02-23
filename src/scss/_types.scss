@@ -68,12 +68,31 @@ h6 {
   font-family: $headings-h6-font-family;
   font-size: $font-size-h6;
 }
+hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $text-muted;
+  border: 0 none;
+  margin: 0 auto;
+}
 .lead {
   font-size: 120%;
   text-align: justify;
 }
 p {
   margin: .4em 0;
+}
+a {
+  text-decoration: none;
+  color: $link-color;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 blockquote {
   appearance: none;

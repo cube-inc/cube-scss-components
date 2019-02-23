@@ -9,6 +9,9 @@
       <h4>H4 heading</h4>
       <h5>H5 heading</h5>
       <h6>H6 heading</h6>
+      hr start
+      <hr>
+      hr end
       <p class="lead">.lead</p>
       <p class="text-muted">.text-muted</p>
       <p class="text-success">.text-success</p>
