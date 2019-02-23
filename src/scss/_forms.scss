@@ -71,7 +71,7 @@ $form-switch-inner-padding: 2px !default;
       color: $form-control-muted-color;
     }
     &.has-error,
-    &:invalid:not(:placeholder-shown):not(select) {
+    &:invalid:not(:placeholder-shown):not(select):not(input[type="checkbox"]):not(input[type="radio"]) {
       border-color: $form-control-danger-color;
     }
   }

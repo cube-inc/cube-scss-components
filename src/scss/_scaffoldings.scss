@@ -3,45 +3,20 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  -webkit-tap-highlight-color: rgba($brand-primary, .05);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
 * {
   box-sizing: border-box;
 }
-a {
-  text-decoration: none;
-  color: $link-color;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
-  &:focus {
-    outline: none;
-  }
-}
-.link-list {
-  $list-gap: .6em;
-  margin: -$list-gap;
-  display: flex;
-  > a {
-    margin: $list-gap;
-  }
-}
-.subtitle,
-.lead {
-  font-size: 1.3em;
-}
-.layout-menu-inverse {
-  #App {
-    background: #000;
-  }
-}
+
 .content {
+  box-sizing: border-box;
   padding: 5em 1em;
   margin: 0 auto;
+  width: 100%;
   max-width: $screen-xs;
   > header {
     text-align: center;
@@ -53,26 +28,42 @@ a {
     padding: 4em 1em;
   }
 }
-.header-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1em;
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+
+.content-large {
+  padding: 0 1em;
+  margin: 5em auto;
+  width: 100%;
+  max-width: $screen-md;
+  @media (max-width: $screen-xs-max) {
+    margin: 4em auto;
   }
-  > .actions {
-    > * + * {
-      margin-left: 2em;
+  > header {
+    margin: 2em 0;
+    > .lead {
+      margin-bottom: 2em;
     }
   }
+  > section {
+    margin: 4em 0;
+  }
 }
+
 .full-page {
   min-height: 100%;
   min-width: 100%;
 }
+
 .hidden-xs {
   @media (max-width: $screen-xs-max) {
     display: none;
   }
+}
+
+hr {
+  display: block;
+  width: 75px;
+  height: 6px;
+  background-color: $brand-primary;
+  border: 0 none;
+  margin: 0;
 }
