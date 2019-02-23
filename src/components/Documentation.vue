@@ -1,9 +1,14 @@
 <template>
-  <section id="Examples">
+  <section id="Documentation">
     <header>
-      <h1>Examples</h1>
+      <h1>
+        Cube SCSS Components
+        <small class="small-block text-muted">Documentation v{{ $root.$options.version }}</small>
+      </h1>
     </header>
+
     <nav class="toc">
+      <h2>Table of content</h2>
       <a href="#Badges">Badges</a>
       <a href="#Bullets">Bullets</a>
       <a href="#Buttons">Buttons</a>
@@ -17,6 +22,7 @@
       <a href="#Tables">Tables</a>
       <a href="#Types">Typography</a>
     </nav>
+
     <main>
       <Buttons/>
       <Badges/>

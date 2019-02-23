@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Examples/>
+    <Documentation/>
     <footer>
       <div>cube-scss-components v{{ $root.$options.version }}</div>
       <div>Cube Living, Inc. © {{ currentYear }}</div>
@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import Examples from './components/Examples.vue'
+import Documentation from './components/Documentation.vue'
 import './scss/index.scss'
 
 export default {
   name: 'app',
   components: {
-    Examples
+    Documentation
   },
   data () {
     const now = new Date()
