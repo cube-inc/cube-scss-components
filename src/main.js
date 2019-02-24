@@ -2,7 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import './components'
 import './highlight'
+import Clipboard from 'v-clipboard'
 import { name, version } from '../package.json'
+
+Vue.use(Clipboard)
 
 Vue.config.productionTip = false
 
