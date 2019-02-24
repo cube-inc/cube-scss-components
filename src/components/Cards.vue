@@ -10,7 +10,12 @@
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
-        <footer class="card-footer">This is a footer</footer>
+        <footer class="card-footer">
+          <div class="button-list button-list-right">
+            <button class="button">Hide</button>
+            <button class="button button-filled">Show</button>
+          </div>
+        </footer>
       </div>
     </Example>
 
@@ -29,7 +34,14 @@
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
-        <footer class="card-footer">This is a footer</footer>
+        <footer class="card-footer card-footer-justify">
+          <div>
+            <strong>$1,150</strong>
+            <small class="text-muted"> per month</small>
+            <div class="small text-muted">Sub-info here</div>
+          </div>
+          <button class="button button-filled button-shadow">Book</button>
+        </footer>
       </div>
     </Example>
 
@@ -43,9 +55,10 @@
         <main class="card-body">
           <h2>Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
-        <footer class="card-footer">This is a footer</footer>
+        <footer class="card-footer">
+          <button class="button">Learn more</button>
+        </footer>
       </div>
     </Example>
 
@@ -54,19 +67,17 @@
       <div class="card-list">
         <div class="card">
           <main class="card-body">
-            <h2>Card title</h2>
+            <h2>Card title 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
             <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
           </main>
-          <footer class="card-footer">This is a footer</footer>
         </div>
         <div class="card">
           <main class="card-body">
-            <h2>Card title</h2>
+            <h2>Card title 2</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
             <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
           </main>
-          <footer class="card-footer">This is a footer</footer>
         </div>
       </div>
     </Example>

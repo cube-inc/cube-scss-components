@@ -46,8 +46,14 @@ $card-list-grid-gap: 10px !default;
     }
   }
   &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     padding: $card-padding;
     border-top: $card-border-size solid $card-border-color;
+    &-justify {
+      justify-content: space-between;
+    }
   }
   &-borderless {
     border: 0 none;
