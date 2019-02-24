@@ -9,9 +9,9 @@ $pagination-focus-outline: $outline !default;
 $pagination-hover-bg: darken($component-bg-color,5%) !default;
 $pagination-hover-border-color: darken($component-border-color,5%) !default;
 $pagination-hover-color: $text-color !default;
-$pagination-line-height: inherit !default;
-$pagination-font-size: inherit !default;
-$pagination-font-family: inherit !default;
+$pagination-line-height: $line-height-base !default;
+$pagination-font-size: $font-size-sm !default;
+$pagination-font-family: $font-family-base !default;
 $pagination-padding: .8em 1.6em !default;
 
 .pagination {
@@ -42,6 +42,7 @@ $pagination-padding: .8em 1.6em !default;
       }
     }
     &-button {
+      text-transform: uppercase;
       transition:
         all 250ms ease,
         box-shadow 100ms ease
