@@ -1,9 +1,8 @@
 $badge-size: 24px !default;
 $badge-font-size: $font-size-sm !default;
 $badge-border-radius: 50% !default;
-$badge-bg-color: $component-bg-color-light !default;
 $badge-color: $text-color !default;
-
+$badge-bg-color: rgba($text-color, .15) !default;
 $badge-success-bg-color: $brand-success !default;
 $badge-success-color: white !default;
 $badge-info-bg-color: $brand-info !default;
