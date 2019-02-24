@@ -65,6 +65,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$example-padding: 16px !default;
 $example-border-color: $component-border-color !default;
 $example-border-radius: $component-border-radius !default;
 $example-preview-bg-color: rgba($gray-dark, 0.05) !default;
@@ -94,7 +95,7 @@ $example-font-family-code: $font-family-code !default;
     transition: all 250ms ease;
   }
   &-preview {
-    padding: 32px;
+    padding: $example-padding;
     background-color: white;
     background-image: linear-gradient(
         45deg,
@@ -128,7 +129,7 @@ $example-font-family-code: $font-family-code !default;
   }
   &-code {
     display: block;
-    padding: 32px;
+    padding: $example-padding;
     background-color: $example-code-bg-color;
     white-space: pre-wrap;
     font-size: 12px;
