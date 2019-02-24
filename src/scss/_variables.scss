@@ -11,7 +11,7 @@ $brand-primary: $citron !default;
 $brand-secondary: $outremer-text !default;
 $brand-success: #3ecf8e !default;
 $brand-info: $indigo !default;
-$brand-warning: $citron !default;
+$brand-warning: darken($citron, 10%) !default;
 $brand-danger: $grenadine !default;
 
 // Text
