@@ -46,7 +46,7 @@
     </Example>
 
     <h3>Borderless card</h3>
-    <Example>
+    <Example :dark="true">
       <div class="card card-borderless">
         <header class="card-header" style="height:180px;">
           <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
