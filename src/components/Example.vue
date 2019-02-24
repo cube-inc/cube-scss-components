@@ -16,6 +16,7 @@ export default {
   name: 'Example',
   props: {
     html: String,
+    previewScroll: Boolean,
     dark: Boolean
   },
   data () {
@@ -27,6 +28,7 @@ export default {
   computed: {
     exampleClasses () {
       return {
+        'example-preview-scroll': this.previewScroll,
         'example-dark': this.darkMode
       }
     }

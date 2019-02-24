@@ -53,7 +53,7 @@
     </Example>
 
     <h3>Button group</h3>
-    <Example class="example-preview-scroll">
+    <Example :previewScroll="true">
       <div class="button-group">
         <button class="button">Button 1</button>
         <button class="button">Button 2</button>
