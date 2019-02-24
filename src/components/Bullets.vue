@@ -3,11 +3,11 @@
     <nav><a href="#Toc">Top</a></nav>
     <h2>Bullets</h2>
     <Example>
-      <p>.bullet <span class="bullet"></span></p>
-      <p>.bullet-success <span class="bullet bullet-success"></span></p>
-      <p>.bullet-info <span class="bullet bullet-info"></span></p>
-      <p>.bullet-warning <span class="bullet bullet-warning"></span></p>
-      <p>.bullet-danger <span class="bullet bullet-danger"></span></p>
+      <p><span class="bullet"></span> .bullet</p>
+      <p><span class="bullet bullet-success"></span> .bullet-success</p>
+      <p><span class="bullet bullet-info"></span> .bullet-info</p>
+      <p><span class="bullet bullet-warning"></span> .bullet-warning</p>
+      <p><span class="bullet bullet-danger"></span> .bullet-danger</p>
     </Example>
   </section>
 </template>
