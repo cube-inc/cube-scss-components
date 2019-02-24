@@ -2,7 +2,7 @@ $card-border-radius: $component-border-radius !default;
 $card-border-size: $component-border-size !default;
 $card-border-color: $component-border-color !default;
 $card-bg-color: $component-bg-color !default;
-$card-body-padding: $component-padding !default;
+$card-padding: $component-padding !default;
 $card-list-grid-gap: 10px !default;
 
 .card {
@@ -19,7 +19,7 @@ $card-list-grid-gap: 10px !default;
     position: relative;
     &-title {
       margin: 0;
-      padding: $card-body-padding;
+      padding: $card-padding;
     }
     &-image {
       display: inline-block;
@@ -40,15 +40,14 @@ $card-list-grid-gap: 10px !default;
     }
   }
   &-body {
-    padding: $card-body-padding;
+    padding: $card-padding;
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
     }
   }
   &-footer {
-    box-sizing: border-box;
-    padding: $component-padding;
-    border-top: $component-border-size solid $component-border-color;
+    padding: $card-padding;
+    border-top: $card-border-size solid $card-border-color;
   }
   &-borderless {
     border: 0 none;
