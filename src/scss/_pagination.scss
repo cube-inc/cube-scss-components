@@ -72,6 +72,7 @@ $pagination-padding: .8em 1.6em !default;
     &-info {
       flex-grow: 1;
       flex-basis: 0;
+      white-space: nowrap;
     }
   }
 }
