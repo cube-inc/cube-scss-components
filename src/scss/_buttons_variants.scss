@@ -1,3 +1,7 @@
+$button-shadow: 0px 4px 4px -2px $gray-darker !default;
+$button-shadow-hover: 0px 4px 4px -2px $gray-darker !default;
+$button-shadow-active: 0px 0px 0px 0px $gray-darker !default;
+
 $button-success-color: $brand-success !default;
 $button-info-color: $brand-info !default;
 $button-warning-color: $brand-warning !default;
@@ -17,6 +21,17 @@ $button-font-size-lg: 16px;
 $button-padding-lg: 12px 24px !default;
 
 .button {
+  &-shadow {
+    box-shadow: $button-shadow;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      box-shadow: $button-shadow-hover;
+    }
+    &.active:not(:disabled),
+    &:active:not(:disabled) {
+      box-shadow: $button-shadow-active;
+    }
+  }
   &-white {
     color: white;
     &:hover:not(:disabled),

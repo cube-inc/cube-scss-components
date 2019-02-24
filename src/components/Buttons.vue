@@ -9,11 +9,13 @@
         <button class="button">Button</button>
         <button class="button button-outline">Outline</button>
         <button class="button button-filled">Filled</button>
+        <button class="button button-filled button-shadow">Shadow</button>
       </div>
       <div class="button-list">
         <button class="button" disabled>Button</button>
         <button class="button button-outline" disabled>Outline</button>
         <button class="button button-filled" disabled>Filled</button>
+        <button class="button button-filled button-shadow" disabled>Shadow</button>
       </div>
     </Example>
 

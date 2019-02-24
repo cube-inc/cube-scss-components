@@ -1,6 +1,6 @@
+$button-list-gap: 2px !default;
 .button {
   &-list {
-    $button-list-gap: .2em;
     margin: -$button-list-gap;
     display: flex;
     flex-wrap: wrap;
