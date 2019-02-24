@@ -76,10 +76,13 @@ section {
   margin: 3em 0;
   > a {
     display: block;
-    padding: .2em .8em;
+    padding: 4px 8px;
+    margin: 0 -8px;
+    border-radius: $component-border-radius;
+    transition: all 250ms ease;
     &:hover {
       text-decoration: none;
-      background-color: darken($component-bg-color, 5%);
+      background-color: $gray-light;
     }
   }
 }
