@@ -34,18 +34,18 @@ $font-family-base: "Helvetica Neue", "Ubuntu", "Roboto", "Noto", "Segoe UI", "Ar
 $font-weight-base: normal !default;
 $font-weight-bold: bold !default;
 $font-size-base: 1em !default;
-$font-size-sm: 13px !default;
-$font-size-xs: 9px !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-xs: $font-size-base * .625 !default;
 
 $headings-font-weight: $font-weight-bold !default;
 $headings-line-height: $line-height-base !default;
 
-$font-size-h1: 2em !default;
-$font-size-h2: 1.4em !default;
-$font-size-h3: 1em !default;
-$font-size-h4: 1em !default;
-$font-size-h5: 1em !default;
-$font-size-h6: 1em !default;
+$font-size-h1: $font-size-base * 2 !default;
+$font-size-h2: $font-size-base * 1.5 !default;
+$font-size-h3: $font-size-base !default;
+$font-size-h4: $font-size-base !default;
+$font-size-h5: $font-size-base !default;
+$font-size-h6: $font-size-base !default;
 
 // Outline
 $outline-color: rgba($brand-secondary,.4) !default;
