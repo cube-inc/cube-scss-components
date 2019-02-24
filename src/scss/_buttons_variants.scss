@@ -19,7 +19,6 @@ $button-padding-lg: 12px 24px !default;
 .button {
   &-white {
     color: white;
-    background-color: rgba(white,.05);
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
       background-color: rgba(white,.1);

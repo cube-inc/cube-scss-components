@@ -21,12 +21,11 @@ $text-danger: $brand-danger !default;
 $link-color: $grenadine !default;
 
 // Grays
-$gray-base: #555555 !default;
-$gray-darker: $gray-base !default;
-$gray-dark: #979797 !default;
-$gray: #aaaabe !default;
-$gray-light: #ddd9e3 !default;
-$gray-lighter: #f8f8f8 !default;
+$gray-lighter:  hsl(210, 17%, 98%) !default;
+$gray-light:    hsl(210, 16%, 93%) !default;
+$gray:          hsl(210, 14%, 89%) !default;
+$gray-dark:     hsl(210, 10%, 66%) !default;
+$gray-darker:   hsl(210,  5%, 33%) !default;
 
 // Types
 $line-height-base: 1.5 !default;
@@ -53,10 +52,10 @@ $outline: 0 0 1rem $outline-color !default;
 
 // Component
 $component-border-size: 1px !default;
-$component-border-color: rgba(black, .2) !default;
+$component-border-color: $gray !default;
 $component-bg-color: white !default;
+$component-bg-color-light: $gray-light !default;
 $component-bg-color-alt: $creme !default;
-$component-bg-color-light: #e6e6e6 !default;
 $component-filter-saturate: 300% !default;
 $component-filter-blur: 20px !default;
 $component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;

@@ -51,7 +51,7 @@ $list-group-action-font-size: 11px;
         background-color: darken($list-group-bg-color, 2%);
       }
       + .list-group-item-body {
-        border-top: $list-group-border-size dotted lighten($list-group-border-color, 50%);
+        border-top: $list-group-border-size dotted lighten($list-group-border-color, 5%);
         margin: 0;
         padding: $list-group-padding;
       }
