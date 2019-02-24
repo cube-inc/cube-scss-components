@@ -31,12 +31,10 @@
       <p><ins>ins – Lorem ipsum</ins></p>
       <p><abbr title="Abbreviation">abbr – Lorem ipsum</abbr></p>
       <p><a>link</a></p>
-      <p class="text-justify">
-        .text-justify<br>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aliquid aperiam veritatis qui similique aspernatur corporis impedit animi. Debitis corporis ad id quis esse? Animi non vel amet natus repellat.</p>
-      <p class="text-left">.text-left</p>
-      <p class="text-center">.text-center</p>
-      <p class="text-right">.text-right</p>
+      <p class="text-left">.text-left<br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias expedita cum aliquam adipisci modi fugit possimus velit repellat quaerat! Nisi sequi suscipit nihil laboriosam quidem labore. Ipsam provident accusantium quas.</p>
+      <p class="text-justify">.text-justify<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aliquid aperiam veritatis qui similique aspernatur corporis impedit animi. Debitis corporis ad id quis esse? Animi non vel amet natus repellat.</p>
+      <p class="text-center">.text-center<br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aliquam, delectus nisi deleniti ea expedita architecto id consectetur consequatur facere provident asperiores, repellendus vel ut reprehenderit at assumenda perspiciatis optio!</p>
+      <p class="text-right">.text-right<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id consequuntur ut, iure amet unde aspernatur consectetur perspiciatis quasi molestiae! Neque ullam aut, sequi beatae tempora exercitationem sunt a voluptas eius.</p>
       <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
     </Example>
 

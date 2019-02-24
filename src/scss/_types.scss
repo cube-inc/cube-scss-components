@@ -1,4 +1,5 @@
 $font-family-base: "Helvetica Neue", "Ubuntu", "Roboto", "Noto", "Segoe UI", "Arial", sans-serif !default;
+$font-family-code: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-size-base: 1em !default; // iOS zooms the page to show a larger input field if its font-size is less than 16px/1em.
 $font-size-sm: 13px !default;
@@ -105,7 +106,7 @@ blockquote {
 code {
   font-size: 90%;
   word-break: break-word;
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: $font-family-code;
   color: #e83e8c;
   &.code-block {
     font-size: 12px;
@@ -115,6 +116,7 @@ code {
 }
 pre {
   font-size: 90%;
+  font-family: $font-family-code;
   margin: 0;
   padding: 0;
   white-space: pre-line;
