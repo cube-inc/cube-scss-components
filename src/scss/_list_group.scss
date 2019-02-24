@@ -1,103 +1,110 @@
+$list-group-padding: $component-padding !default;
+$list-group-border-color: $component-border-color !default;
+$list-group-border-size: $component-border-size !default;
+$list-group-border-radius: $component-border-radius !default;
 $list-group-bg-color: $component-bg-color !default;
+$list-group-action-font-size: 11px;
 
 .list-group {
   margin: 0;
   padding: 0;
   position: relative;
-  > li,
-  > a,
-  > .list-group-item {
+  &-item {
     list-style: none;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     display: block;
-    border: $component-border-size solid $component-border-color;
+    border: $list-group-border-size solid $list-group-border-color;
     background-color: $list-group-bg-color;
     overflow: hidden;
     line-height: $line-height-base;
     transition: all 250ms ease;
-    + li,
-    + a,
     + .list-group-item {
       margin-top: -1px;
     }
-    &:first-child {
-      border-top-left-radius: $component-border-radius;
-      border-top-right-radius: $component-border-radius;
+    &:first-of-type {
+      border-top-left-radius: $list-group-border-radius;
+      border-top-right-radius: $list-group-border-radius;
     }
-    &:last-child {
-      border-bottom-left-radius: $component-border-radius;
-      border-bottom-right-radius: $component-border-radius;
+    &:last-of-type {
+      border-bottom-left-radius: $list-group-border-radius;
+      border-bottom-right-radius: $list-group-border-radius;
     }
     > a {
-      display: block;
+      display: inline-block;
+      width: 100%;
       cursor: pointer;
       color: inherit;
-      padding: 1px;
-      margin: -1px;
+      padding: 0;
+      margin: 0;
       text-decoration: inherit;
+      box-sizing: border-box;
       transition: background-color 250ms ease;
       &:hover {
         color: inherit;
         text-decoration: inherit;
-        background-color: darken($color: $component-bg-color, $amount: 3%);
+        background-color: darken($list-group-bg-color, 3%);
       }
       &:focus {
         text-shadow: inherit;
-        background-color: darken($color: $component-bg-color, $amount: 2%);
+        background-color: darken($list-group-bg-color, 2%);
+      }
+      + .list-group-item-body {
+        border-top: $list-group-border-size dotted lighten($list-group-border-color, 50%);
+        margin: 0;
+        padding: $list-group-padding;
       }
     }
-  }
-}
-.list-group-item-header {
-  display: flex;
-  align-items: center;
-  margin: $component-padding;
-  box-sizing: border-box;
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  > .actions {
-    display: flex;
-    align-items: center;
-    &:first-child {
-      margin-right: .8em;
-    }
-    &:last-child {
-      margin-left: auto;
-    }
-    &.actions-top {
-      align-self: flex-start;
-    }
-    > a {
-      cursor: pointer;
-      color: $text-muted;
-      text-decoration: inherit;
-      transition: color 250ms ease;
-      white-space: nowrap;
-      &:hover {
-        color: $text-color;
-        text-decoration: inherit;
+    &-header {
+      display: flex;
+      align-items: center;
+      margin: $list-group-padding;
+      box-sizing: border-box;
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0;
       }
-      & + * {
-        margin-left: .8em;
+      > .actions {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: $list-group-action-font-size;
+        &:first-child {
+          margin-right: .8em;
+        }
+        &:last-child {
+          margin-left: auto;
+        }
+        &-top {
+          align-self: flex-start;
+        }
+        > a {
+          cursor: pointer;
+          color: $text-muted;
+          text-decoration: inherit;
+          transition: color 250ms ease;
+          white-space: nowrap;
+          &:hover {
+            color: $text-color;
+            text-decoration: inherit;
+          }
+          & + * {
+            margin-left: .8em;
+          }
+        }
+        .icon {
+          display: inline-block;
+          width: 1em;
+          line-height: 1;
+          text-align: center;
+        }
       }
     }
-    .icon {
-      display: inline-block;
-      width: 1em;
-      line-height: 1;
-      text-align: center;
+    &-body,
+    &-footer {
+      margin: $list-group-padding;
+      box-sizing: border-box;
     }
   }
-}
-.list-group-item-body {
-  margin: $component-padding;
-  box-sizing: border-box;
-}
-.list-group-item-footer {
-  margin: $component-padding;
-  box-sizing: border-box;
 }
