@@ -129,9 +129,11 @@
 
 <style lang="scss" scoped>
 .button-list {
-  margin: 1em auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .button-group {
-  margin: 1em auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 </style>

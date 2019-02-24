@@ -1,6 +1,6 @@
-$button-shadow: 0px 4px 4px -2px $gray-darker !default;
-$button-shadow-hover: 0px 4px 4px -2px $gray-darker !default;
-$button-shadow-active: 0px 0px 0px 0px $gray-darker !default;
+$button-shadow: 0px 3px 6px -2px $gray-darker !default;
+$button-shadow-hover: $button-shadow !default;
+$button-shadow-active: 0px 2px 2px -1px $gray-darker !default;
 
 $button-success-color: $brand-success !default;
 $button-info-color: $brand-info !default;
@@ -56,6 +56,9 @@ $button-padding-lg: 12px 24px !default;
       &.active:not(:disabled),
       &:active:not(:disabled) {
         background-color: rgba(white, .7);
+      }
+      &:disabled {
+        color: grayscale($button-primary-color);
       }
     }
   }

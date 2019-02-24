@@ -73,3 +73,6 @@ $screen-sm-max: ($screen-sm - 1px) !default;
 
 $screen-md: 992px !default;
 $screen-md-max: ($screen-md - 1px) !default;
+
+// Buttons
+$button-primary-color: lighten($brand-secondary, 25%);
