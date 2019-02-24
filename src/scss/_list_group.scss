@@ -46,12 +46,12 @@ $list-group-action-font-size: 11px;
         text-decoration: inherit;
         background-color: darken($list-group-bg-color, 3%);
       }
-      &:focus {
+      &:active {
         text-shadow: inherit;
-        background-color: darken($list-group-bg-color, 2%);
+        background-color: darken($list-group-bg-color, 6%);
       }
       + .list-group-item-body {
-        border-top: $list-group-border-size dotted lighten($list-group-border-color, 5%);
+        border-top: $list-group-border-size dotted lighten($list-group-border-color, 3%);
         margin: 0;
         padding: $list-group-padding;
       }
@@ -68,7 +68,6 @@ $list-group-action-font-size: 11px;
       > .actions {
         display: flex;
         align-items: center;
-        text-transform: uppercase;
         font-size: $list-group-action-font-size;
         &:first-child {
           margin-right: .8em;
@@ -81,23 +80,22 @@ $list-group-action-font-size: 11px;
         }
         > a {
           cursor: pointer;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-decoration: none;
           color: $text-muted;
-          text-decoration: inherit;
-          transition: color 250ms ease;
           white-space: nowrap;
+          transition: color 250ms ease;
           &:hover {
             color: $text-color;
-            text-decoration: inherit;
+            text-decoration: none;
+          }
+          &:active {
+            color: lighten($text-color, 50%);
           }
           & + * {
             margin-left: .8em;
           }
-        }
-        .icon {
-          display: inline-block;
-          width: 1em;
-          line-height: 1;
-          text-align: center;
         }
       }
     }
