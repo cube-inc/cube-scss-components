@@ -52,6 +52,9 @@
           <a>
             <div class="list-group-item-header">
               <h4>Item 7 – Clickable header</h4>
+              <div class="actions">
+                <a>•••</a>
+              </div>
             </div>
           </a>
           <div class="list-group-item-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio perferendis nesciunt voluptatum, sequi molestias aut tempore temporibus quod non delectus dicta odit, cum eaque quos neque sapiente, dolores ut id.</div>
