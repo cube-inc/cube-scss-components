@@ -53,6 +53,12 @@
         <button class="button button-filled">Button 3</button>
         <button class="button button-filled">Button 4</button>
       </div>
+      <div class="button-list">
+        <button class="button button-filled button-shadow">Button 1</button>
+        <button class="button button-filled button-shadow">Button 2</button>
+        <button class="button button-filled button-shadow">Button 3</button>
+        <button class="button button-filled button-shadow">Button 4</button>
+      </div>
     </Example>
 
     <h3>Button group</h3>
@@ -86,16 +92,34 @@
         <button class="button button-danger">Danger</button>
       </div>
       <div class="button-list">
+        <button class="button button-success" disabled>Success</button>
+        <button class="button button-info" disabled>Info</button>
+        <button class="button button-warning" disabled>Warning</button>
+        <button class="button button-danger" disabled>Danger</button>
+      </div>
+      <div class="button-list">
         <button class="button button-outline button-success">Success</button>
         <button class="button button-outline button-info">Info</button>
         <button class="button button-outline button-warning">Warning</button>
         <button class="button button-outline button-danger">Danger</button>
       </div>
       <div class="button-list">
+        <button class="button button-outline button-success" disabled>Success</button>
+        <button class="button button-outline button-info" disabled>Info</button>
+        <button class="button button-outline button-warning" disabled>Warning</button>
+        <button class="button button-outline button-danger" disabled>Danger</button>
+      </div>
+      <div class="button-list">
         <button class="button button-filled button-success">Success</button>
         <button class="button button-filled button-info">Info</button>
         <button class="button button-filled button-warning">Warning</button>
         <button class="button button-filled button-danger">Danger</button>
+      </div>
+      <div class="button-list">
+        <button class="button button-filled button-success" disabled>Success</button>
+        <button class="button button-filled button-info" disabled>Info</button>
+        <button class="button button-filled button-warning" disabled>Warning</button>
+        <button class="button button-filled button-danger" disabled>Danger</button>
       </div>
     </Example>
 

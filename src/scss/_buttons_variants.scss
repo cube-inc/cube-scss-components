@@ -42,6 +42,9 @@ $button-padding-lg: 12px 24px !default;
     &:active:not(:disabled) {
       background-color: rgba(white,.2);
     }
+    &:disabled {
+      color: white;
+    }
     &.button-outline {
       color: white;
       border-color: white;
@@ -64,10 +67,9 @@ $button-padding-lg: 12px 24px !default;
   }
   &-success {
     color: $button-success-color;
-    background-color: rgba($button-success-color, .05);
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: rgba($button-success-color,.1);
+      background-color: rgba($button-success-color,.15);
     }
     &.active:not(:disabled),
     &:active:not(:disabled) {
@@ -76,25 +78,24 @@ $button-padding-lg: 12px 24px !default;
     &.button-outline {
       background-color: transparent;
     }
-    &.button-filled {
+    &.button-filled:not(:disabled) {
       color: if(lightness($button-warning-color) > $button-lightness-threshold, $button-primary-color, white);
       background-color: $button-success-color;
-      &:hover:not(:disabled),
-      &:focus:not(:disabled) {
+      &:hover,
+      &:focus {
         background-color: rgba($button-success-color, .8);
       }
-      &.active:not(:disabled),
-      &:active:not(:disabled) {
+      &.active,
+      &:active {
         background-color: rgba($button-success-color, .7);
       }
     }
   }
   &-info {
     color: $button-info-color;
-    background-color: rgba($button-info-color, .05);
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: rgba($button-info-color,.1);
+      background-color: rgba($button-info-color,.15);
     }
     &.active:not(:disabled),
     &:active:not(:disabled) {
@@ -103,25 +104,24 @@ $button-padding-lg: 12px 24px !default;
     &.button-outline {
       background-color: transparent;
     }
-    &.button-filled {
+    &.button-filled:not(:disabled) {
       color: if(lightness($button-warning-color) > $button-lightness-threshold, $button-primary-color, white);
       background-color: $button-info-color;
-      &:hover:not(:disabled),
-      &:focus:not(:disabled) {
+      &:hover,
+      &:focus {
         background-color: rgba($button-info-color, .8);
       }
-      &.active:not(:disabled),
-      &:active:not(:disabled) {
+      &.active,
+      &:active {
         background-color: rgba($button-info-color, .7);
       }
     }
   }
   &-warning {
     color: $button-warning-color;
-    background-color: rgba($button-warning-color, .05);
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: rgba($button-warning-color,.1);
+      background-color: rgba($button-warning-color,.15);
     }
     &.active:not(:disabled),
     &:active:not(:disabled) {
@@ -130,25 +130,24 @@ $button-padding-lg: 12px 24px !default;
     &.button-outline {
       background-color: transparent;
     }
-    &.button-filled {
+    &.button-filled:not(:disabled) {
       color: if(lightness($button-warning-color) > $button-lightness-threshold, $button-primary-color, white);
       background-color: $button-warning-color;
-      &:hover:not(:disabled),
-      &:focus:not(:disabled) {
+      &:hover,
+      &:focus {
         background-color: rgba($button-warning-color, .8);
       }
-      &.active:not(:disabled),
-      &:active:not(:disabled) {
+      &.active,
+      &:active {
         background-color: rgba($button-warning-color, .7);
       }
     }
   }
   &-danger {
     color: $button-danger-color;
-    background-color: rgba($button-danger-color, .05);
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: rgba($button-danger-color,.1);
+      background-color: rgba($button-danger-color,.15);
     }
     &.active:not(:disabled),
     &:active:not(:disabled) {
@@ -157,15 +156,15 @@ $button-padding-lg: 12px 24px !default;
     &.button-outline {
       background-color: transparent;
     }
-    &.button-filled {
+    &.button-filled:not(:disabled) {
       color: if(lightness($button-warning-color) > $button-lightness-threshold, $button-primary-color, white);
       background-color: $button-danger-color;
-      &:hover:not(:disabled),
-      &:focus:not(:disabled) {
+      &:hover,
+      &:focus {
         background-color: rgba($button-danger-color, .8);
       }
-      &.active:not(:disabled),
-      &:active:not(:disabled) {
+      &.active,
+      &:active {
         background-color: rgba($button-danger-color, .7);
       }
     }

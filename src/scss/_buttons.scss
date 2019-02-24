@@ -34,15 +34,16 @@ $button-primary-color: $brand-secondary !default;
   &:hover:not(:disabled),
   &:focus:not(:disabled) {
     text-decoration: none;
-    background-color: rgba($button-primary-color,.1);
+    background-color: rgba($button-primary-color,.15);
   }
   &.active:not(:disabled),
   &:active:not(:disabled) {
     background-color: rgba($button-primary-color,.2);
   }
   &:disabled {
-    opacity: .5;
     cursor: not-allowed;
+    color: grayscale($button-primary-color);
+    opacity: .5;
   }
   > * + * {
     padding-left: 1em;
