@@ -76,6 +76,7 @@ $list-group-bg-color: $component-bg-color !default;
       color: $text-muted;
       text-decoration: inherit;
       transition: color 250ms ease;
+      white-space: nowrap;
       &:hover {
         color: $text-color;
         text-decoration: inherit;
