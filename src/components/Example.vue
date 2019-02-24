@@ -1,8 +1,11 @@
 <template>
   <div class="example" :class="exampleClasses">
-    <a class="example-dark-toggle" @click.prevent="toggleDark">{{ darkMode ? 'light' : 'dark'}}</a>
     <div class="example-preview" ref="preview">
       <slot/>
+    </div>
+    <div class="example-toolbar">
+      <button class="button button-xs" @click="toggleDark">{{ darkMode ? 'Light' : 'Dark'}}</button>
+      <button class="button button-xs" @click="copyCode" ref="copyButton">Copy</button>
     </div>
     <code class="example-code" ref="code">{{ code }}</code>
   </div>
@@ -42,6 +45,17 @@ export default {
     },
     toggleDark () {
       this.darkMode = !this.darkMode
+    },
+    copyCode () {
+      this.$clipboard(this.code)
+      const button = this.$refs.copyButton
+      button.disabled = true
+      const initialHtml = button.innerHTML
+      button.innerHTML = 'Copied!'
+      setTimeout(() => {
+        button.innerHTML = initialHtml
+        button.disabled = false
+      }, 1250)
     }
   },
   mounted () {
@@ -53,16 +67,17 @@ export default {
 <style lang="scss" scoped>
 $example-border-color: $component-border-color !default;
 $example-border-radius: $component-border-radius !default;
-$example-preview-bg-color: rgba($gray-dark, .05) !default;
+$example-preview-bg-color: rgba($gray-dark, 0.05) !default;
 $example-preview-dark-bg-color: $gray-darker !default;
 $example-preview-bg-square-size: 10px !default;
 $example-code-bg-color: $gray-light !default;
+$example-font-family-code: $font-family-code !default;
 .example {
   margin: 1em 0;
   border: 1px solid $example-border-color;
   border-radius: $example-border-radius;
   overflow: hidden;
-    position: relative;
+  position: relative;
   &-preview-scroll {
     .example-preview {
       overflow: scroll;
@@ -81,12 +96,35 @@ $example-code-bg-color: $gray-light !default;
   &-preview {
     padding: 32px;
     background-color: white;
-    background-image:
-      linear-gradient(45deg, $example-preview-bg-color 25%, transparent 25%, transparent 75%, $example-preview-bg-color 75%),
-      linear-gradient(45deg, $example-preview-bg-color 25%, transparent 25%, transparent 75%, $example-preview-bg-color 75%);
-    background-size: $example-preview-bg-square-size $example-preview-bg-square-size;
-    background-position: 0 0, ($example-preview-bg-square-size / 2) ($example-preview-bg-square-size / 2);
+    background-image: linear-gradient(
+        45deg,
+        $example-preview-bg-color 25%,
+        transparent 25%,
+        transparent 75%,
+        $example-preview-bg-color 75%
+      ),
+      linear-gradient(
+        45deg,
+        $example-preview-bg-color 25%,
+        transparent 25%,
+        transparent 75%,
+        $example-preview-bg-color 75%
+      );
+    background-size: $example-preview-bg-square-size
+      $example-preview-bg-square-size;
+    background-position: 0 0,
+      ($example-preview-bg-square-size / 2)
+        ($example-preview-bg-square-size / 2);
     transition: all 250ms ease;
+  }
+  &-toolbar {
+    border-top: 1px solid $example-border-color;
+    border-bottom: 1px solid $example-border-color;
+    display: flex;
+    justify-content: flex-end;
+    .button {
+      border-radius: 0;
+    }
   }
   &-code {
     display: block;
@@ -94,7 +132,7 @@ $example-code-bg-color: $gray-light !default;
     background-color: $example-code-bg-color;
     white-space: pre-wrap;
     font-size: 12px;
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: $example-font-family-code;
   }
   &-dark {
     .example-preview {
