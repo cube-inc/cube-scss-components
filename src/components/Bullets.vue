@@ -1,5 +1,6 @@
 <template>
   <section id="Bullets">
+    <nav><a href="#Toc">Top</a></nav>
     <h2>Bullets</h2>
     <Example>
       <p>.bullet <span class="bullet"></span></p>

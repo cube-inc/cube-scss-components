@@ -7,7 +7,7 @@
       </h1>
     </header>
 
-    <nav class="toc">
+    <nav id="Toc" class="toc">
       <h2>Table of content</h2>
       <a href="#Badges">Badges</a>
       <a href="#Bullets">Bullets</a>
@@ -80,6 +80,16 @@ section {
     &:hover {
       text-decoration: none;
       background-color: darken($component-bg-color, 5%);
+    }
+  }
+}
+/deep/
+section {
+  > nav {
+    float: right;
+    > a {
+      display: inline-block;
+      line-height: $font-size-h2 * $line-height-base;
     }
   }
 }

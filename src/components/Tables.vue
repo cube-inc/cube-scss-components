@@ -1,5 +1,6 @@
 <template>
   <section id="Tables">
+    <nav><a href="#Toc">Top</a></nav>
     <h2>Tables</h2>
     <Example>
       <table class="table">

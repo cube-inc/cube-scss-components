@@ -1,5 +1,6 @@
 <template>
   <section id="Pagination">
+    <nav><a href="#Toc">Top</a></nav>
     <h2>Pagination</h2>
     <Example :previewScroll="true">
       <nav class="pagination">

@@ -1,5 +1,6 @@
 <template>
   <section id="ListGroup">
+    <nav><a href="#Toc">Top</a></nav>
 
     <h2>List group</h2>
     <Example>

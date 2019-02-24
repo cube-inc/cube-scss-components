@@ -1,5 +1,6 @@
 <template>
   <section id="Cards">
+    <nav><a href="#Toc">Top</a></nav>
     <h2>Cards</h2>
 
     <Example>

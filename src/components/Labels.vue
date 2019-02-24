@@ -1,5 +1,6 @@
 <template>
   <section id="Labels">
+    <nav><a href="#Toc">Top</a></nav>
     <h2>Labels</h2>
     <Example>
       <p>.label <span class="label">Label</span></p>
