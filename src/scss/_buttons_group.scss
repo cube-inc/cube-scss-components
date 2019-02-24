@@ -3,11 +3,15 @@
     white-space: nowrap;
     > .button {
       border-radius: 0;
-      &:not(.button-outline):not(.button-filled):not(:hover):not(:focus):not(:active):not(:disabled) {
+      &:not(.button-outline):not(.button-filled):not(:hover):not(:focus):not(.active):not(:active):not(:disabled) {
         background-color: rgba($button-primary-color,.05);
       }
       + .button {
-        border-left-width: 0;
+        margin-left: -1px;
+      }
+      &.active:not(:disabled),
+      &:active:not(:disabled) {
+        z-index: 1;
       }
       &:first-child {
         border-top-left-radius: $component-border-radius;

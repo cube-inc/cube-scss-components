@@ -24,6 +24,7 @@ $button-padding-lg: 12px 24px !default;
     &:focus:not(:disabled) {
       background-color: rgba(white,.1);
     }
+    &.active:not(:disabled),
     &:active:not(:disabled) {
       background-color: rgba(white,.2);
     }
@@ -38,6 +39,7 @@ $button-padding-lg: 12px 24px !default;
       &:focus:not(:disabled) {
         background-color: rgba(white, .8);
       }
+      &.active:not(:disabled),
       &:active:not(:disabled) {
         background-color: rgba(white, .7);
       }
@@ -50,6 +52,7 @@ $button-padding-lg: 12px 24px !default;
     &:focus:not(:disabled) {
       background-color: rgba($button-success-color,.1);
     }
+    &.active:not(:disabled),
     &:active:not(:disabled) {
       background-color: rgba($button-success-color,.2);
     }
@@ -63,6 +66,7 @@ $button-padding-lg: 12px 24px !default;
       &:focus:not(:disabled) {
         background-color: rgba($button-success-color, .8);
       }
+      &.active:not(:disabled),
       &:active:not(:disabled) {
         background-color: rgba($button-success-color, .7);
       }
@@ -75,6 +79,7 @@ $button-padding-lg: 12px 24px !default;
     &:focus:not(:disabled) {
       background-color: rgba($button-info-color,.1);
     }
+    &.active:not(:disabled),
     &:active:not(:disabled) {
       background-color: rgba($button-info-color,.2);
     }
@@ -88,6 +93,7 @@ $button-padding-lg: 12px 24px !default;
       &:focus:not(:disabled) {
         background-color: rgba($button-info-color, .8);
       }
+      &.active:not(:disabled),
       &:active:not(:disabled) {
         background-color: rgba($button-info-color, .7);
       }
@@ -100,6 +106,7 @@ $button-padding-lg: 12px 24px !default;
     &:focus:not(:disabled) {
       background-color: rgba($button-warning-color,.1);
     }
+    &.active:not(:disabled),
     &:active:not(:disabled) {
       background-color: rgba($button-warning-color,.2);
     }
@@ -113,6 +120,7 @@ $button-padding-lg: 12px 24px !default;
       &:focus:not(:disabled) {
         background-color: rgba($button-warning-color, .8);
       }
+      &.active:not(:disabled),
       &:active:not(:disabled) {
         background-color: rgba($button-warning-color, .7);
       }
@@ -125,6 +133,7 @@ $button-padding-lg: 12px 24px !default;
     &:focus:not(:disabled) {
       background-color: rgba($button-danger-color,.1);
     }
+    &.active:not(:disabled),
     &:active:not(:disabled) {
       background-color: rgba($button-danger-color,.2);
     }
@@ -138,6 +147,7 @@ $button-padding-lg: 12px 24px !default;
       &:focus:not(:disabled) {
         background-color: rgba($button-danger-color, .8);
       }
+      &.active:not(:disabled),
       &:active:not(:disabled) {
         background-color: rgba($button-danger-color, .7);
       }

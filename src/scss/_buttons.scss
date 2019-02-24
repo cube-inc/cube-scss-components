@@ -34,6 +34,7 @@ $button-primary-color: $brand-secondary !default;
     text-decoration: none;
     background-color: rgba($button-primary-color,.1);
   }
+  &.active:not(:disabled),
   &:active:not(:disabled) {
     background-color: rgba($button-primary-color,.2);
   }

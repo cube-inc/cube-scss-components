@@ -9,6 +9,7 @@ $button-filled-bg-color: $button-primary-color !default;
     &:focus:not(:disabled) {
       background-color: rgba($button-filled-bg-color, .8);
     }
+    &.active:not(:disabled),
     &:active:not(:disabled) {
       background-color: rgba($button-filled-bg-color, .7);
     }
