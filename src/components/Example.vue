@@ -137,6 +137,7 @@ $example-font-family-code: $font-family-code !default;
   }
   &-dark {
     .example-preview {
+      color: white;
       background-color: $example-preview-dark-bg-color;
     }
   }
