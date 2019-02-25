@@ -1,6 +1,6 @@
 {
   "name": "cube-scss-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic SCSS components of Cube web apps",
   "author": "Fred Gomez <fred@cube.rentals>",
   "license": "MIT",
@@ -22,9 +22,6 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "highlight.js": "^9.14.2",
-    "v-clipboard": "^2.2.1",
-    "vue": "^2.6.6",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
@@ -32,8 +29,11 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "highlight.js": "^9.14.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "v-clipboard": "^2.2.1",
+    "vue": "^2.6.6",
     "vue-template-compiler": "^2.5.21"
   }
 }
