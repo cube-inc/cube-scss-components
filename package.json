@@ -20,13 +20,11 @@
   "files": [
     "src/scss/**/*.scss"
   ],
-  "main": "src/scss/index.scss",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "highlight.js": "^9.14.2",
     "v-clipboard": "^2.2.1",
-    "vue": "^2.6.6"
-  },
-  "devDependencies": {
+    "vue": "^2.6.6",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
