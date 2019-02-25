@@ -75,4 +75,4 @@ $screen-md: 992px !default;
 $screen-md-max: ($screen-md - 1px) !default;
 
 // Buttons
-$button-primary-color: lighten($brand-secondary, 25%);
+$button-primary-color: lighten($brand-secondary, 25%) !default;
