@@ -8,6 +8,7 @@ $card-list-grid-gap: 10px !default;
 .card {
   border-radius: $card-border-radius;
   border: $card-border-size solid $card-border-color;
+  color: $text-color;
   background-color: $card-bg-color;
   list-style: none;
   padding: 0;
