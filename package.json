@@ -1,12 +1,26 @@
 {
   "name": "cube-scss-components",
   "version": "0.1.0",
-  "private": true,
+  "description": "Basic SCSS components of Cube web apps",
+  "author": "Fred Gomez <fred@cube.rentals>",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cube-inc/cube-scss-components.git"
+  },
+  "keywords": [
+    "scss"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "src/scss/**/*.scss"
+  ],
+  "main": "src/scss/index.scss",
   "dependencies": {
     "highlight.js": "^9.14.2",
     "v-clipboard": "^2.2.1",
