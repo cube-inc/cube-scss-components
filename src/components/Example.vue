@@ -68,7 +68,7 @@ export default {
 $example-padding: 16px !default;
 $example-border-color: $component-border-color !default;
 $example-border-radius: $component-border-radius !default;
-$example-preview-bg-color: rgba($gray-dark, 0.05) !default;
+$example-preview-bg-color: rgba($gray-dark, 0.1) !default;
 $example-preview-dark-bg-color: $gray-darker !default;
 $example-preview-bg-square-size: 10px !default;
 $example-code-bg-color: $gray-light !default;
