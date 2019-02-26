@@ -43,7 +43,8 @@ export default {
       this.darkMode = !this.darkMode
     },
     copyCode () {
-      this.$clipboard(this.code)
+      const html = this.$refs.code.innerText
+      this.$clipboard(html)
       const button = this.$refs.copyButton
       button.disabled = true
       const initialHtml = button.innerHTML
