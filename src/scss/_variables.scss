@@ -63,6 +63,7 @@ $component-backdrop-filter: saturate($component-filter-saturate) blur($component
 $component-border-radius: 6px !default;
 $component-border-radius-sm: 3px !default;
 $component-padding: 12px 16px !default;
+$component-box-shadow: 0px 3px 6px -2px $gray-darker !default;
 
 // Breakpoints
 $screen-xs: 576px !default;
