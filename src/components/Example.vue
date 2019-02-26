@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import vnodesToString from '@/services/vnodeToString'
+import vnodesToHtml from '@/services/vnodeService'
 import hljs from 'highlight.js/lib/highlight'
 
 export default {
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     format () {
-      this.code = vnodesToString(this.$slots.default)
+      this.code = vnodesToHtml(this.$slots.default)
       this.$nextTick(() => {
         hljs.highlightBlock(this.$refs.code)
       })
