@@ -6,6 +6,8 @@ $card-padding: $component-padding !default;
 $card-list-grid-gap: 10px !default;
 
 .card {
+  display: flex;
+  flex-direction: column;
   border-radius: $card-border-radius;
   border: $card-border-size solid $card-border-color;
   color: $text-color;
@@ -42,6 +44,7 @@ $card-list-grid-gap: 10px !default;
   }
   &-body {
     padding: $card-padding;
+    flex-grow: 1;
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
     }
