@@ -7,7 +7,7 @@
       <button class="button button-xs" @click="toggleDark">{{ darkMode ? 'Light' : 'Dark'}}</button>
       <button class="button button-xs" @click="copyCode" ref="copyButton">Copy</button>
     </div>
-    <code class="example-code" ref="code">{{ code }}</code>
+    <code class="example-code code-block" ref="code">{{ code }}</code>
   </div>
 </template>
 
