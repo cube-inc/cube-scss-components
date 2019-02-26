@@ -36,18 +36,19 @@ const blockElements = [
   'svg'
 ]
 
-export default function vnodesToHtml (vnodes) {
-  return new Nodes(vnodes).toHtml()
+export default function vnodesToHtml (vnodes, options = {}) {
+  return new Nodes(vnodes, options).toHtml()
 }
 
 export class Nodes extends Array {
-  constructor (vnodes) {
+  constructor (vnodes, options = {}) {
     const items = []
     if (vnodes instanceof Array) {
-      vnodes.forEach(vnode => items.push(new Node(vnode)))
+      vnodes.forEach(vnode => items.push(new Node(vnode, options)))
     }
     super(...items)
     this.vnodes = vnodes
+    this.options = options
   }
   toHtml () {
     return this
@@ -57,12 +58,13 @@ export class Nodes extends Array {
 }
 
 export class Node {
-  constructor (vnode) {
+  constructor (vnode, options = {}) {
     this.vnode = vnode
     this.tag = vnode.tag
-    this.attrs = new Attrs(vnode)
-    this.children = new Children(vnode)
+    this.attrs = new Attrs(vnode, options)
+    this.children = new Children(vnode, options)
     this.text = vnode.text
+    this.options = options
   }
   isTag () {
     return Boolean(this.vnode.tag)
@@ -96,7 +98,7 @@ export class Node {
 }
 
 export class Attrs extends Array {
-  constructor (vnode) {
+  constructor (vnode, options = {}) {
     const items = []
     const { data } = vnode
     if (data instanceof Object) {
@@ -109,15 +111,16 @@ export class Attrs extends Array {
         classes.push(data.class)
       }
       if (classes.length) {
-        items.push(new Attr('class', classes.join(' ')))
+        items.push(new Attr('class', classes.join(' '), options))
       }
       if (attrs instanceof Object) {
         Object.keys(attrs)
-          .forEach(key => items.push(new Attr(key, attrs[key])))
+          .forEach(key => items.push(new Attr(key, attrs[key], options)))
       }
     }
     super(...items)
     this.vnode = vnode
+    this.options = options
   }
   toHtml () {
     return this
@@ -128,9 +131,10 @@ export class Attrs extends Array {
 }
 
 export class Attr {
-  constructor (name, value) {
+  constructor (name, value, options = {}) {
     this.name = name
     this.value = value
+    this.options = options
   }
   toHtml () {
     if (typeof this.value === 'boolean') {
@@ -145,14 +149,15 @@ export class Attr {
 }
 
 export class Children extends Array {
-  constructor (vnode) {
+  constructor (vnode, options = {}) {
     const items = []
     const { children } = vnode
     if (children instanceof Array) {
-      children.forEach(vnode => items.push(new Node(vnode)))
+      children.forEach(vnode => items.push(new Node(vnode, options)))
     }
     super(...items)
     this.vnode = vnode
+    this.options = options
   }
   hasBlockElements () {
     return this.some(node => node.isBlockElement())
