@@ -16,7 +16,7 @@ $brand-danger: $grenadine !default;
 
 // Text
 $text-color: $brand-secondary !default;
-$text-muted: rgba($brand-secondary, .5) !default;
+$text-muted: mix(rgba($brand-secondary, .8), white) !default;
 $text-danger: $brand-danger !default;
 $link-color: $grenadine !default;
 

@@ -6,7 +6,7 @@ $label-font-size-xs: $font-size-base * .5 !default;
 $label-font-weight: 500 !default;
 $label-text-transform: uppercase !default;
 $label-color: $text-color !default;
-$label-bg-color: rgba($text-color, .15) !default;
+$label-bg-color: mix(rgba($text-color,.35), white) !default;
 $label-success-bg-color: rgba($brand-success, .15) !default;
 $label-success-color: $brand-success !default;
 $label-info-bg-color: rgba($brand-info, .15) !default;
