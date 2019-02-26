@@ -36,6 +36,14 @@ const blockElements = [
   'svg'
 ]
 
+export function escapeHtml (string) {
+  return string
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
 export default function vnodesToHtml (vnodes, options = {}) {
   return new Nodes(vnodes, options).toHtml()
 }
@@ -66,6 +74,9 @@ export class Node {
     this.text = vnode.text
     this.options = options
   }
+  isHighlighted () {
+    return Boolean(this.options.highlight)
+  }
   isTag () {
     return Boolean(this.vnode.tag)
   }
@@ -78,22 +89,40 @@ export class Node {
   isBlockElement () {
     return blockElements.indexOf(this.vnode.tag) > -1
   }
+  tagToHtml () {
+    return this.isHighlighted()
+      ? `<span class="code-tag">${this.tag}</span>`
+      : this.tag
+  }
+  openTagToHtml () {
+    const tag = this.tagToHtml()
+    const attrs = this.attrs.toHtml()
+    return this.isHighlighted()
+      ? `&lt;${tag}${attrs}&gt;` + (this.tag === 'br' ? '<br>' : '')
+      : `<${tag}${attrs}>` + (this.tag === 'br' ? '\n' : '')
+  }
+  closeTagToHtml () {
+    const tag = this.tagToHtml()
+    return this.isHighlighted()
+      ? `&lt;/${tag}&gt;`
+      : `</${tag}>`
+  }
+  textToHtml () {
+    return this.isHighlighted()
+      ? escapeHtml(escapeHtml(this.text))
+      : escapeHtml(this.text)
+  }
   toHtml () {
     if (this.isTag()) {
-      const tag = this.tag
-      const attrs = this.attrs.toHtml()
+      const openTag = this.openTagToHtml()
       if (this.isVoidElement()) {
-        // Not sure this is the responsibility of Node to add \n when br
-        return `<${tag}${attrs}>` + (tag === 'br' ? '\n' : '')
+        return openTag
       }
       const children = this.children.toHtml()
-      return `<${tag}${attrs}>${children}</${tag}>`
+      const closeTag = this.closeTagToHtml()
+      return `${openTag}${children}${closeTag}`
     }
-    return this.text
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
+    return this.textToHtml()
   }
 }
 
@@ -136,15 +165,29 @@ export class Attr {
     this.value = value
     this.options = options
   }
+  isHighlighted () {
+    return Boolean(this.options.highlight)
+  }
+  nameToHtml () {
+    return this.isHighlighted()
+      ? `<span class="code-attr">${this.name}</span>`
+      : this.name
+  }
+  valueToHtml () {
+    const value = ['src', 'href'].indexOf(this.name) > -1 ? '…' : this.value
+    return this.isHighlighted()
+      ? `<span class="code-attr-val">&quot;${value}&quot;</span>`
+      : `"${value}"`
+  }
   toHtml () {
     if (typeof this.value === 'boolean') {
-      return this.value ? this.name : null
+      return this.value ? this.nameToHtml() : null
     }
     if (this.value === '') {
-      return this.name
+      return this.nameToHtml()
     }
-    const value = ['src', 'href'].indexOf(this.name) > -1 ? '…' : this.value
-    return `${this.name}="${value}"`
+    const value = this.valueToHtml()
+    return `${this.nameToHtml()}=${value}`
   }
 }
 

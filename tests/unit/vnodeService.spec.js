@@ -120,6 +120,11 @@ describe('vnodeService', () => {
       .toStrictEqual('<p>This is <strong>strong</strong> text</p>')
   })
 
+  test('Node renders code properly', () => {
+    expect(new Node(<code>&lt;li&gt;Test&lt;/li&gt;</code>).toHtml())
+      .toStrictEqual('<code>&lt;li&gt;Test&lt;/li&gt;</code>')
+  })
+
   test('Node renders complexe html', () => {
     const node = new Node(
       <fieldset class="form-group">
@@ -152,5 +157,20 @@ describe('vnodeService', () => {
     expect(new Nodes(vnodes).toHtml()).toStrictEqual(`<p>Paragraph 1</p>
 <p>Paragraph 2</p>
 <p>Paragraph 3</p>`)
+  })
+
+  test('Attr highlight properly', () => {
+    expect(new Attr('class', 'test-class', { highlight: true }).toHtml())
+      .toStrictEqual('<span class="code-attr">class</span>=<span class="code-attr-val">&quot;test-class&quot;</span>')
+  })
+
+  test('Tag node highlight properly', () => {
+    expect(new Node(<div>Inner text</div>, { highlight: true }).toHtml())
+      .toStrictEqual('&lt;<span class="code-tag">div</span>&gt;Inner text&lt;/<span class="code-tag">div</span>&gt;')
+  })
+
+  test('Node highlight code properly', () => {
+    expect(new Node(<code>&lt;li&gt;Test&lt;/li&gt;</code>, { highlight: true }).toHtml())
+      .toStrictEqual('&lt;<span class="code-tag">code</span>&gt;&amp;lt;li&amp;gt;Test&amp;lt;/li&amp;gt;&lt;/<span class="code-tag">code</span>&gt;')
   })
 })

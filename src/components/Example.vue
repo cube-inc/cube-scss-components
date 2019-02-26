@@ -7,13 +7,12 @@
       <button class="button button-xs" @click="toggleDark">{{ darkMode ? 'Light' : 'Dark'}}</button>
       <button class="button button-xs" @click="copyCode" ref="copyButton">Copy</button>
     </div>
-    <code class="example-code code-block" ref="code">{{ code }}</code>
+    <code class="example-code code-block" ref="code" v-html="code"></code>
   </div>
 </template>
 
 <script>
 import vnodesToHtml from '@/services/vnodeService'
-import hljs from 'highlight.js/lib/highlight'
 
 export default {
   name: 'Example',
@@ -38,10 +37,7 @@ export default {
   },
   methods: {
     format () {
-      this.code = vnodesToHtml(this.$slots.default)
-      this.$nextTick(() => {
-        hljs.highlightBlock(this.$refs.code)
-      })
+      this.code = vnodesToHtml(this.$slots.default, { highlight: true })
     },
     toggleDark () {
       this.darkMode = !this.darkMode
@@ -134,6 +130,22 @@ $example-font-family-code: $font-family-code !default;
     white-space: pre-wrap;
     font-size: 12px;
     font-family: $example-font-family-code;
+    color: #212529;
+    /deep/
+    .code {
+      &-tag {
+        // color: #000080;
+        color: #2f6f9f;
+      }
+      &-attr {
+        // color: #008080;
+        color: #4f9fcf;
+        &-val {
+          // color: #dd1144;
+          color: #d44950;
+        }
+      }
+    }
   }
   &-dark {
     .example-preview {
