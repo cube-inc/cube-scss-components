@@ -1,4 +1,4 @@
-$button-shadow: 0px 3px 6px -2px $gray-darker !default;
+$button-shadow: $component-box-shadow !default;
 $button-shadow-hover: $button-shadow !default;
 $button-shadow-active: 0px 2px 2px -1px $gray-darker !default;
 
