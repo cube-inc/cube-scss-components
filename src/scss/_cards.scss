@@ -65,6 +65,9 @@ $card-list-grid-gap: 10px !default;
       border-top: 0 none;
     }
   }
+  &-shadow {
+    box-shadow: $component-box-shadow;
+  }
   &-list {
     display: grid;
     grid-gap: $card-list-grid-gap;
