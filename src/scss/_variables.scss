@@ -1,86 +1,96 @@
 // Colors
-$outremer: #1a0078 !default;
-$outremer-text: #1a004f !default;
+$navy:   #1a004f !default;
+$blue:   #2c00ca !default;
 $indigo: #738cff !default;
-$grenadine: #ff405e !default;
-$citron: #ffe51f !default;
-$creme: #fffae5 !default;
-
-// Brand colors
-$brand-primary: $citron !default;
-$brand-secondary: $outremer-text !default;
-$brand-success: #3ecf8e !default;
-$brand-info: $indigo !default;
-$brand-warning: darken($citron, 10%) !default;
-$brand-danger: $grenadine !default;
-
-// Text
-$text-color: $brand-secondary !default;
-$text-muted: mix(rgba($brand-secondary, .8), white) !default;
-$text-danger: $brand-danger !default;
-$link-color: $grenadine !default;
+$purple: #6f42c1 !default;
+$pink:   #e83e8c !default;
+$red:    #ff405e !default;
+$orange: #fd7e14 !default;
+$yellow: #f2d30c !default;
+$green:  #28a745 !default;
+$teal:   #20c997 !default;
+$cyan:   #17a2b8 !default;
 
 // Grays
-$gray-lighter:  hsl(210, 17%, 98%) !default;
-$gray-light:    hsl(210, 16%, 93%) !default;
-$gray:          hsl(210, 14%, 89%) !default;
-$gray-dark:     hsl(210, 10%, 66%) !default;
-$gray-darker:   hsl(210,  5%, 33%) !default;
+$gray-020: hsl(210, 10%,  98%) !default;
+$gray-050: hsl(210, 10%,  95%) !default;
+$gray-070: hsl(210, 10%,  93%) !default;
+$gray-100: hsl(210, 10%,  90%) !default;
+$gray-200: hsl(210, 10%,  80%) !default;
+$gray-300: hsl(210, 10%,  70%) !default;
+$gray-400: hsl(210, 10%,  60%) !default;
+$gray-500: hsl(210, 10%,  50%) !default;
+$gray-600: hsl(210, 10%,  40%) !default;
+$gray-700: hsl(210, 10%,  30%) !default;
+$gray-800: hsl(210, 10%,  20%) !default;
+$gray-900: hsl(210, 10%,  10%) !default;
 
-// Types
-$line-height-base: 1.5 !default;
+// Brand colors
+$brand-primary:   $blue !default;
+$brand-secondary: $yellow !default;
+$brand-success:   $teal !default;
+$brand-info:      $indigo !default;
+$brand-warning:   $yellow !default;
+$brand-danger:    $red !default;
+
+// Text
+$text-color: $navy !default;
+$text-muted: mix(rgba($text-color, .8), white) !default;
+$text-danger: $brand-danger !default;
+$link-color: $red !default;
+
+// Font families
 $font-family-base: "Helvetica Neue", "Ubuntu", "Roboto", "Noto", "Segoe UI", "Arial", sans-serif !default;
 $font-family-code: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-weight-base: normal !default;
-$font-weight-bold: bold !default;
+$font-family-headings: $font-family-base !default;
+$font-family-h1: $font-family-headings !default;
+$font-family-h2: $font-family-headings !default;
+$font-family-h3: $font-family-headings !default;
+$font-family-h4: $font-family-headings !default;
+$font-family-h5: $font-family-headings !default;
+$font-family-h6: $font-family-headings !default;
+
+// Font sizes
 $font-size-base: 1em !default;
-$font-size-sm: $font-size-base * .875 !default;
-$font-size-xs: $font-size-base * .625 !default;
-
-$headings-font-weight: $font-weight-bold !default;
-$headings-line-height: $line-height-base !default;
-
-$font-size-h1: $font-size-base * 2 !default;
-$font-size-h2: $font-size-base * 1.5 !default;
-$font-size-h3: $font-size-base !default;
+$font-size-code: $font-size-base * .75 !default;
+$font-size-h1: $font-size-base * 3 !default;
+$font-size-h2: $font-size-base * 2 !default;
+$font-size-h3: $font-size-base * 1.5 !default;
 $font-size-h4: $font-size-base !default;
 $font-size-h5: $font-size-base !default;
 $font-size-h6: $font-size-base !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-xs: $font-size-base * .625 !default;
 
-$font-weight-h1: $headings-font-weight !default;
-$font-weight-h2: $headings-font-weight !default;
-$font-weight-h3: $headings-font-weight !default;
-$font-weight-h4: $headings-font-weight !default;
-$font-weight-h5: $headings-font-weight !default;
-$font-weight-h6: $headings-font-weight !default;
+// Font weights
+$font-weight-base: normal !default;
+$font-weight-bold: bold !default;
+$font-weight-headings: bold !default;
+$font-weight-h1: $font-weight-headings !default;
+$font-weight-h2: $font-weight-headings !default;
+$font-weight-h3: $font-weight-headings !default;
+$font-weight-h4: $font-weight-headings !default;
+$font-weight-h5: $font-weight-headings !default;
+$font-weight-h6: $font-weight-headings !default;
 
-// Outline
-$outline-color: rgba($brand-secondary,.4) !default;
-$outline: 0 0 1rem $outline-color !default;
+// Line heights
+$line-height-base: 1.5 !default;
+$line-height-headings: $line-height-base !default;
 
-// Component
+// Headings
+$headings-margin-top: 1em !default;
+$headings-margin-bottom: 1em !default;
+
+// Components
 $component-border-size: 1px !default;
-$component-border-color: $gray !default;
+$component-border-color: $gray-100 !default;
 $component-bg-color: white !default;
-$component-bg-color-light: $gray-light !default;
-$component-bg-color-alt: $creme !default;
 $component-filter-saturate: 300% !default;
 $component-filter-blur: 20px !default;
 $component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;
 $component-border-radius: 6px !default;
 $component-border-radius-sm: 3px !default;
 $component-padding: 12px 16px !default;
-$component-box-shadow: 0px 3px 6px -2px $gray-darker !default;
-
-// Breakpoints
-$screen-xs: 576px !default;
-$screen-xs-max: ($screen-xs - 1px) !default;
-
-$screen-sm: 768px !default;
-$screen-sm-max: ($screen-sm - 1px) !default;
-
-$screen-md: 992px !default;
-$screen-md-max: ($screen-md - 1px) !default;
-
-// Buttons
-$button-primary-color: lighten($brand-secondary, 25%) !default;
+$component-box-shadow: 0px 3px 6px -2px $gray-700 !default;
+$component-outline-color: rgba(black, .2) !default;
+$component-outline: 0 0 1rem $component-outline-color !default;

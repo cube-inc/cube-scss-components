@@ -1,37 +1,4 @@
-$button-shadow: $component-box-shadow !default;
-$button-shadow-hover: $button-shadow !default;
-$button-shadow-active: 0px 2px 2px -1px $gray-darker !default;
-
-$button-success-color: $brand-success !default;
-$button-info-color: $brand-info !default;
-$button-warning-color: $brand-warning !default;
-$button-danger-color: $brand-danger !default;
-$button-lightness-threshold: 57;
-
-$button-font-size-xs: 9px;
-$button-padding-xs: 5px 10px !default;
-
-$button-font-size-sm: 11px;
-$button-padding-sm: 8px 16px !default;
-
-$button-font-size-md: 14px;
-$button-padding-md: 11px 22px !default;
-
-$button-font-size-lg: 16px;
-$button-padding-lg: 12px 24px !default;
-
 .button {
-  &-shadow {
-    box-shadow: $button-shadow;
-    &:hover:not(:disabled),
-    &:focus:not(:disabled) {
-      box-shadow: $button-shadow-hover;
-    }
-    &.active:not(:disabled),
-    &:active:not(:disabled) {
-      box-shadow: $button-shadow-active;
-    }
-  }
   &-white {
     color: white;
     &:hover:not(:disabled),
@@ -79,7 +46,7 @@ $button-padding-lg: 12px 24px !default;
       background-color: transparent;
     }
     &.button-filled:not(:disabled) {
-      color: if(lightness($button-warning-color) > $button-lightness-threshold, $button-primary-color, white);
+      color: $button-filled-color;
       background-color: $button-success-color;
       &:hover,
       &:focus {
@@ -105,7 +72,7 @@ $button-padding-lg: 12px 24px !default;
       background-color: transparent;
     }
     &.button-filled:not(:disabled) {
-      color: if(lightness($button-warning-color) > $button-lightness-threshold, $button-primary-color, white);
+      color: $button-filled-color;
       background-color: $button-info-color;
       &:hover,
       &:focus {
@@ -131,7 +98,7 @@ $button-padding-lg: 12px 24px !default;
       background-color: transparent;
     }
     &.button-filled:not(:disabled) {
-      color: if(lightness($button-warning-color) > $button-lightness-threshold, $button-primary-color, white);
+      color: $button-filled-color;
       background-color: $button-warning-color;
       &:hover,
       &:focus {
@@ -157,7 +124,7 @@ $button-padding-lg: 12px 24px !default;
       background-color: transparent;
     }
     &.button-filled:not(:disabled) {
-      color: if(lightness($button-warning-color) > $button-lightness-threshold, $button-primary-color, white);
+      color: $button-filled-color;
       background-color: $button-danger-color;
       &:hover,
       &:focus {
@@ -168,21 +135,5 @@ $button-padding-lg: 12px 24px !default;
         background-color: rgba($button-danger-color, .7);
       }
     }
-  }
-  &-xs {
-    font-size: $button-font-size-xs;
-    padding: $button-padding-xs;
-  }
-  &-sm {
-    font-size: $button-font-size-sm;
-    padding: $button-padding-sm;
-  }
-  &-md {
-    font-size: $button-font-size-md;
-    padding: $button-padding-md;
-  }
-  &-lg {
-    font-size: $button-font-size-lg;
-    padding: $button-padding-lg;
   }
 }

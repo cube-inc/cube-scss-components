@@ -1,8 +1,8 @@
 $table-cell-padding-vertical: .3rem !default;
 $table-cell-padding-horizontal: .6rem !default;
 $table-cell-padding: $table-cell-padding-vertical $table-cell-padding-horizontal !default;
-$table-cell-hover-bg-color: rgba($gray, .5) !default;
-$table-cell-striped-bg-color: rgba($gray-light, .5) !default;
+$table-cell-hover-bg-color: rgba($gray-100, .5) !default;
+$table-cell-striped-bg-color: rgba($gray-070, .5) !default;
 $table-border-size: $component-border-size !default;
 $table-border-color: $component-border-color !default;
 $table-border-radius: $component-border-radius !default;
@@ -88,27 +88,6 @@ $table-border-radius: $component-border-radius !default;
     > tbody {
       > tr:hover {
         background-color: $table-cell-hover-bg-color;
-      }
-    }
-  }
-}
-.table-block {
-  display: block;
-}
-.table-transpose-xs {
-  @media (max-width: $screen-xs-max) {
-    > tbody {
-      display: block;
-      > tr {
-        display: block;
-        margin: $table-cell-padding-vertical 0;
-        padding-top: ($table-cell-padding-vertical / 2);
-        > th,
-        > td {
-          display: block;
-          padding: 0;
-          margin: ($table-cell-padding-vertical / 2) 0;
-        }
       }
     }
   }

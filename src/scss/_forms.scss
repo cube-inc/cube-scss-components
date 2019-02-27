@@ -8,7 +8,7 @@ $form-control-padding: $component-padding !default;
 $form-control-font-size: $font-size-base !default;
 $form-control-font-family: $font-family-base !default;
 $form-control-font-weight: $font-weight-base !default;
-$form-control-ouline: $outline !default;
+$form-control-ouline: $component-outline !default;
 $form-label-font-weight: $font-weight-bold !default;
 $form-switch-active-color: $form-control-color !default;
 $form-switch-size: floor(($font-size-base * $line-height-base)) !default;
@@ -54,10 +54,13 @@ $form-switch-inner-padding: 2px !default;
     &:focus:not(:disabled):not(:read-only) {
       box-shadow: $form-control-ouline;
     }
-    &.disabled,
-    &:disabled,
     &:read-only:not(select) {
       cursor: default;
+      color: $form-control-muted-color;
+    }
+    &.disabled,
+    &:disabled {
+      cursor: not-allowed;
       color: $form-control-muted-color;
     }
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

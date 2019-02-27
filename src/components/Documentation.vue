@@ -82,7 +82,7 @@ section {
     transition: all 250ms ease;
     &:hover {
       text-decoration: none;
-      background-color: $gray-light;
+      background-color: $gray-070;
     }
   }
 }

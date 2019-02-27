@@ -1,5 +1,5 @@
 $slider-track-height: 20px !default;
-$slider-track-background-color: $gray-lighter !default;
+$slider-track-background-color: $gray-020 !default;
 $slider-track-border: 0 none !default;
 $slider-track-border-radius: $slider-track-height/2 !default;
 $slider-thumb-width: 35px !default;
@@ -7,7 +7,7 @@ $slider-thumb-height: 35px !default;
 $slider-thumb-background-color: $text-color !default;
 $slider-thumb-border: 0 none !default;
 $slider-thumb-border-radius: 50% !default;
-$slider-thumb-outline: $outline !default;
+$slider-thumb-outline: $component-outline !default;
 
 .slider {
   appearance: none;

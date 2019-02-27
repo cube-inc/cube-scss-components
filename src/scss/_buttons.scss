@@ -4,8 +4,48 @@ $button-font-weight: 500 !default;
 $button-text-transform: uppercase !default;
 $button-border-radius: $component-border-radius-sm !default;
 $button-padding: 10px 10px !default;
+$button-transition: all 100ms ease !default;
 
-$button-primary-color: $brand-secondary !default;
+// button colors
+$button-primary-color: $brand-primary !default;
+$button-success-color: $brand-success !default;
+$button-info-color: $brand-info !default;
+$button-warning-color: $brand-warning !default;
+$button-danger-color: $brand-danger !default;
+
+// button-list
+$button-list-gap: 2px !default;
+
+// button-outline
+$button-outline-border-color: $component-border-color !default;
+$button-outline-bg-color: transparent !default;
+$button-outline-padding: $button-padding !default;
+
+// button-filled
+$button-filled-color: white !default;
+$button-filled-bg-color: $button-primary-color !default;
+$button-filled-padding: $button-padding !default;
+
+// button-xs
+$button-font-size-xs: 9px;
+$button-padding-xs: 5px 10px !default;
+
+// button-sm
+$button-font-size-sm: 11px;
+$button-padding-sm: 8px 16px !default;
+
+// button-md
+$button-font-size-md: 14px;
+$button-padding-md: 11px 22px !default;
+
+// button-lg
+$button-font-size-lg: 16px;
+$button-padding-lg: 12px 24px !default;
+
+// button-shadow
+$button-shadow: $component-box-shadow !default;
+$button-shadow-hover: $button-shadow !default;
+$button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
 
 .button {
   cursor: pointer;
@@ -28,9 +68,7 @@ $button-primary-color: $brand-secondary !default;
   color: $button-primary-color;
   border: 1px solid transparent;
   background-color: transparent;
-  transition:
-    all 250ms ease,
-    box-shadow 100ms ease;
+  transition: $button-transition;
   &:hover:not(:disabled),
   &:focus:not(:disabled) {
     text-decoration: none;
@@ -47,5 +85,96 @@ $button-primary-color: $brand-secondary !default;
   }
   > * + * {
     padding-left: 1em;
+  }
+  &-outline {
+    border-color: $button-outline-border-color;
+    background-color: $button-outline-bg-color;
+    padding: $button-outline-padding;
+  }
+  &-filled {
+    background-color: $button-filled-bg-color;
+    color: $button-filled-color;
+    padding: $button-filled-padding;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      background-color: rgba($button-filled-bg-color, .8);
+    }
+    &.active:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: rgba($button-filled-bg-color, .7);
+    }
+    &:disabled {
+      background-color: lighten(grayscale($button-filled-bg-color), 50%);
+      color: darken(grayscale($button-filled-bg-color), 25%);
+    }
+  }
+  &-shadow {
+    box-shadow: $button-shadow;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      box-shadow: $button-shadow-hover;
+    }
+    &.active:not(:disabled),
+    &:active:not(:disabled) {
+      box-shadow: $button-shadow-active;
+    }
+  }
+  &-list {
+    margin: -$button-list-gap;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    > .button,
+    > .button-group {
+      margin: $button-list-gap;
+    }
+  }
+  &-list-right {
+    justify-content: flex-end;
+  }
+  &-list-grow {
+    > .button {
+      flex-grow: 1;
+    }
+  }
+  &-group {
+    white-space: nowrap;
+    > .button {
+      border-radius: 0;
+      &:not(.button-outline):not(.button-filled):not(:hover):not(:focus):not(.active):not(:active):not(:disabled) {
+        background-color: rgba($button-primary-color,.05);
+      }
+      + .button {
+        margin-left: -1px;
+      }
+      &.active:not(:disabled),
+      &:active:not(:disabled) {
+        z-index: 1;
+      }
+      &:first-child {
+        border-top-left-radius: $component-border-radius;
+        border-bottom-left-radius: $component-border-radius;
+      }
+      &:last-child {
+        border-top-right-radius: $component-border-radius;
+        border-bottom-right-radius: $component-border-radius;
+      }
+    }
+  }
+  &-xs {
+    font-size: $button-font-size-xs;
+    padding: $button-padding-xs;
+  }
+  &-sm {
+    font-size: $button-font-size-sm;
+    padding: $button-padding-sm;
+  }
+  &-md {
+    font-size: $button-font-size-md;
+    padding: $button-padding-md;
+  }
+  &-lg {
+    font-size: $button-font-size-lg;
+    padding: $button-padding-lg;
   }
 }
