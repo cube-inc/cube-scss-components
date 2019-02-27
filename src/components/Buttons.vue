@@ -3,7 +3,7 @@
     <nav><a href="#Toc">Top</a></nav>
     <h2>Buttons</h2>
 
-    <h3>Button style</h3>
+    <h3>Button styles</h3>
     <Example>
       <div class="button-list">
         <button class="button">Button</button>
