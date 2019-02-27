@@ -65,11 +65,15 @@ export default {
 $example-padding: 16px !default;
 $example-border-color: $component-border-color !default;
 $example-border-radius: $component-border-radius !default;
-$example-preview-bg-color: rgba($gray-dark, 0.1) !default;
-$example-preview-dark-bg-color: $gray-darker !default;
+$example-preview-bg-color: rgba($gray-300, 0.1) !default;
+$example-preview-dark-bg-color: $gray-700 !default;
 $example-preview-bg-square-size: 10px !default;
-$example-code-bg-color: $gray-light !default;
-$example-font-family-code: $font-family-code !default;
+$example-code-bg-color: $gray-070 !default;
+
+$code-tag-color: $blue;
+$code-attr-color: $cyan;
+$code-attr-val-color: $red;
+
 .example {
   margin: 1em 0;
   border: 1px solid $example-border-color;
@@ -129,21 +133,15 @@ $example-font-family-code: $font-family-code !default;
     padding: $example-padding;
     background-color: $example-code-bg-color;
     white-space: pre-wrap;
-    font-size: 12px;
-    font-family: $example-font-family-code;
-    color: #212529;
     /deep/
     .code {
       &-tag {
-        // color: #000080;
-        color: #2f6f9f;
+      color: $code-tag-color;
       }
       &-attr {
-        // color: #008080;
-        color: #4f9fcf;
+        color: $code-attr-color;
         &-val {
-          // color: #dd1144;
-          color: #d44950;
+          color: $code-attr-val-color;
         }
       }
     }
