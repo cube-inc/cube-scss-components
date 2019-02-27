@@ -42,6 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-family: $headings-h1-font-family;
   font-size: $font-size-h1;
+  font-weight: $font-weight-h1;
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-h1 * .75;
   }
@@ -49,22 +50,27 @@ h1 {
 h2 {
   font-family: $headings-h2-font-family;
   font-size: $font-size-h2;
+  font-weight: $font-weight-h2;
 }
 h3 {
   font-family: $headings-h3-font-family;
   font-size: $font-size-h3;
+  font-weight: $font-weight-h3;
 }
 h4 {
   font-family: $headings-h4-font-family;
   font-size: $font-size-h4;
+  font-weight: $font-weight-h4;
 }
 h5 {
   font-family: $headings-h5-font-family;
   font-size: $font-size-h5;
+  font-weight: $font-weight-h5;
 }
 h6 {
   font-family: $headings-h6-font-family;
   font-size: $font-size-h6;
+  font-weight: $font-weight-h6;
 }
 hr {
   display: block;
