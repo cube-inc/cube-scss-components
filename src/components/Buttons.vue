@@ -188,6 +188,58 @@
       </div>
     </Example>
 
+    <h3>Variables</h3>
+    <Style lang="scss">
+      $button-font-family: inherit !default;
+      $button-font-size: $font-size-sm !default;
+      $button-font-weight: 500 !default;
+      $button-text-transform: uppercase !default;
+      $button-border-radius: $component-border-radius-sm !default;
+      $button-padding: 10px 10px !default;
+      $button-transition: all 100ms ease !default;
+
+      // button colors
+      $button-primary-color: $brand-primary !default;
+      $button-success-color: $brand-success !default;
+      $button-info-color: $brand-info !default;
+      $button-warning-color: $brand-warning !default;
+      $button-danger-color: $brand-danger !default;
+
+      // button-list
+      $button-list-gap: 2px !default;
+
+      // button-outline
+      $button-outline-border-color: $component-border-color !default;
+      $button-outline-bg-color: transparent !default;
+      $button-outline-padding: $button-padding !default;
+
+      // button-filled
+      $button-filled-color: white !default;
+      $button-filled-bg-color: $button-primary-color !default;
+      $button-filled-padding: $button-padding !default;
+
+      // button-xs
+      $button-font-size-xs: 9px;
+      $button-padding-xs: 5px 10px !default;
+
+      // button-sm
+      $button-font-size-sm: 11px;
+      $button-padding-sm: 8px 16px !default;
+
+      // button-md
+      $button-font-size-md: 14px;
+      $button-padding-md: 11px 22px !default;
+
+      // button-lg
+      $button-font-size-lg: 16px;
+      $button-padding-lg: 12px 24px !default;
+
+      // button-shadow
+      $button-shadow: $component-box-shadow !default;
+      $button-shadow-hover: $button-shadow !default;
+      $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
+    </Style>
+
   </section>
 </template>
 
