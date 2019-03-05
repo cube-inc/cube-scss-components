@@ -128,13 +128,31 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
     > .button-group {
       margin: $button-list-gap;
     }
-  }
-  &-list-right {
-    justify-content: flex-end;
-  }
-  &-list-grow {
-    > .button {
-      flex-grow: 1;
+    &-column {
+      flex-direction: column
+    }
+    &-left {
+      justify-content: flex-start;
+      &.button-list-column {
+        align-items: flex-start;
+      }
+    }
+    &-center {
+      justify-content: center;
+      &.button-list-column {
+        align-items: center;
+      }
+    }
+    &-right {
+      justify-content: flex-end;
+      &.button-list-column {
+        align-items: flex-end;
+      }
+    }
+    &-grow {
+      > .button {
+        flex-grow: 1;
+      }
     }
   }
   &-group {
