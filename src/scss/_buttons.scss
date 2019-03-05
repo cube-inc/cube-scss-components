@@ -156,8 +156,9 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
     }
   }
   &-group {
-    white-space: nowrap;
+    display: flex;
     > .button {
+      flex-shrink: 0;
       border-radius: 0;
       &:not(.button-outline):not(.button-filled):not(:hover):not(:focus):not(.active):not(:active):not(:disabled) {
         background-color: rgba($button-primary-color,.05);
@@ -176,6 +177,11 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
       &:last-child {
         border-top-right-radius: $component-border-radius;
         border-bottom-right-radius: $component-border-radius;
+      }
+    }
+    &-grow {
+      > .button {
+        flex-grow: 1
       }
     }
   }
