@@ -14,7 +14,7 @@ $button-warning-color: $brand-warning !default;
 $button-danger-color: $brand-danger !default;
 
 // button-list
-$button-list-gap: 2px !default;
+$button-list-gap: 4px !default;
 
 // button-outline
 $button-outline-border-color: $component-border-color !default;
@@ -119,13 +119,13 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
     }
   }
   &-list {
-    margin: -$button-list-gap;
+    margin: -$button-list-gap / 2;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     > .button,
     > .button-group {
-      margin: $button-list-gap;
+      margin: $button-list-gap / 2;
     }
     &-column {
       flex-direction: column
