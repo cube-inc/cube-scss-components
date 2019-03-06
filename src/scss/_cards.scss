@@ -3,7 +3,7 @@ $card-border-size: $component-border-size !default;
 $card-border-color: $component-border-color !default;
 $card-bg-color: $component-bg-color !default;
 $card-padding: $component-padding !default;
-$card-list-grid-gap: 10px !default;
+$card-list-gap: 10px !default;
 
 .card {
   display: flex;
@@ -74,9 +74,9 @@ $card-list-grid-gap: 10px !default;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    margin: -$card-list-grid-gap / 2;
+    margin: -$card-list-gap / 2;
     > .card {
-      margin: $card-list-grid-gap / 2;
+      margin: $card-list-gap / 2;
     }
   }
 }
