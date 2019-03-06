@@ -15,7 +15,6 @@ h1, h2, h3, h4, h5, h6 {
   small, .small {
     font-size: 80%;
     font-weight: $font-weight-base;
-    vertical-align: text-bottom;
   }
   .small-block {
     display: block;
@@ -121,16 +120,16 @@ abbr {
   color: $text-muted;
 }
 .text-success {
-  color: $brand-success;
+  color: $text-success;
 }
 .text-info {
-  color: $brand-info;
+  color: $text-info;
 }
 .text-warning {
-  color: $brand-warning;
+  color: $text-warning;
 }
 .text-danger {
-  color: $brand-danger;
+  color: $text-danger;
 }
 .text-left {
   text-align: left;

@@ -36,6 +36,9 @@ $brand-danger:    $red !default;
 // Text
 $text-color: $navy !default;
 $text-muted: mix(rgba($text-color, .8), white) !default;
+$text-success: $brand-success !default;
+$text-info: $brand-info !default;
+$text-warning: $brand-warning !default;
 $text-danger: $brand-danger !default;
 $link-color: $red !default;
 
