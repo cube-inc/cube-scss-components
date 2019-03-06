@@ -7,9 +7,7 @@
       <div class="card">
         <main class="card-body">
           <h2>Card title</h2>
-          <small class="text-muted">Sub-title</small>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
         <footer class="card-footer">
           <div class="button-list">
@@ -50,7 +48,9 @@
       <div class="card card-borderless">
         <header class="card-header" style="height:180px;">
           <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          <div class="card-header-overlay">Image overlay</div>
+          <div class="card-header-overlay">
+            <h2>Image overlay</h2>
+          </div>
         </header>
         <main class="card-body">
           <h2>Card title</h2>
@@ -63,6 +63,22 @@
             <button class="button button-outline">Outline</button>
           </div>
         </footer>
+      </div>
+    </Example>
+
+    <h3>Card shadow</h3>
+    <Example>
+      <div class="card card-borderless card-shadow">
+        <header class="card-header" style="height:180px;">
+          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          <div class="card-header-overlay">
+            <h2>Image overlay</h2>
+          </div>
+        </header>
+        <main class="card-body">
+          <h2>Card title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+        </main>
       </div>
     </Example>
 

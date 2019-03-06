@@ -11,7 +11,6 @@ $card-list-grid-gap: 10px !default;
   border-radius: $card-border-radius;
   border: $card-border-size solid $card-border-color;
   color: $text-color;
-  background-color: $card-bg-color;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -20,6 +19,7 @@ $card-list-grid-gap: 10px !default;
   z-index: 0; // with position: relative, avoid img transition issue with border-radius (overflow not hidden has expected)
   &-header {
     position: relative;
+    background-color: $card-bg-color;
     &-title {
       margin: 0;
       padding: $card-padding;
@@ -43,6 +43,7 @@ $card-list-grid-gap: 10px !default;
     }
   }
   &-body {
+    background-color: $card-bg-color;
     padding: $card-padding;
     flex-grow: 1;
     h1, h2, h3, h4, h5, h6 {
@@ -50,6 +51,7 @@ $card-list-grid-gap: 10px !default;
     }
   }
   &-footer {
+    background-color: $card-bg-color;
     display: flex;
     align-items: center;
     justify-content: space-between;
