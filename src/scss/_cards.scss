@@ -79,6 +79,10 @@ $card-list-gap: 10px !default;
       margin: $card-list-gap / 2;
     }
   }
+  &-grid {
+    display: grid;
+    grid-gap: $card-list-gap;
+  }
 }
 a.card {
   display: block;
