@@ -90,6 +90,7 @@ code {
   font-family: $font-family-code;
   color: $red;
   &.code-block {
+    display: block;
     color: $gray-800;
     white-space: pre-wrap;
   }

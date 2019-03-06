@@ -129,10 +129,8 @@ $code-attr-val-color: $red;
     }
   }
   &-code {
-    display: block;
     padding: $example-padding;
     background-color: $example-code-bg-color;
-    white-space: pre-wrap;
     /deep/
     .code {
       &-tag {
