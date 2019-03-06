@@ -87,7 +87,7 @@
       <div class="card-list">
         <div class="card">
           <main class="card-body">
-            <h2>Card title 1</h2>
+            <h2>Card 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
             <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
           </main>
@@ -97,12 +97,17 @@
         </div>
         <div class="card">
           <main class="card-body">
-            <h2>Card title 2</h2>
+            <h2>Card 2</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-            <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
+          </main>
+        </div>
+        <div class="card">
+          <main class="card-body">
+            <h2>Card 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
           <footer class="card-footer">
-            <button class="button button-filled button-shadow">Call to action 2</button>
+            <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
           </footer>
         </div>
       </div>
@@ -122,7 +127,8 @@
   align-items: center;
 }
 .card-list {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: auto;
+  > .card {
+    max-width: 300px;
+  }
 }
 </style>
