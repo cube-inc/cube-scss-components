@@ -20,7 +20,6 @@ $form-switch-inner-padding: 2px !default;
     padding: 0;
     display: block;
     position: relative;
-    box-sizing: border-box;
     border: 0 none;
     &:first-child {
       margin-top: 0;
@@ -41,7 +40,6 @@ $form-switch-inner-padding: 2px !default;
     position: relative;
     display: block;
     width: 100%;
-    box-sizing: border-box;
     border-radius: $form-control-border-radius;
     border: 1px solid $form-control-border-color;
     background-color: $form-control-bg-color;
