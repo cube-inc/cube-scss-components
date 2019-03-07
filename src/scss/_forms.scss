@@ -60,6 +60,7 @@ $form-switch-inner-padding: 2px !default;
     &:disabled {
       cursor: not-allowed;
       color: $form-control-muted-color;
+      opacity: .6; /* Safari already does this  */
     }
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: $form-control-muted-color;
@@ -136,9 +137,18 @@ input[type="radio"].form-control {
       background-color: $form-switch-active-color;
     }
   }
+  &:disabled {
+    cursor: not-allowed;
+    &::before {
+      background-color: $form-control-muted-color;
+    }
+    & + .form-text {
+      cursor: not-allowed;
+    }
+  }
   & + .form-text {
     font-weight: $form-control-font-weight;
-    margin-left: .5em;
+    padding-left: .5em;
     vertical-align: middle;
   }
 }
