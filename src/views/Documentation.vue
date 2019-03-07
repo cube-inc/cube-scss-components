@@ -39,17 +39,17 @@
 </template>
 
 <script>
-import Badges from './Badges.vue'
-import Bullets from './Bullets.vue'
-import Buttons from './Buttons.vue'
-import Cards from './Cards.vue'
-import Forms from './Forms.vue'
-import Labels from './Labels.vue'
-import ListGroup from './ListGroup.vue'
-import Pagination from './Pagination.vue'
-import Sliders from './Sliders.vue'
-import Tables from './Tables.vue'
-import Types from './Types.vue'
+import Badges from '@/components/Badges.vue'
+import Bullets from '@/components/Bullets.vue'
+import Buttons from '@/components/Buttons.vue'
+import Cards from '@/components/Cards.vue'
+import Forms from '@/components/Forms.vue'
+import Labels from '@/components/Labels.vue'
+import ListGroup from '@/components/ListGroup.vue'
+import Pagination from '@/components/Pagination.vue'
+import Sliders from '@/components/Sliders.vue'
+import Tables from '@/components/Tables.vue'
+import Types from '@/components/Types.vue'
 
 export default {
   components: {

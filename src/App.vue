@@ -1,25 +1,23 @@
 <template>
   <div id="app">
-    <Documentation/>
+    <router-view/>
     <footer>
-      <div>cube-scss-components v{{ $root.$options.version }}</div>
+      <div>{{ appInfo.fullName }}</div>
       <div>Cube Living, Inc. © {{ currentYear }}</div>
     </footer>
   </div>
 </template>
 
 <script>
-import Documentation from './components/Documentation.vue'
+import appInfo from '@/services/appInfo'
 import './scss/index.scss'
 
 export default {
   name: 'app',
-  components: {
-    Documentation
-  },
   data () {
     const now = new Date()
     return {
+      appInfo,
       currentYear: now.getFullYear()
     }
   }

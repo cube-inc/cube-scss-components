@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
 import './components'
 import Clipboard from 'v-clipboard'
-import { name, version } from '../package.json'
+import appInfo from '@/services/appInfo'
 
 Vue.use(Clipboard)
 
 Vue.config.productionTip = false
 
 new Vue({
-  name,
-  version,
+  router,
+  appInfo,
   render: h => h(App)
 }).$mount('#app')
