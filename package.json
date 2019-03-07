@@ -21,10 +21,7 @@
   "files": [
     "src/scss/**/*.scss"
   ],
-  "dependencies": {
-    "vue-meta": "^1.5.8",
-    "vue-router": "^3.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
