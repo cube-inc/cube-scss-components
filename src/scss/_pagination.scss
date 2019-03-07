@@ -4,10 +4,13 @@ $pagination-border-width: 1px !default;
 $pagination-border-radius: $component-border-radius !default;
 $pagination-color: $text-color !default;
 $pagination-color-disabled: $text-muted !default;
-$pagination-focus-box-shadow: $component-outline !default;
 $pagination-hover-bg: darken($component-bg-color,5%) !default;
 $pagination-hover-border-color: darken($component-border-color,5%) !default;
 $pagination-hover-color: $text-color !default;
+$pagination-focus-bg: $pagination-hover-bg !default;
+$pagination-focus-border-color: $pagination-hover-border-color !default;
+$pagination-focus-color: $pagination-hover-color !default;
+$pagination-active-box-shadow: .1em .1em .5em rgba(black,.15) inset !default;
 $pagination-line-height: $line-height-base !default;
 $pagination-font-size: $font-size-sm !default;
 $pagination-font-family: $font-family-base !default;
@@ -48,17 +51,20 @@ $pagination-padding: .8em 1.6em !default;
       ;
       &:hover:not(:disabled) {
         z-index: 2;
-        color: $pagination-hover-color;
         text-decoration: none;
+        color: $pagination-hover-color;
         background-color: $pagination-hover-bg;
         border-color: $pagination-hover-border-color;
       }
       &:focus:not(:disabled) {
         z-index: 2;
-        box-shadow: $pagination-focus-box-shadow;
+        text-decoration: none;
+        color: $pagination-focus-color;
+        background-color: $pagination-focus-bg;
+        border-color: $pagination-focus-border-color;
       }
       &:active:not(:disabled) {
-        box-shadow: .1em .1em .5em rgba(black,.15) inset;
+        box-shadow: $pagination-active-box-shadow;
       }
       .disabled,
       &:disabled {
