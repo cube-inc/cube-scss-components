@@ -91,6 +91,7 @@ code {
   color: $red;
   &.code-block {
     display: block;
+    font-size: $font-size-code-block;
     color: $gray-800;
     white-space: pre-wrap;
   }

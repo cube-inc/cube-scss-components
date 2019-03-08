@@ -56,7 +56,8 @@ $font-family-h6: $font-family-headings !default;
 // Font sizes
 $font-size-base: 1em !default;
 $font-size-lead: 120% !default;
-$font-size-code: $font-size-base * .75 !default;
+$font-size-code: $font-size-base * .875 !default;
+$font-size-code-block: $font-size-base * .75 !default;
 $font-size-h1: $font-size-base * 3 !default;
 $font-size-h2: $font-size-base * 2 !default;
 $font-size-h3: $font-size-base * 1.5 !default;
