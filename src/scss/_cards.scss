@@ -57,6 +57,9 @@ $card-list-gap: 10px !default;
     justify-content: space-between;
     padding: $card-padding;
     border-top: $card-border-size solid $card-border-color;
+    &-center {
+      justify-content: center;
+    }
     &-right {
       justify-content: flex-end;
     }
