@@ -24,6 +24,8 @@ $button-outline-padding: $button-padding !default;
 // button-filled
 $button-filled-color: white !default;
 $button-filled-bg-color: $button-primary-color !default;
+$button-filled-disabled-color: lighten(grayscale($button-filled-color), 25%) !default;
+$button-filled-disabled-bg-color: lighten(grayscale($button-filled-bg-color), 25%) !default;
 $button-filled-padding: $button-padding !default;
 
 // button-xs
@@ -103,8 +105,8 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
       background-color: rgba($button-filled-bg-color, .7);
     }
     &:disabled {
-      background-color: lighten(grayscale($button-filled-bg-color), 50%);
-      color: darken(grayscale($button-filled-bg-color), 25%);
+      background-color: $button-filled-disabled-bg-color;
+      color: $button-filled-disabled-color;
     }
   }
   &-shadow {
