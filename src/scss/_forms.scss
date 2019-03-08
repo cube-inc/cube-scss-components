@@ -49,7 +49,7 @@ $form-switch-inner-padding: 2px !default;
     font-family: $form-control-font-family;
     font-weight: $form-control-font-weight;
     color: $form-control-color;
-    &:focus:not(:disabled):not(:read-only) {
+    &:focus:not(:disabled):not(:not(select):read-only) {
       box-shadow: $form-control-ouline;
     }
     &:read-only:not(select) {
@@ -73,8 +73,17 @@ $form-switch-inner-padding: 2px !default;
       color: $form-control-muted-color;
     }
     &.has-error,
-    &:invalid:not(:placeholder-shown):not(select):not(input[type="checkbox"]):not(input[type="radio"]) {
+    &:invalid:not(:placeholder-shown):not(select):not([type="checkbox"]):not([type="radio"]) {
       border-color: $form-control-danger-color;
+    }
+    &:-moz-ui-invalid {
+      box-shadow: none;
+    }
+    &:-moz-submit-invalid {
+      box-shadow: none;
+    }
+    + .form-control {
+      margin-top: 4px;
     }
   }
 }
@@ -104,7 +113,7 @@ select.form-control {
   background-color: $form-control-bg-color;
   background-size: 1.3em;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>');
-  &:invalid {
+  &:invalid { // Simulate placeholder
     color: $form-control-muted-color;
   }
 }
@@ -156,5 +165,18 @@ input[type="radio"].form-control {
   border-radius: 50%;
   &::before {
     border-radius: 50%;
+  }
+}
+
+/**
+ * Form validation
+ */
+.validate {
+  &.form-control,
+  .form-control {
+    &.has-error,
+    &:invalid {
+      border-color: $form-control-danger-color;
+    }
   }
 }

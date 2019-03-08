@@ -1,6 +1,9 @@
 <template>
   <section id="Forms">
-    <nav><a href="#Toc">Top</a></nav>
+    <nav>
+      <a href="#Toc">Top</a>
+    </nav>
+
     <h2>Forms</h2>
     <Example>
       <fieldset class="form-group">
@@ -66,7 +69,12 @@
       <fieldset class="form-group">
         <label class="form-label">
           Input readonly
-          <input type="text" class="form-control" value="This input is readonly" readonly>
+          <input
+            type="text"
+            class="form-control"
+            value="This input is readonly"
+            readonly
+          >
         </label>
       </fieldset>
       <fieldset class="form-group">
@@ -88,13 +96,23 @@
       <fieldset class="form-group">
         <label class="form-label">
           Input email
-          <input type="email" class="form-control" placeholder="Type an email address" disabled>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Type an email address"
+            disabled
+          >
         </label>
       </fieldset>
       <fieldset class="form-group">
         <label class="form-label">
           Input number
-          <input type="number" class="form-control" placeholder="Type a number" disabled>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Type a number"
+            disabled
+          >
         </label>
       </fieldset>
       <fieldset class="form-group">
@@ -137,5 +155,116 @@
       </fieldset>
     </Example>
 
+    <h3>Form validation</h3>
+    <p>
+      The validation error highlights when the
+      <code>input</code>,
+      <code>select</code> or
+      <code>textarea</code> element has a not empty
+      <code>placeholder</code> attribute and you start writing something (the placeholder disappears)…
+      <br>
+    </p>
+    <p>
+      Since it works with the
+      <code>:placeholder-shown</code> selector, this have no effect on
+      <code>checkbox</code>,
+      <code>radio</code> and
+      <code>select</code> elements.
+    </p>
+    <p>
+      If you want to highlight required fields after the user tries to submit the
+      form, you have to add the
+      <code>validate</code> class to <code>form</code> element or the element itself (see
+      <a
+        href="#formsShowRequired"
+      >Form validation, show required elements</a>).
+    </p>
+    <p>
+      <Example>
+        <form>
+          <fieldset class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Text required, minlength 10"
+              minlength="10"
+              required
+            >
+            <input type="email" class="form-control" placeholder="Email required" required>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password, at least 1 number, 1 uppercase and 1 lowercase, minlength 8"
+              title="At least 1 number, 1 uppercase and 1 lowercase, minlength 8"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              required
+            >
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Number required, min 5, max 10"
+              min="5"
+              max="10"
+              required
+            >
+            <select class="form-control" required>
+              <option value hidden>Select required, no effect</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+            </select>
+            <textarea
+              class="form-control"
+              placeholder="Textarea required, minlength 10"
+              minlength="10"
+              required
+            ></textarea>
+            <label class="form-label">
+              <input type="checkbox" class="form-control" required>
+              <span class="form-text">Checkbox required, no effect</span>
+            </label>
+            <label class="form-label">
+              <input type="radio" class="form-control" name="input-radio" required>
+              <span class="form-text">Radio required, no effect</span>
+            </label>
+            <label class="form-label">
+              <input type="radio" class="form-control" name="input-radio" required>
+              <span class="form-text">Radio required, no effect</span>
+            </label>
+          </fieldset>
+        </form>
+      </Example>
+    </p>
+    <h3 id="formsShowRequired">Form validation, show required elements</h3>
+    <p>
+      Just add the
+      <code>validate</code> class to the <code>form</code> element or the element itself…
+    </p>
+    <Example>
+      <form class="validate">
+        <fieldset class="form-group">
+          <input type="text" class="form-control" placeholder="Text required" required>
+          <input type="email" class="form-control" placeholder="Email required" required>
+          <input type="number" class="form-control" placeholder="Number required" required>
+          <select class="form-control" required>
+            <option value hidden>Select required</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+          </select>
+          <textarea class="form-control" placeholder="Textarea required" required></textarea>
+          <label class="form-label">
+            <input type="checkbox" class="form-control" required>
+            <span class="form-text">Checkbox required</span>
+          </label>
+          <label class="form-label">
+            <input type="radio" class="form-control" name="input-radio" required>
+            <span class="form-text">Radio required</span>
+          </label>
+          <label class="form-label">
+            <input type="radio" class="form-control" name="input-radio" required>
+            <span class="form-text">Radio required</span>
+          </label>
+        </fieldset>
+      </form>
+    </Example>
   </section>
 </template>
