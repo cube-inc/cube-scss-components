@@ -1,5 +1,6 @@
 $badge-size: 24px !default;
 $badge-font-size: $font-size-sm !default;
+$badge-font-weight: $font-weight-base !default;
 $badge-border-radius: 50% !default;
 $badge-color: $text-color !default;
 $badge-bg-color: mix(rgba($text-color,.35), white) !default;
@@ -22,6 +23,7 @@ $badge-danger-color: white !default;
   background-color: $badge-bg-color;
   color: $badge-color;
   font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
   &-success {
     background-color: $badge-success-bg-color;
     color: $badge-success-color;
