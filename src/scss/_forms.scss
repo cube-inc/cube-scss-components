@@ -16,6 +16,7 @@ $form-switch-inner-padding: 2px !default;
 
 .form {
   &-group {
+    min-width: 0; // override user-agent stylesheet in webkit for fieldset
     margin: 2em 0 0 0;
     padding: 0;
     display: block;
