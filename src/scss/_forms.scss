@@ -53,7 +53,7 @@ $form-switch-inner-padding: 2px !default;
     &:focus:not(:disabled):not(:not(select):read-only) {
       box-shadow: $form-control-ouline;
     }
-    &:read-only:not(select) {
+    &:read-only:not(select):not(div) {
       cursor: default;
       color: $form-control-muted-color;
     }
