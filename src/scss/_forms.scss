@@ -89,6 +89,20 @@ $form-switch-inner-padding: 2px !default;
   }
 }
 
+// Safari auto-fill-button
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button,
+input::-webkit-credit-card-auto-fill-button {
+  background-color: $form-control-muted-color;
+  transition: all 250ms ease;
+  &:hover {
+    background-color: $form-control-color;
+  }
+  &:active {
+    background-color: rgba($form-control-color, .75);
+  }
+}
+
 // Input number
 input[type=number].form-control {
   -moz-appearance: textfield;
