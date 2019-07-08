@@ -34,6 +34,7 @@ $list-group-footer-font-size: $font-size-sm;
     + .list-group-item {
       margin-top: -1px;
     }
+    &-subheader + &,
     &:first-of-type {
       border-top-left-radius: $list-group-border-radius;
       border-top-right-radius: $list-group-border-radius;
@@ -84,6 +85,7 @@ $list-group-footer-font-size: $font-size-sm;
       color: $list-group-subheader-color;
       font-size: $list-group-subheader-font-size;
       h1, h2, h3, h4, h5, h6 {
+        font-size: inherit;
         margin-top: 0;
         margin-bottom: 0;
       }
