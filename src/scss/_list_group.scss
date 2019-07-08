@@ -1,8 +1,13 @@
 $list-group-padding: $component-padding !default;
+$list-group-margin: 0 !default;
 $list-group-border-color: $component-border-color !default;
 $list-group-border-size: $component-border-size !default;
 $list-group-border-radius: $component-border-radius !default;
 $list-group-bg-color: $component-bg-color !default;
+
+$list-group-subheader-color: $text-muted !default;
+$list-group-subheader-padding: ($component-padding-y * 2) $component-padding-x $component-padding-y $component-padding-x !default;
+$list-group-subheader-font-size: .75em !default;
 
 $list-group-accessory-color: $text-muted !default;
 $list-group-action-font-size: 11px !default;
@@ -12,7 +17,7 @@ $list-group-footer-color: $text-muted !default;
 $list-group-footer-font-size: $font-size-sm;
 
 .list-group {
-  margin: 0;
+  margin: $list-group-margin;
   padding: 0;
   position: relative;
   &-item {
@@ -67,6 +72,17 @@ $list-group-footer-font-size: $font-size-sm;
       display: flex;
       align-items: center;
       margin: $list-group-padding;
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    &-subheader {
+      display: flex;
+      align-items: center;
+      margin: $list-group-subheader-padding;
+      color: $list-group-subheader-color;
+      font-size: $list-group-subheader-font-size;
       h1, h2, h3, h4, h5, h6 {
         margin-top: 0;
         margin-bottom: 0;
