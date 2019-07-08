@@ -61,7 +61,7 @@
             <div class="list-group-item-header">
               <h4>Clickable header</h4>
               <div class="list-group-item-accessory">
-                <div class="text-muted">•••</div>
+                <button class="action">•••</button>
               </div>
             </div>
           </a>
@@ -71,6 +71,20 @@
             </div>
             <div class="list-group-item-footer">cube-scss-components v{{ $root.$options.version }}</div>
           </div>
+        </li>
+      </ul>
+      <ul class="list-group">
+        <li class="list-group-item-subheader">
+          <h3>Subheader</h3>
+          <div class="list-group-item-accessory">
+            <div>Accessory</div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="list-group-item-body">Item #1</div>
+        </li>
+        <li class="list-group-item">
+          <div class="list-group-item-body">Item #2</div>
         </li>
       </ul>
     </Example>
