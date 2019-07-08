@@ -87,7 +87,6 @@ $list-group-footer-font-size: $font-size-sm;
       text-decoration: none;
       color: $list-group-accessory-color;
       .action {
-        cursor: pointer;
         font-size: $list-group-action-font-size;
         font-weight: $list-group-action-font-weight;
         font-family: inherit;
@@ -102,6 +101,16 @@ $list-group-footer-font-size: $font-size-sm;
         margin: 0;
         padding: 0;
         transition: all 250ms ease;
+      }
+      &:first-child {
+        margin-right: .8em;
+      }
+      &:last-child {
+        margin-left: auto;
+      }
+      a.action,
+      button.action {
+        cursor: pointer;
         &:hover:not(:disabled) {
           color: $text-color;
           text-decoration: none;
@@ -113,12 +122,6 @@ $list-group-footer-font-size: $font-size-sm;
           opacity: .5;
           cursor: not-allowed;
         }
-      }
-      &:first-child {
-        margin-right: .8em;
-      }
-      &:last-child {
-        margin-left: auto;
       }
       &.list-group-item-accessory-list {
         > * + * {
