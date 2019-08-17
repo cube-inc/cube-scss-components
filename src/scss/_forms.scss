@@ -53,7 +53,7 @@ $form-switch-inner-padding: 2px !default;
     &:focus:not(:disabled):not(:not(select):read-only) {
       box-shadow: $form-control-ouline;
     }
-    &:read-only:not(select):not(div) {
+    &:read-only:not(select):not(div):not([type="checkbox"]):not([type="radio"]) {
       cursor: default;
       color: $form-control-muted-color;
     }
