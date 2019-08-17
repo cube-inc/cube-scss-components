@@ -4,6 +4,7 @@ $button-font-weight: 500 !default;
 $button-text-transform: uppercase !default;
 $button-border-radius: $component-border-radius-sm !default;
 $button-padding: 10px 10px !default;
+$button-min-width: 160px !default;
 $button-transition: all 100ms ease !default;
 
 // button colors
@@ -56,7 +57,7 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
   outline: none;
   margin: 0;
   padding: $button-padding;
-  min-width: 64px;
+  min-width: $button-min-width;
   border-radius: $button-border-radius;
   font-size: $button-font-size;
   font-family: $button-font-family;
