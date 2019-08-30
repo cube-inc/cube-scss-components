@@ -19,7 +19,6 @@ $card-list-gap: 10px !default;
   z-index: 0; // with position: relative, avoid img transition issue with border-radius (overflow not hidden has expected)
   &-header {
     position: relative;
-    background-color: $card-bg-color;
     &-title {
       margin: 0;
       padding: $card-padding;
@@ -29,6 +28,7 @@ $card-list-gap: 10px !default;
       object-fit: cover;
       width: 100%;
       height: 100%;
+      background-color: $card-bg-color;
     }
     &-overlay {
       position: absolute;
@@ -56,7 +56,6 @@ $card-list-gap: 10px !default;
     align-items: center;
     justify-content: space-between;
     padding: $card-padding;
-    border-top: $card-border-size solid $card-border-color;
     &-center {
       justify-content: center;
     }
