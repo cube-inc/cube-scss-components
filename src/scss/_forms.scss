@@ -131,6 +131,10 @@ select.form-control {
   &:invalid { // Simulate placeholder
     color: $form-control-muted-color;
   }
+  &:-moz-focusring {
+    color: transparent !important;
+    text-shadow: 0 0 0 $text-color !important;
+  }
 }
 
 // Switch – checkbox and radio
@@ -171,9 +175,11 @@ input[type="radio"].form-control {
     }
   }
   & + .form-text {
+    display: inline-block;
     font-weight: $form-control-font-weight;
     padding-left: .5em;
     vertical-align: middle;
+    line-height: $line-height-base;
   }
 }
 input[type="radio"].form-control {
