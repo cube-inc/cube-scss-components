@@ -10,8 +10,9 @@ $form-control-font-family: $font-family-base !default;
 $form-control-font-weight: $font-weight-base !default;
 $form-control-ouline: $component-outline !default;
 $form-label-font-weight: $font-weight-bold !default;
+$form-label-line-height: 2.25em !default;
 $form-switch-active-color: $form-control-color !default;
-$form-switch-size: floor(($font-size-base * $line-height-base)) !default;
+$form-switch-size: $font-size-base * 1.125 !default;
 $form-switch-inner-padding: 2px !default;
 
 .form {
@@ -31,7 +32,7 @@ $form-switch-inner-padding: 2px !default;
     font-weight: $form-label-font-weight;
     cursor: pointer;
     color: inherit;
-    line-height: 2.2em;
+    line-height: $form-label-line-height;
   }
   &-control {
     transition: all .2s;
@@ -180,12 +181,25 @@ input[type="radio"].form-control {
     padding-left: .5em;
     vertical-align: middle;
     line-height: $line-height-base;
+    width: calc(100% - #{$form-switch-size});
   }
 }
 input[type="radio"].form-control {
   border-radius: 50%;
   &::before {
     border-radius: 50%;
+  }
+}
+.form-label {
+  input[type="checkbox"].form-control,
+  input[type="radio"].form-control {
+    vertical-align: top;
+    margin-top: ($form-label-line-height - $form-switch-size) / 2;
+    & + .form-text {
+      vertical-align: top;
+      margin-top: ($form-label-line-height - $line-height-base) / 2;
+      margin-bottom: ($form-label-line-height - $line-height-base) / 2;
+    }
   }
 }
 
