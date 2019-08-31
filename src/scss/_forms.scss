@@ -161,6 +161,11 @@ input[type="radio"].form-control {
     border-radius: $form-control-border-radius - 1px;
     transition: all 250ms ease;
   }
+  &:hover {
+    &::before {
+      background-color: rgba($form-switch-active-color, .125);
+    }
+  }
   &:checked {
     &::before {
       background-color: $form-switch-active-color;
@@ -199,6 +204,14 @@ input[type="radio"].form-control {
       vertical-align: top;
       margin-top: ($form-label-line-height - $line-height-base) / 2;
       margin-bottom: ($form-label-line-height - $line-height-base) / 2;
+    }
+  }
+  &:hover {
+    input[type="checkbox"].form-control:not(:disabled):not(:read-only):not(:checked),
+    input[type="radio"].form-control:not(:disabled):not(:read-only):not(:checked) {
+      &::before {
+        background-color: rgba($form-switch-active-color, .125);
+      }
     }
   }
 }
