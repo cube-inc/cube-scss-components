@@ -30,7 +30,6 @@ $list-group-footer-font-size: $font-size-sm;
     background-color: $list-group-bg-color;
     overflow: hidden;
     line-height: $line-height-base;
-    transition: all 250ms ease;
     + .list-group-item {
       margin-top: -1px;
     }
