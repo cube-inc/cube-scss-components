@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~@/scss/variables";
 #app {
   width: 100%;
   max-width: 1024px;
@@ -40,5 +41,6 @@ footer {
   align-items: center;
   margin: 3em 0;
   padding: 3em 1em;
+  color: $text-muted;
 }
 </style>
