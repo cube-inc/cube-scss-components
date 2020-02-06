@@ -1,3 +1,54 @@
+// Colors
+$text-color: rgba(black, .9) !default;
+
+// Font families
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"  !default;
+$font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-headings: $font-family-base !default;
+$font-family-h1: $font-family-headings !default;
+$font-family-h2: $font-family-headings !default;
+$font-family-h3: $font-family-headings !default;
+$font-family-h4: $font-family-headings !default;
+$font-family-h5: $font-family-headings !default;
+$font-family-h6: $font-family-headings !default;
+
+// Font sizes
+$font-size-base: 1em !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-xs: $font-size-base * .625 !default;
+$font-size-lead: 120% !default;
+$font-size-code: $font-size-base * .875 !default;
+$font-size-code-block: $font-size-base * .75 !default;
+$font-size-h1: $font-size-base * 3 !default;
+$font-size-h2: $font-size-base * 2 !default;
+$font-size-h3: $font-size-base * 1.5 !default;
+$font-size-h4: $font-size-base !default;
+$font-size-h5: $font-size-base !default;
+$font-size-h6: $font-size-base !default;
+
+// Line heights
+$line-height-base: 1.5 !default;
+$line-height-headings: $line-height-base !default;
+
+// Font weights
+$font-weight-base: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-headings: $font-weight-bold !default;
+$font-weight-h1: $font-weight-headings !default;
+$font-weight-h2: $font-weight-headings !default;
+$font-weight-h3: $font-weight-headings !default;
+$font-weight-h4: $font-weight-headings !default;
+$font-weight-h5: $font-weight-headings !default;
+$font-weight-h6: $font-weight-headings !default;
+
+// Margins
+$paragraph-margin-top: 1em !default;
+$paragraph-margin-bottom: 1em !default;
+$headings-margin-top: 1em !default;
+$headings-margin-bottom: 1em !default;
+
 html, body {
   font-family: $font-family-base;
   color: $text-color;
