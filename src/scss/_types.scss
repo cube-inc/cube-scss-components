@@ -11,6 +11,7 @@ $font-family-h3: $font-family-headings !default;
 $font-family-h4: $font-family-headings !default;
 $font-family-h5: $font-family-headings !default;
 $font-family-h6: $font-family-headings !default;
+$font-variant-numeric: normal !default;
 
 // Font sizes
 $font-size-base: 1em !default;
@@ -55,7 +56,7 @@ html, body {
   line-height: $line-height-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
-  font-variant-numeric: lining-nums;
+  font-variant-numeric: $font-variant-numeric;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headings;
