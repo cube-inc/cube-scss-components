@@ -48,7 +48,7 @@
         </label>
         <label class="form-label">
           <input type="checkbox" class="form-control">
-          <span class="form-text">This is another checkbox</span>
+          <span class="form-text">This is another checkbox with a very long text that should align nicely along the checkbox. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim expedita tempore soluta officiis similique. Deleniti adipisci alias modi harum illum laboriosam accusamus enim iste nesciunt? Aliquid reprehenderit magnam mollitia doloremque!</span>
         </label>
       </fieldset>
       <fieldset class="form-group">

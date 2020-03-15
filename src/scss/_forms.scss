@@ -186,7 +186,7 @@ input[type="radio"].form-control {
     padding-left: .5rem;
     vertical-align: middle;
     line-height: $line-height-base;
-    width: calc(100% - #{$form-switch-size});
+    max-width: calc(100% - #{$form-switch-size});
   }
 }
 input[type="radio"].form-control {
