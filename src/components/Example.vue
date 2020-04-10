@@ -1,13 +1,13 @@
 <template>
   <div class="example" :class="exampleClasses">
     <div class="example-preview" ref="preview">
-      <slot/>
+      <slot />
     </div>
     <div class="example-toolbar">
       <button class="button button-xs" @click="toggleDark">{{ darkMode ? 'Light' : 'Dark'}}</button>
       <button class="button button-xs" @click="copyCode" ref="copyButton">Copy</button>
     </div>
-    <code class="example-code code-block" ref="code" v-html="code"></code>
+    <code class="example-code code-block light-color-scheme" ref="code" v-html="code"></code>
   </div>
 </template>
 
@@ -19,11 +19,11 @@ export default {
   props: {
     html: String,
     previewScroll: Boolean,
-    dark: Boolean
+    dark: { type: Boolean, default: null }
   },
   data () {
     return {
-      darkMode: this.dark,
+      darkMode: false,
       code: null
     }
   },
@@ -31,13 +31,18 @@ export default {
     exampleClasses () {
       return {
         'example-preview-scroll': this.previewScroll,
-        'example-dark': this.darkMode
+        'light-color-scheme': !this.darkMode,
+        'dark-color-scheme': this.darkMode
       }
     }
   },
   methods: {
     format () {
       this.code = vnodesToHtml(this.$slots.default, { highlight: true })
+    },
+    onMatchMedia (event) {
+      const { matches } = event
+      this.darkMode = matches
     },
     toggleDark () {
       this.darkMode = !this.darkMode
@@ -55,8 +60,16 @@ export default {
       }, 1250)
     }
   },
+  beforeMount () {
+    this.$matchDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
+    this.$matchDarkMode.addListener(this.onMatchMedia)
+    this.darkMode = this.dark !== null ? this.dark : this.$matchDarkMode.matches
+  },
   mounted () {
     this.format()
+  },
+  beforeDestroy () {
+    this.$matchDarkMode.removeListener(this.onMatchMedia)
   }
 }
 </script>
@@ -66,7 +79,7 @@ $example-padding: 16px !default;
 $example-border-color: $component-border-color !default;
 $example-border-radius: $component-border-radius !default;
 $example-preview-bg-color: rgba($gray-300, 0.1) !default;
-$example-preview-dark-bg-color: $gray-700 !default;
+$example-preview-dark-bg-color: $dark-body-bg-color !default;
 $example-preview-bg-square-size: 10px !default;
 $example-code-bg-color: $gray-070 !default;
 
@@ -80,6 +93,7 @@ $code-attr-val-color: $red;
   border-radius: $example-border-radius;
   overflow: hidden;
   position: relative;
+  color: var(--text-color, #{$text-color});
   &-preview-scroll {
     .example-preview {
       overflow: scroll;
@@ -131,10 +145,9 @@ $code-attr-val-color: $red;
   &-code {
     padding: $example-padding;
     background-color: $example-code-bg-color;
-    /deep/
-    .code {
+    /deep/ .code {
       &-tag {
-      color: $code-tag-color;
+        color: $code-tag-color;
       }
       &-attr {
         color: $code-attr-color;
@@ -144,11 +157,11 @@ $code-attr-val-color: $red;
       }
     }
   }
-  &-dark {
-    .example-preview {
-      color: white;
-      background-color: $example-preview-dark-bg-color;
-    }
+}
+.dark-color-scheme {
+  .example-preview {
+    // color: white;
+    background-color: $example-preview-dark-bg-color;
   }
 }
 </style>

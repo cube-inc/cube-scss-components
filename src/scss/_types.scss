@@ -1,8 +1,17 @@
 // Colors
-$text-color: rgba(black, .9) !default;
+$text-color: $gray-900 !default;
+$text-muted: rgba($text-color, 0.4) !default;
+$text-success: $success !default;
+$text-info: $info !default;
+$text-warning: $warning !default;
+$text-danger: $danger !default;
+$link-color: $blue !default;
+$code-color: $red !default;
+$code-block-color: $gray-800 !default;
 
 // Font families
-$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"  !default;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-headings: $font-family-base !default;
 $font-family-h1: $font-family-headings !default;
@@ -15,11 +24,11 @@ $font-variant-numeric: normal !default;
 
 // Font sizes
 $font-size-base: 1em !default;
-$font-size-sm: $font-size-base * .875 !default;
-$font-size-xs: $font-size-base * .625 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-xs: $font-size-base * 0.625 !default;
 $font-size-lead: 120% !default;
-$font-size-code: $font-size-base * .875 !default;
-$font-size-code-block: $font-size-base * .75 !default;
+$font-size-code: $font-size-base * 0.875 !default;
+$font-size-code-block: $font-size-base * 0.75 !default;
 $font-size-h1: $font-size-base * 3 !default;
 $font-size-h2: $font-size-base * 2 !default;
 $font-size-h3: $font-size-base * 1.5 !default;
@@ -50,21 +59,27 @@ $paragraph-margin-bottom: 1em !default;
 $headings-margin-top: 1em !default;
 $headings-margin-bottom: 1em !default;
 
-html, body {
+body {
+  color: var(--text-color, #{$text-color});
   font-family: $font-family-base;
-  color: $text-color;
-  line-height: $line-height-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   font-variant-numeric: $font-variant-numeric;
+  line-height: $line-height-base;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-family-headings;
   line-height: $line-height-headings;
   font-weight: $font-weight-headings;
   margin: $headings-margin-top 0 $headings-margin-bottom 0;
   padding: 0;
-  small, .small {
+  small,
+  .small {
     font-size: 75%;
     font-weight: $font-weight-base;
   }
@@ -123,19 +138,19 @@ blockquote {
   appearance: none;
   display: block;
   white-space: pre-line;
-  margin: .2em 0;
-  padding: .2em .6em;
+  margin: 0.2em 0;
+  padding: 0.2em 0.6em;
   border-left: 3px solid $text-muted;
 }
 code {
   font-size: $font-size-code;
   word-break: break-word;
   font-family: $font-family-code;
-  color: $red;
+  color: $code-color;
   &.code-block {
     display: block;
     font-size: $font-size-code-block;
-    color: $gray-800;
+    color: $code-block-color;
     white-space: pre-wrap;
   }
 }
@@ -146,15 +161,17 @@ pre {
   padding: 0;
   white-space: pre-line;
 }
-small, .small {
+small,
+.small {
   font-size: $font-size-sm;
 }
-strong, b {
+strong,
+b {
   font-weight: $font-weight-bold;
 }
 mark {
-  padding: .2em .6em;
-  background-color: $brand-warning;
+  padding: 0.2em 0.6em;
+  background-color: $warning;
 }
 abbr {
   text-decoration: underline dotted;
@@ -162,7 +179,7 @@ abbr {
   cursor: help;
 }
 .text-muted {
-  color: $text-muted;
+  color: var(--text-muted, #{$text-muted});
 }
 .text-success {
   color: $text-success;

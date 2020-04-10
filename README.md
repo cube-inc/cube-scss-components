@@ -49,13 +49,13 @@ Your `_variables.scss` file may looks like:
 ```scss
 // Colors
 $gray-700: hsl(210, 10%,  30%);
-$brand-primary: #8d1760;
-$brand-secondary: #ffa7e7;
+$primary: #8d1760;
+$secondary: #ffa7e7;
 
 // Text
 $text-color: #54424a;
 $link-color: #00c9b1;
-$text-muted: lighten($text-color, 30%);
+$muted: lighten($text-color, 30%);
 
 // Fonts
 $font-weight-base: 400;
@@ -64,7 +64,7 @@ $font-size-small: 85%;
 $line-height-base: 1.5;
 
 // Buttons
-$button-primary-color: $brand-primary;
+$button-primary-color: $primary;
 
 // Component commons
 $component-border-radius: 4px;

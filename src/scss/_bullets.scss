@@ -1,9 +1,9 @@
 $bullet-size: 10px !default;
-$bullet-color: mix(rgba($text-color,.6), white) !default;
-$bullet-success-color: $brand-success !default;
-$bullet-info-color: $brand-info !default;
-$bullet-warning-color: $brand-warning !default;
-$bullet-danger-color: $brand-danger !default;
+$bullet-color: var(--bullet-color, $gray-300) !default;
+$bullet-success-color: $success !default;
+$bullet-info-color: $info !default;
+$bullet-warning-color: $warning !default;
+$bullet-danger-color: $danger !default;
 
 .bullet {
   display: inline-block;
@@ -12,15 +12,15 @@ $bullet-danger-color: $brand-danger !default;
   background-color: $bullet-color;
   border-radius: 50%;
   &-success {
-    background-color: $brand-success;
+    background-color: $success;
   }
   &-info {
-    background-color: $brand-info;
+    background-color: $info;
   }
   &-warning {
-    background-color: $brand-warning;
+    background-color: $warning;
   }
   &-danger {
-    background-color: $brand-danger;
+    background-color: $danger;
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Documentation/>
+    <Header />
+    <Documentation />
     <footer>
       <div>cube-scss-components v{{ $root.$options.version }}</div>
       <div>Cube Living, Inc. © {{ currentYear }}</div>
@@ -9,12 +10,14 @@
 </template>
 
 <script>
+import Header from './components/Header.vue'
 import Documentation from './components/Documentation.vue'
 import './scss/index.scss'
 
 export default {
   name: 'app',
   components: {
+    Header,
     Documentation
   },
   data () {
@@ -32,7 +35,10 @@ export default {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: calc(env(safe-area-inset-top) + 1em)
+    calc(env(safe-area-inset-right) + 1em)
+    calc(env(safe-area-inset-bottom) + 1em)
+    calc(env(safe-area-inset-left) + 1em);
 }
 footer {
   display: flex;

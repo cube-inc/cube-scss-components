@@ -1,9 +1,9 @@
-$form-control-color: $text-color !default;
+$form-control-color: var(--form-control-color, #{$text-color}) !default;
 $form-control-border-color: $component-border-color !default;
 $form-control-border-radius: $component-border-radius-sm !default;
 $form-control-bg-color: $component-bg-color !default;
 $form-control-muted-color: $text-muted !default;
-$form-control-danger-color: $text-danger !default;
+$form-control-danger-color: $danger !default;
 $form-control-padding: $component-padding !default;
 $form-control-font-size: $font-size-base !default;
 $form-control-font-family: $font-family-base !default;
@@ -11,9 +11,11 @@ $form-control-font-weight: $font-weight-base !default;
 $form-control-ouline: $component-outline !default;
 $form-label-font-weight: $font-weight-bold !default;
 $form-label-line-height: 2.25em !default;
-$form-switch-active-color: $form-control-color !default;
+$form-switch-active-color: $primary !default;
 $form-switch-size: $font-size-base * 1.125 !default;
 $form-switch-inner-padding: 2px !default;
+
+$form-control-focus-border-color: $primary !default;
 
 .form {
   &-group {
@@ -35,7 +37,7 @@ $form-switch-inner-padding: 2px !default;
     line-height: $form-label-line-height;
   }
   &-control {
-    transition: all .2s;
+    transition: all 0.2s;
     outline: none;
     appearance: none;
     box-shadow: none;
@@ -52,7 +54,8 @@ $form-switch-inner-padding: 2px !default;
     font-weight: $form-control-font-weight;
     color: $form-control-color;
     &:focus:not(:disabled):not(:not(select):read-only) {
-      box-shadow: $form-control-ouline;
+      border-color: $form-control-focus-border-color;
+      // box-shadow: $form-control-ouline;
     }
     &:read-only:not(select):not(div):not([type="checkbox"]):not([type="radio"]) {
       cursor: default;
@@ -62,16 +65,19 @@ $form-switch-inner-padding: 2px !default;
     &:disabled {
       cursor: not-allowed;
       color: $form-control-muted-color;
-      opacity: .6; /* Safari already does this  */
+      opacity: 0.6; /* Safari already does this  */
     }
-    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: $form-control-muted-color;
       opacity: 1; /* Firefox */
     }
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
       color: $form-control-muted-color;
     }
-    &::-ms-input-placeholder { /* Microsoft Edge */
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
       color: $form-control-muted-color;
     }
     &.has-error,
@@ -100,16 +106,16 @@ input::-webkit-credit-card-auto-fill-button {
     background-color: $form-control-color;
   }
   &:active {
-    background-color: rgba($form-control-color, .75);
+    background-color: rgba($form-control-color, 0.75);
   }
 }
 
 // Input number
-input[type=number].form-control {
+input[type="number"].form-control {
   -moz-appearance: textfield;
 }
-input[type=number].form-control::-webkit-inner-spin-button,
-input[type=number].form-control::-webkit-outer-spin-button {
+input[type="number"].form-control::-webkit-inner-spin-button,
+input[type="number"].form-control::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -129,12 +135,13 @@ select.form-control {
   background-color: $form-control-bg-color;
   background-size: 1.3em;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>');
-  &:invalid { // Simulate placeholder
+  &:invalid {
+    // Simulate placeholder
     color: $form-control-muted-color;
   }
   &:-moz-focusring {
     color: transparent !important;
-    text-shadow: 0 0 0 $text-color !important;
+    text-shadow: 0 0 0 $form-control-color !important;
   }
 }
 
@@ -163,7 +170,7 @@ input[type="radio"].form-control {
   }
   &:hover {
     &::before {
-      background-color: rgba($form-switch-active-color, .125);
+      background-color: rgba($form-switch-active-color, 0.125);
     }
   }
   &:checked {
@@ -183,7 +190,7 @@ input[type="radio"].form-control {
   & + .form-text {
     display: inline-block;
     font-weight: $form-control-font-weight;
-    padding-left: .5rem;
+    padding-left: 0.5rem;
     vertical-align: middle;
     line-height: $line-height-base;
     max-width: calc(100% - #{$form-switch-size});
@@ -210,7 +217,7 @@ input[type="radio"].form-control {
     input[type="checkbox"].form-control:not(:disabled):not(:read-only):not(:checked),
     input[type="radio"].form-control:not(:disabled):not(:read-only):not(:checked) {
       &::before {
-        background-color: rgba($form-switch-active-color, .125);
+        background-color: rgba($form-switch-active-color, 0.125);
       }
     }
   }

@@ -1,4 +1,10 @@
-html, body {
+$body-color: var(--body-color, #{$black}) !default;
+$body-background-color: var(--body-background-color, #{$white}) !default;
+$tap-highlight-color: var(--tap-highlight-color, #{rgba($primary, 0.05)}) !default;
+$container-breakpoint: $breakpoint-lg !default;
+$z-index-fixed: 1000 !default;
+
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -6,14 +12,18 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  -webkit-tap-highlight-color: rgba($brand-primary, .05);
+  -webkit-tap-highlight-color: $tap-highlight-color;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+  color: var(--body-color, #{$body-color});
+  background-color: var(--body-background-color, #{$body-background-color});
 }
 
 *,
 *::before,
 *::after {
+  color: var(--text-color, #{$text-color});
   box-sizing: border-box;
+  transition: all 100ms ease;
 }
 
 hr {
@@ -23,4 +33,37 @@ hr {
   background-color: $component-border-color;
   border: 0 none;
   margin: 0 auto;
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-breakpoint;
+}
+
+.content {
+
+}
+.fixed-top {
+  position: fixed;
+  z-index: $z-index-fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
+}
+.fixed-bottom {
+  position: fixed;
+  z-index: $z-index-fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
 }

@@ -1,5 +1,7 @@
 $list-group-padding: $component-padding !default;
 $list-group-margin: 0 !default;
+
+$list-group-color: var(--list-group-color, #{$text-color}) !default;
 $list-group-border-color: $component-border-color !default;
 $list-group-border-size: $component-border-size !default;
 $list-group-border-radius: $component-border-radius !default;
@@ -7,7 +9,7 @@ $list-group-bg-color: $component-bg-color !default;
 
 $list-group-subheader-color: $text-muted !default;
 $list-group-subheader-padding: ($component-padding-y * 2) $component-padding-x $component-padding-y $component-padding-x !default;
-$list-group-subheader-font-size: .75em !default;
+$list-group-subheader-font-size: 0.75em !default;
 
 $list-group-accessory-color: $text-muted !default;
 $list-group-action-font-size: 11px !default;
@@ -20,12 +22,12 @@ $list-group-footer-font-size: $font-size-sm;
   margin: $list-group-margin;
   padding: 0;
   position: relative;
+  color: $list-group-color;
   &-item {
     list-style: none;
     margin: 0;
     padding: 0;
     display: block;
-    color: $text-color;
     border: $list-group-border-size solid $list-group-border-color;
     background-color: $list-group-bg-color;
     overflow: hidden;
@@ -72,7 +74,12 @@ $list-group-footer-font-size: $font-size-sm;
       display: flex;
       align-items: center;
       margin: $list-group-padding;
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         margin-top: 0;
         margin-bottom: 0;
       }
@@ -83,7 +90,12 @@ $list-group-footer-font-size: $font-size-sm;
       margin: $list-group-subheader-padding;
       color: $list-group-subheader-color;
       font-size: $list-group-subheader-font-size;
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         font-size: inherit;
         margin-top: 0;
         margin-bottom: 0;
@@ -120,7 +132,7 @@ $list-group-footer-font-size: $font-size-sm;
         transition: all 250ms ease;
       }
       &:first-child {
-        margin-right: .75em;
+        margin-right: 0.75em;
       }
       &:last-child {
         margin-left: auto;
@@ -129,14 +141,14 @@ $list-group-footer-font-size: $font-size-sm;
       button.action {
         cursor: pointer;
         &:hover:not(:disabled) {
-          color: $text-color;
+          color: inherit;
           text-decoration: none;
         }
         &:active:not(:disabled) {
-          color: lighten($text-color, 50%);
+          opacity: 0.8;
         }
         &:disabled {
-          opacity: .5;
+          opacity: 0.5;
           cursor: not-allowed;
         }
       }

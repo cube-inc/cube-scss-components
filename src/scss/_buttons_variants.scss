@@ -1,32 +1,32 @@
 .button {
   &-white {
-    color: white;
-    background-color: rgba(white,.05);
+    color: $white;
+    background-color: rgba($white,.05);
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: rgba(white,.1);
+      background-color: rgba($white,.1);
     }
     &.active:not(:disabled),
     &:active:not(:disabled) {
-      background-color: rgba(white,.2);
+      background-color: rgba($white,.2);
     }
     &:disabled {
-      color: white;
+      color: $white;
     }
     &.button-outline {
-      color: white;
-      border-color: white;
+      color: $white;
+      border-color: $white;
     }
     &.button-filled {
       color: $button-primary-color;
-      background-color: white;
+      background-color: $white;
       &:hover:not(:disabled),
       &:focus:not(:disabled) {
-        background-color: rgba(white, .8);
+        background-color: rgba($white, .8);
       }
       &.active:not(:disabled),
       &:active:not(:disabled) {
-        background-color: rgba(white, .7);
+        background-color: rgba($white, .7);
       }
       &:disabled {
         color: grayscale($button-primary-color);

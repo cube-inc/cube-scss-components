@@ -155,7 +155,7 @@
 
 <style lang="scss" scoped>
 .card-header-image {
-  background-color: $brand-info;
+  background-color: $info;
 }
 .card-header-overlay {
   color: white;

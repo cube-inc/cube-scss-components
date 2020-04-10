@@ -1,6 +1,7 @@
 $card-border-radius: $component-border-radius !default;
 $card-border-size: $component-border-size !default;
 $card-border-color: $component-border-color !default;
+$card-text-color: var(--card-text-color, #{$text-color}) !default;
 $card-bg-color: $component-bg-color !default;
 $card-padding: $component-padding !default;
 $card-list-gap: 10px !default;
@@ -10,7 +11,7 @@ $card-list-gap: 10px !default;
   flex-direction: column;
   border-radius: $card-border-radius;
   border: $card-border-size solid $card-border-color;
-  color: $text-color;
+  color: $card-text-color;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -37,7 +38,12 @@ $card-list-gap: 10px !default;
       right: 0;
       bottom: 0;
       left: 0;
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         margin: 0;
       }
     }
@@ -46,7 +52,12 @@ $card-list-gap: 10px !default;
     background-color: $card-bg-color;
     padding: $card-padding;
     flex-grow: 1;
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 0;
     }
   }

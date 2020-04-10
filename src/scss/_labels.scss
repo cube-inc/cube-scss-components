@@ -1,20 +1,20 @@
 $label-padding: 3px 6px !default;
 $label-border-radius: $component-border-radius-sm !default;
-$label-font-size: $font-size-base * .75 !default;
-$label-font-size-sm: $font-size-base * .625 !default;
-$label-font-size-xs: $font-size-base * .5 !default;
-$label-font-weight: 500 !default;
+$label-font-size: $font-size-base * 0.75 !default;
+$label-font-size-sm: $font-size-base * 0.625 !default;
+$label-font-size-xs: $font-size-base * 0.5 !default;
+$label-font-weight: $font-weight-medium !default;
 $label-text-transform: uppercase !default;
 $label-color: $text-color !default;
-$label-bg-color: mix(rgba($label-color,.35), white) !default;
-$label-success-color: $brand-success !default;
-$label-success-bg-color: rgba($label-success-color, .15) !default;
-$label-info-color: $brand-info !default;
-$label-info-bg-color: rgba($label-info-color, .15) !default;
-$label-warning-color: $brand-warning !default;
-$label-warning-bg-color: rgba($label-warning-color, .15) !default;
-$label-danger-color: $brand-danger !default;
-$label-danger-bg-color: rgba($label-danger-color, .15) !default;
+$label-bg-color: rgba($text-color, 0.15) !default;
+$label-success-color: $success !default;
+$label-success-bg-color: rgba($label-success-color, 0.15) !default;
+$label-info-color: $info !default;
+$label-info-bg-color: rgba($label-info-color, 0.15) !default;
+$label-warning-color: $warning !default;
+$label-warning-bg-color: rgba($label-warning-color, 0.15) !default;
+$label-danger-color: $danger !default;
+$label-danger-bg-color: rgba($label-danger-color, 0.15) !default;
 
 .label {
   display: inline;
@@ -28,7 +28,7 @@ $label-danger-bg-color: rgba($label-danger-color, .15) !default;
   text-transform: $label-text-transform;
   white-space: nowrap;
   & + .label {
-    margin-left: .4em;
+    margin-left: 0.4em;
   }
   &-sm {
     font-size: $label-font-size-sm;
