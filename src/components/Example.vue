@@ -127,17 +127,17 @@ $code-attr-val-color: $red;
     background-color: $example-preview-bg-color;
     background-image: linear-gradient(
         45deg,
-        rgba($gray-300, 0.1) 25%,
+        rgba($gray-300, 0.05) 25%,
         transparent 25%,
         transparent 75%,
-        rgba($gray-300, 0.1) 75%
+        rgba($gray-300, 0.05) 75%
       ),
       linear-gradient(
         45deg,
-        rgba($gray-300, 0.1) 25%,
+        rgba($gray-300, 0.05) 25%,
         transparent 25%,
         transparent 75%,
-        rgba($gray-300, 0.1) 75%
+        rgba($gray-300, 0.05) 75%
       );
     background-size: $example-preview-bg-square-size
       $example-preview-bg-square-size;
