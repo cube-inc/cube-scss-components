@@ -1,12 +1,12 @@
 // Body colors
-$body-color-dark: #{rgba(white, 0.8)} !default;
+$body-color-dark: rgba($white, 0.8) !default;
 $body-background-color-dark: hsl(180, 1%, 22%) !default;
 $tap-highlight-color-dark: rgba($primary, 0.05) !default;
 
 // Text colors
-$text-color-dark: #{rgba(white, 0.8)} !default;
-$text-muted-dark: #{rgba(white, 0.4)} !default;
-$code-block-color-dark: #{rgba(white, 0.6)} !default;
+$text-color-dark: rgba($white, 0.8) !default;
+$text-muted-dark: rgba($white, 0.4) !default;
+$code-block-color-dark: rgba($white, 0.6) !default;
 $text-success-dark: lighten($success, 5%) !default;
 $text-info-dark: lighten($info, 5%) !default;
 $text-warning-dark: lighten($warning, 5%) !default;
@@ -17,9 +17,9 @@ $code-block-color-dark: lighten($body-background-color-dark, 5%) !default;
 
 // Component colors
 $component-color-dark: var(--text-color) !default;
-$component-border-color-dark: #{rgba($white, 0.1)} !default;
-$component-background-color-dark: hsla(180, 1%, 25%, 0.98) !default;
-$component-background-color-alt-dark: #{rgba($white, 0.04)} !default;
+$component-border-color-dark: lighten($body-background-color-dark, 14%) !default;
+$component-background-color-dark: rgba($body-background-color-dark, 0.98) !default;
+$component-background-color-alt-dark: rgba($white, 0.04) !default;
 $component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
 
 @mixin dark-color-scheme {

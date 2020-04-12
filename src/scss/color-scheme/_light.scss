@@ -16,7 +16,7 @@ $code-block-color: $gray-800 !default;
 
 // Component colors
 $component-color: $text-color !default;
-$component-border-color: $gray-100 !default;
+$component-border-color: darken($body-background-color, 14%) !default;
 $component-bg-color: rgba($white, 0.98) !default;
 $component-bg-color-alt: rgba($black, 0.04) !default;
 $component-bg-color-hover: rgba($primary, 0.1) !default;
