@@ -67,9 +67,13 @@ export default {
     }
   },
   beforeMount () {
-    this.$matchDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
-    this.$matchDarkMode.addListener(this.onMatchMedia)
-    this.darkMode = this.dark !== null ? this.dark : this.$matchDarkMode.matches
+    if (this.dark === null) {
+      this.$matchDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
+      this.$matchDarkMode.addListener(this.onMatchMedia)
+      this.darkMode = this.$matchDarkMode.matches
+    } else {
+      this.darkMode = this.dark
+    }
   },
   mounted () {
     this.format()
