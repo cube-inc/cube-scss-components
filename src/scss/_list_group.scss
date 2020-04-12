@@ -5,9 +5,9 @@ $list-group-color: var(--component-color, #{$component-color}) !default;
 $list-group-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $list-group-border-size: $component-border-size !default;
 $list-group-border-radius: $component-border-radius !default;
-$list-group-bg-color: var(--component-background-color, #{$component-bg-color}) !default;
-$list-group-bg-color-hover: var(--component-background-color-hover, #{$component-bg-color-hover}) !default;
-$list-group-bg-color-active: var(--component-background-color-active, #{$component-bg-color-active}) !default;
+$list-group-bg-color: var(--component-background-color, #{$component-background-color}) !default;
+$list-group-bg-color-hover: var(--component-background-color-hover, #{$component-background-color-hover}) !default;
+$list-group-bg-color-active: var(--component-background-color-active, #{$component-background-color-active}) !default;
 
 $list-group-subheader-color: var(--text-muted, #{$text-muted}) !default;
 $list-group-subheader-padding: ($component-padding-y * 2) $component-padding-x $component-padding-y $component-padding-x !default;

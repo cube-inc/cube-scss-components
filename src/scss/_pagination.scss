@@ -1,10 +1,10 @@
-$pagination-bg: var(--component-background-color, #{$component-bg-color}) !default;
+$pagination-bg: var(--component-background-color, #{$component-background-color}) !default;
 $pagination-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $pagination-border-width: 1px !default;
 $pagination-border-radius: $component-border-radius !default;
 $pagination-color: var(--component-color, #{$component-color}) !default;
 $pagination-color-disabled: var(--text-muted, #{$text-muted}) !default;
-$pagination-hover-bg: var(--component-background-color-hover, #{$component-bg-color-hover}) !default;
+$pagination-hover-bg: var(--component-background-color-hover, #{$component-background-color-hover}) !default;
 $pagination-hover-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $pagination-hover-color: var(--component-color, #{$component-color}) !default;
 $pagination-focus-bg: $pagination-hover-bg !default;

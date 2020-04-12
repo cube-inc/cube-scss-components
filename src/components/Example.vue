@@ -90,10 +90,10 @@ $example-color: var(--component-color, #{$component-color}) !default;
 $example-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $example-border-radius: $component-border-radius !default;
 $example-preview-color: var(--component-color, #{$component-color}) !default;
-$example-preview-bg-color: var(--component-background-color, #{$component-bg-color}) !default;
+$example-preview-bg-color: var(--component-background-color, #{$component-background-color}) !default;
 $example-preview-dark-bg-color: #373838 !default;
 $example-preview-bg-square-size: 10px !default;
-$example-code-bg-color: var(--component-background-color-alt, #{$component-bg-color-alt}) !default;
+$example-code-bg-color: var(--component-background-color-alt, #{$component-background-color-alt}) !default;
 
 $code-tag-color: $blue;
 $code-attr-color: $cyan;

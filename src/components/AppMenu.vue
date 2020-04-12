@@ -55,7 +55,7 @@ export default {
 .header {
   border-top: 1px solid
     var(--component-border-color, #{$component-border-color});
-  background-color: var(--component-background-color, #{$component-bg-color});
+  background-color: var(--component-background-color, #{$component-background-color});
   @supports (backdrop-filter: blur()) {
     background-color: var(
       --component-backdrop-background-color,

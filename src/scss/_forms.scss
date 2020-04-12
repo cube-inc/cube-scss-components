@@ -2,7 +2,7 @@ $form-control-color: var(--text-color, #{$text-color}) !default;
 $form-control-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $form-control-border-color-focus: $primary !default;
 $form-control-border-radius: $component-border-radius-sm !default;
-$form-control-bg-color: var(--component-background-color, #{$component-bg-color}) !default;
+$form-control-bg-color: var(--component-background-color, #{$component-background-color}) !default;
 $form-control-muted-color: var(--text-muted, #{$text-muted}) !default;
 $form-control-danger-color: var(--text-danger, #{$text-danger}) !default;
 $form-control-padding: $component-padding !default;
