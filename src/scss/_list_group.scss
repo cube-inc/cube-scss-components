@@ -1,8 +1,8 @@
 $list-group-padding: $component-padding !default;
 $list-group-margin: 0 !default;
 
-$list-group-color: var(--component-color, #{component-color}) !default;
-$list-group-border-color: var(--component-border-color, #{component-border-color}) !default;
+$list-group-color: var(--component-color, #{$component-color}) !default;
+$list-group-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $list-group-border-size: $component-border-size !default;
 $list-group-border-radius: $component-border-radius !default;
 $list-group-bg-color: var(--component-background-color, #{$component-bg-color}) !default;
