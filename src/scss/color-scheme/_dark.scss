@@ -18,6 +18,7 @@ $code-block-color-dark: lighten($body-background-color-dark, 5%) !default;
 $component-color-dark: var(--text-color) !default;
 $component-border-color-dark: #{rgba($white, 0.1)} !default;
 $component-background-color-dark: hsla(180, 1%, 25%, 0.98) !default;
+$component-background-color-alt-dark: #{rgba($white, 0.04)} !default;
 $component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
 
 @mixin dark-color-scheme {
@@ -37,6 +38,7 @@ $component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
   --component-color: #{$component-color-dark};
   --component-border-color: #{$component-border-color-dark};
   --component-background-color: #{$component-background-color-dark};
+  --component-background-color-alt: #{$component-background-color-alt-dark};
   --component-backdrop-background-color: #{$component-backdrop-background-color-dark};
 
   --form-control-select-arrow-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$text-muted-dark}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>');

@@ -18,8 +18,10 @@ $code-block-color: $gray-800 !default;
 $component-color: $text-color !default;
 $component-border-color: $gray-100 !default;
 $component-bg-color: rgba($white, 0.98) !default;
+$component-bg-color-alt: rgba($black, 0.04) !default;
 $component-bg-color-hover: rgba($primary, 0.1) !default;
 $component-backdrop-bg-color: rgba($white, 0.6) !default;
+$component-box-shadow-color: $black !default;
 $component-outline-color: rgba($black, 0.2) !default;
 
 @mixin light-color-scheme {
@@ -40,6 +42,7 @@ $component-outline-color: rgba($black, 0.2) !default;
   --component-color: #{$component-color};
   --component-border-color: #{$component-border-color};
   --component-background-color: #{$component-bg-color};
+  --component-background-color-alt: #{$component-bg-color-alt};
   --component-background-color-hover: #{$component-bg-color-hover};
   --component-backdrop-background-color: #{$component-backdrop-bg-color};
 

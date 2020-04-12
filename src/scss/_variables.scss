@@ -64,7 +64,7 @@ $component-border-radius-sm: 3px !default;
 $component-padding-y: 12px !default;
 $component-padding-x: 16px !default;
 $component-padding: $component-padding-y $component-padding-x !default;
-$component-box-shadow: 0px 3px 6px -2px $gray-700 !default;
+$component-box-shadow: 0px 3px 6px -2px $component-box-shadow-color !default;
 $component-outline: 0 0 1rem $component-outline-color !default;
 
 // Z-Indexes
