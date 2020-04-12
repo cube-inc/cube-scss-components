@@ -6,6 +6,8 @@ $list-group-border-color: var(--component-border-color, #{$component-border-colo
 $list-group-border-size: $component-border-size !default;
 $list-group-border-radius: $component-border-radius !default;
 $list-group-bg-color: var(--component-background-color, #{$component-bg-color}) !default;
+$list-group-bg-color-hover: var(--component-background-color-hover, #{$component-bg-color-hover}) !default;
+$list-group-bg-color-active: var(--component-background-color-active, #{$component-bg-color-active}) !default;
 
 $list-group-subheader-color: var(--text-muted, #{$text-muted}) !default;
 $list-group-subheader-padding: ($component-padding-y * 2) $component-padding-x $component-padding-y $component-padding-x !default;
@@ -16,7 +18,7 @@ $list-group-action-font-size: 11px !default;
 $list-group-action-font-weight: 500 !default;
 
 $list-group-footer-color: var(--text-muted, #{$text-muted}) !default;
-$list-group-footer-font-size: $font-size-sm;
+$list-group-footer-font-size: $font-size-sm !default;
 
 .list-group {
   margin: $list-group-margin;
@@ -56,16 +58,16 @@ $list-group-footer-font-size: $font-size-sm;
       &:hover {
         color: inherit;
         text-decoration: inherit;
-        // background-color: darken($list-group-bg-color, 3%);
+        background-color: $list-group-bg-color-hover;
       }
       &:active {
         text-shadow: inherit;
-        // background-color: darken($list-group-bg-color, 6%);
+        background-color: $list-group-bg-color-active;
       }
       + .list-group-item-container {
         &::before {
           content: "";
-          // border-top: $list-group-border-size dotted lighten($list-group-border-color, 3%);
+          border-top: $list-group-border-size dotted $list-group-border-color;
           display: block;
         }
       }

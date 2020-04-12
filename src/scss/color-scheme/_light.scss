@@ -20,6 +20,7 @@ $component-border-color: $gray-100 !default;
 $component-bg-color: rgba($white, 0.98) !default;
 $component-bg-color-alt: rgba($black, 0.04) !default;
 $component-bg-color-hover: rgba($primary, 0.1) !default;
+$component-bg-color-active: rgba($primary, 0.2) !default;
 $component-backdrop-bg-color: rgba($white, 0.6) !default;
 $component-box-shadow-color: rgba($black, 0.3) !default;
 $component-outline-color: rgba($black, 0.2) !default;
@@ -45,6 +46,7 @@ $component-outline-color: rgba($black, 0.2) !default;
   --component-background-color: #{$component-bg-color};
   --component-background-color-alt: #{$component-bg-color-alt};
   --component-background-color-hover: #{$component-bg-color-hover};
+  --component-background-color-active: #{$component-bg-color-active};
   --component-backdrop-background-color: #{$component-backdrop-bg-color};
 
   --form-control-select-arrow-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$text-muted}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>');
