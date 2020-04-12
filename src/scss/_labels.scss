@@ -5,16 +5,16 @@ $label-font-size-sm: $font-size-base * 0.625 !default;
 $label-font-size-xs: $font-size-base * 0.5 !default;
 $label-font-weight: $font-weight-medium !default;
 $label-text-transform: uppercase !default;
-$label-color: $text-color !default;
+$label-color: var(--text-color, #{$text-color}) !default;
 $label-bg-color: rgba($text-color, 0.15) !default;
-$label-success-color: $success !default;
-$label-success-bg-color: rgba($label-success-color, 0.15) !default;
-$label-info-color: $info !default;
-$label-info-bg-color: rgba($label-info-color, 0.15) !default;
-$label-warning-color: $warning !default;
-$label-warning-bg-color: rgba($label-warning-color, 0.15) !default;
-$label-danger-color: $danger !default;
-$label-danger-bg-color: rgba($label-danger-color, 0.15) !default;
+$label-success-color: var(--text-success, #{$text-success}) !default;
+$label-success-bg-color: rgba($success, 0.15) !default;
+$label-info-color: var(--text-info, #{$text-info}) !default;
+$label-info-bg-color: rgba($info, 0.15) !default;
+$label-warning-color: var(--text-warning, #{$text-warning}) !default;
+$label-warning-bg-color: rgba($warning, 0.15) !default;
+$label-danger-color: var(--text-danger, #{$text-danger}) !default;
+$label-danger-bg-color: rgba($danger, 0.15) !default;
 
 .label {
   display: inline;

@@ -1,9 +1,10 @@
-$form-control-color: var(--form-control-color, #{$text-color}) !default;
-$form-control-border-color: $component-border-color !default;
+$form-control-color: var(--text-color, #{$text-color}) !default;
+$form-control-border-color: var(--component-border-color, #{$component-border-color}) !default;
+$form-control-border-color-focus: $primary !default;
 $form-control-border-radius: $component-border-radius-sm !default;
-$form-control-bg-color: $component-bg-color !default;
-$form-control-muted-color: $text-muted !default;
-$form-control-danger-color: $danger !default;
+$form-control-bg-color: var(--component-background-color, #{$component-bg-color}) !default;
+$form-control-muted-color: var(--text-muted, #{$text-muted}) !default;
+$form-control-danger-color: var(--text-danger, #{$text-danger}) !default;
 $form-control-padding: $component-padding !default;
 $form-control-font-size: $font-size-base !default;
 $form-control-font-family: $font-family-base !default;
@@ -15,7 +16,7 @@ $form-switch-active-color: $primary !default;
 $form-switch-size: $font-size-base * 1.125 !default;
 $form-switch-inner-padding: 2px !default;
 
-$form-control-focus-border-color: $primary !default;
+$form-control-select-arrow-image: var(--form-control-select-arrow-image, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$text-muted}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>'));
 
 .form {
   &-group {
@@ -54,7 +55,7 @@ $form-control-focus-border-color: $primary !default;
     font-weight: $form-control-font-weight;
     color: $form-control-color;
     &:focus:not(:disabled):not(:not(select):read-only) {
-      border-color: $form-control-focus-border-color;
+      border-color: $form-control-border-color-focus;
       box-shadow: $form-control-ouline;
     }
     &:read-only:not(select):not(div):not([type="checkbox"]):not([type="radio"]) {
@@ -134,7 +135,7 @@ select.form-control {
   background-repeat: no-repeat;
   background-color: $form-control-bg-color;
   background-size: 1.3em;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>');
+  background-image: $form-control-select-arrow-image;
   &:invalid {
     // Simulate placeholder
     color: $form-control-muted-color;
