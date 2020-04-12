@@ -93,7 +93,7 @@ $example-preview-color: var(--component-color, #{$component-color}) !default;
 $example-preview-bg-color: var(--component-background-color, #{$component-bg-color}) !default;
 $example-preview-dark-bg-color: #373838 !default;
 $example-preview-bg-square-size: 10px !default;
-$example-code-bg-color: var(--body-background-color) !default;
+$example-code-bg-color: var(--component-background-color-alt, #{&component-bg-color-alt}) !default;
 
 $code-tag-color: $blue;
 $code-attr-color: $cyan;
