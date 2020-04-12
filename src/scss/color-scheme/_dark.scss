@@ -50,7 +50,7 @@ $component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
   @include dark-color-scheme;
 }
 
-@if ($enable-automatic-color-scheme) {
+@if ($enable-prefers-color-scheme) {
   @media (prefers-color-scheme: dark) {
     :root {
       @include dark-color-scheme;

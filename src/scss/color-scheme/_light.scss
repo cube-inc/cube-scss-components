@@ -56,7 +56,7 @@ $component-outline-color: rgba($black, 0.2) !default;
   @include light-color-scheme;
 }
 
-@if ($enable-automatic-color-scheme) {
+@if ($enable-prefers-color-scheme) {
   @media (prefers-color-scheme: light) {
     :root {
       @include light-color-scheme;
