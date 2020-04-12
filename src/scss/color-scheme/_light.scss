@@ -21,7 +21,7 @@ $component-bg-color: rgba($white, 0.98) !default;
 $component-bg-color-alt: rgba($black, 0.04) !default;
 $component-bg-color-hover: rgba($primary, 0.1) !default;
 $component-backdrop-bg-color: rgba($white, 0.6) !default;
-$component-box-shadow-color: $black !default;
+$component-box-shadow-color: rgba($black, 0.3) !default;
 $component-outline-color: rgba($black, 0.2) !default;
 
 @mixin light-color-scheme {
