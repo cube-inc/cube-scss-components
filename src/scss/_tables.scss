@@ -5,7 +5,7 @@ $table-cell-padding: $table-cell-padding-vertical $table-cell-padding-horizontal
 $table-cell-hover-bg-color: var(--component-background-color-hover, #{$component-bg-color-hover}) !default;
 $table-cell-striped-bg-color: rgba($gray-070, 0.5) !default;
 $table-border-size: $component-border-size !default;
-$table-border-color: $component-border-color !default;
+$table-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $table-border-radius: $component-border-radius !default;
 
 .table {
