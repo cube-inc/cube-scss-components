@@ -27,6 +27,7 @@ $component-outline-color: rgba($black, 0.2) !default;
 @mixin light-color-scheme {
   --body-color: #{$body-color};
   --body-background-color: #{$body-background-color};
+  --tap-highlight-color: #{$tap-highlight-color};
 
   --text-color: #{$text-color};
   --text-muted: #{$text-muted};

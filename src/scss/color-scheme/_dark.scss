@@ -1,6 +1,7 @@
 // Body colors
 $body-color-dark: #{rgba(white, 0.8)} !default;
 $body-background-color-dark: hsl(180, 1%, 22%) !default;
+$tap-highlight-color-dark: rgba($primary, 0.05) !default;
 
 // Text colors
 $text-color-dark: #{rgba(white, 0.8)} !default;
@@ -24,6 +25,7 @@ $component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
 @mixin dark-color-scheme {
   --body-color: #{$body-color-dark};
   --body-background-color: #{$body-background-color-dark};
+  --tap-highlight-color: #{$tap-highlight-color-dark};
 
   --text-color: #{$text-color-dark};
   --text-muted: #{$text-muted-dark};
