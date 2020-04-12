@@ -2,7 +2,7 @@ $table-color: var(--text-color, #{$text-color}) !default;
 $table-cell-padding-vertical: 0.3rem !default;
 $table-cell-padding-horizontal: 0.6rem !default;
 $table-cell-padding: $table-cell-padding-vertical $table-cell-padding-horizontal !default;
-$table-cell-hover-bg-color: rgba($gray-100, 0.5) !default;
+$table-cell-hover-bg-color: var(--component-background-color-hover, #{$component-bg-color-hover}) !default;
 $table-cell-striped-bg-color: rgba($gray-070, 0.5) !default;
 $table-border-size: $component-border-size !default;
 $table-border-color: $component-border-color !default;
@@ -89,6 +89,7 @@ $table-border-radius: $component-border-radius !default;
   &-hover {
     > tbody {
       > tr:hover {
+        transition: background-color 250ms ease;
         background-color: $table-cell-hover-bg-color;
       }
     }

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <AppMenu />
     <Documentation />
     <footer>
       <div>cube-scss-components v{{ $root.$options.version }}</div>
@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import AppMenu from './components/AppMenu.vue'
 import Documentation from './components/Documentation.vue'
 import './scss/index.scss'
 
 export default {
   name: 'app',
   components: {
-    Header,
+    AppMenu,
     Documentation
   },
   data () {
@@ -47,6 +47,6 @@ footer {
   align-items: center;
   margin: 3em 0;
   padding: 3em 1em;
-  color: $text-muted;
+  color: var(--text-muted);
 }
 </style>

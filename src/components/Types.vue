@@ -1,6 +1,5 @@
 <template>
   <section id="Types">
-    <nav><a href="#Toc">Top</a></nav>
     <h2>Typography</h2>
 
     <Example>

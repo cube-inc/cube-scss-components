@@ -1,0 +1,59 @@
+// Body colors
+$body-color: $gray-900 !default;
+$body-background-color: $white !default;
+$tap-highlight-color: rgba($primary, 0.05) !default;
+
+// Text colors
+$text-color: $body-color !default;
+$text-muted: rgba($text-color, 0.4) !default;
+$text-success: $success !default;
+$text-info: $info !default;
+$text-warning: $warning !default;
+$text-danger: $danger !default;
+$link-color: $blue !default;
+$code-color: $red !default;
+$code-block-color: $gray-800 !default;
+
+// Components
+$component-color: $text-color !default;
+$component-border-color: $gray-100 !default;
+$component-bg-color: rgba($white, 0.98) !default;
+$component-bg-color-hover: rgba($primary, 0.1) !default;
+$component-backdrop-bg-color: rgba($white, 0.6) !default;
+$component-outline-color: rgba($black, 0.2) !default;
+
+@mixin light-color-scheme {
+  --body-color: #{$body-color};
+  --body-background-color: #{$body-background-color};
+
+  --text-color: #{$text-color};
+  --text-muted: #{$text-muted};
+  --text-success: #{$text-success};
+  --text-info: #{$text-info};
+  --text-warning: #{$text-warning};
+  --text-danger: #{$text-danger};
+  --link-color: #{$link-color};
+
+  --code-color: #{$code-color};
+  --code-block-color: #{$code-block-color};
+
+  --component-color: #{$component-color};
+  --component-border-color: #{$component-border-color};
+  --component-background-color: #{$component-bg-color};
+  --component-background-color-hover: #{$component-bg-color-hover};
+  --component-backdrop-background-color: #{$component-backdrop-bg-color};
+}
+
+.light-color-scheme {
+  @include light-color-scheme;
+}
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     @include light-color-scheme;
+//   }
+// }
+
+:root {
+  @include light-color-scheme;
+}

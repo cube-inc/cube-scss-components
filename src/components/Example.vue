@@ -1,24 +1,26 @@
 <template>
   <div class="example" :class="exampleClasses">
-    <div class="example-preview" ref="preview">
+    <div class="example-preview" :class="examplePreviewClasses" ref="preview">
       <slot />
     </div>
     <div class="example-toolbar">
       <button class="button button-xs" @click="toggleDark">{{ darkMode ? 'Light' : 'Dark'}}</button>
       <button class="button button-xs" @click="copyCode" ref="copyButton">Copy</button>
     </div>
-    <code class="example-code code-block light-color-scheme" ref="code" v-html="code"></code>
+    <code class="example-code code-block" ref="code" v-html="code"></code>
   </div>
 </template>
 
 <script>
 import vnodesToHtml from '@/services/vnodeService'
 
+/**
+ * TODO: Rely on global app state and ui-color-scheme
+ */
 export default {
   name: 'Example',
   props: {
-    html: String,
-    previewScroll: Boolean,
+    previewScroll: { type: Boolean, default: false },
     dark: { type: Boolean, default: null }
   },
   data () {
@@ -30,7 +32,11 @@ export default {
   computed: {
     exampleClasses () {
       return {
-        'example-preview-scroll': this.previewScroll,
+        'example-preview-scroll': this.previewScroll
+      }
+    },
+    examplePreviewClasses () {
+      return {
         'light-color-scheme': !this.darkMode,
         'dark-color-scheme': this.darkMode
       }
@@ -76,12 +82,14 @@ export default {
 
 <style lang="scss" scoped>
 $example-padding: 16px !default;
-$example-border-color: $component-border-color !default;
+$example-color: var(--component-color, #{$component-color}) !default;
+$example-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $example-border-radius: $component-border-radius !default;
-$example-preview-bg-color: rgba($gray-300, 0.1) !default;
-$example-preview-dark-bg-color: $dark-body-bg-color !default;
+$example-preview-color: var(--component-color, #{$component-color}) !default;
+$example-preview-bg-color: var(--component-background-color, #{$component-bg-color}) !default;
+$example-preview-dark-bg-color: #373838 !default;
 $example-preview-bg-square-size: 10px !default;
-$example-code-bg-color: $gray-070 !default;
+$example-code-bg-color: var(--body-background-color) !default;
 
 $code-tag-color: $blue;
 $code-attr-color: $cyan;
@@ -93,7 +101,7 @@ $code-attr-val-color: $red;
   border-radius: $example-border-radius;
   overflow: hidden;
   position: relative;
-  color: var(--text-color, #{$text-color});
+  color: $example-color;
   &-preview-scroll {
     .example-preview {
       overflow: scroll;
@@ -111,20 +119,21 @@ $code-attr-val-color: $red;
   }
   &-preview {
     padding: $example-padding;
-    background-color: white;
+    color: $example-preview-color;
+    background-color: $example-preview-bg-color;
     background-image: linear-gradient(
         45deg,
-        $example-preview-bg-color 25%,
+        rgba($gray-300, 0.1) 25%,
         transparent 25%,
         transparent 75%,
-        $example-preview-bg-color 75%
+        rgba($gray-300, 0.1) 75%
       ),
       linear-gradient(
         45deg,
-        $example-preview-bg-color 25%,
+        rgba($gray-300, 0.1) 25%,
         transparent 25%,
         transparent 75%,
-        $example-preview-bg-color 75%
+        rgba($gray-300, 0.1) 75%
       );
     background-size: $example-preview-bg-square-size
       $example-preview-bg-square-size;
@@ -156,12 +165,6 @@ $code-attr-val-color: $red;
         }
       }
     }
-  }
-}
-.dark-color-scheme {
-  .example-preview {
-    // color: white;
-    background-color: $example-preview-dark-bg-color;
   }
 }
 </style>

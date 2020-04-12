@@ -6,22 +6,7 @@
         <small class="small-block text-muted">Documentation v{{ $root.$options.version }}</small>
       </h1>
     </header>
-
-    <nav id="Toc" class="toc">
-      <h2>Table of content</h2>
-      <a href="#Badges">Badges</a>
-      <a href="#Bullets">Bullets</a>
-      <a href="#Buttons">Buttons</a>
-      <a href="#Cards">Cards</a>
-      <a href="#Forms">Forms</a>
-      <a href="#Labels">Labels</a>
-      <a href="#ListGroup">List group</a>
-      <a href="#Pagination">Pagination</a>
-      <a href="#Sliders">Sliders</a>
-      <a href="#Tables">Tables</a>
-      <a href="#Types">Typography</a>
-    </nav>
-
+    <AppNav />
     <main>
       <Badges/>
       <Bullets/>
@@ -39,6 +24,7 @@
 </template>
 
 <script>
+import AppNav from './AppNav.vue'
 import Badges from './Badges.vue'
 import Bullets from './Bullets.vue'
 import Buttons from './Buttons.vue'
@@ -53,6 +39,7 @@ import Types from './Types.vue'
 
 export default {
   components: {
+    AppNav,
     Badges,
     Bullets,
     Buttons,
@@ -71,29 +58,5 @@ export default {
 <style lang="scss" scoped>
 section {
   margin: 3em 0;
-}
-.toc {
-  margin: 3em 0;
-  > a {
-    display: block;
-    padding: 4px 8px;
-    margin: 0 -8px;
-    border-radius: $component-border-radius;
-    transition: all 250ms ease;
-    &:hover {
-      text-decoration: none;
-      background-color: $gray-070;
-    }
-  }
-}
-/deep/
-section {
-  > nav {
-    float: right;
-    > a {
-      display: inline-block;
-      line-height: $font-size-h2 * $line-height-base;
-    }
-  }
 }
 </style>

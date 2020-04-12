@@ -1,0 +1,51 @@
+// Body
+$body-color-dark: #{rgba(white, 0.8)} !default;
+$body-background-color-dark: hsl(180, 1%, 22%) !default;
+
+// Text
+$text-color-dark: #{rgba(white, 0.8)} !default;
+$text-muted-dark: #{rgba(white, 0.4)} !default;
+$code-block-color-dark: #{rgba(white, 0.6)} !default;
+$text-success-dark: lighten($success, 5%) !default;
+$text-info-dark: lighten($info, 5%) !default;
+$text-warning-dark: lighten($warning, 5%) !default;
+$text-danger-dark: lighten($danger, 5%) !default;
+$link-color-dark: lighten($blue, 5%) !default;
+$code-color-dark: lighten($red, 5%) !default;
+$code-block-color-dark: lighten($body-background-color-dark, 5%) !default;
+
+// Components
+$component-color-dark: var(--text-color) !default;
+$component-border-color-dark: #{rgba($white, 0.1)} !default;
+$component-background-color-dark: hsla(180, 1%, 25%, 0.98) !default;
+$component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
+
+@mixin dark-color-scheme {
+  --body-color: #{$body-color-dark};
+  --body-background-color: #{$body-background-color-dark};
+
+  --text-color: #{$text-color-dark};
+  --text-muted: #{$text-muted-dark};
+  --text-success: #{$text-success-dark};
+  --text-info: #{$text-info-dark};
+  --text-warning: #{$text-warning-dark};
+  --text-danger: #{$text-danger-dark};
+  --link-color: #{$link-color-dark};
+  --code-color: #{$code-color-dark};
+  --code-block-color: #{$code-block-color-dark};
+
+  --component-color: #{$component-color-dark};
+  --component-border-color: #{$component-border-color-dark};
+  --component-background-color: #{$component-background-color-dark};
+  --component-backdrop-background-color: #{$component-backdrop-background-color-dark};
+}
+
+.dark-color-scheme {
+  @include dark-color-scheme;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-color-scheme;
+  }
+}

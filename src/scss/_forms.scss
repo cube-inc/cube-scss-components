@@ -55,7 +55,7 @@ $form-control-focus-border-color: $primary !default;
     color: $form-control-color;
     &:focus:not(:disabled):not(:not(select):read-only) {
       border-color: $form-control-focus-border-color;
-      // box-shadow: $form-control-ouline;
+      box-shadow: $form-control-ouline;
     }
     &:read-only:not(select):not(div):not([type="checkbox"]):not([type="radio"]) {
       cursor: default;

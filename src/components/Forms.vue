@@ -1,9 +1,5 @@
 <template>
   <section id="Forms">
-    <nav>
-      <a href="#Toc">Top</a>
-    </nav>
-
     <h2>Forms</h2>
     <Example>
       <fieldset class="form-group">

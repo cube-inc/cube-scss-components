@@ -21,9 +21,7 @@ body {
 *,
 *::before,
 *::after {
-  color: var(--text-color, #{$text-color});
   box-sizing: border-box;
-  transition: all 100ms ease;
 }
 
 hr {

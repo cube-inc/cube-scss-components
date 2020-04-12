@@ -1,6 +1,5 @@
 <template>
   <section id="Badges">
-    <nav><a href="#Toc">Top</a></nav>
     <h2>Badges</h2>
     <Example>
       <p><span class="badge">99</span> .badge</p>

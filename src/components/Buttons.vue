@@ -1,6 +1,5 @@
 <template>
   <section id="Buttons">
-    <nav><a href="#Toc">Top</a></nav>
     <h2>Buttons</h2>
 
     <h3>Button styles</h3>

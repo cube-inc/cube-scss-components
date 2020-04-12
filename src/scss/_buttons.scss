@@ -23,7 +23,7 @@ $button-danger-color: $danger !default;
 $button-list-gap: 4px !default;
 
 // button-outline
-$button-outline-border-color: $component-border-color !default;
+$button-outline-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $button-outline-bg-color: transparent !default;
 $button-outline-padding: $button-padding !default;
 

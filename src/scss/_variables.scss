@@ -1,61 +1,6 @@
-// Colors
-$navy: #1a004f !default;
-$blue: #157efb !default;
-$indigo: #738cff !default;
-$purple: #6f42c1 !default;
-$pink: #e83e8c !default;
-$red: #ff405e !default;
-$orange: #fd7e14 !default;
-$yellow: #f2d30c !default;
-$green: #28a745 !default;
-$teal: #20c997 !default;
-$cyan: #17a2b8 !default;
-
-// Grays
-$white: hsl(210, 10%, 100%) !default;
-$gray-020: hsl(210, 10%, 98%) !default;
-$gray-050: hsl(210, 10%, 95%) !default;
-$gray-070: hsl(210, 10%, 93%) !default;
-$gray-100: hsl(210, 10%, 90%) !default;
-$gray-200: hsl(210, 10%, 80%) !default;
-$gray-300: hsl(210, 10%, 70%) !default;
-$gray-400: hsl(210, 10%, 60%) !default;
-$gray-500: hsl(210, 10%, 50%) !default;
-$gray-600: hsl(210, 10%, 40%) !default;
-$gray-700: hsl(210, 10%, 30%) !default;
-$gray-800: hsl(210, 10%, 20%) !default;
-$gray-900: hsl(210, 10%, 10%) !default;
-$black: hsl(210, 10%, 0%) !default;
-
-// Brand colors
-$primary: $blue !default;
-$secondary: $yellow !default;
-$success: $teal !default;
-$info: $indigo !default;
-$warning: $yellow !default;
-$danger: $red !default;
-
-// Text colors
-$text-color: $gray-900 !default;
-$text-muted: rgba($text-color, 0.4) !default;
-$text-success: $success !default;
-$text-info: $info !default;
-$text-warning: $warning !default;
-$text-danger: $danger !default;
-$link-color: $blue !default;
-$code-color: $red !default;
-$code-block-color: $gray-800 !default;
-
-// Dark colors
-$dark-body-color: $white !default;
-$dark-body-bg-color: #373838 !default;
-$dark-text-color: $white !default;
-$dark-text-muted: rgba($dark-text-color, 0.4) !default;
-
-// Body colors
-$body-color: $text-color !default;
-$body-background-color: $white !default;
-$tap-highlight-color: rgba($primary, 0.05) !default;
+@import "colors";
+@import "color-scheme/light";
+@import "color-scheme/dark";
 
 // Font families
 $font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif,
@@ -109,9 +54,6 @@ $headings-margin-bottom: 1em !default;
 
 // Components
 $component-border-size: 1px !default;
-$component-border-color: $gray-100 !default;
-$component-color: $white !default;
-$component-bg-color: $white !default;
 $component-filter-saturate: 300% !default;
 $component-filter-blur: 20px !default;
 $component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;
@@ -121,7 +63,6 @@ $component-padding-y: 12px !default;
 $component-padding-x: 16px !default;
 $component-padding: $component-padding-y $component-padding-x !default;
 $component-box-shadow: 0px 3px 6px -2px $gray-700 !default;
-$component-outline-color: rgba($black, 0.2) !default;
 $component-outline: 0 0 1rem $component-outline-color !default;
 
 // Z-Indexes

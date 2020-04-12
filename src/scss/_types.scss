@@ -125,7 +125,7 @@ p {
 }
 a {
   text-decoration: none;
-  color: $link-color;
+  color: var(--link-color, #{$link-color});
   cursor: pointer;
   &:hover {
     text-decoration: underline;
@@ -140,17 +140,17 @@ blockquote {
   white-space: pre-line;
   margin: 0.2em 0;
   padding: 0.2em 0.6em;
-  border-left: 3px solid $text-muted;
+  border-left: 3px solid var(--text-muted, #{$text-muted});
 }
 code {
   font-size: $font-size-code;
   word-break: break-word;
   font-family: $font-family-code;
-  color: $code-color;
+  color: var(--code-color, #{$code-color});
   &.code-block {
     display: block;
     font-size: $font-size-code-block;
-    color: $code-block-color;
+    color: var(--code-block-color, #{$code-block-color});
     white-space: pre-wrap;
   }
 }
@@ -182,16 +182,16 @@ abbr {
   color: var(--text-muted, #{$text-muted});
 }
 .text-success {
-  color: $text-success;
+  color: var(--text-success, #{$text-success});
 }
 .text-info {
-  color: $text-info;
+  color: var(--text-info, #{$text-info});
 }
 .text-warning {
-  color: $text-warning;
+  color: var(--text-warning, #{$text-warning});
 }
 .text-danger {
-  color: $text-danger;
+  color: var(--text-danger, #{$text-danger});
 }
 .text-left {
   text-align: left;
