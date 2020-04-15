@@ -7,6 +7,10 @@ $button-padding-x: 10px !default;
 $button-padding-y: 10px !default;
 $button-padding: $button-padding-y $button-padding-x !default;
 $button-min-width: 160px !default;
+$button-min-width-xs: 80px !default;
+$button-min-width-sm: 120px !default;
+$button-min-width-md: 180px !default;
+$button-min-width-lg: 200 !default;
 $button-transition: all 100ms ease !default;
 
 // button colors
@@ -214,6 +218,7 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
   &-xs {
     font-size: $button-font-size-xs;
     padding: $button-padding-xs;
+    min-width: $button-min-width-xs;
     .icon {
       height: calc(#{$button-font-size-xs} + 2px);
       margin: -2px 0;
@@ -222,6 +227,7 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
   &-sm {
     font-size: $button-font-size-sm;
     padding: $button-padding-sm;
+    min-width: $button-min-width-sm;
     .icon {
       height: calc(#{$button-font-size-sm} + 2px);
       margin: -2px 0;
@@ -230,6 +236,7 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
   &-md {
     font-size: $button-font-size-md;
     padding: $button-padding-md;
+    min-width: $button-min-width-md;
     .icon {
       height: calc(#{$button-font-size-md} + 1px);
       margin: -2px 0;
@@ -238,6 +245,7 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
   &-lg {
     font-size: $button-font-size-lg;
     padding: $button-padding-lg;
+    min-width: $button-min-width-lg;
     .icon {
       height: calc(#{$button-font-size-lg} + 1px);
       margin: -2px 0;
