@@ -200,20 +200,47 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
       }
     }
   }
+
+  // Icon
+  .icon {
+    font-size: 1;
+    height: calc(#{$button-font-size} + 2px);
+    margin: -2px 0;
+    width: auto;
+    fill: $button-primary-color;
+  }
+
+  // Sizes
   &-xs {
     font-size: $button-font-size-xs;
     padding: $button-padding-xs;
+    .icon {
+      height: calc(#{$button-font-size-xs} + 2px);
+      margin: -2px 0;
+    }
   }
   &-sm {
     font-size: $button-font-size-sm;
     padding: $button-padding-sm;
+    .icon {
+      height: calc(#{$button-font-size-sm} + 2px);
+      margin: -2px 0;
+    }
   }
   &-md {
     font-size: $button-font-size-md;
     padding: $button-padding-md;
+    .icon {
+      height: calc(#{$button-font-size-md} + 1px);
+      margin: -2px 0;
+    }
   }
   &-lg {
     font-size: $button-font-size-lg;
     padding: $button-padding-lg;
+    .icon {
+      height: calc(#{$button-font-size-lg} + 1px);
+      margin: -2px 0;
+    }
   }
 }
