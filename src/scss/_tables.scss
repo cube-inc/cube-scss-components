@@ -86,11 +86,17 @@ $table-border-radius: $component-border-radius !default;
       }
     }
   }
-  &-hover {
-    > tbody {
-      > tr:hover {
-        transition: background-color 250ms ease;
-        background-color: $table-cell-hover-bg-color;
+}
+
+// Hover for supported devices
+@media (hover: hover) {
+  .table {
+    &-hover {
+      > tbody {
+        > tr:hover {
+          transition: background-color 250ms ease;
+          background-color: $table-cell-hover-bg-color;
+        }
       }
     }
   }

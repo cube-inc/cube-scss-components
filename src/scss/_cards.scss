@@ -100,7 +100,13 @@ $card-list-gap: 10px !default;
 a.card {
   color: inherit;
   text-decoration: none;
-  &:hover {
-    text-decoration: none;
+}
+
+// Hover for supported devices
+@media (hover: hover) {
+  a.card {
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

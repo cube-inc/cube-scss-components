@@ -49,13 +49,6 @@ $pagination-padding: .8em 1.6em !default;
         all 250ms ease,
         box-shadow 100ms ease
       ;
-      &:hover:not(:disabled) {
-        z-index: 2;
-        text-decoration: none;
-        color: $pagination-hover-color;
-        background-color: $pagination-hover-bg;
-        border-color: $pagination-hover-border-color;
-      }
       &:focus:not(:disabled) {
         z-index: 2;
         text-decoration: none;
@@ -78,6 +71,23 @@ $pagination-padding: .8em 1.6em !default;
       flex-grow: 1;
       flex-basis: 0;
       white-space: nowrap;
+    }
+  }
+}
+
+// Hover for supported devices
+@media (hover: hover) {
+  .pagination {
+    .page {
+      &-button {
+        &:hover:not(:disabled) {
+          z-index: 2;
+          text-decoration: none;
+          color: $pagination-hover-color;
+          background-color: $pagination-hover-bg;
+          border-color: $pagination-hover-border-color;
+        }
+      }
     }
   }
 }

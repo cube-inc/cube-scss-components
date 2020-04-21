@@ -2,7 +2,6 @@
   &-white {
     color: $white;
     background-color: rgba($white,.05);
-    &:hover:not(:disabled),
     &:focus:not(:disabled) {
       background-color: rgba($white,.1);
     }
@@ -20,7 +19,6 @@
     &.button-filled {
       color: $button-primary-color;
       background-color: $white;
-      &:hover:not(:disabled),
       &:focus:not(:disabled) {
         background-color: rgba($white, .8);
       }
@@ -38,7 +36,6 @@
   }
   &-success {
     color: $button-success-color;
-    &:hover:not(:disabled),
     &:focus:not(:disabled) {
       background-color: rgba($button-success-color,.15);
     }
@@ -52,7 +49,6 @@
     &.button-filled:not(:disabled) {
       color: $button-filled-color;
       background-color: $button-success-color;
-      &:hover,
       &:focus {
         background-color: rgba($button-success-color, .8);
       }
@@ -64,7 +60,6 @@
   }
   &-info {
     color: $button-info-color;
-    &:hover:not(:disabled),
     &:focus:not(:disabled) {
       background-color: rgba($button-info-color,.15);
     }
@@ -78,7 +73,6 @@
     &.button-filled:not(:disabled) {
       color: $button-filled-color;
       background-color: $button-info-color;
-      &:hover,
       &:focus {
         background-color: rgba($button-info-color, .8);
       }
@@ -90,7 +84,6 @@
   }
   &-warning {
     color: $button-warning-color;
-    &:hover:not(:disabled),
     &:focus:not(:disabled) {
       background-color: rgba($button-warning-color,.15);
     }
@@ -104,7 +97,6 @@
     &.button-filled:not(:disabled) {
       color: $button-filled-color;
       background-color: $button-warning-color;
-      &:hover,
       &:focus {
         background-color: rgba($button-warning-color, .8);
       }
@@ -116,7 +108,6 @@
   }
   &-danger {
     color: $button-danger-color;
-    &:hover:not(:disabled),
     &:focus:not(:disabled) {
       background-color: rgba($button-danger-color,.15);
     }
@@ -130,13 +121,68 @@
     &.button-filled:not(:disabled) {
       color: $button-filled-color;
       background-color: $button-danger-color;
-      &:hover,
       &:focus {
         background-color: rgba($button-danger-color, .8);
       }
       &.active,
       &:active {
         background-color: rgba($button-danger-color, .7);
+      }
+    }
+  }
+}
+
+// Hover for supported devices
+@media (hover: hover) {
+  .button {
+    &-white {
+      &:hover:not(:disabled) {
+        background-color: rgba($white, 0.1);
+      }
+      &.button-filled {
+        &:hover:not(:disabled) {
+          background-color: rgba($white, 0.8);
+        }
+      }
+    }
+    &-success {
+      &:hover:not(:disabled) {
+        background-color: rgba($button-success-color, 0.15);
+      }
+      &.button-filled:not(:disabled) {
+        &:hover {
+          background-color: rgba($button-success-color, 0.8);
+        }
+      }
+    }
+    &-info {
+      &:hover:not(:disabled) {
+        background-color: rgba($button-info-color, 0.15);
+      }
+      &.button-filled:not(:disabled) {
+        &:hover {
+          background-color: rgba($button-info-color, 0.8);
+        }
+      }
+    }
+    &-warning {
+      &:hover:not(:disabled) {
+        background-color: rgba($button-warning-color, 0.15);
+      }
+      &.button-filled:not(:disabled) {
+        &:hover {
+          background-color: rgba($button-warning-color, 0.8);
+        }
+      }
+    }
+    &-danger {
+      &:hover:not(:disabled) {
+        background-color: rgba($button-danger-color, 0.15);
+      }
+      &.button-filled:not(:disabled) {
+        &:hover {
+          background-color: rgba($button-danger-color, 0.8);
+        }
       }
     }
   }

@@ -127,9 +127,6 @@ a {
   text-decoration: none;
   color: var(--link-color, #{$link-color});
   cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
   &:focus {
     outline: none;
   }
@@ -207,4 +204,13 @@ abbr {
 }
 .pre-line {
   white-space: pre-line;
+}
+
+// Hover for supported devices
+@media (hover: hover) {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
