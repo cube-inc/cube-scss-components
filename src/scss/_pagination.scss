@@ -10,11 +10,11 @@ $pagination-hover-color: var(--component-color, #{$component-color}) !default;
 $pagination-focus-bg: $pagination-hover-bg !default;
 $pagination-focus-border-color: $pagination-hover-border-color !default;
 $pagination-focus-color: $pagination-hover-color !default;
-$pagination-active-box-shadow: .1em .1em .5em rgba(black,.15) inset !default;
+$pagination-active-box-shadow: 0.1em 0.1em 0.5em rgba(black, 0.15) inset !default;
 $pagination-line-height: $line-height-base !default;
 $pagination-font-size: $font-size-sm !default;
 $pagination-font-family: $font-family-base !default;
-$pagination-padding: .8em 1.6em !default;
+$pagination-padding: 0.8em 1.6em !default;
 
 .pagination {
   display: flex;
@@ -45,10 +45,7 @@ $pagination-padding: .8em 1.6em !default;
     }
     &-button {
       text-transform: uppercase;
-      transition:
-        all 250ms ease,
-        box-shadow 100ms ease
-      ;
+      transition: all 250ms ease, box-shadow 100ms ease;
       &:focus:not(:disabled) {
         z-index: 2;
         text-decoration: none;
