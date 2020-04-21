@@ -232,8 +232,8 @@ input[type="radio"].form-control {
     }
   }
   // Switch – checkbox and radio
-  input[type="checkbox"].form-control,
-  input[type="radio"].form-control {
+  input[type="checkbox"].form-control:not(:disabled):not(:checked),
+  input[type="radio"].form-control:not(:disabled):not(:checked) {
     &:hover {
       &::before {
         background-color: rgba($form-switch-active-color, 0.125);
@@ -242,8 +242,8 @@ input[type="radio"].form-control {
   }
   .form-label {
     &:hover {
-      input[type="checkbox"].form-control:not(:disabled):not(:read-only):not(:checked),
-      input[type="radio"].form-control:not(:disabled):not(:read-only):not(:checked) {
+      input[type="checkbox"].form-control:not(:disabled):not(:checked),
+      input[type="radio"].form-control:not(:disabled):not(:checked) {
         &::before {
           background-color: rgba($form-switch-active-color, 0.125);
         }
