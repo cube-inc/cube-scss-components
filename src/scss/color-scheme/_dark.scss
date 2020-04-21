@@ -18,7 +18,7 @@ $code-block-color-dark: lighten($body-background-color-dark, 5%) !default;
 // Component colors
 $component-color-dark: var(--text-color) !default;
 $component-border-color-dark: lighten($body-background-color-dark, 14%) !default;
-$component-background-color-dark: rgba($body-background-color-dark, 0.98) !default;
+$component-background-color-dark: lighten($body-background-color-dark, 4%) !default;
 $component-background-color-alt-dark: rgba($white, 0.04) !default;
 $component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
 
