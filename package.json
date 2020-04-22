@@ -34,7 +34,7 @@
     "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
+    "sass": "^1.26.3",
     "sass-loader": "^7.1.0",
     "v-clipboard": "^2.2.1",
     "vue": "^2.6.6",

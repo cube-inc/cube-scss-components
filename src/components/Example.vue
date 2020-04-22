@@ -167,7 +167,7 @@ $code-attr-val-color: $red;
   &-code {
     padding: $example-padding;
     background-color: $example-code-bg-color;
-    /deep/ .code {
+    ::v-deep .code {
       &-tag {
         color: $code-tag-color;
       }
