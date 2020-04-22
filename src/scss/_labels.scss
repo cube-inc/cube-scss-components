@@ -6,20 +6,20 @@ $label-font-size-xs: $font-size-base * 0.5 !default;
 $label-font-weight: $font-weight-medium !default;
 $label-text-transform: uppercase !default;
 $label-color: rgba($white, 0.9) !default;
-$label-bg-color: $gray-400 !default;
+$label-background-color: var(--label-background-color, #{$gray-400}) !default;
 $label-success-color: var(--text-success, #{$text-success}) !default;
-$label-success-bg-color: rgba($success, 0.15) !default;
+$label-success-background-color: rgba($success, 0.15) !default;
 $label-info-color: var(--text-info, #{$text-info}) !default;
-$label-info-bg-color: rgba($info, 0.15) !default;
+$label-info-background-color: rgba($info, 0.15) !default;
 $label-warning-color: var(--text-warning, #{$text-warning}) !default;
-$label-warning-bg-color: rgba($warning, 0.15) !default;
+$label-warning-background-color: rgba($warning, 0.15) !default;
 $label-danger-color: var(--text-danger, #{$text-danger}) !default;
-$label-danger-bg-color: rgba($danger, 0.15) !default;
+$label-danger-background-color: rgba($danger, 0.15) !default;
 
 .label {
   display: inline;
   color: $label-color;
-  background-color: $label-bg-color;
+  background-color: $label-background-color;
   line-height: 1em;
   padding: $label-padding;
   border-radius: $label-border-radius;
@@ -37,19 +37,19 @@ $label-danger-bg-color: rgba($danger, 0.15) !default;
     font-size: $label-font-size-xs;
   }
   &-success {
-    background-color: $label-success-bg-color;
+    background-color: $label-success-background-color;
     color: $label-success-color;
   }
   &-info {
-    background-color: $label-info-bg-color;
+    background-color: $label-info-background-color;
     color: $label-info-color;
   }
   &-warning {
-    background-color: $label-warning-bg-color;
+    background-color: $label-warning-background-color;
     color: $label-warning-color;
   }
   &-danger {
-    background-color: $label-danger-bg-color;
+    background-color: $label-danger-background-color;
     color: $label-danger-color;
   }
 }

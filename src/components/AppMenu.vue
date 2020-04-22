@@ -60,7 +60,7 @@ export default {
   @supports (backdrop-filter: blur()) {
     background-color: var(
       --component-backdrop-background-color,
-      #{$component-backdrop-bg-color}
+      #{$component-backdrop-background-color}
     );
     backdrop-filter: blur(20px) saturate(120%);
   }

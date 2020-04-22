@@ -3,14 +3,14 @@ $badge-font-size: $font-size-xs !default;
 $badge-font-weight: $font-weight-base !default;
 $badge-border-radius: 50% !default;
 $badge-color: rgba($white, 0.9) !default;
-$badge-bg-color: $gray-400 !default;
-$badge-success-bg-color: $success !default;
+$badge-background-color: $gray-400 !default;
+$badge-success-background-color: var(--success, #{$success}) !default;
 $badge-success-color: $white !default;
-$badge-info-bg-color: $info !default;
+$badge-info-background-color: var(--info, #{$info}) !default;
 $badge-info-color: $white !default;
-$badge-warning-bg-color: $warning !default;
+$badge-warning-background-color: var(--warning, #{$warning}) !default;
 $badge-warning-color: $white !default;
-$badge-danger-bg-color: $danger !default;
+$badge-danger-background-color: var(--danger, #{$danger}) !default;
 $badge-danger-color: $white !default;
 
 .badge {
@@ -21,24 +21,24 @@ $badge-danger-color: $white !default;
   text-align: center;
   vertical-align: bottom;
   border-radius: $badge-border-radius;
-  background-color: $badge-bg-color;
+  background-color: $badge-background-color;
   color: $badge-color;
   font-size: $badge-font-size;
   font-weight: $badge-font-weight;
   &-success {
-    background-color: $badge-success-bg-color;
+    background-color: $badge-success-background-color;
     color: $badge-success-color;
   }
   &-info {
-    background-color: $badge-info-bg-color;
+    background-color: $badge-info-background-color;
     color: $badge-info-color;
   }
   &-warning {
-    background-color: $badge-warning-bg-color;
+    background-color: $badge-warning-background-color;
     color: $badge-warning-color;
   }
   &-danger {
-    background-color: $badge-danger-bg-color;
+    background-color: $badge-danger-background-color;
     color: $badge-danger-color;
   }
 }

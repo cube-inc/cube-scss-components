@@ -1,0 +1,52 @@
+@import "variables";
+
+@mixin light-color-scheme {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --success: #{$success};
+  --info: #{$info};
+  --warning: #{$warning};
+  --danger: #{$danger};
+
+  --body-color: #{$body-color};
+  --body-background-color: #{$body-background-color};
+  --tap-highlight-color: #{$tap-highlight-color};
+
+  --text-color: #{$text-color};
+  --text-muted: #{$text-muted};
+  --text-secondary: #{$text-secondary};
+  --text-success: #{$text-success};
+  --text-info: #{$text-info};
+  --text-warning: #{$text-warning};
+  --text-danger: #{$text-danger};
+  --link-color: #{$link-color};
+
+  --code-color: #{$code-color};
+  --code-block-color: #{$code-block-color};
+
+  --component-color: #{$component-color};
+  --component-border-color: #{$component-border-color};
+  --component-background-color: #{$component-background-color};
+  --component-background-color-alt: #{$component-background-color-alt};
+  --component-background-color-hover: #{$component-background-color-hover};
+  --component-background-color-active: #{$component-background-color-active};
+  --component-backdrop-background-color: #{$component-backdrop-background-color};
+
+  --form-control-select-arrow-image: #{$form-control-select-arrow-image};
+}
+
+.light-color-scheme {
+  @include light-color-scheme;
+}
+
+@if ($enable-prefers-color-scheme) {
+  @media (prefers-color-scheme: light) {
+    :root {
+      @include light-color-scheme;
+    }
+  }
+} @else {
+  :root {
+    @include light-color-scheme;
+  }
+}

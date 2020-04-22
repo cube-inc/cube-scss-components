@@ -1,9 +1,9 @@
 $bullet-size: 10px !default;
 $bullet-color: $gray-400 !default;
-$bullet-success-color: $success !default;
-$bullet-info-color: $info !default;
-$bullet-warning-color: $warning !default;
-$bullet-danger-color: $danger !default;
+$bullet-success-color: var(--success, #{$success}) !default;
+$bullet-info-color: var(--info, #{$info}) !default;
+$bullet-warning-color: var(--warning, #{$warning}) !default;
+$bullet-danger-color: var(--danger, #{$danger}) !default;
 
 .bullet {
   display: inline-block;

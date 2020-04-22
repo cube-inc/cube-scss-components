@@ -2,9 +2,18 @@ $card-border-radius: $component-border-radius !default;
 $card-border-size: $component-border-size !default;
 $card-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $card-text-color: var(--component-color, #{$component-color}) !default;
-$card-bg-color: var(--component-background-color, #{$component-background-color}) !default;
+$card-background-color: var(--component-background-color, #{$component-background-color}) !default;
 $card-padding: $component-padding !default;
 $card-list-gap: 10px !default;
+
+// Hover for supported devices
+@media (hover: hover) {
+  a.card {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 
 .card {
   display: flex;
@@ -29,7 +38,7 @@ $card-list-gap: 10px !default;
       object-fit: cover;
       width: 100%;
       height: 100%;
-      background-color: $card-bg-color;
+      background-color: $card-background-color;
     }
     &-overlay {
       position: absolute;
@@ -49,7 +58,7 @@ $card-list-gap: 10px !default;
     }
   }
   &-body {
-    background-color: $card-bg-color;
+    background-color: $card-background-color;
     padding: $card-padding;
     flex-grow: 1;
     h1,
@@ -62,7 +71,7 @@ $card-list-gap: 10px !default;
     }
   }
   &-footer {
-    background-color: $card-bg-color;
+    background-color: $card-background-color;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -100,13 +109,4 @@ $card-list-gap: 10px !default;
 a.card {
   color: inherit;
   text-decoration: none;
-}
-
-// Hover for supported devices
-@media (hover: hover) {
-  a.card {
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }

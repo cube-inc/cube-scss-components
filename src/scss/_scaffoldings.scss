@@ -2,6 +2,7 @@ $body-color: rgba($black, 0.9) !default;
 $body-background-color: $white !default;
 $tap-highlight-color: rgba($primary, 0.05) !default;
 $container-breakpoint: $breakpoint-lg !default;
+$content-padding: $spacer !default;
 $z-index-fixed: 1000 !default;
 
 body {
@@ -40,9 +41,13 @@ hr {
 .container {
   width: 100%;
   max-width: $container-breakpoint;
+  margin: 0 auto;
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
 }
 
 .content {
+  padding: $content-padding;
 }
 .fixed-top {
   position: fixed;

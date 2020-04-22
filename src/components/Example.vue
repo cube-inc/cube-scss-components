@@ -100,10 +100,10 @@ $example-color: var(--component-color, #{$component-color}) !default;
 $example-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $example-border-radius: $component-border-radius !default;
 $example-preview-color: var(--component-color, #{$component-color}) !default;
-$example-preview-bg-color: var(--component-background-color, #{$component-background-color}) !default;
-$example-preview-dark-bg-color: #373838 !default;
-$example-preview-bg-square-size: 10px !default;
-$example-code-bg-color: var(--component-background-color-alt, #{$component-background-color-alt}) !default;
+$example-preview-background-color: var(--component-background-color, #{$component-background-color}) !default;
+$example-preview-dark-background-color: #373838 !default;
+$example-preview-background-square-size: 10px !default;
+$example-code-background-color: var(--component-background-color-alt, #{$component-background-color-alt}) !default;
 
 $code-tag-color: $blue;
 $code-attr-color: $cyan;
@@ -134,7 +134,7 @@ $code-attr-val-color: $red;
   &-preview {
     padding: $example-padding;
     color: $example-preview-color;
-    background-color: $example-preview-bg-color;
+    background-color: $example-preview-background-color;
     background-image: linear-gradient(
         45deg,
         rgba($gray-300, 0.05) 25%,
@@ -149,11 +149,11 @@ $code-attr-val-color: $red;
         transparent 75%,
         rgba($gray-300, 0.05) 75%
       );
-    background-size: $example-preview-bg-square-size
-      $example-preview-bg-square-size;
+    background-size: $example-preview-background-square-size
+      $example-preview-background-square-size;
     background-position: 0 0,
-      ($example-preview-bg-square-size / 2)
-        ($example-preview-bg-square-size / 2);
+      ($example-preview-background-square-size / 2)
+        ($example-preview-background-square-size / 2);
     transition: all 250ms ease;
   }
   &-toolbar {
@@ -167,7 +167,7 @@ $code-attr-val-color: $red;
   }
   &-code {
     padding: $example-padding;
-    background-color: $example-code-bg-color;
+    background-color: $example-code-background-color;
     ::v-deep .code {
       &-tag {
         color: $code-tag-color;

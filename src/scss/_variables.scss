@@ -1,8 +1,9 @@
 // Colors
-$enable-prefers-color-scheme: true !default;
 @import "colors";
-@import "color-scheme/light";
-@import "color-scheme/dark";
+@import "color-schemes/light/variables";
+@import "color-schemes/dark/variables";
+
+$enable-prefers-color-scheme: true !default;
 
 // Font families
 $font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
@@ -48,10 +49,13 @@ $font-weight-h5: $font-weight-headings !default;
 $font-weight-h6: $font-weight-headings !default;
 
 // Margins
-$paragraph-margin-top: 1em !default;
+$paragraph-margin-top: 0 !default;
 $paragraph-margin-bottom: 1em !default;
-$headings-margin-top: 1em !default;
+$headings-margin-top: 0 !default;
 $headings-margin-bottom: 1em !default;
+
+// Paddings
+$content-padding: 1rem !default;
 
 // Components
 $component-border-size: 1px !default;

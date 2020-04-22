@@ -1,0 +1,39 @@
+$_lighten-amount: 3%;
+
+// Brand colors
+$primary-dark: lighten($primary, $_lighten-amount) !default;
+$secondary-dark: lighten($secondary, $_lighten-amount) !default;
+$success-dark: lighten($success, $_lighten-amount) !default;
+$info-dark: lighten($info, $_lighten-amount) !default;
+$warning-dark: lighten($warning, $_lighten-amount) !default;
+$danger-dark: lighten($danger, $_lighten-amount) !default;
+
+// Body colors
+$body-color-dark: rgba($white, 0.9) !default;
+$body-background-color-dark: hsl(180, 1%, 22%) !default;
+$tap-highlight-color-dark: rgba($primary, 0.05) !default;
+
+// Text colors
+$text-color-dark: rgba($white, 0.9) !default;
+$text-muted-dark: rgba($white, 0.5) !default;
+$text-secondary-dark: $secondary-dark !default;
+$text-success-dark: $success-dark !default;
+$text-info-dark: $info-dark !default;
+$text-warning-dark: $warning-dark !default;
+$text-danger-dark: $danger-dark !default;
+$link-color-dark: lighten($link-color, $_lighten-amount) !default;
+$code-color-dark: lighten($code-color, $_lighten-amount) !default;
+$code-block-color-dark: rgba($white, 0.6) !default;
+
+// Component colors
+$component-color-dark: $text-color-dark !default;
+$component-border-color-dark: lighten($body-background-color-dark, 14%) !default;
+$component-background-color-dark: lighten($body-background-color-dark, $_lighten-amount) !default;
+$component-background-color-alt-dark: rgba($white, 0.04) !default;
+$component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
+
+// Labels
+$label-background-color-dark: $gray-500 !default;
+
+// Forms
+$form-control-select-arrow-image-dark: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$text-muted-dark}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>');

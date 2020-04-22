@@ -28,14 +28,14 @@ $button-list-gap: 4px !default;
 
 // button-outline
 $button-outline-border-color: var(--component-border-color, #{$component-border-color}) !default;
-$button-outline-bg-color: transparent !default;
+$button-outline-background-color: transparent !default;
 $button-outline-padding: $button-padding !default;
 
 // button-filled
 $button-filled-color: $white !default;
-$button-filled-bg-color: $button-primary-color !default;
+$button-filled-background-color: $button-primary-color !default;
 $button-filled-disabled-color: lighten(grayscale($button-filled-color), 25%) !default;
-$button-filled-disabled-bg-color: lighten(grayscale($button-filled-bg-color), 25%) !default;
+$button-filled-disabled-background-color: lighten(grayscale($button-filled-background-color), 25%) !default;
 $button-filled-padding: $button-padding !default;
 
 // button-xs
@@ -58,6 +58,26 @@ $button-padding-lg: 12px 24px !default;
 $button-shadow: $component-box-shadow !default;
 $button-shadow-hover: $button-shadow !default;
 $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
+
+// Hover for supported devices
+@media (hover: hover) {
+  .button {
+    &:hover:not(:disabled) {
+      text-decoration: none;
+      background-color: $button-primary-color-hover;
+    }
+    &-filled {
+      &:hover:not(:disabled) {
+        background-color: rgba($button-filled-background-color, 0.8);
+      }
+    }
+    &-shadow {
+      &:hover:not(:disabled) {
+        box-shadow: $button-shadow-hover;
+      }
+    }
+  }
+}
 
 .button {
   cursor: pointer;
@@ -98,22 +118,22 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
   }
   &-outline {
     border-color: $button-outline-border-color;
-    background-color: $button-outline-bg-color;
+    background-color: $button-outline-background-color;
     padding: $button-outline-padding;
   }
   &-filled {
-    background-color: $button-filled-bg-color;
+    background-color: $button-filled-background-color;
     color: $button-filled-color;
     padding: $button-filled-padding;
     &:focus:not(:disabled) {
-      background-color: rgba($button-filled-bg-color, 0.8);
+      background-color: rgba($button-filled-background-color, 0.8);
     }
     &.active:not(:disabled),
     &:active:not(:disabled) {
-      background-color: rgba($button-filled-bg-color, 0.7);
+      background-color: rgba($button-filled-background-color, 0.7);
     }
     &:disabled {
-      background-color: $button-filled-disabled-bg-color;
+      background-color: $button-filled-disabled-background-color;
       color: $button-filled-disabled-color;
     }
   }
@@ -246,26 +266,6 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
     .icon {
       height: calc(#{$button-font-size-lg} + 1px);
       margin: -2px 0;
-    }
-  }
-}
-
-// Hover for supported devices
-@media (hover: hover) {
-  .button {
-    &:hover:not(:disabled) {
-      text-decoration: none;
-      background-color: $button-primary-color-hover;
-    }
-    &-filled {
-      &:hover:not(:disabled) {
-        background-color: rgba($button-filled-bg-color, 0.8);
-      }
-    }
-    &-shadow {
-      &:hover:not(:disabled) {
-        box-shadow: $button-shadow-hover;
-      }
     }
   }
 }

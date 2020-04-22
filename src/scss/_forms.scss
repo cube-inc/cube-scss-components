@@ -1,8 +1,9 @@
+$form-group-margin: $spacer-md 0 !default;
 $form-control-color: var(--text-color, #{$text-color}) !default;
 $form-control-border-color: var(--component-border-color, #{$component-border-color}) !default;
-$form-control-border-color-focus: $primary !default;
+$form-control-border-color-focus: var(--primary, #{$primary}) !default;
 $form-control-border-radius: $component-border-radius-sm !default;
-$form-control-bg-color: var(--component-background-color, #{$component-background-color}) !default;
+$form-control-background-color: var(--component-background-color, #{$component-background-color}) !default;
 $form-control-muted-color: var(--text-muted, #{$text-muted}) !default;
 $form-control-danger-color: var(--text-danger, #{$text-danger}) !default;
 $form-control-padding: $component-padding !default;
@@ -12,22 +13,60 @@ $form-control-font-weight: $font-weight-base !default;
 $form-control-ouline: $component-outline !default;
 $form-label-font-weight: $font-weight-bold !default;
 $form-label-line-height: 2.25em !default;
-$form-switch-active-color: $primary !default;
+$form-switch-active-color: var(--primary, #{$primary}) !default;
+$form-switch-active-color-hover: var(--component-background-color-hover, #{$component-background-color-hover}) !default;
 $form-switch-size: $font-size-base * 1.125 !default;
 $form-switch-inner-padding: 2px !default;
 
-$form-control-select-arrow-image: var(--form-control-select-arrow-image, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$text-muted}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>'));
+$form-control-select-arrow-image: var(--form-control-select-arrow-image, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>'));
+
+// Hover for supported devices
+@media (hover: hover) {
+  // Safari auto-fill-button
+  input::-webkit-contacts-auto-fill-button,
+  input::-webkit-credentials-auto-fill-button,
+  input::-webkit-credit-card-auto-fill-button {
+    &:hover {
+      background-color: $form-control-color;
+    }
+  }
+  // Switch – checkbox and radio
+  input[type="checkbox"].form-control:not(:disabled):not(:checked),
+  input[type="radio"].form-control:not(:disabled):not(:checked) {
+    &:hover {
+      &::before {
+        background-color: $form-switch-active-color-hover;
+      }
+    }
+  }
+  .form-label {
+    &:hover {
+      input[type="checkbox"].form-control:not(:disabled):not(:checked),
+      input[type="radio"].form-control:not(:disabled):not(:checked) {
+        &::before {
+          background-color: $form-switch-active-color-hover;
+        }
+      }
+    }
+  }
+}
 
 .form {
   &-group {
     min-width: 0; // override user-agent stylesheet in webkit for fieldset
-    margin: 2em 0 0 0;
+    margin: $form-group-margin;
     padding: 0;
     display: block;
     position: relative;
     border: 0 none;
     &:first-child {
       margin-top: 0;
+    }
+    &-inline {
+      display: flex;
+      > .form-control {
+        width: auto;
+      }
     }
   }
   &-label {
@@ -47,14 +86,14 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
     width: 100%;
     border-radius: $form-control-border-radius;
     border: 1px solid $form-control-border-color;
-    background-color: $form-control-bg-color;
+    background-color: $form-control-background-color;
     margin: 0;
     padding: $form-control-padding;
     font-size: $form-control-font-size;
     font-family: $form-control-font-family;
     font-weight: $form-control-font-weight;
     color: $form-control-color;
-    &:focus:not(:disabled):not(:not(select):read-only) {
+    &:focus:not(:disabled) {
       border-color: $form-control-border-color-focus;
       box-shadow: $form-control-ouline;
     }
@@ -130,7 +169,7 @@ select.form-control {
   padding-right: 3rem;
   background-position: right 1rem center;
   background-repeat: no-repeat;
-  background-color: $form-control-bg-color;
+  background-color: $form-control-background-color;
   background-size: 1.3em;
   background-image: $form-control-select-arrow-image;
   &:invalid {
@@ -217,37 +256,6 @@ input[type="radio"].form-control {
     &.has-error,
     &:invalid {
       border-color: $form-control-danger-color;
-    }
-  }
-}
-
-// Hover for supported devices
-@media (hover: hover) {
-  // Safari auto-fill-button
-  input::-webkit-contacts-auto-fill-button,
-  input::-webkit-credentials-auto-fill-button,
-  input::-webkit-credit-card-auto-fill-button {
-    &:hover {
-      background-color: $form-control-color;
-    }
-  }
-  // Switch – checkbox and radio
-  input[type="checkbox"].form-control:not(:disabled):not(:checked),
-  input[type="radio"].form-control:not(:disabled):not(:checked) {
-    &:hover {
-      &::before {
-        background-color: rgba($form-switch-active-color, 0.125);
-      }
-    }
-  }
-  .form-label {
-    &:hover {
-      input[type="checkbox"].form-control:not(:disabled):not(:checked),
-      input[type="radio"].form-control:not(:disabled):not(:checked) {
-        &::before {
-          background-color: rgba($form-switch-active-color, 0.125);
-        }
-      }
     }
   }
 }
