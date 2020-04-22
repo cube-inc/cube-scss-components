@@ -52,6 +52,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~@/scss/variables";
 .header {
   border-top: 1px solid
     var(--component-border-color, #{$component-border-color});

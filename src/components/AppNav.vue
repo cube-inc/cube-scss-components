@@ -16,6 +16,7 @@
 </template>
 
 <style lang="scss" scoped>
+@import "~@/scss/variables";
 .toc {
   margin: 3em 0;
   > a {

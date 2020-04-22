@@ -94,6 +94,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~@/scss/variables";
 $example-padding: 16px !default;
 $example-color: var(--component-color, #{$component-color}) !default;
 $example-border-color: var(--component-border-color, #{$component-border-color}) !default;
