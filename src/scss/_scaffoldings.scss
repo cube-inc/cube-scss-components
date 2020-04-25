@@ -3,7 +3,7 @@ $body-background-color: $white !default;
 $tap-highlight-color: rgba($primary, 0.05) !default;
 $container-breakpoint: $breakpoint-lg !default;
 $content-padding: $spacer !default;
-$z-index-fixed: 1000 !default;
+$zindex-fixed: 1000 !default;
 
 body {
   margin: 0;
@@ -51,7 +51,7 @@ hr {
 }
 .fixed-top {
   position: fixed;
-  z-index: $z-index-fixed;
+  z-index: $zindex-fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -61,7 +61,7 @@ hr {
 }
 .fixed-bottom {
   position: fixed;
-  z-index: $z-index-fixed;
+  z-index: $zindex-fixed;
   bottom: 0;
   left: 0;
   right: 0;
