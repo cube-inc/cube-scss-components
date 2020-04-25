@@ -177,6 +177,9 @@ $button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
         align-items: center;
       }
     }
+    &-space-between {
+      justify-content: space-between;
+    }
     &-right {
       justify-content: flex-end;
       &.button-list-column {
