@@ -73,14 +73,20 @@ $card-list-gap: 10px !default;
   }
   &-footer {
     background-color: $card-background-color;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: $card-padding;
+    &-space-between {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     &-center {
+      display: flex;
+      align-items: center;
       justify-content: center;
     }
     &-right {
+      display: flex;
+      align-items: center;
       justify-content: flex-end;
     }
   }
