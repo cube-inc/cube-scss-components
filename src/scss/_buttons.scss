@@ -6,11 +6,11 @@ $button-border-radius: $component-border-radius-sm !default;
 $button-padding-x: 10px !default;
 $button-padding-y: 10px !default;
 $button-padding: $button-padding-y $button-padding-x !default;
-$button-min-width: 160px !default;
+$button-min-width: 120px !default;
 $button-min-width-xs: 80px !default;
-$button-min-width-sm: 120px !default;
-$button-min-width-md: 180px !default;
-$button-min-width-lg: 200px !default;
+$button-min-width-sm: 100px !default;
+$button-min-width-md: 140px !default;
+$button-min-width-lg: 140px !default;
 $button-transition: all 100ms ease !default;
 
 // button colors
