@@ -14,6 +14,7 @@ $list-group-subheader-padding: ($component-padding-y * 2) $component-padding-x $
 $list-group-subheader-font-size: 0.75em !default;
 
 $list-group-accessory-color: var(--text-muted, #{$text-muted}) !default;
+$list-group-accessory-color-hover: var(--link-color, #{$link-color}) !default;
 $list-group-action-font-size: 11px !default;
 $list-group-action-font-weight: 500 !default;
 
@@ -35,7 +36,7 @@ $list-group-footer-font-size: $font-size-sm !default;
         a.action,
         button.action {
           &:hover:not(:disabled) {
-            color: inherit;
+            color: $list-group-accessory-color-hover;
             text-decoration: none;
           }
         }
