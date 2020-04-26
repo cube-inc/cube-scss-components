@@ -6,10 +6,13 @@ $form-control-border-radius: $component-border-radius-sm !default;
 $form-control-background-color: var(--component-background-color, #{$component-background-color}) !default;
 $form-control-muted-color: var(--text-muted, #{$text-muted}) !default;
 $form-control-danger-color: var(--text-danger, #{$text-danger}) !default;
-$form-control-padding: $component-padding !default;
+$form-control-padding-y: $component-padding-sm !default;
+$form-control-padding-x: $component-padding !default;
+$form-control-padding: $form-control-padding-y $form-control-padding-x !default;
 $form-control-font-size: $font-size-base !default;
 $form-control-font-family: $font-family-base !default;
 $form-control-font-weight: $font-weight-base !default;
+$form-control-line-height: 1.5rem !default;
 $form-control-ouline: $component-outline !default;
 $form-label-font-weight: $font-weight-bold !default;
 $form-label-line-height: 2.25em !default;
@@ -92,6 +95,7 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
     font-size: $form-control-font-size;
     font-family: $form-control-font-family;
     font-weight: $form-control-font-weight;
+    line-height: $form-control-line-height;
     color: $form-control-color;
     &:focus:not(:disabled) {
       border-color: $form-control-border-color-focus;
