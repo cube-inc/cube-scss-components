@@ -1,4 +1,4 @@
-$list-group-padding: $component-padding !default;
+$list-group-padding: $component-padding-sm $component-padding !default;
 $list-group-margin: 0 !default;
 
 $list-group-color: var(--component-color, #{$component-color}) !default;
@@ -10,7 +10,7 @@ $list-group-background-color-hover: var(--component-background-color-hover, #{$c
 $list-group-background-color-active: var(--component-background-color-active, #{$component-background-color-active}) !default;
 
 $list-group-subheader-color: var(--text-muted, #{$text-muted}) !default;
-$list-group-subheader-padding: ($component-padding-y * 2) $component-padding-x $component-padding-y $component-padding-x !default;
+$list-group-subheader-padding: $component-padding-lg $component-padding $component-padding-sm $component-padding !default;
 $list-group-subheader-font-size: 0.75em !default;
 
 $list-group-accessory-color: var(--text-muted, #{$text-muted}) !default;
