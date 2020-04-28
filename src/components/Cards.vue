@@ -31,7 +31,7 @@
           <h2>Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
-        <footer class="card-footer">
+        <footer class="card-footer card-footer-space-between">
           <div>
             <strong>$1,150</strong>
             <small class="text-muted"> per month</small>
