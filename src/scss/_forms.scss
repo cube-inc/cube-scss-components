@@ -21,10 +21,7 @@ $form-switch-active-color-hover: var(--component-background-color-hover, #{$comp
 $form-switch-size: $font-size-base * 1.125 !default;
 $form-switch-inner-padding: 2px !default;
 
-$form-control-select-arrow-image: var(
-  --form-control-select-arrow-image,
-  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>')
-);
+$form-control-select-arrow-image: var(--form-control-select-arrow-image, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>'));
 
 // Hover for supported devices
 @media (hover: hover) {
@@ -64,10 +61,10 @@ $form-control-select-arrow-image: var(
     cursor: pointer;
     color: inherit;
     line-height: $form-label-line-height;
-    margin-top: $spacer-xs;
-    margin-bottom: $spacer-xs;
+    margin-top: $spacer-sm;
+    margin-bottom: $spacer-sm;
     > *:first-child {
-      margin-top: $spacer-xs;
+      margin-top: $spacer-sm;
     }
   }
   &-control {
