@@ -60,6 +60,34 @@
       </fieldset>
     </Example>
 
+    <h3>Stacked</h3>
+    <Example>
+      <fieldset class="form-group">
+        <label class="form-label">
+          Stacked inputs
+          <div class="form-group-stacked">
+            <input type="text" class="form-control" placeholder="Input #1" />
+            <input type="text" class="form-control" placeholder="Input #2" />
+            <input type="text" class="form-control" placeholder="Input #3" />
+          </div>
+        </label>
+      </fieldset>
+    </Example>
+
+    <h3>Inline</h3>
+    <Example>
+      <fieldset class="form-group">
+        <label class="form-label">
+          Inline inputs
+          <div class="form-group-inline">
+            <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #1" />
+            <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #2" />
+            <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #3" />
+          </div>
+        </label>
+      </fieldset>
+    </Example>
+
     <h3>Readonly</h3>
     <Example>
       <fieldset class="form-group">
@@ -153,7 +181,7 @@
     <p>
       <Example>
         <form>
-          <fieldset class="form-group">
+          <fieldset class="form-group form-group-stacked">
             <input type="text" class="form-control" placeholder="Text required, minlength 10" minlength="10" required />
             <input type="email" class="form-control" placeholder="Email required" required />
             <input type="password" class="form-control" placeholder="Password, at least 1 number, 1 uppercase and 1 lowercase, minlength 8" title="At least 1 number, 1 uppercase and 1 lowercase, minlength 8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
@@ -187,7 +215,7 @@
     </p>
     <Example>
       <form class="validate">
-        <fieldset class="form-group">
+        <fieldset class="form-group form-group-stacked">
           <input type="text" class="form-control" placeholder="Text required" required />
           <input type="email" class="form-control" placeholder="Email required" required />
           <input type="number" class="form-control" placeholder="Number required" required />

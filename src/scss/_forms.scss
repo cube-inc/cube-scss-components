@@ -58,23 +58,6 @@ $form-control-select-arrow-image: var(
 }
 
 .form {
-  &-group {
-    min-width: 0; // override user-agent stylesheet in webkit for fieldset
-    margin: $form-group-margin;
-    padding: 0;
-    display: block;
-    position: relative;
-    border: 0 none;
-    &:first-child {
-      margin-top: 0;
-    }
-    &-inline {
-      display: flex;
-      > .form-control {
-        width: auto;
-      }
-    }
-  }
   &-label {
     display: block;
     font-weight: $form-label-font-weight;
@@ -95,6 +78,7 @@ $form-control-select-arrow-image: var(
     position: relative;
     display: block;
     width: 100%;
+    min-width: 0;
     border-radius: $form-control-border-radius;
     border: 1px solid $form-control-border-color;
     background-color: $form-control-background-color;
@@ -142,8 +126,46 @@ $form-control-select-arrow-image: var(
     &:-moz-submit-invalid {
       box-shadow: none;
     }
-    + .form-control {
-      margin-top: 4px;
+  }
+  &-group {
+    min-width: 0; // override user-agent stylesheet in webkit for fieldset
+    margin: $form-group-margin;
+    padding: 0;
+    display: block;
+    position: relative;
+    border: 0 none;
+    &:first-child {
+      margin-top: 0;
+    }
+    &-stacked {
+      display: flex;
+      flex-direction: column;
+      > .form-control + .form-control {
+        margin-top: $spacer-xs;
+      }
+    }
+    &-inline {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      margin-bottom: -$spacer-xs;
+      margin-left: -$spacer-xs;
+      > .form-control {
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: auto;
+        margin-bottom: $spacer-xs;
+        margin-left: $spacer-xs;
+      }
+      > .button {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-bottom: $spacer-xs;
+        margin-left: $spacer-xs;
+      }
     }
   }
 }
