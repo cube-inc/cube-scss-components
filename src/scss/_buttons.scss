@@ -41,19 +41,19 @@ $button-filled-padding: $button-padding !default;
 
 // button-xs
 $button-font-size-xs: 9px !default;
-$button-padding-xs: $component-padding-xs $component-padding-sm !default;
+$button-padding-xs: 0 $component-padding-xs !default;
 
 // button-sm
 $button-font-size-sm: 11px !default;
-$button-padding-sm: 8px 16px !default;
+$button-padding-sm: $component-padding-xs $component-padding-sm !default;
 
 // button-md
 $button-font-size-md: 14px !default;
-$button-padding-md: 11px 22px !default;
+$button-padding-md: $component-padding $component-padding-md !default;
 
 // button-lg
 $button-font-size-lg: 16px !default;
-$button-padding-lg: 12px 24px !default;
+$button-padding-lg: $component-padding-md $component-padding-lg !default;
 
 // button-shadow
 $button-shadow: $component-box-shadow !default;
