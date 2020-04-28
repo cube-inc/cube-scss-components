@@ -149,6 +149,5 @@
         </tbody>
       </table>
     </Example>
-
   </section>
 </template>

@@ -31,7 +31,7 @@
         <li class="list-group-item">
           <div class="list-group-item-header">
             <div class="list-group-item-accessory">
-              <input type="checkbox" class="form-control">
+              <input type="checkbox" class="form-control" />
             </div>
             <div>With accessory to the left</div>
           </div>
@@ -40,7 +40,9 @@
           <div class="list-group-item-header">
             <h4>Rich content</h4>
           </div>
-          <div class="list-group-item-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio perferendis nesciunt voluptatum, sequi molestias aut tempore temporibus quod non delectus dicta odit, cum eaque quos neque sapiente, dolores ut id.</div>
+          <div class="list-group-item-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio perferendis nesciunt voluptatum, sequi molestias aut tempore temporibus quod non delectus dicta odit, cum eaque quos neque sapiente, dolores ut id.
+          </div>
           <div class="list-group-item-footer">
             <div>This is a footer…</div>
             <div>With <strong>formatted</strong> text.</div>
@@ -51,7 +53,9 @@
             <div class="list-group-item-header">
               <h4>Clickable rich content</h4>
             </div>
-            <div class="list-group-item-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio perferendis nesciunt voluptatum, sequi molestias aut tempore temporibus quod non delectus dicta odit, cum eaque quos neque sapiente, dolores ut id.</div>
+            <div class="list-group-item-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio perferendis nesciunt voluptatum, sequi molestias aut tempore temporibus quod non delectus dicta odit, cum eaque quos neque sapiente, dolores ut id.
+            </div>
           </a>
         </li>
         <li class="list-group-item">
@@ -86,6 +90,5 @@
         </li>
       </ul>
     </Example>
-
   </section>
 </template>

@@ -8,17 +8,17 @@
     </header>
     <AppNav />
     <main>
-      <Badges/>
-      <Bullets/>
-      <Buttons/>
-      <Cards/>
-      <Forms/>
-      <Labels/>
-      <ListGroup/>
-      <Pagination/>
-      <Sliders/>
-      <Tables/>
-      <Types/>
+      <Badges />
+      <Bullets />
+      <Buttons />
+      <Cards />
+      <Forms />
+      <Labels />
+      <ListGroup />
+      <Pagination />
+      <Sliders />
+      <Tables />
+      <Types />
     </main>
   </section>
 </template>

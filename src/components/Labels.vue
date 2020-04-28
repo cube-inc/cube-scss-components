@@ -16,6 +16,5 @@
       <p><span class="label label-sm">Small</span> .label-sm</p>
       <p><span class="label label-xs">Extra small</span> .label-xs</p>
     </Example>
-
   </section>
 </template>

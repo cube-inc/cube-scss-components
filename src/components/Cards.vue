@@ -20,8 +20,8 @@
     <h3>Images</h3>
     <Example>
       <div class="card">
-        <header class="card-header" style="height:180px;">
-          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <header class="card-header" style="height: 180px;">
+          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
           <div class="card-header-overlay">
             <h2>Image overlay</h2>
             <div class="lead">With rich content</div>
@@ -45,8 +45,8 @@
     <h3>Borderless card</h3>
     <Example :dark="true">
       <div class="card card-borderless">
-        <header class="card-header" style="height:180px;">
-          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <header class="card-header" style="height: 180px;">
+          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
           <div class="card-header-overlay">
             <h2>Image overlay</h2>
           </div>
@@ -68,8 +68,8 @@
     <h3>Card shadow</h3>
     <Example>
       <div class="card card-borderless card-shadow">
-        <header class="card-header" style="height:180px;">
-          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <header class="card-header" style="height: 180px;">
+          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
           <div class="card-header-overlay">
             <h2>Image overlay</h2>
           </div>
@@ -113,12 +113,7 @@
     </Example>
 
     <h3>Card grid</h3>
-    <p>
-      In this example <code>.card-grid-example</code> equals:
-      <code class="code-block">.card-grid-example {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}</code>
-    </p>
+    <p>In this example <code>.card-grid-example</code> equals: <code class="code-block">.card-grid-example { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }</code></p>
     <Example>
       <div class="card-grid card-grid-example">
         <div class="card">
@@ -148,12 +143,11 @@
         </div>
       </div>
     </Example>
-
   </section>
 </template>
 
 <style lang="scss" scoped>
-@import "~@/scss/variables";
+@import '~@/scss/variables';
 .card-header-image {
   background-color: $info;
 }

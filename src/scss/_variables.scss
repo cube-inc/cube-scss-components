@@ -1,13 +1,13 @@
 // Colors
-@import "colors";
-@import "color-schemes/light/variables";
-@import "color-schemes/dark/variables";
+@import 'colors';
+@import 'color-schemes/light/variables';
+@import 'color-schemes/dark/variables';
 
 $enable-prefers-color-scheme: true !default;
 
 // Font families
-$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 $font-family-headings: $font-family-base !default;
 $font-family-h1: $font-family-headings !default;
 $font-family-h2: $font-family-headings !default;

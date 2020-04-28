@@ -1,72 +1,31 @@
-const voidElements = [
-  'area',
-  'base',
-  'br',
-  'col',
-  'embed',
-  'hr',
-  'img',
-  'input',
-  'keygen',
-  'link',
-  'meta',
-  'param',
-  'source',
-  'track',
-  'wbr'
-]
-const blockElements = [
-  'p',
-  'a',
-  'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-  'ol', 'ul', 'li',
-  'pre',
-  'address',
-  'blockquote',
-  'dl',
-  'div',
-  'fieldset',
-  'form', 'textarea', 'select', 'option',
-  'hr',
-  'noscript',
-  'table',
-  'header', 'main', 'footer',
-  'button', 'label', 'input',
-  'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td',
-  'svg'
-]
+const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr']
+const blockElements = ['p', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ol', 'ul', 'li', 'pre', 'address', 'blockquote', 'dl', 'div', 'fieldset', 'form', 'textarea', 'select', 'option', 'hr', 'noscript', 'table', 'header', 'main', 'footer', 'button', 'label', 'input', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'svg']
 
-export function escapeHtml (string) {
-  return string
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
+export function escapeHtml(string) {
+  return string.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 }
 
-export default function vnodesToHtml (vnodes, options = {}) {
+export default function vnodesToHtml(vnodes, options = {}) {
   return new Nodes(vnodes, options).toHtml()
 }
 
 export class Nodes extends Array {
-  constructor (vnodes, options = {}) {
+  constructor(vnodes, options = {}) {
     const items = []
     if (vnodes instanceof Array) {
-      vnodes.forEach(vnode => items.push(new Node(vnode, options)))
+      vnodes.forEach((vnode) => items.push(new Node(vnode, options)))
     }
     super(...items)
     this.vnodes = vnodes
     this.options = options
   }
-  toHtml () {
-    return this
-      .map(node => node.toHtml())
-      .join('\n')
+  toHtml() {
+    return this.map((node) => node.toHtml()).join('\n')
   }
 }
 
 export class Node {
-  constructor (vnode, options = {}) {
+  constructor(vnode, options = {}) {
     this.vnode = vnode
     this.tag = vnode.tag
     this.attrs = new Attrs(vnode, options)
@@ -74,45 +33,37 @@ export class Node {
     this.text = vnode.text
     this.options = options
   }
-  isHighlighted () {
+  isHighlighted() {
     return Boolean(this.options.highlight)
   }
-  isTag () {
+  isTag() {
     return Boolean(this.vnode.tag)
   }
-  isPreTag () {
+  isPreTag() {
     return ['pre', 'code'].indexOf(this.vnode.tag) > -1
   }
-  isVoidElement () {
+  isVoidElement() {
     return voidElements.indexOf(this.vnode.tag) > -1
   }
-  isBlockElement () {
+  isBlockElement() {
     return blockElements.indexOf(this.vnode.tag) > -1
   }
-  tagToHtml () {
-    return this.isHighlighted()
-      ? `<span class="code-tag">${this.tag}</span>`
-      : this.tag
+  tagToHtml() {
+    return this.isHighlighted() ? `<span class="code-tag">${this.tag}</span>` : this.tag
   }
-  openTagToHtml () {
+  openTagToHtml() {
     const tag = this.tagToHtml()
     const attrs = this.attrs.toHtml()
-    return this.isHighlighted()
-      ? `&lt;${tag}${attrs}&gt;` + (this.tag === 'br' ? '<br>' : '')
-      : `<${tag}${attrs}>` + (this.tag === 'br' ? '\n' : '')
+    return this.isHighlighted() ? `&lt;${tag}${attrs}&gt;` + (this.tag === 'br' ? '<br>' : '') : `<${tag}${attrs}>` + (this.tag === 'br' ? '\n' : '')
   }
-  closeTagToHtml () {
+  closeTagToHtml() {
     const tag = this.tagToHtml()
-    return this.isHighlighted()
-      ? `&lt;/${tag}&gt;`
-      : `</${tag}>`
+    return this.isHighlighted() ? `&lt;/${tag}&gt;` : `</${tag}>`
   }
-  textToHtml () {
-    return this.isHighlighted()
-      ? escapeHtml(escapeHtml(this.text))
-      : escapeHtml(this.text)
+  textToHtml() {
+    return this.isHighlighted() ? escapeHtml(escapeHtml(this.text)) : escapeHtml(this.text)
   }
-  toHtml () {
+  toHtml() {
     if (this.isTag()) {
       const openTag = this.openTagToHtml()
       if (this.isVoidElement()) {
@@ -127,7 +78,7 @@ export class Node {
 }
 
 export class Attrs extends Array {
-  constructor (vnode, options = {}) {
+  constructor(vnode, options = {}) {
     const items = []
     const { data } = vnode
     if (data instanceof Object) {
@@ -143,43 +94,37 @@ export class Attrs extends Array {
         items.push(new Attr('class', classes.join(' '), options))
       }
       if (attrs instanceof Object) {
-        Object.keys(attrs)
-          .forEach(key => items.push(new Attr(key, attrs[key], options)))
+        Object.keys(attrs).forEach((key) => items.push(new Attr(key, attrs[key], options)))
       }
     }
     super(...items)
     this.vnode = vnode
     this.options = options
   }
-  toHtml () {
-    return this
-      .map(attr => ` ${attr.toHtml()}`)
-      .filter(attr => attr)
+  toHtml() {
+    return this.map((attr) => ` ${attr.toHtml()}`)
+      .filter((attr) => attr)
       .join('')
   }
 }
 
 export class Attr {
-  constructor (name, value, options = {}) {
+  constructor(name, value, options = {}) {
     this.name = name
     this.value = value
     this.options = options
   }
-  isHighlighted () {
+  isHighlighted() {
     return Boolean(this.options.highlight)
   }
-  nameToHtml () {
-    return this.isHighlighted()
-      ? `<span class="code-attr">${this.name}</span>`
-      : this.name
+  nameToHtml() {
+    return this.isHighlighted() ? `<span class="code-attr">${this.name}</span>` : this.name
   }
-  valueToHtml () {
+  valueToHtml() {
     const value = ['src', 'href'].indexOf(this.name) > -1 ? '…' : this.value
-    return this.isHighlighted()
-      ? `<span class="code-attr-val">&quot;${value}&quot;</span>`
-      : `"${value}"`
+    return this.isHighlighted() ? `<span class="code-attr-val">&quot;${value}&quot;</span>` : `"${value}"`
   }
-  toHtml () {
+  toHtml() {
     if (typeof this.value === 'boolean') {
       return this.value ? this.nameToHtml() : null
     }
@@ -192,33 +137,28 @@ export class Attr {
 }
 
 export class Children extends Array {
-  constructor (vnode, options = {}) {
+  constructor(vnode, options = {}) {
     const items = []
     const { children } = vnode
     if (children instanceof Array) {
-      children.forEach(vnode => items.push(new Node(vnode, options)))
+      children.forEach((vnode) => items.push(new Node(vnode, options)))
     }
     super(...items)
     this.vnode = vnode
     this.options = options
   }
-  hasBlockElements () {
-    return this.some(node => node.isBlockElement())
+  hasBlockElements() {
+    return this.some((node) => node.isBlockElement())
   }
-  toHtml () {
+  toHtml() {
     if (this.hasBlockElements()) {
-      const html = this
-        .map(node => node.isTag()
-          ? node.toHtml()
-          : node.toHtml().trim())
+      const html = this.map((node) => (node.isTag() ? node.toHtml() : node.toHtml().trim()))
         .join('\n')
         .split('\n')
-        .map(line => `  ${line}`)
+        .map((line) => `  ${line}`)
         .join('\n')
       return `\n${html}\n`
     }
-    return this
-      .map(node => node.toHtml())
-      .join('')
+    return this.map((node) => node.toHtml()).join('')
   }
 }

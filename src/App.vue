@@ -20,7 +20,7 @@ export default {
     AppMenu,
     Documentation
   },
-  data () {
+  data() {
     const now = new Date()
     return {
       currentYear: now.getFullYear()
@@ -30,15 +30,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/scss/variables";
+@import '~@/scss/variables';
 #app {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  padding: calc(env(safe-area-inset-top) + 1em)
-    calc(env(safe-area-inset-right) + 1em)
-    calc(env(safe-area-inset-bottom) + 1em)
-    calc(env(safe-area-inset-left) + 1em);
+  padding: calc(env(safe-area-inset-top) + 1em) calc(env(safe-area-inset-right) + 1em) calc(env(safe-area-inset-bottom) + 1em) calc(env(safe-area-inset-left) + 1em);
 }
 footer {
   display: flex;

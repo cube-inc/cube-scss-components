@@ -18,14 +18,14 @@
 
     <h3>Button white</h3>
     <Example :dark="true">
-        <p><button class="button button-white">White</button></p>
-        <p><button class="button button-white button-outline">Outline</button></p>
-        <p><button class="button button-white button-filled">Filled</button></p>
-        <p><button class="button button-white button-text">Text</button></p>
-        <p><button class="button button-white" disabled>White</button></p>
-        <p><button class="button button-white button-outline" disabled>Outline</button></p>
-        <p><button class="button button-white button-filled" disabled>Filled</button></p>
-        <p><button class="button button-white button-text" disabled>Text</button></p>
+      <p><button class="button button-white">White</button></p>
+      <p><button class="button button-white button-outline">Outline</button></p>
+      <p><button class="button button-white button-filled">Filled</button></p>
+      <p><button class="button button-white button-text">Text</button></p>
+      <p><button class="button button-white" disabled>White</button></p>
+      <p><button class="button button-white button-outline" disabled>Outline</button></p>
+      <p><button class="button button-white button-filled" disabled>Filled</button></p>
+      <p><button class="button button-white button-text" disabled>Text</button></p>
     </Example>
 
     <h3>Button list</h3>
@@ -225,7 +225,6 @@
         <button class="button button-text button-lg">Large</button>
       </div>
     </Example>
-
   </section>
 </template>
 

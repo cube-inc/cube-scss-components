@@ -21,7 +21,10 @@ $form-switch-active-color-hover: var(--component-background-color-hover, #{$comp
 $form-switch-size: $font-size-base * 1.125 !default;
 $form-switch-inner-padding: 2px !default;
 
-$form-control-select-arrow-image: var(--form-control-select-arrow-image, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>'));
+$form-control-select-arrow-image: var(
+  --form-control-select-arrow-image,
+  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>')
+);
 
 // Hover for supported devices
 @media (hover: hover) {
@@ -34,8 +37,8 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
     }
   }
   // Switch – checkbox and radio
-  input[type="checkbox"].form-control:not(:disabled):not(:checked),
-  input[type="radio"].form-control:not(:disabled):not(:checked) {
+  input[type='checkbox'].form-control:not(:disabled):not(:checked),
+  input[type='radio'].form-control:not(:disabled):not(:checked) {
     &:hover {
       &::before {
         background-color: $form-switch-active-color-hover;
@@ -44,8 +47,8 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
   }
   .form-label {
     &:hover {
-      input[type="checkbox"].form-control:not(:disabled):not(:checked),
-      input[type="radio"].form-control:not(:disabled):not(:checked) {
+      input[type='checkbox'].form-control:not(:disabled):not(:checked),
+      input[type='radio'].form-control:not(:disabled):not(:checked) {
         &::before {
           background-color: $form-switch-active-color-hover;
         }
@@ -101,7 +104,7 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       border-color: $form-control-border-color-focus;
       box-shadow: $form-control-ouline;
     }
-    &:read-only:not(select):not(div):not([type="checkbox"]):not([type="radio"]) {
+    &:read-only:not(select):not(div):not([type='checkbox']):not([type='radio']) {
       cursor: default;
       color: $form-control-muted-color;
     }
@@ -125,7 +128,7 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       color: $form-control-muted-color;
     }
     &.has-error,
-    &:invalid:not(:placeholder-shown):not(select):not([type="checkbox"]):not([type="radio"]) {
+    &:invalid:not(:placeholder-shown):not(select):not([type='checkbox']):not([type='radio']) {
       border-color: $form-control-danger-color;
     }
     &:-moz-ui-invalid {
@@ -152,11 +155,11 @@ input::-webkit-credit-card-auto-fill-button {
 }
 
 // Input number
-input[type="number"].form-control {
+input[type='number'].form-control {
   -moz-appearance: textfield;
 }
-input[type="number"].form-control::-webkit-inner-spin-button,
-input[type="number"].form-control::-webkit-outer-spin-button {
+input[type='number'].form-control::-webkit-inner-spin-button,
+input[type='number'].form-control::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -187,8 +190,8 @@ select.form-control {
 }
 
 // Switch – checkbox and radio
-input[type="checkbox"].form-control,
-input[type="radio"].form-control {
+input[type='checkbox'].form-control,
+input[type='radio'].form-control {
   cursor: pointer;
   appearance: none;
   width: $form-switch-size;
@@ -199,7 +202,7 @@ input[type="radio"].form-control {
   vertical-align: middle;
   position: relative;
   &::before {
-    content: "";
+    content: '';
     background-color: transparent;
     position: absolute;
     top: $form-switch-inner-padding;
@@ -232,15 +235,15 @@ input[type="radio"].form-control {
     max-width: calc(100% - #{$form-switch-size} - 0.5rem);
   }
 }
-input[type="radio"].form-control {
+input[type='radio'].form-control {
   border-radius: 50%;
   &::before {
     border-radius: 50%;
   }
 }
 .form-label {
-  input[type="checkbox"].form-control,
-  input[type="radio"].form-control {
+  input[type='checkbox'].form-control,
+  input[type='radio'].form-control {
     vertical-align: top;
     margin-top: ($form-label-line-height - $form-switch-size) / 2;
     & + .form-text {
