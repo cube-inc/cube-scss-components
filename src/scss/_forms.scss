@@ -15,7 +15,7 @@ $form-control-font-weight: $font-weight-base !default;
 $form-control-line-height: 1.5rem !default;
 $form-control-ouline: $component-outline !default;
 $form-label-font-weight: $font-weight-bold !default;
-$form-label-line-height: 2.25em !default;
+$form-label-line-height: $form-control-line-height !default;
 $form-switch-active-color: var(--primary, #{$primary}) !default;
 $form-switch-active-color-hover: var(--component-background-color-hover, #{$component-background-color-hover}) !default;
 $form-switch-size: $font-size-base * 1.125 !default;
@@ -81,6 +81,11 @@ $form-control-select-arrow-image: var(
     cursor: pointer;
     color: inherit;
     line-height: $form-label-line-height;
+    margin-top: $spacer-xs;
+    margin-bottom: $spacer-xs;
+    > *:first-child {
+      margin-top: $spacer-xs;
+    }
   }
   &-control {
     transition: all 0.2s;
@@ -231,7 +236,7 @@ input[type='radio'].form-control {
     font-weight: $form-control-font-weight;
     padding-left: 0.5rem;
     vertical-align: middle;
-    line-height: $line-height-base;
+    line-height: inherit;
     max-width: calc(100% - #{$form-switch-size} - 0.5rem);
   }
 }
@@ -245,11 +250,9 @@ input[type='radio'].form-control {
   input[type='checkbox'].form-control,
   input[type='radio'].form-control {
     vertical-align: top;
-    margin-top: ($form-label-line-height - $form-switch-size) / 2;
+    margin-top: calc((#{$form-label-line-height} - #{$form-switch-size}) / 2);
     & + .form-text {
       vertical-align: top;
-      margin-top: ($form-label-line-height - $line-height-base) / 2;
-      margin-bottom: ($form-label-line-height - $line-height-base) / 2;
     }
   }
 }
