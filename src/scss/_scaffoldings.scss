@@ -68,7 +68,8 @@ hr {
   width: 100%;
 }
 
-// Fixed
+// (alpha) Fixed
+// TODO: add margins to "content" behind
 .fixed-top {
   position: fixed;
   z-index: $zindex-fixed;
