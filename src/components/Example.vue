@@ -120,7 +120,7 @@ $code-attr-color: $cyan;
 $code-attr-val-color: $red;
 
 .example {
-  margin: 1em 0;
+  margin: 1em 0 2em 0;
   border: 1px solid $example-border-color;
   border-radius: $example-border-radius;
   overflow: hidden;
