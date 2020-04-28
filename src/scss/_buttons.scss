@@ -57,8 +57,8 @@ $button-padding-lg: $component-padding-md $component-padding-lg !default;
 
 // button-shadow
 $button-shadow: $component-box-shadow !default;
-$button-shadow-hover: $button-shadow !default;
-$button-shadow-active: 0px 2px 2px -1px $gray-700 !default;
+$button-shadow-hover: $component-box-shadow-hover !default;
+$button-shadow-active: $component-box-shadow-active !default;
 
 // Hover for supported devices
 @media (hover: hover) {
