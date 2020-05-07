@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 @mixin dark-color-scheme {
   --primary: #{$primary-dark};
@@ -25,6 +25,7 @@
   --component-color: #{$component-color-dark};
   --component-border-color: #{$component-border-color-dark};
   --component-background-color: #{$component-background-color-dark};
+  --component-background-color-disabled: #{$component-background-color-disabled-dark};
   --component-background-color-alt: #{$component-background-color-alt-dark};
   --component-backdrop-background-color: #{$component-backdrop-background-color-dark};
 

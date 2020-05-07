@@ -4,6 +4,7 @@ $form-control-border-color: var(--component-border-color, #{$component-border-co
 $form-control-border-color-focus: var(--primary, #{$primary}) !default;
 $form-control-border-radius: $component-border-radius-sm !default;
 $form-control-background-color: var(--component-background-color, #{$component-background-color}) !default;
+$form-control-background-color-disabled: var(--component-background-color-disabled, #{$component-background-color-disabled}) !default;
 $form-control-muted-color: var(--text-muted, #{$text-muted}) !default;
 $form-control-danger-color: var(--text-danger, #{$text-danger}) !default;
 $form-control-padding-y: $component-padding-sm !default;
@@ -99,6 +100,7 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       cursor: not-allowed;
       color: $form-control-muted-color;
       opacity: 0.6; /* Safari already does this  */
+      background-color: $form-control-background-color-disabled;
     }
     &::placeholder {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -200,7 +202,6 @@ select.form-control {
   padding-right: 3rem;
   background-position: right 1rem center;
   background-repeat: no-repeat;
-  background-color: $form-control-background-color;
   background-size: 1.3em;
   background-image: $form-control-select-arrow-image;
   &:invalid {
@@ -244,7 +245,7 @@ input[type='radio'].form-control {
   &:disabled {
     cursor: not-allowed;
     &::before {
-      background-color: $form-control-muted-color;
+      background-color: $form-control-background-color-disabled;
     }
     & + .form-text {
       cursor: not-allowed;
