@@ -27,13 +27,9 @@ $card-list-gap: 10px !default;
   overflow: hidden;
   position: relative;
   z-index: 0; // with position: relative, avoid img transition issue with border-radius (overflow not hidden has expected)
-  &-header {
+  &-media {
     background-color: $card-background-color;
     position: relative;
-    &-title {
-      margin: 0;
-      padding: $card-padding;
-    }
     &-image {
       display: block;
       object-fit: cover;
@@ -48,28 +44,16 @@ $card-list-gap: 10px !default;
       right: 0;
       bottom: 0;
       left: 0;
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin: 0;
-      }
     }
+  }
+  &-header {
+    background-color: $card-background-color;
+    padding: $card-padding;
   }
   &-body {
     background-color: $card-background-color;
     padding: $card-padding;
     flex-grow: 1;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 0;
-    }
   }
   &-footer {
     background-color: $card-background-color;
