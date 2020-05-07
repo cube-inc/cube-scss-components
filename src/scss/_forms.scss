@@ -99,8 +99,8 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
     &:disabled {
       cursor: not-allowed;
       color: $form-control-muted-color;
-      opacity: 0.6; /* Safari already does this  */
       background-color: $form-control-background-color-disabled;
+      opacity: 0.3; /* Safari already applies an opacity */
     }
     &::placeholder {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -148,8 +148,8 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
-      align-items: flex-start;
-      align-content: flex-start;
+      align-items: center;
+      align-content: center;
       margin-bottom: -$spacer-xs;
       margin-left: -$spacer-xs;
       > .form-control {
@@ -159,6 +159,7 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
         margin-bottom: $spacer-xs;
         margin-left: $spacer-xs;
       }
+      > .form-text,
       > .button {
         flex-grow: 0;
         flex-shrink: 0;
@@ -211,6 +212,12 @@ select.form-control {
   &:-moz-focusring {
     color: transparent !important;
     text-shadow: 0 0 0 $form-control-color !important;
+  }
+  > option {
+    color: $text-color; // Fixes a Firefox color issue in dark mode where the background color is white
+    &.placeholder {
+      display: none;
+    }
   }
 }
 
