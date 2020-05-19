@@ -77,14 +77,14 @@
     <h3>Inline</h3>
     <Example>
       <fieldset class="form-group">
-        <label class="form-label">
-          Inline inputs
-          <div class="form-group-inline">
-            <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #1" />
-            <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #2" />
-            <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #3" />
-          </div>
-        </label>
+        <label class="form-label">Inline inputs</label>
+        <div class="form-group-inline">
+          <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #1" />
+          <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #2" />
+          <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #3" />
+          <div class="form-text">This a <code>.form-text</code></div>
+          <button class="button">Button</button>
+        </div>
       </fieldset>
     </Example>
 
