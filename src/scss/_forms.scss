@@ -15,7 +15,7 @@ $form-control-font-family: $font-family-base !default;
 $form-control-font-weight: $font-weight-base !default;
 $form-control-line-height: 1.5rem !default;
 $form-control-ouline: $component-outline !default;
-$form-control-spacer: $spacer-sm !default;
+$form-control-spacer: $spacer-xs !default;
 $form-label-font-weight: $font-weight-bold !default;
 $form-label-line-height: $form-control-line-height !default;
 $form-switch-active-color: var(--primary, #{$primary}) !default;
@@ -63,10 +63,10 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
     cursor: pointer;
     color: inherit;
     line-height: $form-label-line-height;
-    margin-top: $form-control-spacer;
-    margin-bottom: $form-control-spacer;
+    margin-top: $spacer-sm;
+    margin-bottom: $spacer-sm;
     > *:first-child {
-      margin-top: $form-control-spacer;
+      margin-top: $spacer-sm;
     }
   }
   &-control {
@@ -127,6 +127,8 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       box-shadow: none;
     }
   }
+
+  // Groups
   &-group {
     min-width: 0; // override user-agent stylesheet in webkit for fieldset
     margin: $form-group-margin;
@@ -156,7 +158,8 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       > .form-control {
         flex-grow: 1;
         flex-shrink: 1;
-        width: auto;
+        min-width: 0;
+        width: 0;
         margin-bottom: $form-control-spacer;
         margin-left: $form-control-spacer;
       }
@@ -164,6 +167,7 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       > .button {
         flex-grow: 0;
         flex-shrink: 0;
+        min-width: 0;
         margin-bottom: $form-control-spacer;
         margin-left: $form-control-spacer;
       }
