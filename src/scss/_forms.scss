@@ -15,6 +15,7 @@ $form-control-font-family: $font-family-base !default;
 $form-control-font-weight: $font-weight-base !default;
 $form-control-line-height: 1.5rem !default;
 $form-control-ouline: $component-outline !default;
+$form-control-spacer: $spacer-sm !default;
 $form-label-font-weight: $font-weight-bold !default;
 $form-label-line-height: $form-control-line-height !default;
 $form-switch-active-color: var(--primary, #{$primary}) !default;
@@ -62,10 +63,10 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
     cursor: pointer;
     color: inherit;
     line-height: $form-label-line-height;
-    margin-top: $spacer-sm;
-    margin-bottom: $spacer-sm;
+    margin-top: $form-control-spacer;
+    margin-bottom: $form-control-spacer;
     > *:first-child {
-      margin-top: $spacer-sm;
+      margin-top: $form-control-spacer;
     }
   }
   &-control {
@@ -140,7 +141,7 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       display: flex;
       flex-direction: column;
       > .form-control + .form-control {
-        margin-top: $spacer-xs;
+        margin-top: $form-control-spacer;
       }
     }
     &-inline {
@@ -150,21 +151,21 @@ $form-control-select-arrow-image: var(--form-control-select-arrow-image, url('da
       justify-content: flex-start;
       align-items: center;
       align-content: center;
-      margin-bottom: -$spacer-xs;
-      margin-left: -$spacer-xs;
+      margin-bottom: -$form-control-spacer;
+      margin-left: -$form-control-spacer;
       > .form-control {
         flex-grow: 1;
         flex-shrink: 1;
         width: auto;
-        margin-bottom: $spacer-xs;
-        margin-left: $spacer-xs;
+        margin-bottom: $form-control-spacer;
+        margin-left: $form-control-spacer;
       }
       > .form-text,
       > .button {
         flex-grow: 0;
         flex-shrink: 0;
-        margin-bottom: $spacer-xs;
-        margin-left: $spacer-xs;
+        margin-bottom: $form-control-spacer;
+        margin-left: $form-control-spacer;
       }
     }
   }
