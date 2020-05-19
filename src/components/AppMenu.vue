@@ -26,6 +26,7 @@ export default {
   },
   methods: {
     scrollTop() {
+      window.history.replaceState(null, null, ' ')
       window.scroll({ top: 0, left: 0, behavior: 'smooth' })
     },
     toggleDarkMode() {
