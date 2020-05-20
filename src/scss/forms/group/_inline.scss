@@ -21,7 +21,9 @@
     min-width: 0;
     width: 0;
   }
-  > .form-text,
+  > .form-label {
+    margin-top: 0;
+  }
   > .button {
     min-width: 0;
   }
