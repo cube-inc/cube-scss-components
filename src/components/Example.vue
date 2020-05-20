@@ -158,4 +158,9 @@ $code-attr-val-color: $red;
     }
   }
 }
+@media (min-width: $breakpoint-sm + 1) {
+  .example-preview {
+    padding: $spacer-xl;
+  }
+}
 </style>
