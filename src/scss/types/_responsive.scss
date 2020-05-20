@@ -1,0 +1,16 @@
+@if ($enable-responsive-fonts) {
+  @media (max-width: $breakpoint-xs) {
+    h1 {
+      font-size: $font-size-h1-xs;
+    }
+    h2 {
+      font-size: $font-size-h2-xs;
+    }
+    h3 {
+      font-size: $font-size-h3-xs;
+    }
+    h4 {
+      font-size: $font-size-h4-xs;
+    }
+  }
+}

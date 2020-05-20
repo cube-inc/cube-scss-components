@@ -1,0 +1,100 @@
+@use "sass:math";
+
+// Config
+$enable-responsive-fonts: true !default;
+
+// Colors
+$text-color: $gray-900 !default;
+$text-muted: rgba($text-color, 0.4) !default;
+$text-secondary: var(--secondary, #{$secondary}) !default;
+$text-success: var(--success, #{$success}) !default;
+$text-info: var(--info, #{$info}) !default;
+$text-warning: var(--warning, #{$warning}) !default;
+$text-danger: var(--danger, #{$danger}) !default;
+$link-color: $blue !default;
+$code-color: $red !default;
+$code-block-color: $gray-800 !default;
+
+// Font families
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
+$font-family-headings: $font-family-base !default;
+$font-family-h1: $font-family-headings !default;
+$font-family-h2: $font-family-headings !default;
+$font-family-h3: $font-family-headings !default;
+$font-family-h4: $font-family-headings !default;
+$font-family-h5: $font-family-headings !default;
+$font-family-h6: $font-family-headings !default;
+$font-variant-numeric: normal !default;
+
+// Sizes
+$font-size-ratio-minor-second: 1.067; // 15:16
+$font-size-ratio-major-second: 1.125; // 8:9
+$font-size-ratio-minor-third: 1.2; // 5:6
+$font-size-ratio-major-third: 1.25; // 4:5
+$font-size-ratio-fourth: 1.333; // 3:4
+$font-size-ratio-augmented-fourth: 1.414; // 1:√2
+$font-size-ratio-fifth: 1.5; // 2:3
+$font-size-ratio-minor-sixth: 1.6; // 5:8
+$font-size-ratio-golden: 1.618; // 1:1.618
+$font-size-ratio-major-sixth: 1.667; // 3:5
+$font-size-ratio-minor-seventh: 1.778; // 9:16
+$font-size-ratio-major-seventh: 1.875; // 8:15
+$font-size-ratio-octave: 2; // 1:2
+
+// Base size
+$font-size-base: 1em !default;
+
+// Default font size ratio
+$font-size-ratio: $font-size-ratio-minor-third !default;
+
+// Small sizes
+$font-size-sm: $font-size-base / math.pow($font-size-ratio, 1) !default;
+$font-size-xs: $font-size-base / math.pow($font-size-ratio, 2) !default;
+
+// Heading sizes
+$font-size-h1: ($font-size-base * math.pow($font-size-ratio, 6)) !default;
+$font-size-h2: ($font-size-base * math.pow($font-size-ratio, 5)) !default;
+$font-size-h3: ($font-size-base * math.pow($font-size-ratio, 4)) !default;
+$font-size-h4: ($font-size-base * math.pow($font-size-ratio, 3)) !default;
+$font-size-h5: ($font-size-base * math.pow($font-size-ratio, 2)) !default;
+$font-size-h6: ($font-size-base * math.pow($font-size-ratio, 1)) !default;
+
+// Small screen font size ratio
+$font-size-ratio-xs: $font-size-ratio-major-second !default;
+
+// Small screens font sizes
+$font-size-h1-xs: ($font-size-base * math.pow($font-size-ratio-xs, 6)) !default;
+$font-size-h2-xs: ($font-size-base * math.pow($font-size-ratio-xs, 5)) !default;
+$font-size-h3-xs: ($font-size-base * math.pow($font-size-ratio-xs, 4)) !default;
+$font-size-h4-xs: ($font-size-base * math.pow($font-size-ratio-xs, 3)) !default;
+$font-size-h5-xs: ($font-size-base * math.pow($font-size-ratio-xs, 2)) !default;
+$font-size-h6-xs: ($font-size-base * math.pow($font-size-ratio-xs, 1)) !default;
+
+// Other sizes
+$font-size-lead: 120% !default;
+$font-size-code: $font-size-base * 0.875 !default;
+$font-size-code-block: $font-size-base * 0.75 !default;
+
+// Line heights
+$line-height-base: 1.5 !default;
+$line-height-headings: $line-height-base !default;
+
+// Font weights
+$font-weight-base: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-headings: $font-weight-bold !default;
+$font-weight-h1: $font-weight-headings !default;
+$font-weight-h2: $font-weight-headings !default;
+$font-weight-h3: $font-weight-headings !default;
+$font-weight-h4: $font-weight-headings !default;
+$font-weight-h5: $font-weight-headings !default;
+$font-weight-h6: $font-weight-headings !default;
+
+// Margins
+$paragraph-margin-top: 1em !default;
+$paragraph-margin-bottom: 1em !default;
+$headings-margin-top: 2em !default;
+$headings-margin-bottom: 1em !default;

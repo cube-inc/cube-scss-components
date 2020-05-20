@@ -1,0 +1,36 @@
+@import 'variables';
+
+.button-warning {
+  color: $button-warning-color;
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      background-color: rgba($button-warning-color, 0.15);
+    }
+    &.button-filled:not(:disabled) {
+      &:hover {
+        background-color: rgba($button-warning-color, 0.8);
+      }
+    }
+  }
+  &:focus:not(:disabled) {
+    background-color: rgba($button-warning-color, 0.15);
+  }
+  &.active:not(:disabled),
+  &:active:not(:disabled) {
+    background-color: rgba($button-warning-color, 0.2);
+  }
+  &.button-outline {
+    background-color: transparent;
+  }
+  &.button-filled:not(:disabled) {
+    color: $button-filled-color;
+    background-color: $button-warning-color;
+    &:focus {
+      background-color: rgba($button-warning-color, 0.8);
+    }
+    &.active,
+    &:active {
+      background-color: rgba($button-warning-color, 0.7);
+    }
+  }
+}

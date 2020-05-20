@@ -1,0 +1,39 @@
+@import 'variables';
+
+.label {
+  display: inline;
+  color: $label-color;
+  background-color: $label-background-color;
+  line-height: 1em;
+  padding: $label-padding;
+  border-radius: $label-border-radius;
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  text-transform: $label-text-transform;
+  white-space: nowrap;
+  & + .label {
+    margin-left: 0.4em;
+  }
+  &-sm {
+    font-size: $label-font-size-sm;
+  }
+  &-xs {
+    font-size: $label-font-size-xs;
+  }
+  &-success {
+    background-color: $label-success-background-color;
+    color: $label-success-color;
+  }
+  &-info {
+    background-color: $label-info-background-color;
+    color: $label-info-color;
+  }
+  &-warning {
+    background-color: $label-warning-background-color;
+    color: $label-warning-color;
+  }
+  &-danger {
+    background-color: $label-danger-background-color;
+    color: $label-danger-color;
+  }
+}

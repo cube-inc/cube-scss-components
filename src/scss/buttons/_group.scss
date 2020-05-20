@@ -1,0 +1,34 @@
+@import 'variables';
+
+.button-group {
+  display: flex;
+  > .button {
+    flex-shrink: 0;
+    &:not(.button-text) {
+      border-radius: 0;
+    }
+    &:not(.button-outline):not(.button-filled):not(.button-text):not(:hover):not(:focus):not(.active):not(:active):not(:disabled) {
+      background-color: rgba($button-primary-color, 0.05);
+    }
+    + .button {
+      margin-left: -1px;
+    }
+    &.active:not(:disabled),
+    &:active:not(:disabled) {
+      z-index: 1;
+    }
+    &:first-child:not(.button-text) {
+      border-top-left-radius: $component-border-radius;
+      border-bottom-left-radius: $component-border-radius;
+    }
+    &:last-child:not(.button-text) {
+      border-top-right-radius: $component-border-radius;
+      border-bottom-right-radius: $component-border-radius;
+    }
+  }
+  &-grow {
+    > .button {
+      flex-grow: 1;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import 'variables';
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  color: $table-color;
+  > thead {
+    > tr {
+      > th {
+        text-align: left;
+        padding: $table-cell-padding;
+      }
+    }
+  }
+  > tbody {
+    > tr {
+      border-top: 1px solid $table-border-color;
+      > th {
+        text-align: left;
+        padding: $table-cell-padding;
+        vertical-align: top;
+        font-weight: $font-weight-bold;
+      }
+      > td {
+        text-align: left;
+        padding: $table-cell-padding;
+        vertical-align: top;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import 'variables';
+
+.card-grid {
+  display: grid;
+  grid-gap: $card-list-gap;
+}

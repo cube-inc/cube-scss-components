@@ -1,0 +1,7 @@
+@import 'variables';
+
+.button-outline {
+  border-color: $button-outline-border-color;
+  background-color: $button-outline-background-color;
+  padding: $button-outline-padding;
+}

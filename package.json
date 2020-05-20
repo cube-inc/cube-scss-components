@@ -19,6 +19,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "files": [
+    "src/scss/**/*.md",
     "src/scss/**/*.scss"
   ],
   "dependencies": {},

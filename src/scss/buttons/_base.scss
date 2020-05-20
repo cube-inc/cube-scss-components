@@ -1,0 +1,55 @@
+@import 'variables';
+
+.button {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  margin: 0;
+  padding: $button-padding;
+  min-width: $button-min-width;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  text-transform: $button-text-transform;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  line-height: $button-line-height;
+  color: $button-primary-color;
+  border: 1px solid transparent;
+  background-color: $button-primary-color-default;
+  transition: $button-transition;
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      text-decoration: none;
+      background-color: $button-primary-color-hover;
+    }
+  }
+  &:focus:not(:disabled) {
+    text-decoration: none;
+    background-color: $button-primary-color-hover;
+  }
+  &.active:not(:disabled),
+  &:active:not(:disabled) {
+    background-color: $button-primary-color-active;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    color: grayscale($button-primary-color);
+    opacity: 0.5;
+  }
+  > * + * {
+    padding-left: 1em;
+  }
+}
+
+// Button icon
+.button .icon {
+  font-size: 1;
+  height: calc(#{$button-font-size} + 2px);
+  margin: -2px 0;
+  width: auto;
+  fill: $button-primary-color;
+}

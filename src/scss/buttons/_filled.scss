@@ -1,0 +1,23 @@
+@import 'variables';
+
+.button-filled {
+  background-color: $button-filled-background-color;
+  color: $button-filled-color;
+  padding: $button-filled-padding;
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      background-color: rgba($button-filled-background-color, 0.8);
+    }
+  }
+  &:focus:not(:disabled) {
+    background-color: rgba($button-filled-background-color, 0.8);
+  }
+  &.active:not(:disabled),
+  &:active:not(:disabled) {
+    background-color: rgba($button-filled-background-color, 0.7);
+  }
+  &:disabled {
+    background-color: $button-filled-disabled-background-color;
+    color: $button-filled-disabled-color;
+  }
+}

@@ -1,0 +1,15 @@
+.table-borderless {
+  > tbody {
+    > tr {
+      border-top: 0 none;
+      > th:first-child,
+      > td:first-child {
+        padding-left: 0;
+      }
+      > th:last-child,
+      > td:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

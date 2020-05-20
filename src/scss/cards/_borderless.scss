@@ -1,0 +1,26 @@
+@import 'variables';
+
+.card {
+  &-borderless {
+    border: 0 none;
+    .card-footer {
+      border-top: 0 none;
+    }
+  }
+  &-shadow {
+    box-shadow: $component-box-shadow;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: -$card-list-gap / 2;
+    > .card {
+      margin: $card-list-gap / 2;
+    }
+  }
+  &-grid {
+    display: grid;
+    grid-gap: $card-list-gap;
+  }
+}

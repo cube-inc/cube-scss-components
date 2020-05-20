@@ -1,5 +1,17 @@
 # cube-scss-components
 
+## Key features
+
+- Mobile first
+- Modern
+- Fluid
+- Responsive
+- Composable
+- Best practices
+- Clean
+- Functional
+- Import what you need
+
 ## Why
 
 Because at Cube we manage several web apps and we worry about UI consistency, this project aims to provide basic SCSS components, tailored for SPA and mobile environment.
@@ -24,22 +36,22 @@ From your global `index.scss`:
 
 ```scss
 // Imports your custom "_variables.scss", overrides !defaults
-@import "variables";
+@import 'variables';
 
 // Imports the components you need
-@import "node_modules/cube-scss-components/src/scss/scaffoldings";
-@import "node_modules/cube-scss-components/src/scss/badge";
-@import "node_modules/cube-scss-components/src/scss/bullets";
-@import "node_modules/cube-scss-components/src/scss/buttons";
-@import "node_modules/cube-scss-components/src/scss/buttons_variants";
-@import "node_modules/cube-scss-components/src/scss/cards";
-@import "node_modules/cube-scss-components/src/scss/forms";
-@import "node_modules/cube-scss-components/src/scss/labels";
-@import "node_modules/cube-scss-components/src/scss/list_group";
-@import "node_modules/cube-scss-components/src/scss/pagination";
-@import "node_modules/cube-scss-components/src/scss/slider";
-@import "node_modules/cube-scss-components/src/scss/tables";
-@import "node_modules/cube-scss-components/src/scss/types";
+@import 'node_modules/cube-scss-components/src/scss/scaffoldings';
+@import 'node_modules/cube-scss-components/src/scss/badge';
+@import 'node_modules/cube-scss-components/src/scss/bullets';
+@import 'node_modules/cube-scss-components/src/scss/buttons';
+@import 'node_modules/cube-scss-components/src/scss/buttons_variants';
+@import 'node_modules/cube-scss-components/src/scss/cards';
+@import 'node_modules/cube-scss-components/src/scss/forms';
+@import 'node_modules/cube-scss-components/src/scss/labels';
+@import 'node_modules/cube-scss-components/src/scss/list_group';
+@import 'node_modules/cube-scss-components/src/scss/pagination';
+@import 'node_modules/cube-scss-components/src/scss/slider';
+@import 'node_modules/cube-scss-components/src/scss/tables';
+@import 'node_modules/cube-scss-components/src/scss/types';
 
 // Your other imports here…
 ```
@@ -48,7 +60,7 @@ Your `_variables.scss` file may looks like:
 
 ```scss
 // Colors
-$gray-700: hsl(210, 10%,  30%);
+$gray-700: hsl(210, 10%, 30%);
 $primary: #8d1760;
 $secondary: #ffa7e7;
 
@@ -71,5 +83,5 @@ $component-border-radius: 4px;
 $component-box-shadow: 0px 3px 16px -2px $gray-700;
 
 // Imports other cube-scss-components variables
-@import "node_modules/cube-scss-components/src/scss/_variables.scss";
+@import 'node_modules/cube-scss-components/src/scss/_variables.scss';
 ```

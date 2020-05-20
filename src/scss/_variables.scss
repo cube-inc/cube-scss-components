@@ -1,108 +1,23 @@
+// Config
+$enable-prefers-color-scheme: true !default;
+$enable-responsive-fonts: true !default;
+
 // Colors
 @import 'colors';
-@import 'color-schemes/light/variables';
-@import 'color-schemes/dark/variables';
 
-$enable-prefers-color-scheme: true !default;
-
-// Font families
-$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
-$font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
-$font-family-headings: $font-family-base !default;
-$font-family-h1: $font-family-headings !default;
-$font-family-h2: $font-family-headings !default;
-$font-family-h3: $font-family-headings !default;
-$font-family-h4: $font-family-headings !default;
-$font-family-h5: $font-family-headings !default;
-$font-family-h6: $font-family-headings !default;
-$font-variant-numeric: normal !default;
-
-// Font sizes
-$font-size-base: 1em !default;
-$font-size-sm: $font-size-base * 0.875 !default;
-$font-size-xs: $font-size-base * 0.625 !default;
-$font-size-lead: 120% !default;
-$font-size-code: $font-size-base * 0.875 !default;
-$font-size-code-block: $font-size-base * 0.75 !default;
-$font-size-h1: $font-size-base * 3 !default;
-$font-size-h2: $font-size-base * 2 !default;
-$font-size-h3: $font-size-base * 1.5 !default;
-$font-size-h4: $font-size-base !default;
-$font-size-h5: $font-size-base !default;
-$font-size-h6: $font-size-base !default;
-
-// Line heights
-$line-height-base: 1.5 !default;
-$line-height-headings: $line-height-base !default;
-
-// Font weights
-$font-weight-base: 400 !default;
-$font-weight-medium: 500 !default;
-$font-weight-semibold: 600 !default;
-$font-weight-bold: 700 !default;
-$font-weight-headings: $font-weight-bold !default;
-$font-weight-h1: $font-weight-headings !default;
-$font-weight-h2: $font-weight-headings !default;
-$font-weight-h3: $font-weight-headings !default;
-$font-weight-h4: $font-weight-headings !default;
-$font-weight-h5: $font-weight-headings !default;
-$font-weight-h6: $font-weight-headings !default;
-
-// Spacers
-$spacer: 1rem !default;
-
-$spacer-025: $spacer * 0.25 !default;
-$spacer-050: $spacer * 0.5 !default;
-$spacer-075: $spacer * 0.75 !default;
-$spacer-125: $spacer * 1.25 !default;
-$spacer-150: $spacer * 1.5 !default;
-$spacer-200: $spacer * 2 !default;
-$spacer-250: $spacer * 2.5 !default;
-$spacer-300: $spacer * 3 !default;
-$spacer-400: $spacer * 4 !default;
-
-$spacer-xs: $spacer-025 !default;
-$spacer-sm: $spacer-075 !default;
-$spacer-md: $spacer-150 !default;
-$spacer-lg: $spacer-200 !default;
-$spacer-xl: $spacer-300 !default;
-$spacer-xxl: $spacer-400 !default;
-
-// Margins
-$paragraph-margin-top: 1em !default;
-$paragraph-margin-bottom: 1em !default;
-$headings-margin-top: 2em !default;
-$headings-margin-bottom: 1em !default;
-
-// Paddings
-$content-padding: $spacer !default;
-
-// Z-Indexes
-$zindex-fixed: 1500 !default;
-
-// Breakpoints
-$breakpoint-xs: 576px !default;
-$breakpoint-sm: 768px !default;
-$breakpoint-md: 992px !default;
-$breakpoint-lg: 1200px !default;
-$breakpoint-xl: 1900px !default;
-$container-breakpoint: $breakpoint-lg !default;
+// Commons
+@import 'commons';
 
 // Components
-$component-border-size: 1px !default;
-$component-filter-saturate: 300% !default;
-$component-filter-blur: 20px !default;
-$component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;
-$component-border-radius: 6px !default;
-$component-border-radius-sm: 3px !default;
-$component-padding-xs: $spacer-xs !default;
-$component-padding-sm: $spacer-sm !default;
-$component-padding: $spacer !default;
-$component-padding-md: $spacer-md !default;
-$component-padding-lg: $spacer-lg !default;
-$component-padding-xl: $spacer-xl !default;
-$component-box-shadow: 0 0.25em 1em 0 $component-box-shadow-color !default;
-$component-box-shadow-hover: 0 0.25em 1em 0 $component-box-shadow-color-hover !default;
-$component-box-shadow-active: 0 0.125em 0.5em 0 $component-box-shadow-color-active !default;
-
-$component-outline: 0 0 1rem $component-outline-color !default;
+@import 'badges/variables';
+@import 'bullets/variables';
+@import 'buttons/variables';
+@import 'cards/variables';
+@import 'forms/variables';
+@import 'forms/slider/variables';
+@import 'labels/variables';
+@import 'layouts/variables';
+@import 'list-group/variables';
+@import 'pagination/variables';
+@import 'tables/variables';
+@import 'types/variables';

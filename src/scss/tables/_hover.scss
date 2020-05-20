@@ -1,0 +1,12 @@
+@import 'variables';
+
+@media (hover: hover) {
+  .table-hover {
+    > tbody {
+      > tr:hover {
+        transition: background-color 250ms ease;
+        background-color: $table-cell-hover-background-color;
+      }
+    }
+  }
+}
