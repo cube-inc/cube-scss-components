@@ -21,6 +21,26 @@
       </div>
     </Example>
 
+    <h3>Hover</h3>
+    <Example>
+      <a class="card card-hover">
+        <main class="card-body">
+          <h3 class="title">Card title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <h4>Another title</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <a :href="randomPhotoUrl" target="_blank">{{ randomPhotoUrl }}</a>
+        </main>
+        <footer class="card-footer">
+          <div class="button-list">
+            <button class="button button-filled">Complete</button>
+            <button class="button button-text">Learn more</button>
+          </div>
+        </footer>
+      </a>
+    </Example>
+
     <h3>Media</h3>
     <Example>
       <div class="card">
@@ -80,6 +100,19 @@
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
       </div>
+    </Example>
+
+    <h3>Card shadow – hover</h3>
+    <Example>
+      <a class="card card-borderless card-shadow card-hover">
+        <header class="card-media" style="height: 40vh;">
+          <img class="card-media-image" :src="`${randomPhotoUrl}?random=shadow`" />
+        </header>
+        <main class="card-body">
+          <h2 class="title">Card title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+        </main>
+      </a>
     </Example>
 
     <h3>Card list</h3>

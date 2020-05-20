@@ -1,0 +1,18 @@
+@import 'variables';
+
+@media (hover: hover) {
+  .card.card-hover:hover {
+    &:not(.card-borderless) {
+      border-color: $primary;
+    }
+    // &.card-borderless {
+    //   opacity: 0.9;
+    // }
+    &.card-shadow {
+      box-shadow: $card-box-shadow-hover;
+      &:active {
+        box-shadow: $card-box-shadow-active;
+      }
+    }
+  }
+}

@@ -10,11 +10,13 @@
 @import '~cube-scss-components/src/scss/cards/base';
 @import '~cube-scss-components/src/scss/cards/borderless';
 @import '~cube-scss-components/src/scss/cards/shadow';
+@import '~cube-scss-components/src/scss/cards/hover';
 ```
 
 - Base: `.card`
 - Borderless: `.card-borderless`
 - Shadow: `.card-shadow`
+- Hover effect: `.card-hover`
 
 ## Content type
 

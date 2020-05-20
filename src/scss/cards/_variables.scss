@@ -1,4 +1,5 @@
-@import '../commons';
+@import '../commons/component';
+@import '../commons/spacers';
 
 $card-border-radius: $component-border-radius !default;
 $card-border-size: $component-border-size !default;
@@ -6,5 +7,7 @@ $card-border-color: var(--component-border-color, #{$component-border-color}) !d
 $card-text-color: var(--component-color, #{$component-color}) !default;
 $card-background-color: var(--component-background-color, #{$component-background-color}) !default;
 $card-box-shadow: $component-box-shadow !default;
+$card-box-shadow-hover: $component-box-shadow-hover !default;
+$card-box-shadow-active: $component-box-shadow-active !default;
 $card-padding: $component-padding !default;
 $card-list-gap: $spacer !default;
