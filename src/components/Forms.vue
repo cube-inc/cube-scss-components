@@ -79,11 +79,29 @@
       <fieldset class="form-group">
         <label class="form-label">Inline inputs</label>
         <div class="form-group-inline">
-          <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #1" />
-          <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #2" />
-          <input type="text" class="form-control" style="flex: 1 0 8em;" placeholder="Input #3" />
-          <div class="form-text">This a <code>.form-text</code></div>
-          <button class="button">Button</button>
+          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
+          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
+          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
+          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
+          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
+          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
+        </div>
+      </fieldset>
+      <fieldset class="form-group form-group-stacked">
+        <div class="form-group-inline">
+          <label class="form-label" style="width: 8em">Email:</label>
+          <input type="email" class="form-control" style="flex: 1 0 8em;" placeholder="john@doe" />
+        </div>
+        <div class="form-group-inline">
+          <label class="form-label" style="width: 8em">Password:</label>
+          <input type="password" class="form-control" style="flex: 1 0 8em;" placeholder="Type your password" />
+        </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <div class="form-group-inline">
+          <input type="number" class="form-control" style="flex: 1 0 8em;" placeholder="Input number with buttons" />
+          <button class="button" style="flex: 0 0 4em;">-</button>
+          <button class="button" style="flex: 0 0 4em;">+</button>
         </div>
       </fieldset>
     </Example>

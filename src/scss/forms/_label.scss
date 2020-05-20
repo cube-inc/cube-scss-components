@@ -1,0 +1,24 @@
+@import 'variables';
+
+.form-label {
+  display: block;
+  font-weight: $form-label-font-weight;
+  cursor: pointer;
+  color: inherit;
+  line-height: $form-label-line-height;
+  margin-top: $spacer-sm;
+  margin-bottom: $spacer-sm;
+  > *:first-child {
+    margin-top: $spacer-sm;
+  }
+  @media (hover: hover) {
+    &:hover {
+      input[type='checkbox'].form-control:not(:disabled):not(:checked),
+      input[type='radio'].form-control:not(:disabled):not(:checked) {
+        &::before {
+          background-color: $form-switch-active-color-hover;
+        }
+      }
+    }
+  }
+}

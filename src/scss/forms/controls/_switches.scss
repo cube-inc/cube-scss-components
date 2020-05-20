@@ -1,0 +1,74 @@
+@import '../variables';
+
+@media (hover: hover) {
+  input[type='checkbox'].form-control:not(:disabled):not(:checked),
+  input[type='radio'].form-control:not(:disabled):not(:checked) {
+    &:hover {
+      &::before {
+        background-color: $form-switch-active-color-hover;
+      }
+    }
+  }
+}
+
+input[type='checkbox'].form-control,
+input[type='radio'].form-control {
+  cursor: pointer;
+  appearance: none;
+  width: $form-switch-size;
+  height: $form-switch-size;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  &::before {
+    content: '';
+    background-color: transparent;
+    position: absolute;
+    top: $form-switch-inner-padding;
+    right: $form-switch-inner-padding;
+    bottom: $form-switch-inner-padding;
+    left: $form-switch-inner-padding;
+    border-radius: $form-control-border-radius - 1px;
+    transition: all 250ms ease;
+  }
+  &:checked {
+    &::before {
+      background-color: $form-switch-active-color;
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+    &::before {
+      background-color: $form-control-background-color-disabled;
+    }
+    & + .form-text {
+      cursor: not-allowed;
+    }
+  }
+  & + .form-text {
+    display: inline-block;
+    font-weight: $form-control-font-weight;
+    padding-left: 0.5rem;
+    vertical-align: middle;
+    line-height: inherit;
+    max-width: calc(100% - #{$form-switch-size} - 0.5rem);
+  }
+}
+input[type='radio'].form-control {
+  border-radius: 50%;
+  &::before {
+    border-radius: 50%;
+  }
+}
+.form-label {
+  input[type='checkbox'].form-control,
+  input[type='radio'].form-control {
+    vertical-align: top;
+    margin-top: calc((#{$form-label-line-height} - #{$form-switch-size}) / 2);
+    & + .form-text {
+      vertical-align: top;
+    }
+  }
+}

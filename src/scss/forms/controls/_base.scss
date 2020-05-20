@@ -1,0 +1,50 @@
+@import '../variables';
+
+.form-control {
+  transition: all 0.2s;
+  outline: none;
+  appearance: none;
+  box-shadow: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border-radius: $form-control-border-radius;
+  border: 1px solid $form-control-border-color;
+  background-color: $form-control-background-color;
+  margin: 0;
+  padding: $form-control-padding;
+  font-size: $form-control-font-size;
+  font-family: $form-control-font-family;
+  font-weight: $form-control-font-weight;
+  line-height: $form-control-line-height;
+  color: $form-control-color;
+  &:focus:not(:disabled) {
+    border-color: $form-control-border-color-focus;
+    box-shadow: $form-control-ouline;
+  }
+  &:read-only:not(select):not(div):not([type='checkbox']):not([type='radio']) {
+    cursor: default;
+    color: $form-control-muted-color;
+  }
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    color: $form-control-muted-color;
+    background-color: $form-control-background-color-disabled;
+    opacity: 0.3; /* Safari already applies an opacity */
+  }
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $form-control-muted-color;
+    opacity: 1; /* Firefox */
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $form-control-muted-color;
+  }
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $form-control-muted-color;
+  }
+}
