@@ -89,12 +89,12 @@
       </fieldset>
       <fieldset class="form-group form-group-stacked">
         <div class="form-group-inline">
-          <label class="form-label" style="width: 8em">Email:</label>
-          <input type="email" class="form-control" style="flex: 1 0 8em;" placeholder="john@doe" />
+          <label class="form-label" for="form-group-inline-email" style="width: 8em">Email:</label>
+          <input id="form-group-inline-email" type="email" class="form-control" style="flex: 1 0 8em;" placeholder="john@doe" />
         </div>
         <div class="form-group-inline">
-          <label class="form-label" style="width: 8em">Password:</label>
-          <input type="password" class="form-control" style="flex: 1 0 8em;" placeholder="Type your password" />
+          <label class="form-label" for="form-group-inline-password" style="width: 8em">Password:</label>
+          <input id="form-group-inline-password" type="password" class="form-control" style="flex: 1 0 8em;" placeholder="Type your password" />
         </div>
       </fieldset>
       <fieldset class="form-group">
