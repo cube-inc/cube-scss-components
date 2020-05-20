@@ -30,8 +30,8 @@ $component-color-dark: $text-color-dark !default;
 $component-border-color-dark: lighten($body-background-color-dark, 14%) !default;
 $component-background-color-dark: lighten($body-background-color-dark, 7%) !default;
 $component-background-color-disabled-dark: lighten($body-background-color-dark, 14%) !default;
-
 $component-background-color-alt-dark: rgba($white, 0.04) !default;
+$component-box-shadow-color-dark: rgba($black, 0.2) !default;
 $component-backdrop-background-color-dark: hsla(180, 1%, 25%, 0.9) !default;
 
 // Labels

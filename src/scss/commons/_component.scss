@@ -12,8 +12,8 @@ $component-padding: $spacer !default;
 $component-padding-md: $spacer-md !default;
 $component-padding-lg: $spacer-lg !default;
 $component-padding-xl: $spacer-xl !default;
-$component-box-shadow: 0 0.25em 1em 0 $component-box-shadow-color !default;
-$component-box-shadow-hover: 0 0.25em 1em 0 $component-box-shadow-color-hover !default;
-$component-box-shadow-active: 0 0.125em 0.5em 0 $component-box-shadow-color-active !default;
+$component-box-shadow: 0 0.25em 1em 0 var(--component-box-shadow-color, #{$component-box-shadow-color}) !default;
+$component-box-shadow-hover: 0 0.25em 1em 0 var(--component-box-shadow-color-hover, #{$component-box-shadow-color-hover}) !default;
+$component-box-shadow-active: 0 0.125em 0.5em 0 var(--component-box-shadow-color-active, #{$component-box-shadow-color-active}) !default;
 
 $component-outline: 0 0 1rem $component-outline-color !default;
