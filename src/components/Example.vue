@@ -1,5 +1,5 @@
 <template>
-  <section class="example" :class="exampleClasses">
+  <section class="example">
     <div class="example-preview" :class="examplePreviewClasses" ref="preview">
       <slot />
     </div>
@@ -7,7 +7,7 @@
       <div class="button-group">
         <button class="button button-xs" @click="toggleDark">
           <transition name="fade" mode="out-in">
-            <SunMax v-if="darkMode" class="icon"/>
+            <SunMax v-if="previewDarkColorScheme" class="icon"/>
             <MoonFill v-else class="icon"/>
           </transition>
         </button>
@@ -24,14 +24,13 @@
 </template>
 
 <script>
+import uiState, { DARK } from '@/services/uiState'
+
 import MoonFill from './icons/MoonFill.vue'
 import SunMax from './icons/SunMax.vue'
 import DocOnClipboard from './icons/DocOnClipboard.vue'
 import vnodesToHtml from '@/services/vnodeService'
 
-/**
- * TODO: Rely on global app state and ui-color-scheme
- */
 export default {
   name: 'Example',
   components: {
@@ -40,26 +39,26 @@ export default {
     DocOnClipboard
   },
   props: {
-    previewScroll: { type: Boolean, default: false },
     dark: { type: Boolean, default: null }
   },
   data() {
     return {
-      darkMode: false,
+      reverseColorScheme: false,
       code: null,
       copied: false
     }
   },
   computed: {
-    exampleClasses() {
-      return {
-        'example-preview-scroll': this.previewScroll
-      }
+    previewDarkColorScheme () {
+      return this.reverseColorScheme
+        ? uiState.colorScheme !== DARK
+        : uiState.colorScheme === DARK
     },
     examplePreviewClasses() {
       return {
-        'light-color-scheme': !this.darkMode,
-        'dark-color-scheme': this.darkMode
+        'example-preview-background-dark': this.dark,
+        'light-color-scheme': this.previewDarkColorScheme === false,
+        'dark-color-scheme': this.previewDarkColorScheme === true
       }
     }
   },
@@ -67,12 +66,8 @@ export default {
     format() {
       this.code = vnodesToHtml(this.$slots.default, { highlight: true })
     },
-    onMatchMedia(event) {
-      const { matches } = event
-      this.darkMode = matches
-    },
     toggleDark() {
-      this.darkMode = !this.darkMode
+      this.reverseColorScheme = !this.reverseColorScheme
     },
     copyCode() {
       const html = this.$refs.code.innerText
@@ -83,20 +78,11 @@ export default {
       }, 1250)
     }
   },
-  beforeMount() {
-    if (this.dark === null) {
-      this.$matchDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
-      this.$matchDarkMode.addListener(this.onMatchMedia)
-      this.darkMode = this.$matchDarkMode.matches
-    } else {
-      this.darkMode = this.dark
-    }
+  updated() {
+    this.format()
   },
   mounted() {
     this.format()
-  },
-  beforeDestroy() {
-    this.$matchDarkMode.removeListener(this.onMatchMedia)
   }
 }
 </script>
@@ -109,7 +95,7 @@ $example-border-color: var(--component-border-color, #{$component-border-color})
 $example-border-radius: $component-border-radius !default;
 $example-preview-color: var(--component-color, #{$component-color}) !default;
 $example-preview-background-color: var(--component-background-color, #{$component-background-color}) !default;
-$example-preview-dark-background-color: #373838 !default;
+$example-preview-background-color-dark: $component-background-color-dark !default;
 $example-preview-background-square-size: 10px !default;
 $example-code-background-color: var(--component-background-color-alt, #{$component-background-color-alt}) !default;
 
@@ -147,6 +133,9 @@ $code-attr-val-color: $red;
     background-size: $example-preview-background-square-size $example-preview-background-square-size;
     background-position: 0 0, ($example-preview-background-square-size / 2) ($example-preview-background-square-size / 2);
     transition: all 250ms ease;
+    &-background-dark {
+      background-color: $example-preview-background-color-dark;
+    }
   }
   &-toolbar {
     border-top: 1px solid $example-border-color;
@@ -171,18 +160,6 @@ $code-attr-val-color: $red;
         }
       }
     }
-  }
-}
-.fade {
-  &-enter-active {
-    transition: all 250ms ease;
-  }
-  &-leave-active {
-    transition: all 100ms ease;
-  }
-  &-enter,
-  &-leave-to {
-    opacity: 0;
   }
 }
 </style>

@@ -20,11 +20,8 @@ export default {
     AppMenu,
     Documentation
   },
-  data() {
-    const now = new Date()
-    return {
-      currentYear: now.getFullYear()
-    }
+  computed: {
+    currentYear: () => new Date().getFullYear()
   }
 }
 </script>
@@ -45,5 +42,20 @@ footer {
   margin: 3em 0;
   padding: 3em 1em;
   color: var(--text-muted);
+}
+</style>
+
+<style lang="scss">
+.fade {
+  &-enter-active {
+    transition: all 250ms ease;
+  }
+  &-leave-active {
+    transition: all 100ms ease;
+  }
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
 }
 </style>
