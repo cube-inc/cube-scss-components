@@ -28,7 +28,7 @@
           <h3>Card title</h3>
         </header>
         <aside class="card-media" style="height: 30vh;">
-          <img class="card-media-image" :src="randomPhotoUrl" />
+          <img class="card-media-image" :src="`${randomPhotoUrl}?random=media&grayscale&blur=10`" style="opacity:.15;" />
           <div class="card-media-overlay text-center">
             <h2>Overlay</h2>
             <p class="lead">With rich content</p>
@@ -52,8 +52,8 @@
     <h3>Borderless card</h3>
     <Example :dark="true">
       <div class="card card-borderless">
-        <header class="card-media" style="height: 30vh;">
-          <img class="card-media-image" :src="randomPhotoUrl" />
+        <header class="card-media" style="height: 40vh;">
+          <img class="card-media-image" :src="`${randomPhotoUrl}?random=borderless`" />
         </header>
         <main class="card-body">
           <h2 class="title">Card title</h2>
@@ -72,8 +72,8 @@
     <h3>Card shadow</h3>
     <Example>
       <div class="card card-borderless card-shadow">
-        <header class="card-media" style="height: 30vh;">
-          <img class="card-media-image" :src="randomPhotoUrl" />
+        <header class="card-media" style="height: 40vh;">
+          <img class="card-media-image" :src="`${randomPhotoUrl}?random=shadow`" />
         </header>
         <main class="card-body">
           <h2 class="title">Card title</h2>
@@ -150,7 +150,7 @@
 <script>
 export default {
   computed: {
-    randomPhotoUrl: () => `https://source.unsplash.com/random/800x600?city,night`
+    randomPhotoUrl: () => `https://picsum.photos/1920/1080/`
   }
 }
 </script>
@@ -158,10 +158,7 @@ export default {
 <style lang="scss" scoped>
 @import '~@/scss/variables';
 .card-media {
-  background-color: rgba($info, 0.8);
-}
-.card-media-overlay {
-  background-color: rgba($info, 0.8);
+  background-color: rgba($info, 0.5);
 }
 .card-list {
   > .card {
