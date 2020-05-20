@@ -29,7 +29,7 @@
         </header>
         <aside class="card-media" style="height: 30vh;">
           <img class="card-media-image" :src="`${randomPhotoUrl}?random=media&grayscale&blur=10`" style="opacity:.15;" />
-          <div class="card-media-overlay text-center">
+          <div class="card-media-overlay">
             <h2>Overlay</h2>
             <p class="lead">With rich content</p>
           </div>
@@ -157,7 +157,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~@/scss/variables';
-.card-media {
+.card-media-overlay {
   background-color: rgba($info, 0.5);
 }
 .card-list {
