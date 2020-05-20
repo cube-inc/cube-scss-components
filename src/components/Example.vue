@@ -110,12 +110,6 @@ $code-attr-val-color: $red;
   overflow: hidden;
   position: relative;
   color: $example-color;
-  &-preview-scroll {
-    .example-preview {
-      overflow: scroll;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
   &-dark-toggle {
     position: absolute;
     top: 0;
@@ -126,6 +120,8 @@ $code-attr-val-color: $red;
     transition: all 250ms ease;
   }
   &-preview {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     padding: $example-padding;
     color: $example-preview-color;
     background-color: $example-preview-background-color;

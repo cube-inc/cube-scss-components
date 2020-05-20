@@ -1,7 +1,7 @@
 <template>
   <section id="Pagination">
     <h2>Pagination</h2>
-    <Example :previewScroll="true">
+    <Example>
       <nav class="pagination">
         <a class="page-item page-button">Prev</a>
         <a class="page-item page-button">1</a>
