@@ -28,7 +28,7 @@ $code-block-color-dark: rgba($white, 0.6) !default;
 // Component colors
 $component-color-dark: $text-color-dark !default;
 $component-border-color-dark: lighten($body-background-color-dark, 14%) !default;
-$component-background-color-dark: rgba($white, 0.05) !default;
+$component-background-color-dark: lighten($body-background-color-dark, 7%) !default;
 $component-background-color-disabled-dark: lighten($body-background-color-dark, 14%) !default;
 
 $component-background-color-alt-dark: rgba($white, 0.04) !default;
