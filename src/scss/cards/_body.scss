@@ -1,7 +1,9 @@
 @import 'variables';
 
 .card-body {
-  background-color: $card-background-color;
   padding: $card-padding;
   flex-grow: 1;
+  .title {
+    margin: 0;
+  }
 }

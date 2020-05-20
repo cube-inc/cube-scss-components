@@ -1,5 +1,5 @@
 <template>
-  <div class="example" :class="exampleClasses">
+  <section class="example" :class="exampleClasses">
     <div class="example-preview" :class="examplePreviewClasses" ref="preview">
       <slot />
     </div>
@@ -30,7 +30,7 @@
       </div>
     </div>
     <code class="example-code code-block" ref="code" v-html="code"></code>
-  </div>
+  </section>
 </template>
 
 <script>

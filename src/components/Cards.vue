@@ -5,30 +5,37 @@
     <Example>
       <div class="card">
         <main class="card-body">
-          <h2>Card title</h2>
+          <h3 class="title">Card title</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <h4>Another title</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+          <a :href="randomPhotoUrl" target="_blank">{{ randomPhotoUrl }}</a>
         </main>
         <footer class="card-footer">
           <div class="button-list">
-            <button class="button">Hide</button>
-            <button class="button button-filled">Show</button>
+            <button class="button button-filled">Complete</button>
+            <button class="button button-text">Learn more</button>
           </div>
         </footer>
       </div>
     </Example>
 
-    <h3>Images</h3>
+    <h3>Media</h3>
     <Example>
       <div class="card">
-        <header class="card-header" style="height: 180px;">
-          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-          <div class="card-header-overlay">
-            <h2>Image overlay</h2>
-            <div class="lead">With rich content</div>
-          </div>
+        <header class="card-header">
+          <h3>Card title</h3>
         </header>
+        <aside class="card-media" style="height: 30vh;">
+          <img class="card-media-image" :src="randomPhotoUrl" />
+          <div class="card-media-overlay text-center">
+            <h2>Overlay</h2>
+            <p class="lead">With rich content</p>
+          </div>
+        </aside>
         <main class="card-body">
-          <h2>Card title</h2>
+          <h4 class="title">My sub title</h4>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
         <footer class="card-footer card-footer-space-between">
@@ -45,21 +52,18 @@
     <h3>Borderless card</h3>
     <Example :dark="true">
       <div class="card card-borderless">
-        <header class="card-header" style="height: 180px;">
-          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-          <div class="card-header-overlay">
-            <h2>Image overlay</h2>
-          </div>
+        <header class="card-media" style="height: 30vh;">
+          <img class="card-media-image" :src="randomPhotoUrl" />
         </header>
         <main class="card-body">
-          <h2>Card title</h2>
+          <h2 class="title">Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
-        <footer class="card-footer card-footer-right">
+        <footer class="card-footer">
           <div class="button-list">
-            <button class="button">Normal</button>
-            <button class="button button-outline">Outline</button>
+            <button class="button button-filled">Outline</button>
+            <button class="button button-text">Text</button>
           </div>
         </footer>
       </div>
@@ -68,14 +72,11 @@
     <h3>Card shadow</h3>
     <Example>
       <div class="card card-borderless card-shadow">
-        <header class="card-header" style="height: 180px;">
-          <img class="card-header-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-          <div class="card-header-overlay">
-            <h2>Image overlay</h2>
-          </div>
+        <header class="card-media" style="height: 30vh;">
+          <img class="card-media-image" :src="randomPhotoUrl" />
         </header>
         <main class="card-body">
-          <h2>Card title</h2>
+          <h2 class="title">Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
       </div>
@@ -86,7 +87,7 @@
       <div class="card-list">
         <div class="card">
           <main class="card-body">
-            <h2>Card 1</h2>
+            <h2 class="title">Card 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
             <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
           </main>
@@ -96,13 +97,13 @@
         </div>
         <div class="card">
           <main class="card-body">
-            <h2>Card 2</h2>
+            <h2 class="title">Card 2</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
         </div>
         <div class="card">
           <main class="card-body">
-            <h2>Card 3</h2>
+            <h2 class="title">Card 3</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
           <footer class="card-footer">
@@ -118,7 +119,7 @@
       <div class="card-grid card-grid-example">
         <div class="card">
           <main class="card-body">
-            <h2>Card 1</h2>
+            <h2 class="title">Card 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
             <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
           </main>
@@ -128,13 +129,13 @@
         </div>
         <div class="card">
           <main class="card-body">
-            <h2>Card 2</h2>
+            <h2 class="title">Card 2</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
         </div>
         <div class="card">
           <main class="card-body">
-            <h2>Card 3</h2>
+            <h2 class="title">Card 3</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
           <footer class="card-footer">
@@ -146,16 +147,21 @@
   </section>
 </template>
 
+<script>
+export default {
+  computed: {
+    randomPhotoUrl: () => `https://source.unsplash.com/random/800x600?city,night`
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 @import '~@/scss/variables';
-.card-header-image {
-  background-color: $info;
+.card-media {
+  background-color: rgba($info, 0.8);
 }
-.card-header-overlay {
-  color: white;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.card-media-overlay {
+  background-color: rgba($info, 0.8);
 }
 .card-list {
   > .card {
