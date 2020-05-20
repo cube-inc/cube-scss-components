@@ -25,17 +25,17 @@
 
 <script>
 import AppNav from './AppNav.vue'
-import Badges from './Badges.vue'
-import Bullets from './Bullets.vue'
-import Buttons from './Buttons.vue'
-import Cards from './Cards.vue'
-import Forms from './Forms.vue'
-import Labels from './Labels.vue'
-import ListGroup from './ListGroup.vue'
-import Pagination from './Pagination.vue'
-import Sliders from './Sliders.vue'
-import Tables from './Tables.vue'
-import Types from './Types.vue'
+import Badges from './docs/Badges.vue'
+import Bullets from './docs/Bullets.vue'
+import Buttons from './docs/Buttons.vue'
+import Cards from './docs/Cards.vue'
+import Forms from './docs/Forms.vue'
+import Labels from './docs/Labels.vue'
+import ListGroup from './docs/ListGroup.vue'
+import Pagination from './docs/Pagination.vue'
+import Sliders from './docs/Sliders.vue'
+import Tables from './docs/Tables.vue'
+import Types from './docs/Types.vue'
 
 export default {
   components: {

@@ -38,7 +38,7 @@ export default {
     MoonFill,
     ArrowUpToLine
   },
-  data () {
+  data() {
     return {
       LIGHT,
       DARK

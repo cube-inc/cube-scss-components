@@ -7,8 +7,8 @@
       <div class="button-group">
         <button class="button button-xs" @click="toggleDark">
           <transition name="fade" mode="out-in">
-            <SunMax v-if="previewDarkColorScheme" class="icon"/>
-            <MoonFill v-else class="icon"/>
+            <SunMax v-if="previewDarkColorScheme" class="icon" />
+            <MoonFill v-else class="icon" />
           </transition>
         </button>
         <button class="button button-xs" @click="copyCode">
@@ -49,10 +49,8 @@ export default {
     }
   },
   computed: {
-    previewDarkColorScheme () {
-      return this.reverseColorScheme
-        ? uiState.colorScheme !== DARK
-        : uiState.colorScheme === DARK
+    previewDarkColorScheme() {
+      return this.reverseColorScheme ? uiState.colorScheme !== DARK : uiState.colorScheme === DARK
     },
     examplePreviewClasses() {
       return {

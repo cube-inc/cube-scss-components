@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <AppMenu />
-    <Documentation />
+    <AppDocumentation />
     <footer>
       <div>cube-scss-components v{{ $root.$options.version }}</div>
       <div>Cube Living, Inc. © {{ currentYear }}</div>
@@ -11,14 +11,14 @@
 
 <script>
 import AppMenu from './components/AppMenu.vue'
-import Documentation from './components/Documentation.vue'
+import AppDocumentation from './components/AppDocumentation.vue'
 import './scss/index.scss'
 
 export default {
   name: 'app',
   components: {
     AppMenu,
-    Documentation
+    AppDocumentation
   },
   computed: {
     currentYear: () => new Date().getFullYear()
