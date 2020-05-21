@@ -40,13 +40,13 @@ export class Node {
     return Boolean(this.vnode.tag)
   }
   isPreTag() {
-    return ['pre', 'code'].indexOf(this.vnode.tag) > -1
+    return ['pre', 'code'].includes(this.vnode.tag)
   }
   isVoidElement() {
-    return voidElements.indexOf(this.vnode.tag) > -1
+    return voidElements.includes(this.vnode.tag)
   }
   isBlockElement() {
-    return blockElements.indexOf(this.vnode.tag) > -1
+    return blockElements.includes(this.vnode.tag)
   }
   tagToHtml() {
     return this.isHighlighted() ? `<span class="code-tag">${this.tag}</span>` : this.tag
