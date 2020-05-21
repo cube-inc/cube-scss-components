@@ -1,0 +1,31 @@
+// Colors
+$navy: #1a004f !default;
+$blue: #157efb !default;
+$indigo: #738cff !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #ff405e !default;
+$orange: #fd7e14 !default;
+$yellow: #f2d30c !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+// Grays
+$white: hsl(210, 10%, 100%) !default;
+$gray-020: hsl(210, 10%, 98%) !default;
+$gray-050: hsl(210, 10%, 95%) !default;
+$gray-070: hsl(210, 10%, 93%) !default;
+$gray-100: hsl(210, 10%, 90%) !default;
+$gray-200: hsl(210, 10%, 80%) !default;
+$gray-300: hsl(210, 10%, 70%) !default;
+$gray-400: hsl(210, 10%, 60%) !default;
+$gray-500: hsl(210, 10%, 50%) !default;
+$gray-600: hsl(210, 10%, 40%) !default;
+$gray-700: hsl(210, 10%, 30%) !default;
+$gray-800: hsl(210, 10%, 20%) !default;
+$gray-900: hsl(204, 10%, 10%) !default;
+$black: hsl(210, 10%, 0%) !default;
+
+@import 'schemes/light/variables';
+@import 'schemes/dark/variables';

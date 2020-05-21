@@ -1,11 +1,13 @@
+// You must import variables first
 @import 'variables';
 
-@import 'colors';
-@import 'colors/schemes/light';
-@import 'colors/schemes/dark';
-
+// Kind of reset
 @import 'scaffoldings';
 
+// Install color schemes
+@import 'colors';
+
+// Components
 @import 'badges';
 @import 'bullets';
 @import 'buttons';
