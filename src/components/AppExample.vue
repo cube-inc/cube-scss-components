@@ -156,6 +156,15 @@ $code-attr-val-color: $red;
     }
   }
 }
+@media (max-width: $breakpoint-xs) {
+  .example {
+    border-radius: 0;
+    border-left: 0 none;
+    border-right: 0 none;
+    margin-left: -$spacer;
+    margin-right: -$spacer;
+  }
+}
 @media (min-width: $breakpoint-sm + 1) {
   .example-preview {
     padding: $spacer-xl;
