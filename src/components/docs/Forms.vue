@@ -98,11 +98,14 @@
         </div>
       </fieldset>
       <fieldset class="form-group">
-        <div class="form-group-inline">
-          <input type="number" class="form-control" style="flex: 1 0 8em;" placeholder="Input number with buttons" />
-          <button class="button" style="flex: 0 0 4em;">-</button>
-          <button class="button" style="flex: 0 0 4em;">+</button>
-        </div>
+        <label class="form-label">
+          Input number with buttons
+          <div class="form-group-inline">
+            <input ref="inputNumber" type="number" class="form-control" style="flex: 1 0 8em;" placeholder="Number" />
+            <button class="button" @click="$refs.inputNumber.stepDown()" style="flex: 0 0 4em;"><Minus class="icon" /></button>
+            <button class="button" @click="$refs.inputNumber.stepUp()" style="flex: 0 0 4em;"><Plus class="icon" /></button>
+          </div>
+        </label>
       </fieldset>
     </Example>
 
@@ -260,3 +263,15 @@
     </Example>
   </section>
 </template>
+
+<script>
+import Minus from '../icons/Minus.vue'
+import Plus from '../icons/Plus.vue'
+
+export default {
+  components: {
+    Minus,
+    Plus
+  }
+}
+</script>
