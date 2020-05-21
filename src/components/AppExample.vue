@@ -7,14 +7,14 @@
       <div class="button-group">
         <button class="button button-xs" @click="toggleDark">
           <transition name="fade" mode="out-in">
-            <SunMax v-if="previewDarkColorScheme" class="icon icon-sm" />
-            <MoonFill v-else class="icon icon-sm" />
+            <SunMax v-if="previewDarkColorScheme" class="icon icon" />
+            <MoonFill v-else class="icon icon" />
           </transition>
         </button>
-        <button class="button button-xs" @click="copyCode">
+        <button class="button button-xs" @click="copyCode" :disabled="copied">
           <transition name="fade" mode="out-in">
             <span v-if="copied">Copied!</span>
-            <DocOnClipboard v-else class="icon icon-sm" />
+            <DocOnClipboard v-else class="icon icon" />
           </transition>
         </button>
       </div>
@@ -30,7 +30,8 @@ import vnodesToHtml from '@/services/vnodeService'
 export default {
   name: 'Example',
   props: {
-    dark: { type: Boolean, default: null }
+    dark: { type: Boolean, default: null },
+    transparencyGrid: { type: Boolean, default: false }
   },
   data() {
     return {
@@ -46,6 +47,7 @@ export default {
     examplePreviewClasses() {
       return {
         'example-preview-background-dark': this.dark,
+        'example-preview-transparency-grid': this.transparencyGrid,
         'light-color-scheme': this.previewDarkColorScheme === false,
         'dark-color-scheme': this.previewDarkColorScheme === true
       }
@@ -114,10 +116,12 @@ $code-attr-val-color: $red;
     padding: $example-padding;
     color: $example-preview-color;
     background-color: $example-preview-background-color;
-    background-image: linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%), linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%);
-    background-size: $example-preview-background-square-size $example-preview-background-square-size;
-    background-position: 0 0, ($example-preview-background-square-size / 2) ($example-preview-background-square-size / 2);
     transition: all 250ms ease;
+    &-transparency-grid {
+      background-image: linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%), linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%);
+      background-size: $example-preview-background-square-size $example-preview-background-square-size;
+      background-position: 0 0, ($example-preview-background-square-size / 2) ($example-preview-background-square-size / 2);
+    }
     &-background-dark {
       background-color: $example-preview-background-color-dark;
     }
