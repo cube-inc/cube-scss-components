@@ -27,6 +27,11 @@ $enable-responsive-fonts: true !default;
 @import 'colors/variables';
 
 /**
+ * Reset
+ */
+@import 'reset/variables';
+
+/**
  * Types
  */
 @import 'types/variables';
