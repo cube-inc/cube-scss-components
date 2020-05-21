@@ -27,7 +27,7 @@ export class Nodes extends Array {
 export class Node {
   constructor(vnode, options = {}) {
     this.vnode = vnode
-    this.tag = vnode.tag
+    this.tag = vnode.componentInstance ? vnode.elm.tagName : vnode.tag
     this.attrs = new Attrs(vnode, options)
     this.children = new Children(vnode, options)
     this.text = vnode.text
