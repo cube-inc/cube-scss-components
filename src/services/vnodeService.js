@@ -1,5 +1,7 @@
 const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr']
-const blockElements = ['p', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ol', 'ul', 'li', 'pre', 'address', 'blockquote', 'dl', 'div', 'fieldset', 'form', 'textarea', 'select', 'option', 'hr', 'noscript', 'table', 'header', 'main', 'footer', 'button', 'label', 'input', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'svg']
+const blockElements = ['p', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ol', 'ul', 'li', 'pre', 'address', 'blockquote', 'dl', 'div', 'fieldset', 'form', 'textarea', 'select', 'option', 'hr', 'noscript', 'table', 'header', 'main', 'footer', 'button', 'label', 'input', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td']
+const complexElements = ['svg']
+const hiddenAttrs = ['xmlns', 'viewBox']
 
 export function escapeHtml(string) {
   return string.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -37,16 +39,16 @@ export class Node {
     return Boolean(this.options.highlight)
   }
   isTag() {
-    return Boolean(this.vnode.tag)
+    return Boolean(this.tag)
   }
   isPreTag() {
-    return ['pre', 'code'].includes(this.vnode.tag)
+    return ['pre', 'code'].includes(this.tag)
   }
   isVoidElement() {
-    return voidElements.includes(this.vnode.tag)
+    return voidElements.includes(this.tag)
   }
   isBlockElement() {
-    return blockElements.includes(this.vnode.tag)
+    return blockElements.includes(this.tag)
   }
   tagToHtml() {
     return this.isHighlighted() ? `<span class="code-tag">${this.tag}</span>` : this.tag
@@ -69,7 +71,7 @@ export class Node {
       if (this.isVoidElement()) {
         return openTag
       }
-      const children = this.children.toHtml()
+      const children = complexElements.includes(this.tag) ? '…' : this.children.toHtml()
       const closeTag = this.closeTagToHtml()
       return `${openTag}${children}${closeTag}`
     }
@@ -94,7 +96,9 @@ export class Attrs extends Array {
         items.push(new Attr('class', classes.join(' '), options))
       }
       if (attrs instanceof Object) {
-        Object.keys(attrs).forEach((key) => items.push(new Attr(key, attrs[key], options)))
+        Object.keys(attrs)
+          .filter((key) => !hiddenAttrs.includes(key))
+          .forEach((key) => items.push(new Attr(key, attrs[key], options)))
       }
     }
     super(...items)
@@ -121,7 +125,7 @@ export class Attr {
     return this.isHighlighted() ? `<span class="code-attr">${this.name}</span>` : this.name
   }
   valueToHtml() {
-    const value = ['src', 'href'].indexOf(this.name) > -1 ? '…' : this.value
+    const value = ['src', 'href', 'xmlns'].indexOf(this.name) > -1 ? '…' : this.value
     return this.isHighlighted() ? `<span class="code-attr-val">&quot;${value}&quot;</span>` : `"${value}"`
   }
   toHtml() {
