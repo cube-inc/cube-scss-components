@@ -79,12 +79,12 @@
       <fieldset class="form-group">
         <label class="form-label">Inline inputs</label>
         <div class="form-group-inline">
-          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
-          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
-          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
-          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
-          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
-          <input type="text" class="form-control" style="flex: 1 0 12em;" placeholder="flex: 1 0 12em" />
+          <input type="text" class="form-control" style="flex: 6em;" placeholder="flex: 6em" />
+          <input type="text" class="form-control" style="flex: 6em;" placeholder="flex: 6em" />
+          <input type="text" class="form-control" style="flex: 8em;" placeholder="flex: 8em" />
+          <input type="text" class="form-control" style="flex: 6em;" placeholder="flex: 6em" />
+          <input type="text" class="form-control" style="flex: 12em;" placeholder="flex: 12em" />
+          <input type="text" class="form-control" style="flex: 12em;" placeholder="flex: 12em" />
         </div>
       </fieldset>
       <fieldset class="form-group form-group-stacked">
