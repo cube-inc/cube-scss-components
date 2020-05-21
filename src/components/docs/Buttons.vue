@@ -20,68 +20,94 @@
       </div>
     </Example>
 
-    <h3>Icon</h3>
+    <h3>Icons</h3>
     <Example>
+      <h6>Left</h6>
       <div class="button-list">
-        <button class="button button-text"><PersonCropSquare class="icon" /><span>Text</span></button>
         <button class="button"><PersonCropSquare class="icon" /><span>Button</span></button>
         <button class="button button-outline"><PersonCropSquare class="icon" /><span>Outline</span></button>
         <button class="button button-filled"><PersonCropSquare class="icon" /><span>Filled</span></button>
         <button class="button button-filled button-shadow"><PersonCropSquare class="icon" /><span>Shadow</span></button>
+        <button class="button button-text"><PersonCropSquare class="icon" /><span>Text</span></button>
       </div>
       <div class="button-list">
-        <button class="button button-text" disabled><PersonCropSquare class="icon" /><span>Text</span></button>
         <button class="button" disabled><PersonCropSquare class="icon" /><span>Button</span></button>
         <button class="button button-outline" disabled><PersonCropSquare class="icon" /><span>Outline</span></button>
         <button class="button button-filled" disabled><PersonCropSquare class="icon" /><span>Filled</span></button>
         <button class="button button-filled button-shadow" disabled><PersonCropSquare class="icon" /><span>Shadow</span></button>
+        <button class="button button-text" disabled><PersonCropSquare class="icon" /><span>Text</span></button>
       </div>
+      <h6>Right</h6>
       <div class="button-list">
-        <button class="button button-text"><span>Text</span><ChevronRight class="icon" /></button>
         <button class="button"><span>Button</span><ChevronRight class="icon" /></button>
         <button class="button button-outline"><span>Outline</span><ChevronRight class="icon" /></button>
         <button class="button button-filled"><span>Filled</span><ChevronRight class="icon" /></button>
         <button class="button button-filled button-shadow"><span>Shadow</span><ChevronRight class="icon" /></button>
+        <button class="button button-text"><span>Text</span><ChevronRight class="icon" /></button>
       </div>
       <div class="button-list">
-        <button class="button button-text" disabled><span>Text</span><ChevronRight class="icon" /></button>
         <button class="button" disabled><span>Button</span><ChevronRight class="icon" /></button>
         <button class="button button-outline" disabled><span>Outline</span><ChevronRight class="icon" /></button>
         <button class="button button-filled" disabled><span>Filled</span><ChevronRight class="icon" /></button>
         <button class="button button-filled button-shadow" disabled><span>Shadow</span><ChevronRight class="icon" /></button>
+        <button class="button button-text" disabled><span>Text</span><ChevronRight class="icon" /></button>
       </div>
+      <h6>Group</h6>
+      <div class="button-group">
+        <button class="button"><PersonCropSquare class="icon" /><span>Text</span></button>
+        <button class="button"><CircleRighthalfFill class="icon" /><span>Text</span></button>
+        <button class="button"><DocOnClipboard class="icon" /><span>Text</span></button>
+        <button class="button"><MoonFill class="icon" /><span>Text</span></button>
+        <button class="button"><SunMax class="icon" /><span>Text</span></button>
+      </div>
+      <div class="button-group">
+        <button class="button button-outline"><PersonCropSquare class="icon" /><span>Text</span></button>
+        <button class="button button-outline"><CircleRighthalfFill class="icon" /><span>Text</span></button>
+        <button class="button button-outline"><DocOnClipboard class="icon" /><span>Text</span></button>
+        <button class="button button-outline"><MoonFill class="icon" /><span>Text</span></button>
+        <button class="button button-outline"><SunMax class="icon" /><span>Text</span></button>
+      </div>
+      <div class="button-group">
+        <button class="button button-filled"><PersonCropSquare class="icon" /><span>Text</span></button>
+        <button class="button button-filled"><CircleRighthalfFill class="icon" /><span>Text</span></button>
+        <button class="button button-filled"><DocOnClipboard class="icon" /><span>Text</span></button>
+        <button class="button button-filled"><MoonFill class="icon" /><span>Text</span></button>
+        <button class="button button-filled"><SunMax class="icon" /><span>Text</span></button>
+      </div>
+      <h6>No text</h6>
       <div class="button-list">
-        <button class="button button-text"><PersonCropSquare class="icon" /></button>
         <button class="button"><PersonCropSquare class="icon" /></button>
         <button class="button button-outline"><PersonCropSquare class="icon" /></button>
         <button class="button button-filled"><PersonCropSquare class="icon" /></button>
         <button class="button button-filled button-shadow"><PersonCropSquare class="icon" /></button>
+        <button class="button button-text"><PersonCropSquare class="icon" /></button>
       </div>
       <div class="button-list">
-        <button class="button button-text" disabled><PersonCropSquare class="icon" /></button>
         <button class="button" disabled><PersonCropSquare class="icon" /></button>
         <button class="button button-outline" disabled><PersonCropSquare class="icon" /></button>
         <button class="button button-filled" disabled><PersonCropSquare class="icon" /></button>
         <button class="button button-filled button-shadow" disabled><PersonCropSquare class="icon" /></button>
+        <button class="button button-text" disabled><PersonCropSquare class="icon" /></button>
       </div>
+      <h6>Sizes</h6>
       <div class="button-list">
-        <button class="button button-text"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
         <button class="button"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
         <button class="button button-outline"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
         <button class="button button-filled"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
         <button class="button button-filled button-shadow"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
+        <button class="button button-text"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
       </div>
       <div class="button-list">
-        <button class="button button-text"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
         <button class="button"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
         <button class="button button-outline"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
         <button class="button button-filled"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
         <button class="button button-filled button-shadow"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
+        <button class="button button-text"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
       </div>
     </Example>
 
     <h3>Colors</h3>
-    <Example>
+    <Example transparency-grid>
       <div class="button-list">
         <button class="button button-success">Success</button>
         <button class="button button-info">Info</button>
