@@ -2,23 +2,23 @@
   <header class="header fixed-bottom">
     <div class="container">
       <transition name="fade" mode="out-in">
-        <button v-if="userColorScheme === null" key="null" @click="toggleDarkMode" class="button button-sm theme-switch">
-          <SunMax v-if="systemColorScheme === LIGHT" class="icon" />
-          <MoonFill v-else-if="systemColorScheme === DARK" class="icon" />
-          <CircleRighthalfFill v-else class="icon" />
+        <button v-if="userColorScheme === null" key="null" @click="toggleDarkMode" class="button theme-switch">
+          <SunMax v-if="systemColorScheme === LIGHT" class="icon icon-sm" />
+          <MoonFill v-else-if="systemColorScheme === DARK" class="icon icon-sm" />
+          <CircleRighthalfFill v-else class="icon icon-sm" />
           <span>System theme</span>
         </button>
-        <button v-else-if="userColorScheme === DARK" key="dark" @click="toggleDarkMode" class="button button-sm theme-switch">
-          <MoonFill class="icon" />
+        <button v-else-if="userColorScheme === DARK" key="dark" @click="toggleDarkMode" class="button theme-switch">
+          <MoonFill class="icon icon-sm" />
           <span>Dark theme</span>
         </button>
-        <button v-else-if="userColorScheme === LIGHT" key="light" @click="toggleDarkMode" class="button button-sm theme-switch">
-          <SunMax class="icon" />
+        <button v-else-if="userColorScheme === LIGHT" key="light" @click="toggleDarkMode" class="button theme-switch">
+          <SunMax class="icon icon-sm" />
           <span>Light theme</span>
         </button>
       </transition>
-      <button @click="scrollTop" class="button button-sm scroll-top">
-        <ArrowUpToLine class="icon" />
+      <button @click="scrollTop" class="button scroll-top">
+        <ArrowUpToLine class="icon icon-sm" />
       </button>
     </div>
   </header>

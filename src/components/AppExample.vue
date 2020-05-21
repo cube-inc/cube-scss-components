@@ -7,14 +7,14 @@
       <div class="button-group">
         <button class="button button-xs" @click="toggleDark">
           <transition name="fade" mode="out-in">
-            <SunMax v-if="previewDarkColorScheme" class="icon" />
-            <MoonFill v-else class="icon" />
+            <SunMax v-if="previewDarkColorScheme" class="icon icon-sm" />
+            <MoonFill v-else class="icon icon-sm" />
           </transition>
         </button>
         <button class="button button-xs" @click="copyCode">
           <transition name="fade" mode="out-in">
             <span v-if="copied">Copied!</span>
-            <DocOnClipboard v-else class="icon" />
+            <DocOnClipboard v-else class="icon icon-sm" />
           </transition>
         </button>
       </div>
@@ -136,6 +136,7 @@ $code-attr-val-color: $red;
     border-bottom: 1px solid $example-border-color;
     display: flex;
     justify-content: flex-end;
+    min-height: 2em;
     .button-group > .button {
       border-radius: 0;
     }

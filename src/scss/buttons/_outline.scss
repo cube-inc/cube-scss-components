@@ -3,5 +3,7 @@
 .button-outline {
   border-color: $button-outline-border-color;
   background-color: $button-outline-background-color;
-  padding: $button-outline-padding;
+  &:disabled {
+    background-color: $button-outline-background-color;
+  }
 }

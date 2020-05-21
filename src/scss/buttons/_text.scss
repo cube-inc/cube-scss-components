@@ -5,4 +5,7 @@
   margin-right: -$button-padding-x;
   min-width: unset;
   background-color: transparent;
+  &:disabled {
+    background-color: transparent;
+  }
 }

@@ -2,6 +2,8 @@
 
 .button-info {
   color: $button-info-color;
+  stroke: $button-info-color;
+  fill: $button-info-color;
   @media (hover: hover) {
     &:hover:not(:disabled) {
       background-color: rgba($button-info-color, 0.15);

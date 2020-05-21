@@ -2,6 +2,8 @@
 
 .button-success {
   color: $button-success-color;
+  stroke: $button-success-color;
+  fill: $button-success-color;
   @media (hover: hover) {
     &:hover:not(:disabled) {
       background-color: rgba($button-success-color, 0.15);

@@ -3,12 +3,13 @@
 .button {
   cursor: pointer;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   margin: 0;
   padding: $button-padding;
   min-width: $button-min-width;
-  border-radius: $button-border-radius;
   font-size: $button-font-size;
   font-family: $button-font-family;
   font-weight: $button-font-weight;
@@ -18,38 +19,50 @@
   white-space: nowrap;
   line-height: $button-line-height;
   color: $button-primary-color;
+  stroke: $button-primary-color;
+  fill: $button-primary-color;
   border: 1px solid transparent;
-  background-color: $button-primary-color-default;
+  border-radius: $button-border-radius;
+  background-color: $button-background-color-primary;
   transition: $button-transition;
   @media (hover: hover) {
     &:hover:not(:disabled) {
       text-decoration: none;
-      background-color: $button-primary-color-hover;
+      background-color: $button-background-color-primary-hover;
     }
   }
   &:focus:not(:disabled) {
     text-decoration: none;
-    background-color: $button-primary-color-hover;
+    background-color: $button-background-color-primary-hover;
   }
   &.active:not(:disabled),
   &:active:not(:disabled) {
-    background-color: $button-primary-color-active;
+    background-color: $button-background-color-primary-active;
   }
   &:disabled {
     cursor: not-allowed;
     color: grayscale($button-primary-color);
+    stroke: grayscale($button-primary-color);
+    fill: grayscale($button-primary-color);
+    background-color: $button-background-color-primary-disabled;
     opacity: 0.5;
   }
   > * + * {
-    padding-left: 1em;
+    margin-left: 1em;
   }
-}
-
-// Button icon
-.button .icon {
-  font-size: 1;
-  height: calc(#{$button-font-size} + 2px);
-  margin: -2px 0;
-  width: auto;
-  fill: $button-primary-color;
+  .icon {
+    display: block;
+    font-size: inherit;
+    height: $button-line-height;
+    width: $button-line-height;
+    object-fit: contain;
+    &-xs {
+      height: $button-line-height * 0.5;
+      width: $button-line-height * 0.5;
+    }
+    &-sm {
+      height: $button-line-height * 0.75;
+      width: $button-line-height * 0.75;
+    }
+  }
 }

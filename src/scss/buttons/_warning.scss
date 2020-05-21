@@ -2,6 +2,8 @@
 
 .button-warning {
   color: $button-warning-color;
+  stroke: $button-warning-color;
+  fill: $button-warning-color;
   @media (hover: hover) {
     &:hover:not(:disabled) {
       background-color: rgba($button-warning-color, 0.15);

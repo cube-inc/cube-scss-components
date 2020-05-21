@@ -2,95 +2,85 @@
   <section id="Buttons">
     <h2>Buttons</h2>
 
-    <h3>Button styles</h3>
-    <Example>
-      <p><button class="button">Button</button></p>
-      <p><button class="button button-outline">Outline</button></p>
-      <p><button class="button button-filled">Filled</button></p>
-      <p><button class="button button-filled button-shadow">Shadow</button></p>
-      <p><button class="button button-text">Text</button></p>
-      <p><button class="button" disabled>Button</button></p>
-      <p><button class="button button-outline" disabled>Outline</button></p>
-      <p><button class="button button-filled" disabled>Filled</button></p>
-      <p><button class="button button-filled button-shadow" disabled>Shadow</button></p>
-      <p><button class="button button-text" disabled>Text</button></p>
-    </Example>
-
-    <h3>Button white</h3>
-    <Example :dark="true">
-      <p><button class="button button-white">White</button></p>
-      <p><button class="button button-white button-outline">Outline</button></p>
-      <p><button class="button button-white button-filled">Filled</button></p>
-      <p><button class="button button-white button-text">Text</button></p>
-      <p><button class="button button-white" disabled>White</button></p>
-      <p><button class="button button-white button-outline" disabled>Outline</button></p>
-      <p><button class="button button-white button-filled" disabled>Filled</button></p>
-      <p><button class="button button-white button-text" disabled>Text</button></p>
-    </Example>
-
-    <h3>Button list</h3>
+    <h3>Styles</h3>
     <Example>
       <div class="button-list">
-        <button class="button">Button 1</button>
-        <button class="button">Button 2</button>
-        <button class="button">Button 3</button>
-        <button class="button">Button 4</button>
+        <button class="button button-text">Text</button>
+        <button class="button">Button</button>
+        <button class="button button-outline">Outline</button>
+        <button class="button button-filled">Filled</button>
+        <button class="button button-filled button-shadow">Shadow</button>
       </div>
       <div class="button-list">
-        <button class="button button-outline">Button 1</button>
-        <button class="button button-outline">Button 2</button>
-        <button class="button button-outline">Button 3</button>
-        <button class="button button-outline">Button 4</button>
-      </div>
-      <div class="button-list">
-        <button class="button button-filled">Button 1</button>
-        <button class="button button-filled">Button 2</button>
-        <button class="button button-filled">Button 3</button>
-        <button class="button button-filled">Button 4</button>
-      </div>
-      <div class="button-list">
-        <button class="button button-filled button-shadow">Button 1</button>
-        <button class="button button-filled button-shadow">Button 2</button>
-        <button class="button button-filled button-shadow">Button 3</button>
-        <button class="button button-filled button-shadow">Button 4</button>
-      </div>
-      <div class="button-list">
-        <button class="button button-text">Button 1</button>
-        <button class="button button-text">Button 2</button>
-        <button class="button button-text">Button 3</button>
-        <button class="button button-text">Button 4</button>
+        <button class="button button-text" disabled>Text</button>
+        <button class="button" disabled>Button</button>
+        <button class="button button-outline" disabled>Outline</button>
+        <button class="button button-filled" disabled>Filled</button>
+        <button class="button button-filled button-shadow" disabled>Shadow</button>
       </div>
     </Example>
 
-    <h3>Button group</h3>
+    <h3>Icon</h3>
     <Example>
-      <div class="button-group">
-        <button class="button">Button 1</button>
-        <button class="button">Button 2</button>
-        <button class="button">Button 3</button>
-        <button class="button">Button 4</button>
+      <div class="button-list">
+        <button class="button button-text"><PersonCropSquare class="icon" /><span>Text</span></button>
+        <button class="button"><PersonCropSquare class="icon" /><span>Button</span></button>
+        <button class="button button-outline"><PersonCropSquare class="icon" /><span>Outline</span></button>
+        <button class="button button-filled"><PersonCropSquare class="icon" /><span>Filled</span></button>
+        <button class="button button-filled button-shadow"><PersonCropSquare class="icon" /><span>Shadow</span></button>
       </div>
-      <div class="button-group">
-        <button class="button button-outline">Button 1</button>
-        <button class="button button-outline">Button 2</button>
-        <button class="button button-outline">Button 3</button>
-        <button class="button button-outline">Button 4</button>
+      <div class="button-list">
+        <button class="button button-text" disabled><PersonCropSquare class="icon" /><span>Text</span></button>
+        <button class="button" disabled><PersonCropSquare class="icon" /><span>Button</span></button>
+        <button class="button button-outline" disabled><PersonCropSquare class="icon" /><span>Outline</span></button>
+        <button class="button button-filled" disabled><PersonCropSquare class="icon" /><span>Filled</span></button>
+        <button class="button button-filled button-shadow" disabled><PersonCropSquare class="icon" /><span>Shadow</span></button>
       </div>
-      <div class="button-group">
-        <button class="button button-filled">Button 1</button>
-        <button class="button button-filled">Button 2</button>
-        <button class="button button-filled">Button 3</button>
-        <button class="button button-filled">Button 4</button>
+      <div class="button-list">
+        <button class="button button-text"><span>Text</span><ChevronRight class="icon" /></button>
+        <button class="button"><span>Button</span><ChevronRight class="icon" /></button>
+        <button class="button button-outline"><span>Outline</span><ChevronRight class="icon" /></button>
+        <button class="button button-filled"><span>Filled</span><ChevronRight class="icon" /></button>
+        <button class="button button-filled button-shadow"><span>Shadow</span><ChevronRight class="icon" /></button>
       </div>
-      <div class="button-group">
-        <button class="button button-text">Button 1</button>
-        <button class="button button-text">Button 2</button>
-        <button class="button button-text">Button 3</button>
-        <button class="button button-text">Button 4</button>
+      <div class="button-list">
+        <button class="button button-text" disabled><span>Text</span><ChevronRight class="icon" /></button>
+        <button class="button" disabled><span>Button</span><ChevronRight class="icon" /></button>
+        <button class="button button-outline" disabled><span>Outline</span><ChevronRight class="icon" /></button>
+        <button class="button button-filled" disabled><span>Filled</span><ChevronRight class="icon" /></button>
+        <button class="button button-filled button-shadow" disabled><span>Shadow</span><ChevronRight class="icon" /></button>
+      </div>
+      <div class="button-list">
+        <button class="button button-text"><PersonCropSquare class="icon" /></button>
+        <button class="button"><PersonCropSquare class="icon" /></button>
+        <button class="button button-outline"><PersonCropSquare class="icon" /></button>
+        <button class="button button-filled"><PersonCropSquare class="icon" /></button>
+        <button class="button button-filled button-shadow"><PersonCropSquare class="icon" /></button>
+      </div>
+      <div class="button-list">
+        <button class="button button-text" disabled><PersonCropSquare class="icon" /></button>
+        <button class="button" disabled><PersonCropSquare class="icon" /></button>
+        <button class="button button-outline" disabled><PersonCropSquare class="icon" /></button>
+        <button class="button button-filled" disabled><PersonCropSquare class="icon" /></button>
+        <button class="button button-filled button-shadow" disabled><PersonCropSquare class="icon" /></button>
+      </div>
+      <div class="button-list">
+        <button class="button button-text"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
+        <button class="button"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
+        <button class="button button-outline"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
+        <button class="button button-filled"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
+        <button class="button button-filled button-shadow"><PersonCropSquare class="icon icon-sm" /><span>icon-sm</span></button>
+      </div>
+      <div class="button-list">
+        <button class="button button-text"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
+        <button class="button"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
+        <button class="button button-outline"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
+        <button class="button button-filled"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
+        <button class="button button-filled button-shadow"><PersonCropSquare class="icon icon-xs" /><span>icon-xs</span></button>
       </div>
     </Example>
 
-    <h3>Button colors</h3>
+    <h3>Colors</h3>
     <Example>
       <div class="button-list">
         <button class="button button-success">Success</button>
@@ -142,7 +132,85 @@
       </div>
     </Example>
 
-    <h3>Button group colors</h3>
+    <h3>White</h3>
+    <Example :dark="true">
+      <div class="button-list">
+        <button class="button button-white button-text">Text</button>
+        <button class="button button-white">White</button>
+        <button class="button button-white button-outline">Outline</button>
+        <button class="button button-white button-filled">Filled</button>
+      </div>
+      <div class="button-list">
+        <button class="button button-white button-text" disabled>Text</button>
+        <button class="button button-white" disabled>White</button>
+        <button class="button button-white button-outline" disabled>Outline</button>
+        <button class="button button-white button-filled" disabled>Filled</button>
+      </div>
+    </Example>
+
+    <h3>List</h3>
+    <Example>
+      <div class="button-list">
+        <button class="button button-text">Text 1</button>
+        <button class="button button-text">Text 2</button>
+        <button class="button button-text">Text 3</button>
+        <button class="button button-text">Text 4</button>
+      </div>
+      <div class="button-list">
+        <button class="button">Button 1</button>
+        <button class="button">Button 2</button>
+        <button class="button">Button 3</button>
+        <button class="button">Button 4</button>
+      </div>
+      <div class="button-list">
+        <button class="button button-outline">Outline 1</button>
+        <button class="button button-outline">Outline 2</button>
+        <button class="button button-outline">Outline 3</button>
+        <button class="button button-outline">Outline 4</button>
+      </div>
+      <div class="button-list">
+        <button class="button button-filled">Filled 1</button>
+        <button class="button button-filled">Filled 2</button>
+        <button class="button button-filled">Filled 3</button>
+        <button class="button button-filled">Filled 4</button>
+      </div>
+      <div class="button-list">
+        <button class="button button-filled button-shadow">Shadow 1</button>
+        <button class="button button-filled button-shadow">Shadow 2</button>
+        <button class="button button-filled button-shadow">Shadow 3</button>
+        <button class="button button-filled button-shadow">Shadow 4</button>
+      </div>
+    </Example>
+
+    <h3>Group</h3>
+    <Example>
+      <div class="button-group">
+        <button class="button">Button 1</button>
+        <button class="button">Button 2</button>
+        <button class="button">Button 3</button>
+        <button class="button">Button 4</button>
+      </div>
+      <div class="button-group">
+        <button class="button button-outline">Button 1</button>
+        <button class="button button-outline">Button 2</button>
+        <button class="button button-outline">Button 3</button>
+        <button class="button button-outline">Button 4</button>
+      </div>
+      <div class="button-group">
+        <button class="button button-filled">Button 1</button>
+        <button class="button button-filled">Button 2</button>
+        <button class="button button-filled">Button 3</button>
+        <button class="button button-filled">Button 4</button>
+      </div>
+      <div class="button-group">
+        <button class="button button-text">Button 1</button>
+        <button class="button button-text">Button 2</button>
+        <button class="button button-text">Button 3</button>
+        <button class="button button-text">Button 4</button>
+      </div>
+    </Example>
+
+    <h3>Group colors</h3>
     <Example>
       <div class="button-group">
         <button class="button button-success">Success</button>
@@ -227,6 +295,18 @@
     </Example>
   </section>
 </template>
+
+<script>
+import PersonCropSquare from '../icons/PersonCropSquare.vue'
+import ChevronRight from '../icons/ChevronRight.vue'
+
+export default {
+  components: {
+    PersonCropSquare,
+    ChevronRight
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .button-list {
