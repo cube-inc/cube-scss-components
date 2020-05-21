@@ -263,15 +263,3 @@
     </Example>
   </section>
 </template>
-
-<script>
-import Minus from '../icons/Minus.vue'
-import Plus from '../icons/Plus.vue'
-
-export default {
-  components: {
-    Minus,
-    Plus
-  }
-}
-</script>

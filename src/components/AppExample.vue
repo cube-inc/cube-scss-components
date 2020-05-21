@@ -25,19 +25,10 @@
 
 <script>
 import uiState, { DARK } from '@/services/uiState'
-
-import MoonFill from './icons/MoonFill.vue'
-import SunMax from './icons/SunMax.vue'
-import DocOnClipboard from './icons/DocOnClipboard.vue'
 import vnodesToHtml from '@/services/vnodeService'
 
 export default {
   name: 'Example',
-  components: {
-    MoonFill,
-    SunMax,
-    DocOnClipboard
-  },
   props: {
     dark: { type: Boolean, default: null }
   },

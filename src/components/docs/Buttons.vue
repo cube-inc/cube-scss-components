@@ -296,18 +296,6 @@
   </section>
 </template>
 
-<script>
-import PersonCropSquare from '../icons/PersonCropSquare.vue'
-import ChevronRight from '../icons/ChevronRight.vue'
-
-export default {
-  components: {
-    PersonCropSquare,
-    ChevronRight
-  }
-}
-</script>
-
 <style lang="scss" scoped>
 .button-list {
   margin-top: 1em;

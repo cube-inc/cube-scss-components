@@ -26,18 +26,8 @@
 
 <script>
 import uiState, { LIGHT, DARK } from '@/services/uiState'
-import CircleRighthalfFill from './icons/CircleRighthalfFill.vue'
-import SunMax from './icons/SunMax.vue'
-import MoonFill from './icons/MoonFill.vue'
-import ArrowUpToLine from './icons/ArrowUpToLine.vue'
 
 export default {
-  components: {
-    CircleRighthalfFill,
-    SunMax,
-    MoonFill,
-    ArrowUpToLine
-  },
   data() {
     return {
       LIGHT,
