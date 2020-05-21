@@ -35,8 +35,10 @@
   --form-control-select-arrow-image: #{$form-control-select-arrow-image-dark};
 }
 
-.dark-color-scheme {
-  @include dark-color-scheme;
+@if ($enable-dark-color-scheme) {
+  .dark-color-scheme {
+    @include dark-color-scheme;
+  }
 }
 
 @if ($enable-prefers-color-scheme) {

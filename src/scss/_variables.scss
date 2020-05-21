@@ -2,8 +2,11 @@
  * Config
  */
 
+// Enable to write the .dark-color-scheme css class
+$enable-dark-color-scheme: true !default;
+
 // Switch to dark mode regarding the system preferences
-$enable-prefers-color-scheme: true !default;
+$enable-prefers-color-scheme: $enable-dark-color-scheme !default;
 
 // Enable smaller font size for screen < $breakpoint-xs
 $enable-responsive-fonts: true !default;

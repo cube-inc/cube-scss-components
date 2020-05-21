@@ -27,5 +27,4 @@ $gray-800: hsl(210, 10%, 20%) !default;
 $gray-900: hsl(204, 10%, 10%) !default;
 $black: hsl(210, 10%, 0%) !default;
 
-@import 'schemes/light';
-@import 'schemes/dark';
+@import 'schemes';
