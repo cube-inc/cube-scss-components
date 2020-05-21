@@ -45,7 +45,7 @@
     <Example>
       <div class="card">
         <header class="card-header">
-          <h3>Card title</h3>
+          <h3>Card header</h3>
         </header>
         <aside class="card-media" style="height: 30vh;">
           <img class="card-media-image" :src="`${randomPhotoUrl}?random=media&grayscale&blur=10`" style="opacity:.15;" />
@@ -55,7 +55,7 @@
           </div>
         </aside>
         <main class="card-body">
-          <h4 class="title">My sub title</h4>
+          <h4 class="title">Card title</h4>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
         <footer class="card-footer card-footer-space-between">

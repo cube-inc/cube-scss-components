@@ -4,6 +4,6 @@
   padding: $card-padding;
   flex-grow: 1;
   .title {
-    margin: 0;
+    margin: 0 0 $card-title-margin 0;
   }
 }
