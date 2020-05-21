@@ -1,4 +1,4 @@
-$form-group-margin: $spacer-md 0 !default;
+$form-group-margin: $spacer-175 0 !default;
 $form-control-color: var(--text-color, #{$text-color}) !default;
 $form-control-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $form-control-border-color-focus: var(--primary, #{$primary}) !default;
@@ -15,7 +15,7 @@ $form-control-font-family: $font-family-base !default;
 $form-control-font-weight: $font-weight-base !default;
 $form-control-line-height: 1.5rem !default;
 $form-control-ouline: $component-outline !default;
-$form-control-spacer: $spacer-xs !default;
+$form-control-spacer: $spacer-050 !default;
 $form-label-font-weight: $font-weight-bold !default;
 $form-label-line-height: $form-control-line-height !default;
 $form-switch-active-color: var(--primary, #{$primary}) !default;

@@ -6,11 +6,6 @@
   cursor: pointer;
   color: inherit;
   line-height: $form-label-line-height;
-  margin-top: $spacer-sm;
-  margin-bottom: $spacer-sm;
-  > *:first-child {
-    margin-top: $spacer-sm;
-  }
   @media (hover: hover) {
     &:hover {
       input[type='checkbox'].form-control:not(:disabled):not(:checked),
@@ -20,5 +15,11 @@
         }
       }
     }
+  }
+  + * {
+    margin-top: $spacer-sm;
+  }
+  > *:first-child {
+    margin-top: $spacer-sm;
   }
 }

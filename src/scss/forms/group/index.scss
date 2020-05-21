@@ -7,9 +7,9 @@
   display: block;
   position: relative;
   border: 0 none;
-  &:first-child {
-    margin-top: 0;
-  }
+  // &:first-child {
+  //   margin-top: 0;
+  // }
 }
 
 @import 'stacked';

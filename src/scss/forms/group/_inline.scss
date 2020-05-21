@@ -10,8 +10,7 @@
   margin-bottom: -$form-control-spacer;
   margin-left: -$form-control-spacer;
   > * {
-    margin-bottom: $form-control-spacer;
-    margin-left: $form-control-spacer;
+    margin: 0 0 $form-control-spacer $form-control-spacer;
     flex-grow: 0;
     flex-shrink: 0;
   }
@@ -20,9 +19,6 @@
     flex-shrink: 1;
     min-width: 0;
     width: 0;
-  }
-  > .form-label {
-    margin-top: 0;
   }
   > .button {
     min-width: 0;
