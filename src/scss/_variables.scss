@@ -1,14 +1,37 @@
-// Config
+/**
+ * Config
+ */
+
+// Switch to dark mode regarding the system preferences
 $enable-prefers-color-scheme: true !default;
+
+// Enable smaller font size for screen < $breakpoint-xs
 $enable-responsive-fonts: true !default;
 
-// Colors
+/**
+ * Spacers
+ */
+@import 'spacers';
+
+/**
+ * Breakpoints
+ */
+@import 'breakpoints';
+
+/**
+ * Colors
+ */
 @import 'colors';
 
-// Commons
-@import 'commons';
+/**
+ * Types
+ */
+@import 'types/variables';
 
-// Components
+/**
+ * Components
+ */
+@import 'component';
 @import 'badges/variables';
 @import 'bullets/variables';
 @import 'buttons/variables';
@@ -19,4 +42,3 @@ $enable-responsive-fonts: true !default;
 @import 'list-group/variables';
 @import 'pagination/variables';
 @import 'tables/variables';
-@import 'types/variables';
