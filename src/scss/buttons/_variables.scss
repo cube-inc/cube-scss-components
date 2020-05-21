@@ -19,7 +19,7 @@ $button-primary-color: $primary !default;
 $button-background-color-primary: rgba($primary, 0.075) !default;
 $button-background-color-primary-hover: rgba($primary, 0.15) !default;
 $button-background-color-primary-active: rgba($primary, 0.2) !default;
-$button-background-color-primary-disabled: rgba(grayscale($primary), 0.2) !default;
+$button-background-color-primary-disabled: grayscale($button-background-color-primary) !default;
 
 // Success
 $button-success-color: $success !default;
