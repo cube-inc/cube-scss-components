@@ -111,7 +111,7 @@ pre {
     white-space: pre-wrap;
     color: var(--code-block-color, #{$code-block-color});
     background-color: var(--code-background-color, #{$code-background-color});
-    border-radius: $component-border-radius-xs;
+    border-radius: $component-border-radius-sm;
   }
 }
 small,
