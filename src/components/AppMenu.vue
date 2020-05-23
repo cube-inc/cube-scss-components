@@ -93,5 +93,6 @@ export default {
 }
 .scroll-top {
   margin-left: auto;
+  min-width: 0;
 }
 </style>
