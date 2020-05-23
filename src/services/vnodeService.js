@@ -1,5 +1,59 @@
-const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr']
-const blockElements = ['p', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ol', 'ul', 'li', 'pre', 'address', 'blockquote', 'dl', 'div', 'fieldset', 'form', 'textarea', 'select', 'option', 'hr', 'noscript', 'table', 'header', 'main', 'footer', 'button', 'label', 'input', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td']
+const voidElements = [
+  'area',
+  'base',
+  'br',
+  'col',
+  'embed',
+  'hr',
+  'img',
+  'input',
+  'keygen',
+  'link',
+  'meta',
+  'param',
+  'source',
+  'track',
+  'wbr'
+]
+const blockElements = [
+  'p',
+  'a',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'ol',
+  'ul',
+  'li',
+  'pre',
+  'address',
+  'blockquote',
+  'dl',
+  'div',
+  'fieldset',
+  'form',
+  'textarea',
+  'select',
+  'option',
+  'hr',
+  'noscript',
+  'table',
+  'header',
+  'main',
+  'footer',
+  'button',
+  'label',
+  'input',
+  'table',
+  'thead',
+  'tbody',
+  'tfoot',
+  'tr',
+  'th',
+  'td'
+]
 const complexElements = ['svg']
 const hiddenAttrs = ['xmlns', 'viewBox']
 
@@ -29,7 +83,7 @@ export class Nodes extends Array {
 export class Node {
   constructor(vnode, options = {}) {
     this.vnode = vnode
-    this.tag = vnode.componentInstance ? vnode.elm.tagName : vnode.tag
+    this.tag = vnode.componentInstance ? vnode.componentOptions.tag : vnode.tag
     this.attrs = new Attrs(vnode, options)
     this.children = new Children(vnode, options)
     this.text = vnode.text
@@ -56,7 +110,9 @@ export class Node {
   openTagToHtml() {
     const tag = this.tagToHtml()
     const attrs = this.attrs.toHtml()
-    return this.isHighlighted() ? `&lt;${tag}${attrs}&gt;` + (this.tag === 'br' ? '<br>' : '') : `<${tag}${attrs}>` + (this.tag === 'br' ? '\n' : '')
+    return this.isHighlighted()
+      ? `&lt;${tag}${attrs}&gt;` + (this.tag === 'br' ? '<br>' : '')
+      : `<${tag}${attrs}>` + (this.tag === 'br' ? '\n' : '')
   }
   closeTagToHtml() {
     const tag = this.tagToHtml()
