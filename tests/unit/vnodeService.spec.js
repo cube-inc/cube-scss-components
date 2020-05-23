@@ -1,5 +1,9 @@
 import Vue from 'vue'
-import { Attr, Attrs, Node, Children, Nodes } from '@/services/vnodeService'
+import Nodes from '@/services/vnodeService/Nodes'
+import Node from '@/services/vnodeService/Node'
+import Attrs from '@/services/vnodeService/Attrs'
+import Attr from '@/services/vnodeService/Attr'
+import Children from '@/services/vnodeService/Children'
 
 // eslint-disable-next-line no-unused-vars
 const h = new Vue().$createElement
@@ -79,12 +83,6 @@ describe('vnodeService', () => {
     expect(new Node(span.children[0]).isTag()).toStrictEqual(false)
   })
 
-  test('Node.isPreTag ', () => {
-    expect(new Node(<pre></pre>).isPreTag()).toStrictEqual(true)
-    expect(new Node(<code></code>).isPreTag()).toStrictEqual(true)
-    expect(new Node(<div></div>).isPreTag()).toStrictEqual(false)
-  })
-
   test('Node.isVoidElement ', () => {
     expect(new Node(<br />).isVoidElement()).toStrictEqual(true)
     expect(new Node(<div></div>).isVoidElement()).toStrictEqual(false)
@@ -107,7 +105,9 @@ describe('vnodeService', () => {
   })
 
   test('Node renders empty block elements properly', () => {
-    expect(new Node(<div class="test-class" placeholder="Test placeholder"></div>).toHtml()).toStrictEqual('<div class="test-class" placeholder="Test placeholder"></div>')
+    expect(new Node(<div class="test-class" placeholder="Test placeholder"></div>).toHtml()).toStrictEqual(
+      '<div class="test-class" placeholder="Test placeholder"></div>'
+    )
   })
 
   test('Node renders element with text node properly', () => {
@@ -180,6 +180,17 @@ describe('vnodeService', () => {
     expect(node.toHtml()).toStrictEqual(`<svg class="icon" width="105.713" height="105.957">…</svg>`)
   })
 
+  test('Node renders html of Vue Component properly', () => {
+    const node = new Node(
+      (
+        <p>
+          <TestComp />
+        </p>
+      )
+    )
+    expect(node.toHtml()).toStrictEqual(`<p><TestComp></TestComp></p>`)
+  })
+
   test('Nodes renders properly', () => {
     const vnodes = [<p>Paragraph 1</p>, <p>Paragraph 2</p>, <p>Paragraph 3</p>]
     expect(new Nodes(vnodes).toHtml()).toStrictEqual(`<p>Paragraph 1</p>
@@ -188,14 +199,20 @@ describe('vnodeService', () => {
   })
 
   test('Attr highlight properly', () => {
-    expect(new Attr('class', 'test-class', { highlight: true }).toHtml()).toStrictEqual('<span class="code-attr">class</span>=<span class="code-attr-val">&quot;test-class&quot;</span>')
+    expect(new Attr('class', 'test-class', { highlight: true }).toHtml()).toStrictEqual(
+      '<span class="code-attr">class</span>=<span class="code-attr-val">&quot;test-class&quot;</span>'
+    )
   })
 
   test('Tag node highlight properly', () => {
-    expect(new Node(<div>Inner text</div>, { highlight: true }).toHtml()).toStrictEqual('&lt;<span class="code-tag">div</span>&gt;Inner text&lt;/<span class="code-tag">div</span>&gt;')
+    expect(new Node(<div>Inner text</div>, { highlight: true }).toHtml()).toStrictEqual(
+      '&lt;<span class="code-tag">div</span>&gt;Inner text&lt;/<span class="code-tag">div</span>&gt;'
+    )
   })
 
   test('Node highlight code properly', () => {
-    expect(new Node(<code>&lt;li&gt;Test&lt;/li&gt;</code>, { highlight: true }).toHtml()).toStrictEqual('&lt;<span class="code-tag">code</span>&gt;&amp;lt;li&amp;gt;Test&amp;lt;/li&amp;gt;&lt;/<span class="code-tag">code</span>&gt;')
+    expect(new Node(<code>&lt;li&gt;Test&lt;/li&gt;</code>, { highlight: true }).toHtml()).toStrictEqual(
+      '&lt;<span class="code-tag">code</span>&gt;&amp;lt;li&amp;gt;Test&amp;lt;/li&amp;gt;&lt;/<span class="code-tag">code</span>&gt;'
+    )
   })
 })
