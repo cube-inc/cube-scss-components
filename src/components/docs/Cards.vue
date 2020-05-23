@@ -35,10 +35,12 @@
           <RatingStar :rating="3.6" />
         </header>
         <aside class="card-media" style="height: 30vh;">
-          <img class="card-media-image" :src="`${randomPhotoUrl}?random=media&grayscale&blur=10`" style="opacity:.15;" />
+          <img class="card-media-image" :src="`${randomPhotoUrl}?random=media&_grayscale&blur=5`" style="opacity:.75;" />
           <div class="card-media-overlay">
-            <h2>Overlay</h2>
-            <p class="lead">With rich content</p>
+            <h2>
+              Overlay
+              <div class="small">With content</div>
+            </h2>
           </div>
         </aside>
         <main class="card-body">
@@ -51,7 +53,7 @@
             <small class="text-muted"> per month</small>
             <div class="small text-muted">Sub-info here</div>
           </div>
-          <button class="button button-filled button-shadow">Filled</button>
+          <button class="button button-filled button-shadow button-secondary">Filled</button>
         </footer>
       </div>
     </Example>
@@ -185,6 +187,7 @@ export default {
 <style lang="scss" scoped>
 @import '~@/scss/variables';
 .card-media-overlay {
+  color: white;
   background-color: rgba($info, 0.25);
 }
 .card-list-example {
