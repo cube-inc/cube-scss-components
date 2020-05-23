@@ -5,28 +5,30 @@
 // Enable to write the .dark-color-scheme css class
 $enable-dark-color-scheme: true !default;
 
-// Switch to dark mode regarding the system preferences
+// Switch to the same color scheme as the system
 $enable-prefers-color-scheme: $enable-dark-color-scheme !default;
-
-// Enable smaller font size for screen < $breakpoint-xs
-$enable-responsive-fonts: true !default;
 
 /**
  * Types
  */
+
+// Font sizes adapted for xs screens
 $enable-responsive-fonts: true !default;
 
 /**
  * Buttons
  */
+
+// Styles
+$enable-button-text: true !default;
+$enable-button-outline: true !default;
+$enable-button-filled: true !default;
+$enable-button-shadow: true !default;
+
+// Colors
 $enable-button-secondary: true !default;
 $enable-button-success: true !default;
 $enable-button-info: true !default;
 $enable-button-warning: true !default;
 $enable-button-danger: true !default;
 $enable-button-white: true !default;
-
-$enable-button-text: true !default;
-$enable-button-outline: true !default;
-$enable-button-filled: true !default;
-$enable-button-shadow: true !default;

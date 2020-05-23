@@ -20,6 +20,101 @@
   }
 }
 
+@if ($enable-button-secondary) {
+  .button-secondary {
+    @include mixins.button-css-vars(
+      $color: $secondary,
+      $color-hover: $secondary,
+      $color-active: $secondary,
+      $color-disabled: color.grayscale($secondary),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($secondary, 0.15),
+      $background-color-hover: color.scale(rgba($secondary, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($secondary, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($secondary, 0.15), $saturation: -100%)
+    );
+  }
+}
+
+@if ($enable-button-success) {
+  .button-success {
+    @include mixins.button-css-vars(
+      $color: $success,
+      $color-hover: $success,
+      $color-active: $success,
+      $color-disabled: color.grayscale($success),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($success, 0.15),
+      $background-color-hover: color.scale(rgba($success, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($success, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($success, 0.15), $saturation: -100%)
+    );
+  }
+}
+
+@if ($enable-button-info) {
+  .button-info {
+    @include mixins.button-css-vars(
+      $color: $info,
+      $color-hover: $info,
+      $color-active: $info,
+      $color-disabled: color.grayscale($info),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($info, 0.15),
+      $background-color-hover: color.scale(rgba($info, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($info, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($info, 0.15), $saturation: -100%)
+    );
+  }
+}
+
+@if ($enable-button-warning) {
+  .button-warning {
+    @include mixins.button-css-vars(
+      $color: $warning,
+      $color-hover: $warning,
+      $color-active: $warning,
+      $color-disabled: color.grayscale($warning),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($warning, 0.15),
+      $background-color-hover: color.scale(rgba($warning, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($warning, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($warning, 0.15), $saturation: -100%)
+    );
+  }
+}
+
+@if ($enable-button-danger) {
+  .button-danger {
+    @include mixins.button-css-vars(
+      $color: $danger,
+      $color-hover: $danger,
+      $color-active: $danger,
+      $color-disabled: color.grayscale($danger),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($danger, 0.15),
+      $background-color-hover: color.scale(rgba($danger, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($danger, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($danger, 0.15), $saturation: -100%)
+    );
+  }
+}
+
 @if ($enable-button-text) {
   .button-text {
     margin-left: -$button-padding-x;
@@ -51,6 +146,10 @@
   }
 }
 
+/**
+ * Filled
+ */
+
 @if ($enable-button-filled) {
   .button-filled {
     @include mixins.button-css-vars(
@@ -67,6 +166,7 @@
       $background-color-active: color.scale($primary, $lightness: -6%),
       $background-color-disabled: color.scale($primary, $saturation: -100%)
     );
+
     @if ($enable-button-white) {
       &.button-white {
         @include mixins.button-css-vars(
@@ -78,6 +178,61 @@
           $background-color-hover: rgba($white, 0.9),
           $background-color-active: rgba($white, 0.8),
           $background-color-disabled: $white
+        );
+      }
+    }
+
+    @if ($enable-button-secondary) {
+      &.button-secondary {
+        @include mixins.button-css-vars(
+          $background-color: $secondary,
+          $background-color-hover: color.scale($secondary, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($secondary, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($secondary, $saturation: -100%)
+        );
+      }
+    }
+
+    @if ($enable-button-success) {
+      &.button-success {
+        @include mixins.button-css-vars(
+          $background-color: $success,
+          $background-color-hover: color.scale($success, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($success, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($success, $saturation: -100%)
+        );
+      }
+    }
+
+    @if ($enable-button-info) {
+      &.button-info {
+        @include mixins.button-css-vars(
+          $background-color: $info,
+          $background-color-hover: color.scale($info, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($info, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($info, $saturation: -100%)
+        );
+      }
+    }
+
+    @if ($enable-button-warning) {
+      &.button-warning {
+        @include mixins.button-css-vars(
+          $background-color: $warning,
+          $background-color-hover: color.scale($warning, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($warning, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($warning, $saturation: -100%)
+        );
+      }
+    }
+
+    @if ($enable-button-danger) {
+      &.button-danger {
+        @include mixins.button-css-vars(
+          $background-color: $danger,
+          $background-color-hover: color.scale($danger, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($danger, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($danger, $saturation: -100%)
         );
       }
     }

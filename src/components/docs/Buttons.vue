@@ -260,58 +260,6 @@
       </div>
     </Example>
 
-    <h3>Group colors</h3>
-    <Example>
-      <div class="button-group">
-        <button class="button button-success">Success</button>
-        <button class="button button-info">Info</button>
-        <button class="button button-warning">Warning</button>
-        <button class="button button-danger">Danger</button>
-      </div>
-      <div class="button-group">
-        <button class="button button-success" disabled>Success</button>
-        <button class="button button-info" disabled>Info</button>
-        <button class="button button-warning" disabled>Warning</button>
-        <button class="button button-danger" disabled>Danger</button>
-      </div>
-      <div class="button-group">
-        <button class="button button-outline button-success">Success</button>
-        <button class="button button-outline button-info">Info</button>
-        <button class="button button-outline button-warning">Warning</button>
-        <button class="button button-outline button-danger">Danger</button>
-      </div>
-      <div class="button-group">
-        <button class="button button-outline button-success" disabled>Success</button>
-        <button class="button button-outline button-info" disabled>Info</button>
-        <button class="button button-outline button-warning" disabled>Warning</button>
-        <button class="button button-outline button-danger" disabled>Danger</button>
-      </div>
-      <div class="button-group">
-        <button class="button button-filled button-success">Success</button>
-        <button class="button button-filled button-info">Info</button>
-        <button class="button button-filled button-warning">Warning</button>
-        <button class="button button-filled button-danger">Danger</button>
-      </div>
-      <div class="button-group">
-        <button class="button button-filled button-success" disabled>Success</button>
-        <button class="button button-filled button-info" disabled>Info</button>
-        <button class="button button-filled button-warning" disabled>Warning</button>
-        <button class="button button-filled button-danger" disabled>Danger</button>
-      </div>
-      <div class="button-group">
-        <button class="button button-text button-success">Success</button>
-        <button class="button button-text button-info">Info</button>
-        <button class="button button-text button-warning">Warning</button>
-        <button class="button button-text button-danger">Danger</button>
-      </div>
-      <div class="button-group">
-        <button class="button button-text button-success" disabled>Success</button>
-        <button class="button button-text button-info" disabled>Info</button>
-        <button class="button button-text button-warning" disabled>Warning</button>
-        <button class="button button-text button-danger" disabled>Danger</button>
-      </div>
-    </Example>
-
     <h3>Button sizes</h3>
     <Example>
       <div class="button-list">
