@@ -42,10 +42,14 @@ export default new Vue({
   },
   created() {
     this.matchMedia = window.matchMedia(`(prefers-color-scheme: ${DARK})`)
-    this.matchMedia.addEventListener ? this.matchMedia.addEventListener('change', this.onMatchMedia) : this.matchMedia.addListener(this.onMatchMedia)
+    this.matchMedia.addEventListener
+      ? this.matchMedia.addEventListener('change', this.onMatchMedia)
+      : this.matchMedia.addListener(this.onMatchMedia)
     this.systemColorScheme = this.convertMatchMediaMatches(this.matchMedia.matches)
   },
   beforeDestroy() {
-    this.matchMedia.addEventListener ? this.matchMedia.removeEventListener('change', this.onMatchMedia) : this.matchMedia.removeListener(this.onMatchMedia)
+    this.matchMedia.addEventListener
+      ? this.matchMedia.removeEventListener('change', this.onMatchMedia)
+      : this.matchMedia.removeListener(this.onMatchMedia)
   }
 })
