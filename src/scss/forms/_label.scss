@@ -6,7 +6,16 @@
   cursor: pointer;
   color: inherit;
   line-height: $form-label-line-height;
+  transition: all 250ms ease;
   @media (hover: hover) {
+    // &-hover { // Does not work very well
+    //   margin: (-$spacer-sm) (-$spacer-sm);
+    //   padding: $spacer-sm $spacer-sm;
+    //   border-radius: $component-border-radius;
+    //   &:hover {
+    //     background-color: $component-background-color-hover;
+    //   }
+    // }
     &:hover {
       input[type='checkbox'].form-control:not(:disabled):not(:checked),
       input[type='radio'].form-control:not(:disabled):not(:checked) {

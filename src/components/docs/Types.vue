@@ -9,18 +9,25 @@
       <h4>H4 heading</h4>
       <h5>H5 heading</h5>
       <h6>H6 heading</h6>
-      <p>&lt;p&gt; – Simple paragraph</p>
-      <p><a>&lt;a&gt; – This is a link</a></p>
-      <p><strong>&lt;strong&gt; – Lorem ipsum</strong></p>
-      <p><mark>&lt;mark&gt; – Lorem ipsum</mark></p>
-      <p><s>&lt;s&gt; – Lorem ipsum</s></p>
-      <p><del>&lt;del&gt; – Lorem ipsum</del></p>
-      <p><i>&lt;i&gt; – Lorem ipsum</i></p>
-      <p><em>&lt;em&gt; – Lorem ipsum</em></p>
-      <p><u>&lt;u&gt; – Lorem ipsum</u></p>
-      <p><ins>&lt;ins&gt; – Lorem ipsum</ins></p>
-      <p><abbr title="Abbreviation">&lt;abbr&gt; – Lorem ipsum</abbr></p>
-      <blockquote>&lt;blockquote&gt; – Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+      <p>&lt;p&gt; Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vitae ipsam esse repudiandae, facilis nostrum officiis, quibusdam debitis corrupti facere repellat maxime, eligendi fugiat saepe? Illo vitae ipsa voluptates laudantium?</p>
+      <p><a>&lt;a&gt; Link</a></p>
+      <p><strong>&lt;strong&gt; Lorem ipsum</strong></p>
+      <p><mark>&lt;mark&gt; Lorem ipsum</mark></p>
+      <p><s>&lt;s&gt; Lorem ipsum</s></p>
+      <p><del>&lt;del&gt; Lorem ipsum</del></p>
+      <p><i>&lt;i&gt; Lorem ipsum</i></p>
+      <p><em>&lt;em&gt; Lorem ipsum</em></p>
+      <p><u>&lt;u&gt; Lorem ipsum</u></p>
+      <p><ins>&lt;ins&gt; Lorem ipsum</ins></p>
+      <p><abbr title="Abbreviation">&lt;abbr&gt; Lorem ipsum</abbr></p>
+      <blockquote>&lt;blockquote&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nihil, libero numquam illum deserunt excepturi iure qui quibusdam quis ab nesciunt laudantium assumenda cumque, ducimus quas inventore maiores et accusamus.</blockquote>
+      <pre>&lt;pre&gt;
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+      </pre>
     </Example>
 
     <h3>Alignment</h3>
@@ -42,13 +49,13 @@
 
     <h3>code</h3>
     <Example>
-      <p>This is a <code>&lt;button&gt;Button&lt;/button&gt;</code> inline code within a paragraph.</p>
-      <code class="code-block">&lt;h1&gt;Title&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;item 1&lt;/li&gt;
-  &lt;li&gt;item 2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a href=&quot;…&quot;&gt;click here&lt;/a&gt;</code>
+      <p>This is an inline <code>&lt;code&gt;</code> within a paragraph.</p>
+      <pre class="code">&lt;pre class="code"&gt;&lt;h1&gt;Title&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;a href=&quot;…&quot;&gt;click here&lt;/a&gt;&lt;/pre&gt;</pre>
     </Example>
 
     <h3>Sizes</h3>

@@ -1,0 +1,126 @@
+@use 'sass:meta';
+
+/// Writes the color properties
+/// @param {*} $color [null]
+/// @param {*} $border-color [null]
+/// @param {*} $background-color [null]
+/// @param {*} $box-shadow [null]
+
+@mixin colors($color: null, $border-color: null, $background-color: null, $box-shadow: null) {
+  @if ($color) {
+    color: $color;
+    stroke: $color;
+    fill: $color;
+  }
+  @if ($border-color) {
+    border-color: $border-color;
+  }
+  @if ($background-color) {
+    background-color: $background-color;
+  }
+  @if ($box-shadow) {
+    box-shadow: $box-shadow;
+  }
+}
+
+/// Writes the different color states of a button
+/// @param {*} $color [null]
+/// @param {*} $color-hover [null]
+/// @param {*} $color-active [null]
+/// @param {*} $color-disabled [null]
+/// @param {*} $border-color [null]
+/// @param {*} $border-color-hover [null]
+/// @param {*} $border-color-active [null]
+/// @param {*} $border-color-disabled [null]
+/// @param {*} $background-color [null]
+/// @param {*} $background-color-hover [null]
+/// @param {*} $background-color-active [null]
+/// @param {*} $background-color-disabled [null]
+/// @param {*} $box-shadow [null]
+/// @param {*} $box-shadow-hover [null]
+/// @param {*} $box-shadow-active [null]
+/// @param {*} $box-shadow-disabled [null]
+
+@mixin button-colors(
+  $color: null,
+  $color-hover: null,
+  $color-active: null,
+  $color-disabled: null,
+  $border-color: null,
+  $border-color-hover: null,
+  $border-color-active: null,
+  $border-color-disabled: null,
+  $background-color: null,
+  $background-color-hover: null,
+  $background-color-active: null,
+  $background-color-disabled: null,
+  $box-shadow: null,
+  $box-shadow-hover: null,
+  $box-shadow-active: null,
+  $box-shadow-disabled: null
+) {
+  @include colors($color, $border-color, $background-color, $box-shadow);
+  @media (hover: hover) {
+    &:hover:not(:disabled) {
+      @include colors($color-hover, $border-color-hover, $background-color-hover, $box-shadow-hover);
+    }
+  }
+  &:focus:not(:disabled) {
+    @include colors($color-hover, $border-color-hover, $background-color-hover, $box-shadow-hover);
+  }
+  &.active:not(:disabled),
+  &:active:not(:disabled) {
+    @include colors($color-active, $border-color-active, $background-color-active, $box-shadow-active);
+  }
+  &:disabled {
+    @include colors($color-disabled, $border-color-disabled, $background-color-disabled, $box-shadow-disabled);
+  }
+}
+
+/// Writes a css button variable
+/// @param {*} $name
+/// @param {*} $value
+
+@mixin button-css-var($name, $value) {
+  --button-#{$name}: #{$value};
+}
+
+/// Writes the css button variables
+/// @param {*} $color [null]
+/// @param {*} $color-hover [null]
+/// @param {*} $color-active [null]
+/// @param {*} $color-disabled [null]
+/// @param {*} $border-color [null]
+/// @param {*} $border-color-hover [null]
+/// @param {*} $border-color-active [null]
+/// @param {*} $border-color-disabled [null]
+/// @param {*} $background-color [null]
+/// @param {*} $background-color-hover [null]
+/// @param {*} $background-color-active [null]
+/// @param {*} $background-color-disabled [null]
+/// @param {*} $box-shadow [null]
+/// @param {*} $box-shadow-hover [null]
+/// @param {*} $box-shadow-active [null]
+/// @param {*} $box-shadow-disabled [null]
+
+@mixin button-css-vars($vars...) {
+  @each $name, $value in meta.keywords($vars) {
+    @include button-css-var($name, $value);
+  }
+  // --color: #{$color};
+  // --color-hover: #{$color-hover};
+  // --color-active: #{$color-active};
+  // --color-disabled: #{$color-disabled};
+  // --border-color: #{$border-color};
+  // --border-color-hover: #{$border-color-hover};
+  // --border-color-active: #{$border-color-active};
+  // --border-color-disabled: #{$border-color-disabled};
+  // --background-color: #{$background-color};
+  // --background-color-hover: #{$background-color-hover};
+  // --background-color-active: #{$background-color-active};
+  // --background-color-disabled: #{$background-color-disabled};
+  // --box-shadow: #{$box-shadow};
+  // --box-shadow-hover: #{$box-shadow-hover};
+  // --box-shadow-active: #{$box-shadow-active};
+  // --box-shadow-disabled: #{$box-shadow-disabled};
+}

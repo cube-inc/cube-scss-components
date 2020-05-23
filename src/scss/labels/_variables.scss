@@ -1,17 +1,27 @@
-$label-padding: 3px 6px !default;
+$label-padding: $component-padding-xs $component-padding-sm !default;
 $label-border-radius: $component-border-radius-sm !default;
+
 $label-font-size: $font-size-base * 0.75 !default;
-$label-font-size-sm: $font-size-base * 0.625 !default;
 $label-font-size-xs: $font-size-base * 0.5 !default;
+$label-font-size-sm: $font-size-base * 0.625 !default;
+$label-font-size-md: $font-size-base * 1.125 !default;
+$label-font-size-lg: $font-size-base * 1.5 !default;
+
 $label-font-weight: $font-weight-medium !default;
+
 $label-text-transform: uppercase !default;
+
 $label-color: rgba($white, 0.9) !default;
 $label-background-color: var(--label-background-color, #{$gray-400}) !default;
+
 $label-success-color: var(--text-success, #{$text-success}) !default;
 $label-success-background-color: rgba($success, 0.15) !default;
+
 $label-info-color: var(--text-info, #{$text-info}) !default;
 $label-info-background-color: rgba($info, 0.15) !default;
+
 $label-warning-color: var(--text-warning, #{$text-warning}) !default;
 $label-warning-background-color: rgba($warning, 0.15) !default;
+
 $label-danger-color: var(--text-danger, #{$text-danger}) !default;
 $label-danger-background-color: rgba($danger, 0.15) !default;

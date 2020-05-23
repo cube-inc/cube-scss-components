@@ -97,9 +97,9 @@ $button-transition: all 100ms ease !default;
 
 // button colors
 $button-primary-color: $primary !default;
-$button-background-color-primary: rgba($primary, 0.05) !default;
-$button-background-color-primary-hover: rgba($primary, 0.15) !default;
-$button-background-color-primary-active: rgba($primary, 0.2) !default;
+$button-primary-background-color: rgba($primary, 0.05) !default;
+$button-primary-background-color-hover: rgba($primary, 0.15) !default;
+$button-primary-background-color-active: rgba($primary, 0.2) !default;
 $button-success-color: $success !default;
 $button-info-color: $info !default;
 $button-warning-color: $warning !default;
@@ -116,7 +116,7 @@ $button-outline-padding: $button-padding !default;
 // button-filled
 $button-filled-color: $white !default;
 $button-filled-background-color: $button-primary-color !default;
-$button-filled-disabled-color: lighten(grayscale($button-filled-color), 25%) !default;
+$button-filled-color-disabled: lighten(grayscale($button-filled-color), 25%) !default;
 $button-filled-background-color-disabled: lighten(grayscale($button-filled-background-color), 25%) !default;
 $button-filled-padding: $button-padding !default;
 

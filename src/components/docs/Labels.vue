@@ -12,9 +12,13 @@
 
     <h3>Sizes</h3>
     <Example>
-      <p><span class="label">Label</span> .label</p>
-      <p><span class="label label-sm">Small</span> .label-sm</p>
-      <p><span class="label label-xs">Extra small</span> .label-xs</p>
+      <div class="label-list">
+        <div class="label label-xs">.label-xs</div>
+        <div class="label label-sm">.label-sm</div>
+        <div class="label">.label</div>
+        <div class="label label-md">.label-md</div>
+        <div class="label label-lg">.label-lg</div>
+      </div>
     </Example>
   </section>
 </template>

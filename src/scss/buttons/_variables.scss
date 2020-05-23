@@ -1,5 +1,8 @@
+@use 'sass:color';
+@use '../utils';
+
 $button-font-family: inherit !default;
-$button-font-size: $font-size-sm !default;
+$button-font-size: $font-size-base !default;
 $button-font-weight: 500 !default;
 $button-line-height: 1.5em !default;
 $button-text-transform: uppercase !default;
@@ -14,40 +17,49 @@ $button-transition: all 100ms ease !default;
  * Colors
  */
 
-// Primary (default)
-$button-primary-color: $primary !default;
-$button-background-color-primary: rgba($primary, 0.075) !default;
-$button-background-color-primary-hover: rgba($primary, 0.15) !default;
-$button-background-color-primary-active: rgba($primary, 0.2) !default;
-$button-background-color-primary-disabled: grayscale($button-background-color-primary) !default;
+// Default
+$button-color: $primary !default;
+$button-color-hover: $primary !default;
+$button-color-active: $primary !default;
+$button-color-disabled: color.grayscale($primary) !default;
+$button-border-color: transparent !default;
+$button-border-color-hover: transparent !default;
+$button-border-color-active: transparent !default;
+$button-border-color-disabled: transparent !default;
+$button-background-color: rgba($primary, 0.15) !default;
+$button-background-color-hover: color.scale($button-background-color, $lightness: 10%, $alpha: 10%) !default;
+$button-background-color-active: color.scale($button-background-color, $lightness: 5%, $alpha: 20%) !default;
+$button-background-color-disabled: color.scale($button-background-color, $saturation: -100%) !default;
+
+// Secondary
+$button-secondary-color: $secondary !default;
+$button-secondary-border-color: transparent !default;
+$button-secondary-background-color: rgba($secondary, 0.15) !default;
 
 // Success
 $button-success-color: $success !default;
-$button-background-color-success: rgba($success, 0.075) !default;
-$button-background-color-success-hover: rgba($success, 0.15) !default;
-$button-background-color-success-active: rgba($success, 0.2) !default;
-$button-background-color-success-disabled: rgba(grayscale($success), 0.2) !default;
+$button-success-border-color: transparent !default;
+$button-success-background-color: rgba($success, 0.15) !default;
 
 // Info
 $button-info-color: $info !default;
-$button-background-color-info: rgba($info, 0.075) !default;
-$button-background-color-info-hover: rgba($info, 0.15) !default;
-$button-background-color-info-active: rgba($info, 0.2) !default;
-$button-background-color-info-disabled: rgba(grayscale($info), 0.2) !default;
+$button-info-border-color: transparent !default;
+$button-info-background-color: rgba($info, 0.15) !default;
 
 // Warning
 $button-warning-color: $warning !default;
-$button-background-color-warning: rgba($warning, 0.075) !default;
-$button-background-color-warning-hover: rgba($warning, 0.15) !default;
-$button-background-color-warning-active: rgba($warning, 0.2) !default;
-$button-background-color-warning-disabled: rgba(grayscale($warning), 0.2) !default;
+$button-warning-border-color: transparent !default;
+$button-warning-background-color: rgba($warning, 0.15) !default;
 
 // Danger
 $button-danger-color: $danger !default;
-$button-background-color-danger: rgba($danger, 0.075) !default;
-$button-background-color-danger-hover: rgba($danger, 0.15) !default;
-$button-background-color-danger-active: rgba($danger, 0.2) !default;
-$button-background-color-danger-disabled: rgba(grayscale($danger), 0.2) !default;
+$button-danger-border-color: transparent !default;
+$button-danger-background-color: rgba($danger, 0.15) !default;
+
+// White
+$button-white-color: $white !default;
+$button-white-border-color: transparent !default;
+$button-white-background-color: rgba($white, 0.15) !default;
 
 /**
  * Styles
@@ -59,14 +71,15 @@ $button-outline-background-color: transparent !default;
 
 // button-filled
 $button-filled-color: $white !default;
-$button-filled-disabled-color: lighten(grayscale($button-filled-color), 25%) !default;
-$button-filled-background-color: $button-primary-color !default;
+$button-filled-color-disabled: lighten(grayscale($button-filled-color), 25%) !default;
+$button-filled-background-color: $primary !default;
 $button-filled-background-color-disabled: lighten(grayscale($button-filled-background-color), 25%) !default;
 
 // button-shadow
-$button-shadow: $component-box-shadow !default;
-$button-shadow-hover: $component-box-shadow-hover !default;
-$button-shadow-active: $component-box-shadow-active !default;
+$button-box-shadow: $component-box-shadow !default;
+$button-box-shadow-hover: $component-box-shadow-hover !default;
+$button-box-shadow-active: $component-box-shadow-active !default;
+$button-box-shadow-disabled: $component-box-shadow !default;
 
 /**
  * button-list
@@ -76,23 +89,24 @@ $button-list-gap: 4px !default;
 /**
  * Sizes
  */
+$button-scale-ratio: utils.$ratio-major-third !default;
 
 // button-xs
-$button-font-size-xs: 9px !default;
-$button-padding-xs: 0 $component-padding-xs !default;
-$button-min-width-xs: 80px !default;
+$button-font-size-xs: utils.scale($button-font-size, -2, $button-scale-ratio) !default;
+$button-padding-xs: utils.scale($button-padding-y, -2, $button-scale-ratio) utils.scale($button-padding-x, -2, $button-scale-ratio) !default;
+$button-min-width-xs: utils.scale($button-min-width, -2, $button-scale-ratio) !default;
 
 // button-sm
-$button-font-size-sm: 11px !default;
-$button-padding-sm: $component-padding-xs $component-padding-sm !default;
-$button-min-width-sm: 100px !default;
+$button-font-size-sm: utils.scale($button-font-size, -1, $button-scale-ratio) !default;
+$button-padding-sm: utils.scale($button-padding-y, -1, $button-scale-ratio) utils.scale($button-padding-x, -1, $button-scale-ratio) !default;
+$button-min-width-sm: utils.scale($button-min-width, -1, $button-scale-ratio) !default;
 
 // button-md
-$button-font-size-md: 16px !default;
-$button-padding-md: $component-padding $component-padding-md !default;
-$button-min-width-md: 140px !default;
+$button-font-size-md: utils.scale($button-font-size, 1, $button-scale-ratio) !default;
+$button-padding-md: utils.scale($button-padding-y, 1, $button-scale-ratio) utils.scale($button-padding-x, 1, $button-scale-ratio) !default;
+$button-min-width-md: utils.scale($button-min-width, 1, $button-scale-ratio) !default;
 
 // button-lg
-$button-font-size-lg: 20px !default;
-$button-padding-lg: $component-padding-md $component-padding-lg !default;
-$button-min-width-lg: 140px !default;
+$button-font-size-lg: utils.scale($button-font-size, 2, $button-scale-ratio) !default;
+$button-padding-lg: utils.scale($button-padding-y, 2, $button-scale-ratio) utils.scale($button-padding-x, 2, $button-scale-ratio) !default;
+$button-min-width-lg: utils.scale($button-min-width, 2, $button-scale-ratio) !default;

@@ -4,7 +4,7 @@
   display: inline;
   color: $label-color;
   background-color: $label-background-color;
-  line-height: 1em;
+  line-height: 1;
   padding: $label-padding;
   border-radius: $label-border-radius;
   font-size: $label-font-size;
@@ -12,13 +12,7 @@
   text-transform: $label-text-transform;
   white-space: nowrap;
   & + .label {
-    margin-left: 0.4em;
-  }
-  &-sm {
-    font-size: $label-font-size-sm;
-  }
-  &-xs {
-    font-size: $label-font-size-xs;
+    margin-left: $spacer-xs;
   }
   &-success {
     background-color: $label-success-background-color;
@@ -37,3 +31,6 @@
     color: $label-danger-color;
   }
 }
+
+@import 'sizes';
+@import 'list';

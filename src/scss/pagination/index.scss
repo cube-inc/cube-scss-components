@@ -8,9 +8,9 @@
         &:hover:not(:disabled) {
           z-index: 2;
           text-decoration: none;
-          color: $pagination-hover-color;
-          background-color: $pagination-hover-bg;
-          border-color: $pagination-hover-border-color;
+          color: $pagination-color-hover;
+          background-color: $pagination-background-color-hover;
+          border-color: $pagination-border-color-hover;
         }
       }
     }
@@ -32,7 +32,7 @@
       font-family: $pagination-font-family;
       text-align: center;
       color: $pagination-color;
-      background-color: $pagination-bg;
+      background-color: $pagination-background-color;
       border: $pagination-border-width solid $pagination-border-color;
       &:first-child {
         margin-left: 0;
@@ -50,9 +50,9 @@
       &:focus:not(:disabled) {
         z-index: 2;
         text-decoration: none;
-        color: $pagination-focus-color;
-        background-color: $pagination-focus-bg;
-        border-color: $pagination-focus-border-color;
+        color: $pagination-color-focus;
+        background-color: $pagination-background-color-focus;
+        border-color: $pagination-border-color-focus;
       }
       &:active:not(:disabled) {
         box-shadow: $pagination-active-box-shadow;

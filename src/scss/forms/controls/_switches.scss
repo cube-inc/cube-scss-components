@@ -30,7 +30,7 @@ input[type='radio'].form-control {
     right: $form-switch-inner-padding;
     bottom: $form-switch-inner-padding;
     left: $form-switch-inner-padding;
-    border-radius: $form-control-border-radius - 1px;
+    border-radius: calc(#{$form-control-border-radius} - #{$form-switch-inner-padding});
     transition: all 250ms ease;
   }
   &:checked {
@@ -50,10 +50,10 @@ input[type='radio'].form-control {
   & + .form-text {
     display: inline-block;
     font-weight: $form-control-font-weight;
-    padding-left: 0.5rem;
+    padding-left: $spacer-0500;
     vertical-align: middle;
     line-height: inherit;
-    max-width: calc(100% - #{$form-switch-size} - 0.5rem);
+    max-width: calc(100% - #{$form-switch-size} - #{$spacer-0500});
   }
 }
 input[type='radio'].form-control {

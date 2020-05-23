@@ -4,12 +4,7 @@
   display: flex;
   > .button {
     flex-shrink: 0;
-    &:not(.button-text) {
-      border-radius: 0;
-    }
-    &:not(.button-outline):not(.button-filled):not(.button-text):not(:hover):not(:focus):not(.active):not(:active):not(:disabled) {
-      background-color: rgba($button-primary-color, 0.05);
-    }
+    border-radius: 0;
     + .button {
       margin-left: -1px;
     }

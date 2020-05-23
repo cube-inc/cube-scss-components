@@ -57,7 +57,7 @@
 
 ```scss
 $card-border-radius: $component-border-radius !default;
-$card-border-size: $component-border-size !default;
+$card-border-size: $component-border-width !default;
 $card-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $card-text-color: var(--component-color, #{$component-color}) !default;
 $card-background-color: var(--component-background-color, #{$component-background-color}) !default;

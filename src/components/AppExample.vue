@@ -7,19 +7,19 @@
       <div class="button-group">
         <button class="button button-xs" @click="toggleDark">
           <transition name="fade" mode="out-in">
-            <SunMax v-if="previewDarkColorScheme" class="icon icon" />
-            <MoonFill v-else class="icon icon" />
+            <SunMax v-if="previewDarkColorScheme" class="icon icon-sm" />
+            <MoonFill v-else class="icon icon-sm" />
           </transition>
         </button>
         <button class="button button-xs" @click="copyCode" :disabled="copied">
           <transition name="fade" mode="out-in">
             <span v-if="copied">Copied!</span>
-            <DocOnClipboard v-else class="icon icon" />
+            <DocOnClipboard v-else class="icon icon-sm" />
           </transition>
         </button>
       </div>
     </div>
-    <code class="example-code code-block" ref="code" v-html="code"></code>
+    <pre class="code example-code" ref="code" v-html="code"></pre>
   </section>
 </template>
 
@@ -84,11 +84,11 @@ $example-padding: 16px !default;
 $example-color: var(--component-color, #{$component-color}) !default;
 $example-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $example-border-radius: $component-border-radius !default;
+
 $example-preview-color: var(--component-color, #{$component-color}) !default;
-$example-preview-background-color: var(--component-background-color, #{$component-background-color}) !default;
-$example-preview-background-color-dark: $component-background-color-dark !default;
+$example-preview-background-color: var(--body-background-color, #{$body-background-color}) !default;
+$example-preview-background-color-dark: $body-background-color-dark !default;
 $example-preview-background-square-size: 10px !default;
-$example-code-background-color: var(--component-background-color-alt, #{$component-background-color-alt}) !default;
 
 $code-tag-color: $blue;
 $code-attr-color: $cyan;
@@ -118,7 +118,8 @@ $code-attr-val-color: $red;
     background-color: $example-preview-background-color;
     transition: all 250ms ease;
     &-transparency-grid {
-      background-image: linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%), linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%);
+      background-image: linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%),
+        linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%);
       background-size: $example-preview-background-square-size $example-preview-background-square-size;
       background-position: 0 0, ($example-preview-background-square-size / 2) ($example-preview-background-square-size / 2);
     }
@@ -137,8 +138,9 @@ $code-attr-val-color: $red;
     }
   }
   &-code {
+    margin: 0;
     padding: $example-padding;
-    background-color: $example-code-background-color;
+    border-radius: 0;
     ::v-deep .code {
       &-tag {
         color: $code-tag-color;

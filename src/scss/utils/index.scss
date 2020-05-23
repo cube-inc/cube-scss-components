@@ -1,0 +1,22 @@
+@use "sass:math";
+
+$ratio-minor-second: 1.067; // 15:16
+$ratio-major-second: 1.125; // 8:9
+$ratio-minor-third: 1.2; // 5:6
+$ratio-major-third: 1.25; // 4:5
+$ratio-fourth: 1.333; // 3:4
+$ratio-augmented-fourth: 1.414; // 1:√2
+$ratio-fifth: 1.5; // 2:3
+$ratio-minor-sixth: 1.6; // 5:8
+$ratio-golden: 1.618; // 1:1.618
+$ratio-major-sixth: 1.667; // 3:5
+$ratio-minor-seventh: 1.778; // 9:16
+$ratio-major-seventh: 1.875; // 8:15
+$ratio-octave: 2; // 1:2
+
+/**
+ * Scale a $value to a multiple of $ratio
+ */
+@function scale($value, $scale, $ratio) {
+  @return ($value * math.pow($ratio, $scale));
+}

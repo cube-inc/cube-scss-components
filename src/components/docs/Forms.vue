@@ -102,8 +102,8 @@
           Input number with buttons
           <div class="form-group-inline">
             <input ref="inputNumber" type="number" class="form-control" style="flex: 1 0 8em;" placeholder="Number" />
-            <button class="button" @click="$refs.inputNumber.stepDown()" style="flex: 0 0 4em;"><Minus class="icon" /></button>
-            <button class="button" @click="$refs.inputNumber.stepUp()" style="flex: 0 0 4em;"><Plus class="icon" /></button>
+            <button class="button" @click="$refs.inputNumber.stepDown()" style="flex: 0 0 4em;"><Minus class="icon icon-xs" /></button>
+            <button class="button" @click="$refs.inputNumber.stepUp()" style="flex: 0 0 4em;"><Plus class="icon icon-xs" /></button>
           </div>
         </label>
       </fieldset>

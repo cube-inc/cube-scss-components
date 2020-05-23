@@ -1,9 +1,0 @@
-@import 'variables';
-
-.button-outline {
-  border-color: $button-outline-border-color;
-  background-color: $button-outline-background-color;
-  &:disabled {
-    background-color: $button-outline-background-color;
-  }
-}

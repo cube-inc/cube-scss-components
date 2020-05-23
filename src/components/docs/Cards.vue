@@ -7,16 +7,9 @@
         <main class="card-body">
           <h3 class="title">Card title</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <h4>Another title</h4>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <a :href="randomPhotoUrl" target="_blank">{{ randomPhotoUrl }}</a>
         </main>
-        <footer class="card-footer">
-          <div class="button-list">
-            <button class="button button-filled">Complete</button>
-            <button class="button button-text">Learn more</button>
-          </div>
+        <footer class="card-footer text-muted">
+          <small>{{ $root.$options.name }} v{{ $root.$options.version }}</small>
         </footer>
       </div>
     </Example>
@@ -27,16 +20,9 @@
         <main class="card-body">
           <h3 class="title">Card title</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <h4>Another title</h4>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <a :href="randomPhotoUrl" target="_blank">{{ randomPhotoUrl }}</a>
         </main>
-        <footer class="card-footer">
-          <div class="button-list">
-            <button class="button button-filled">Complete</button>
-            <button class="button button-text">Learn more</button>
-          </div>
+        <footer class="card-footer text-muted">
+          <small>{{ $root.$options.name }} v{{ $root.$options.version }}</small>
         </footer>
       </a>
     </Example>
@@ -46,6 +32,7 @@
       <div class="card">
         <header class="card-header">
           <h3>Card header</h3>
+          <RatingStar :rating="3.6" />
         </header>
         <aside class="card-media" style="height: 30vh;">
           <img class="card-media-image" :src="`${randomPhotoUrl}?random=media&grayscale&blur=10`" style="opacity:.15;" />
@@ -78,7 +65,6 @@
         <main class="card-body">
           <h2 class="title">Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-          <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
         </main>
         <footer class="card-footer">
           <div class="button-list">
@@ -106,7 +92,7 @@
     <Example>
       <a class="card card-borderless card-shadow card-hover">
         <header class="card-media" style="height: 40vh;">
-          <img class="card-media-image" :src="`${randomPhotoUrl}?random=shadow`" />
+          <img class="card-media-image" :src="`${randomPhotoUrl}?random=shadow-hover`" />
         </header>
         <main class="card-body">
           <h2 class="title">Card title</h2>
@@ -117,15 +103,14 @@
 
     <h3>Card list</h3>
     <Example>
-      <div class="card-list">
+      <div class="card-list card-list-example">
         <div class="card">
           <main class="card-body">
             <h2 class="title">Card 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-            <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
           </main>
           <footer class="card-footer">
-            <button class="button button-filled button-shadow">Call to action 1</button>
+            <button class="button button-filled button-shadow">Call to action</button>
           </footer>
         </div>
         <div class="card">
@@ -140,25 +125,24 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
           <footer class="card-footer">
-            <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
+            <small class="text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</small>
           </footer>
         </div>
       </div>
     </Example>
+    <h6>CSS</h6>
+    <pre class="code">.card-list-example > .card {
+  flex: 280px;
+}</pre>
 
     <h3>Card grid</h3>
-    <p>In this example <code>.card-grid-example</code> equals: <code class="code-block">.card-grid-example { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }</code></p>
     <Example>
       <div class="card-grid card-grid-example">
         <div class="card">
           <main class="card-body">
             <h2 class="title">Card 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
-            <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
           </main>
-          <footer class="card-footer">
-            <button class="button button-filled button-shadow">Call to action 1</button>
-          </footer>
         </div>
         <div class="card">
           <main class="card-body">
@@ -170,6 +154,7 @@
           <main class="card-body">
             <h2 class="title">Card 3</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
           <footer class="card-footer">
             <div class="small text-muted">{{ $root.$options.name }} v{{ $root.$options.version }}</div>
@@ -177,11 +162,20 @@
         </div>
       </div>
     </Example>
+    <h6>CSS</h6>
+    <pre class="code">.card-grid-example {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}</pre>
   </section>
 </template>
 
 <script>
+import RatingStar from '../RatingStar.vue'
+
 export default {
+  components: {
+    RatingStar
+  },
   computed: {
     randomPhotoUrl: () => `https://picsum.photos/1920/1080/`
   }
@@ -191,11 +185,11 @@ export default {
 <style lang="scss" scoped>
 @import '~@/scss/variables';
 .card-media-overlay {
-  background-color: rgba($info, 0.5);
+  background-color: rgba($info, 0.25);
 }
-.card-list {
+.card-list-example {
   > .card {
-    max-width: 300px;
+    flex: 280px;
   }
 }
 .card-grid-example {

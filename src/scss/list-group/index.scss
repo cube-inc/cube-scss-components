@@ -133,7 +133,7 @@
         transition: all 250ms ease;
       }
       &:first-child {
-        margin-right: 0.75em;
+        margin-right: $spacer-0750;
       }
       &:last-child {
         margin-left: auto;

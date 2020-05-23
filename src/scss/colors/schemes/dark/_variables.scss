@@ -24,6 +24,7 @@ $text-danger-dark: $danger-dark !default;
 $link-color-dark: lighten($link-color, $_lighten-amount) !default;
 $code-color-dark: lighten($code-color, $_lighten-amount) !default;
 $code-block-color-dark: rgba($white, 0.6) !default;
+$code-background-color-dark: rgba($code-background-color, 0.05) !default;
 
 // Component colors
 $component-color-dark: $text-color-dark !default;

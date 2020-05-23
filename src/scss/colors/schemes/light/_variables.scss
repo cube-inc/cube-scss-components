@@ -1,6 +1,6 @@
 // Brand colors
 $primary: $blue !default;
-$secondary: $yellow !default;
+$secondary: $pink !default;
 $success: $teal !default;
 $info: $indigo !default;
 $warning: $yellow !default;
@@ -21,7 +21,8 @@ $text-warning: $warning !default;
 $text-danger: $danger !default;
 $link-color: $blue !default;
 $code-color: $red !default;
-$code-block-color: $gray-800 !default;
+$code-block-color: rgba($black, 0.8) !default;
+$code-background-color: hsl(210, 29%, 97%) !default;
 
 // Component colors
 $component-color: $text-color !default;

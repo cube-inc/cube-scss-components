@@ -86,28 +86,33 @@ blockquote {
   appearance: none;
   display: block;
   white-space: pre-line;
-  margin: 0.2em 0;
-  padding: 0.2em 0.6em;
-  border-left: 3px solid var(--text-muted, #{$text-muted});
+  margin: 1em 0;
+  padding: 0.25em 0.5em 0.25em calc(0.5em + 4px);
+  border-left: 4px solid var(--text-muted, #{$text-muted});
+  background-color: $component-background-color-alt;
+  border-radius: $component-border-radius-xs;
 }
 code {
   font-size: $font-size-code;
-  word-break: break-word;
   font-family: $font-family-code;
   color: var(--code-color, #{$code-color});
-  &.code-block {
-    display: block;
-    font-size: $font-size-code-block;
-    color: var(--code-block-color, #{$code-block-color});
-    white-space: pre-wrap;
-  }
+  word-break: break-word;
+  background-color: var(--code-background-color, #{$code-background-color});
+  padding: 0.25em 0.5em;
+  border-radius: $component-border-radius-xs;
 }
 pre {
-  font-size: 90%;
+  font-size: $font-size-code;
   font-family: $font-family-code;
-  margin: 0;
-  padding: 0;
-  white-space: pre-line;
+  &.code {
+    margin: $spacer 0;
+    padding: $component-padding;
+    word-break: break-word;
+    white-space: pre-wrap;
+    color: var(--code-block-color, #{$code-block-color});
+    background-color: var(--code-background-color, #{$code-background-color});
+    border-radius: $component-border-radius-xs;
+  }
 }
 small,
 .small {
@@ -118,8 +123,9 @@ b {
   font-weight: $font-weight-bold;
 }
 mark {
-  padding: 0.2em 0.6em;
+  padding: 0.25em 0.5em;
   background-color: $warning;
+  border-radius: $component-border-radius-xs;
 }
 abbr {
   text-decoration: underline dotted;

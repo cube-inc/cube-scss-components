@@ -1,12 +1,13 @@
 @import '../variables';
 
 select.form-control {
+  $background-size: $form-control-line-height;
   cursor: pointer;
-  padding-right: 3rem;
-  background-position: right 1rem center;
+  background-position: right $form-control-padding-x center;
   background-repeat: no-repeat;
-  background-size: 1.3em;
+  background-size: $background-size;
   background-image: $form-control-select-arrow-image;
+  padding-right: calc(#{$form-control-padding-x} + #{$background-size} + #{$form-control-padding-x});
   &:invalid {
     // Simulate placeholder
     color: $form-control-muted-color;

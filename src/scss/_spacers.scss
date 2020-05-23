@@ -1,19 +1,20 @@
 $spacer: 1rem !default;
 
-$spacer-025: $spacer * 0.25 !default;
-$spacer-050: $spacer * 0.5 !default;
-$spacer-075: $spacer * 0.75 !default;
-$spacer-125: $spacer * 1.25 !default;
-$spacer-150: $spacer * 1.5 !default;
-$spacer-175: $spacer * 1.75 !default;
-$spacer-200: $spacer * 2 !default;
-$spacer-250: $spacer * 2.5 !default;
-$spacer-300: $spacer * 3 !default;
-$spacer-400: $spacer * 4 !default;
+$spacer-0125: $spacer * 0.125 !default;
+$spacer-0250: $spacer * 0.25 !default;
+$spacer-0500: $spacer * 0.5 !default;
+$spacer-0750: $spacer * 0.75 !default;
+$spacer-1250: $spacer * 1.25 !default;
+$spacer-1500: $spacer * 1.5 !default;
+$spacer-1750: $spacer * 1.75 !default;
+$spacer-2000: $spacer * 2 !default;
+$spacer-2500: $spacer * 2.5 !default;
+$spacer-3000: $spacer * 3 !default;
+$spacer-4000: $spacer * 4 !default;
 
-$spacer-xs: $spacer-025 !default;
-$spacer-sm: $spacer-075 !default;
-$spacer-md: $spacer-150 !default;
-$spacer-lg: $spacer-200 !default;
-$spacer-xl: $spacer-300 !default;
-$spacer-xxl: $spacer-400 !default;
+$spacer-xs: $spacer-0250 !default;
+$spacer-sm: $spacer-0750 !default;
+$spacer-md: $spacer-1500 !default;
+$spacer-lg: $spacer-2000 !default;
+$spacer-xl: $spacer-3000 !default;
+$spacer-xxl: $spacer-4000 !default;

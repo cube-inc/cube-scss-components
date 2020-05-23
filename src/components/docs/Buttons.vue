@@ -107,54 +107,84 @@
     </Example>
 
     <h3>Colors</h3>
-    <Example transparency-grid>
+    <Example>
+      <h6>Primary (default)</h6>
       <div class="button-list">
-        <button class="button button-success">Success</button>
-        <button class="button button-info">Info</button>
-        <button class="button button-warning">Warning</button>
-        <button class="button button-danger">Danger</button>
+        <button class="button button-text">Text</button>
+        <button class="button">Button</button>
+        <button class="button button-outline">Outline</button>
+        <button class="button button-filled">Filled</button>
       </div>
       <div class="button-list">
-        <button class="button button-success" disabled>Success</button>
-        <button class="button button-info" disabled>Info</button>
-        <button class="button button-warning" disabled>Warning</button>
-        <button class="button button-danger" disabled>Danger</button>
+        <button class="button button-text" disabled>Text</button>
+        <button class="button" disabled>Button</button>
+        <button class="button button-outline" disabled>Outline</button>
+        <button class="button button-filled" disabled>Filled</button>
+      </div>
+      <h6>Secondary</h6>
+      <div class="button-list">
+        <button class="button button-secondary button-text">Text</button>
+        <button class="button button-secondary">Button</button>
+        <button class="button button-secondary button-outline">Outline</button>
+        <button class="button button-secondary button-filled">Filled</button>
       </div>
       <div class="button-list">
-        <button class="button button-outline button-success">Success</button>
-        <button class="button button-outline button-info">Info</button>
-        <button class="button button-outline button-warning">Warning</button>
-        <button class="button button-outline button-danger">Danger</button>
+        <button class="button button-secondary button-text" disabled>Text</button>
+        <button class="button button-secondary" disabled>Button</button>
+        <button class="button button-secondary button-outline" disabled>Outline</button>
+        <button class="button button-secondary button-filled" disabled>Filled</button>
+      </div>
+      <h6>Success</h6>
+      <div class="button-list">
+        <button class="button button-success button-text">Text</button>
+        <button class="button button-success">Button</button>
+        <button class="button button-success button-outline">Outline</button>
+        <button class="button button-success button-filled">Filled</button>
       </div>
       <div class="button-list">
-        <button class="button button-outline button-success" disabled>Success</button>
-        <button class="button button-outline button-info" disabled>Info</button>
-        <button class="button button-outline button-warning" disabled>Warning</button>
-        <button class="button button-outline button-danger" disabled>Danger</button>
+        <button class="button button-success button-text" disabled>Text</button>
+        <button class="button button-success" disabled>Button</button>
+        <button class="button button-success button-outline" disabled>Outline</button>
+        <button class="button button-success button-filled" disabled>Filled</button>
+      </div>
+      <h6>Info</h6>
+      <div class="button-list">
+        <button class="button button-info button-text">Text</button>
+        <button class="button button-info">Button</button>
+        <button class="button button-info button-outline">Outline</button>
+        <button class="button button-info button-filled">Filled</button>
       </div>
       <div class="button-list">
-        <button class="button button-filled button-success">Success</button>
-        <button class="button button-filled button-info">Info</button>
-        <button class="button button-filled button-warning">Warning</button>
-        <button class="button button-filled button-danger">Danger</button>
+        <button class="button button-info button-text" disabled>Text</button>
+        <button class="button button-info" disabled>Button</button>
+        <button class="button button-info button-outline" disabled>Outline</button>
+        <button class="button button-info button-filled" disabled>Filled</button>
+      </div>
+      <h6>Warning</h6>
+      <div class="button-list">
+        <button class="button button-warning button-text">Text</button>
+        <button class="button button-warning">Button</button>
+        <button class="button button-warning button-outline">Outline</button>
+        <button class="button button-warning button-filled">Filled</button>
       </div>
       <div class="button-list">
-        <button class="button button-filled button-success" disabled>Success</button>
-        <button class="button button-filled button-info" disabled>Info</button>
-        <button class="button button-filled button-warning" disabled>Warning</button>
-        <button class="button button-filled button-danger" disabled>Danger</button>
+        <button class="button button-warning button-text" disabled>Text</button>
+        <button class="button button-warning" disabled>Button</button>
+        <button class="button button-warning button-outline" disabled>Outline</button>
+        <button class="button button-warning button-filled" disabled>Filled</button>
+      </div>
+      <h6>Danger</h6>
+      <div class="button-list">
+        <button class="button button-danger button-text">Text</button>
+        <button class="button button-danger">Button</button>
+        <button class="button button-danger button-outline">Outline</button>
+        <button class="button button-danger button-filled">Filled</button>
       </div>
       <div class="button-list">
-        <button class="button button-text button-success">Success</button>
-        <button class="button button-text button-info">Info</button>
-        <button class="button button-text button-warning">Warning</button>
-        <button class="button button-text button-danger">Danger</button>
-      </div>
-      <div class="button-list">
-        <button class="button button-text button-success" disabled>Success</button>
-        <button class="button button-text button-info" disabled>Info</button>
-        <button class="button button-text button-warning" disabled>Warning</button>
-        <button class="button button-text button-danger" disabled>Danger</button>
+        <button class="button button-danger button-text" disabled>Text</button>
+        <button class="button button-danger" disabled>Button</button>
+        <button class="button button-danger button-outline" disabled>Outline</button>
+        <button class="button button-danger button-filled" disabled>Filled</button>
       </div>
     </Example>
 
@@ -228,12 +258,6 @@
         <button class="button button-filled">Button 3</button>
         <button class="button button-filled">Button 4</button>
       </div>
-      <div class="button-group">
-        <button class="button button-text">Button 1</button>
-        <button class="button button-text">Button 2</button>
-        <button class="button button-text">Button 3</button>
-        <button class="button button-text">Button 4</button>
-      </div>
     </Example>
 
     <h3>Group colors</h3>
@@ -291,32 +315,32 @@
     <h3>Button sizes</h3>
     <Example>
       <div class="button-list">
-        <button class="button button-xs">Extra small</button>
-        <button class="button button-sm">Small</button>
-        <button class="button">Normal</button>
-        <button class="button button-md">Medium</button>
-        <button class="button button-lg">Large</button>
+        <button class="button button-text button-xs"><PersonCropSquare class="icon"/><span>Extra small</span></button>
+        <button class="button button-text button-sm"><PersonCropSquare class="icon" /><span>Small</span></button>
+        <button class="button button-text"><PersonCropSquare class="icon" /><span>Normal</span></button>
+        <button class="button button-text button-md"><PersonCropSquare class="icon" /><span>Medium</span></button>
+        <button class="button button-text button-lg"><PersonCropSquare class="icon" /><span>Large</span></button>
       </div>
       <div class="button-list">
-        <button class="button button-outline button-xs">Extra small</button>
-        <button class="button button-outline button-sm">Small</button>
-        <button class="button button-outline">Normal</button>
-        <button class="button button-outline button-md">Medium</button>
-        <button class="button button-outline button-lg">Large</button>
+        <button class="button button-xs"><PersonCropSquare class="icon"/><span>Extra small</span></button>
+        <button class="button button-sm"><PersonCropSquare class="icon" /><span>Small</span></button>
+        <button class="button"><PersonCropSquare class="icon" /><span>Normal</span></button>
+        <button class="button button-md"><PersonCropSquare class="icon" /><span>Medium</span></button>
+        <button class="button button-lg"><PersonCropSquare class="icon" /><span>Large</span></button>
       </div>
       <div class="button-list">
-        <button class="button button-filled button-xs">Extra small</button>
-        <button class="button button-filled button-sm">Small</button>
-        <button class="button button-filled">Normal</button>
-        <button class="button button-filled button-md">Medium</button>
-        <button class="button button-filled button-lg">Large</button>
+        <button class="button button-outline button-xs"><PersonCropSquare class="icon"/><span>Extra small</span></button>
+        <button class="button button-outline button-sm"><PersonCropSquare class="icon" /><span>Small</span></button>
+        <button class="button button-outline"><PersonCropSquare class="icon" /><span>Normal</span></button>
+        <button class="button button-outline button-md"><PersonCropSquare class="icon" /><span>Medium</span></button>
+        <button class="button button-outline button-lg"><PersonCropSquare class="icon" /><span>Large</span></button>
       </div>
       <div class="button-list">
-        <button class="button button-text button-xs">Extra small</button>
-        <button class="button button-text button-sm">Small</button>
-        <button class="button button-text">Normal</button>
-        <button class="button button-text button-md">Medium</button>
-        <button class="button button-text button-lg">Large</button>
+        <button class="button button-filled button-xs"><PersonCropSquare class="icon"/><span>Extra small</span></button>
+        <button class="button button-filled button-sm"><PersonCropSquare class="icon" /><span>Small</span></button>
+        <button class="button button-filled"><PersonCropSquare class="icon" /><span>Normal</span></button>
+        <button class="button button-filled button-md"><PersonCropSquare class="icon" /><span>Medium</span></button>
+        <button class="button button-filled button-lg"><PersonCropSquare class="icon" /><span>Large</span></button>
       </div>
     </Example>
   </section>

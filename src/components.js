@@ -10,6 +10,9 @@ import MoonFill from './components/icons/MoonFill.vue'
 import PersonCropSquare from './components/icons/PersonCropSquare.vue'
 import Plus from './components/icons/Plus.vue'
 import SunMax from './components/icons/SunMax.vue'
+import Star from './components/icons/Star.vue'
+import StarFill from './components/icons/StarFill.vue'
+import StarLefthalfFill from './components/icons/StarLefthalfFill.vue'
 
 Vue.component(Example.name, Example)
 Vue.component('ArrowUpToLine', ArrowUpToLine)
@@ -21,3 +24,6 @@ Vue.component('MoonFill', MoonFill)
 Vue.component('PersonCropSquare', PersonCropSquare)
 Vue.component('Plus', Plus)
 Vue.component('SunMax', SunMax)
+Vue.component('Star', Star)
+Vue.component('StarFill', StarFill)
+Vue.component('StarLefthalfFill', StarLefthalfFill)

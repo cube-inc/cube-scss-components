@@ -13,7 +13,7 @@
   overflow: hidden;
   position: relative;
   z-index: 0; // with position: relative, avoid img transition issue with border-radius (overflow not hidden has expected)
-  transition: all 250ms ease;
+  transition: all 100ms ease;
   @media (hover: hover) {
     &:hover {
       text-decoration: none;

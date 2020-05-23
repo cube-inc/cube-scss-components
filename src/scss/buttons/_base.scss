@@ -1,5 +1,8 @@
-@import 'variables';
+@use 'mixins';
 
+/**
+ * Base button
+ */
 .button {
   cursor: pointer;
   position: relative;
@@ -18,37 +21,34 @@
   text-align: center;
   white-space: nowrap;
   line-height: $button-line-height;
-  color: $button-primary-color;
-  stroke: $button-primary-color;
-  fill: $button-primary-color;
-  border: 1px solid transparent;
+  border-width: 1px;
+  border-style: solid;
   border-radius: $button-border-radius;
-  background-color: $button-background-color-primary;
   transition: $button-transition;
-  @media (hover: hover) {
-    &:hover:not(:disabled) {
-      text-decoration: none;
-      background-color: $button-background-color-primary-hover;
-    }
-  }
-  &:focus:not(:disabled) {
-    text-decoration: none;
-    background-color: $button-background-color-primary-hover;
-  }
-  &.active:not(:disabled),
-  &:active:not(:disabled) {
-    background-color: $button-background-color-primary-active;
-  }
+  @include mixins.button-colors(
+    $color: var(--button-color, #{$button-color}),
+    $color-hover: var(--button-color-hover, #{$button-color-hover}),
+    $color-active: var(--button-color-active, #{$button-color-active}),
+    $color-disabled: var(--button-color-disabled, #{$button-color-disabled}),
+    $border-color: var(--button-border-color, #{$button-border-color}),
+    $border-color-hover: var(--button-border-color-hover, #{$button-border-color-hover}),
+    $border-color-active: var(--button-border-color-active, #{$button-border-color-active}),
+    $border-color-disabled: var(--button-border-color-disabled, #{$button-border-color-disabled}),
+    $background-color: var(--button-background-color, #{$button-background-color}),
+    $background-color-hover: var(--button-background-color-hover, #{$button-background-color-hover}),
+    $background-color-active: var(--button-background-color-active, #{$button-background-color-active}),
+    $background-color-disabled: var(--button-background-color-disabled, #{$button-background-color-disabled}),
+    $box-shadow: var(--button-box-shadow),
+    $box-shadow-hover: var(--button-box-shadow-hover),
+    $box-shadow-active: var(--button-box-shadow-active),
+    $box-shadow-disabled: var(--button-box-shadow-disabled)
+  );
   &:disabled {
     cursor: not-allowed;
-    color: grayscale($button-primary-color);
-    stroke: grayscale($button-primary-color);
-    fill: grayscale($button-primary-color);
-    background-color: $button-background-color-primary-disabled;
     opacity: 0.5;
   }
   > * + * {
-    margin-left: 1em;
+    margin-left: $spacer;
   }
   .icon {
     display: block;
@@ -57,12 +57,26 @@
     width: $button-line-height;
     object-fit: contain;
     &-xs {
-      height: $button-line-height * 0.5;
+      padding: ($button-line-height * 0.5 * 0.5) 0;
+      // height: $button-line-height * 0.5;
       width: $button-line-height * 0.5;
     }
     &-sm {
-      height: $button-line-height * 0.75;
+      padding: ($button-line-height * 0.25 * 0.5) 0;
+      // height: $button-line-height * 0.75;
       width: $button-line-height * 0.75;
     }
+  }
+}
+
+/**
+ * Reset a.button
+ */
+a.button {
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
   }
 }

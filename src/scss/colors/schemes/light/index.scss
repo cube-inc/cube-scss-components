@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 @mixin light-color-scheme {
   --primary: #{$primary};
@@ -23,6 +23,7 @@
 
   --code-color: #{$code-color};
   --code-block-color: #{$code-block-color};
+  --code-background-color: #{$code-background-color};
 
   --component-color: #{$component-color};
   --component-border-color: #{$component-border-color};

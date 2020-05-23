@@ -32,7 +32,7 @@
     cursor: not-allowed;
     color: $form-control-muted-color;
     background-color: $form-control-background-color-disabled;
-    opacity: 0.3; /* Safari already applies an opacity */
+    opacity: 0.4; /* Safari already applies an opacity */
   }
   &::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
