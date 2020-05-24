@@ -20,7 +20,7 @@ describe('vnodeService', () => {
 
   test('Attrs renders properly', () => {
     const vnode = <div class="test-class" placeholder="Test placeholder" xmlns="filtered" viewBox="filtered" required></div>
-    const attrs = new Attrs(vnode)
+    const attrs = Attrs.from(vnode)
     expect(attrs.length).toStrictEqual(3)
     expect(attrs[0].name).toStrictEqual('class')
     expect(attrs[0].value).toStrictEqual('test-class')
@@ -56,7 +56,7 @@ describe('vnodeService', () => {
     expect(node.children[0].text).toStrictEqual('Test text node')
   })
 
-  test('Children constructor', () => {
+  test('Children.from', () => {
     const vnode = (
       <select>
         <option value="1">1</option>
@@ -64,7 +64,7 @@ describe('vnodeService', () => {
         <option value="3">3</option>
       </select>
     )
-    const children = new Children(vnode)
+    const children = Children.from(vnode)
     expect(children.length).toStrictEqual(3)
     expect(children[0].tag).toStrictEqual('option')
     expect(children[0].attrs[0].name).toStrictEqual('value')
@@ -193,7 +193,7 @@ describe('vnodeService', () => {
 
   test('Nodes renders properly', () => {
     const vnodes = [<p>Paragraph 1</p>, <p>Paragraph 2</p>, <p>Paragraph 3</p>]
-    expect(new Nodes(vnodes).toHtml()).toStrictEqual(`<p>Paragraph 1</p>
+    expect(Nodes.from(vnodes).toHtml()).toStrictEqual(`<p>Paragraph 1</p>
 <p>Paragraph 2</p>
 <p>Paragraph 3</p>`)
   })

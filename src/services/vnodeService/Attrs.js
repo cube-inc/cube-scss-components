@@ -2,7 +2,7 @@ import { hiddenAttrs } from './utils'
 import Attr from './Attr'
 
 export default class Attrs extends Array {
-  constructor(vnode, options = {}) {
+  static from(vnode, options = {}) {
     const items = []
     const { data } = vnode
     if (data instanceof Object) {
@@ -23,9 +23,7 @@ export default class Attrs extends Array {
           .forEach((key) => items.push(new Attr(key, attrs[key], options)))
       }
     }
-    super(...items)
-    this.vnode = vnode
-    this.options = options
+    return new Attrs(...items)
   }
   toHtml() {
     return this.map((attr) => ` ${attr.toHtml()}`)

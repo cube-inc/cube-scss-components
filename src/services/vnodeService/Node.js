@@ -6,13 +6,10 @@ export default class Node {
   constructor(vnode, options = {}) {
     this.vnode = vnode
     this.tag = vnode.componentInstance ? vnode.componentOptions.tag : vnode.tag
-    this.attrs = new Attrs(vnode, options)
-    this.children = new Children(vnode, options)
+    this.attrs = Attrs.from(vnode, options)
+    this.children = Children.from(vnode, options)
     this.text = vnode.text
     this.options = options
-    if (vnode.componentInstance) {
-      console.debug('Node', this)
-    }
   }
   isHighlighted() {
     return Boolean(this.options.highlight)

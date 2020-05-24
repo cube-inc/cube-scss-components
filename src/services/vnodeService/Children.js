@@ -1,15 +1,13 @@
 import Node from './Node'
 
 export default class Children extends Array {
-  constructor(vnode, options = {}) {
+  static from(vnode, options = {}) {
     const items = []
     const { children } = vnode
     if (children instanceof Array) {
       children.forEach((vnode) => items.push(new Node(vnode, options)))
     }
-    super(...items)
-    this.vnode = vnode
-    this.options = options
+    return new Children(...items)
   }
   hasBlockElements() {
     return this.some((node) => node.isBlockElement())
