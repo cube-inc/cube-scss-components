@@ -111,7 +111,7 @@ $code-attr-val-color: $red;
     transition: all 250ms ease;
   }
   &-preview {
-    overflow: scroll;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
     padding: $example-padding;
     color: $example-preview-color;
