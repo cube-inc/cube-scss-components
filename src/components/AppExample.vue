@@ -5,13 +5,18 @@
     </div>
     <div class="example-toolbar">
       <div class="button-group">
-        <button class="button button-xs" @click="toggleDark">
+        <button class="button button-xs" @click="toggleDark" title="Toggle dark mode">
           <transition name="fade" mode="out-in">
             <SunMax v-if="previewDarkColorScheme" class="icon icon-sm" />
             <MoonFill v-else class="icon icon-sm" />
           </transition>
         </button>
-        <button class="button button-xs" @click="copyCode" :disabled="copied">
+      </div>
+      <div class="button-group">
+        <button class="button button-xs" @click="toggleCode" title="Toggle code">
+          <ChevronLeftSlashChevronRight class="icon" />
+        </button>
+        <button class="button button-xs" @click="copyCode" :disabled="copied" title="Copy code">
           <transition name="fade" mode="out-in">
             <span v-if="copied">Copied!</span>
             <DocOnClipboard v-else class="icon icon-sm" />
@@ -19,7 +24,7 @@
         </button>
       </div>
     </div>
-    <pre class="code example-code" ref="code" v-html="code"></pre>
+    <pre class="code example-code" :class="exampleCodeClasses" ref="code" v-html="code"></pre>
   </section>
 </template>
 
@@ -36,6 +41,7 @@ export default {
   data() {
     return {
       reverseColorScheme: false,
+      showCode: false,
       code: null,
       copied: false
     }
@@ -51,6 +57,11 @@ export default {
         'light-color-scheme': this.previewDarkColorScheme === false,
         'dark-color-scheme': this.previewDarkColorScheme === true
       }
+    },
+    exampleCodeClasses() {
+      return {
+        show: this.showCode
+      }
     }
   },
   methods: {
@@ -59,6 +70,9 @@ export default {
     },
     toggleDark() {
       this.reverseColorScheme = !this.reverseColorScheme
+    },
+    toggleCode() {
+      this.showCode = !this.showCode
     },
     copyCode() {
       const html = this.$refs.code.innerText
@@ -129,18 +143,28 @@ $code-attr-val-color: $red;
   }
   &-toolbar {
     border-top: 1px solid $example-border-color;
-    border-bottom: 1px solid $example-border-color;
+    // border-bottom: 1px solid $example-border-color;
     display: flex;
     justify-content: flex-end;
     min-height: 2em;
-    .button-group > .button {
-      border-radius: 0;
+    .button-group {
+      &:last-child {
+        margin-left: auto;
+      }
+      > .button {
+        border-radius: 0;
+      }
     }
   }
   &-code {
+    display: none;
     margin: 0;
     padding: $example-padding;
+    border-top: 1px solid $example-border-color;
     border-radius: 0;
+    &.show {
+      display: block;
+    }
     ::v-deep .code {
       &-tag {
         color: $code-tag-color;
