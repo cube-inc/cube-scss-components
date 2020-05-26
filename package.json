@@ -15,10 +15,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:css": "sass src/scss/index.scss build/index.css --style=compressed",
+    "build:css:dev": "sass src/scss/index.scss build/index.css",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "files": [
+    "*.md",
     "src/scss/**/*.md",
     "src/scss/**/*.scss"
   ],
