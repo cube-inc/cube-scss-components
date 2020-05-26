@@ -1,6 +1,27 @@
 @use 'sass:color';
 @use '../utils';
 
+///
+/// Config
+///
+
+$button-enabled: true !default;
+$button-size-enabled: true !default;
+$button-text-enabled: true !default;
+$button-outline-enabled: true !default;
+$button-filled-enabled: true !default;
+$button-shadow-enabled: true !default;
+$button-secondary-enabled: true !default;
+$button-success-enabled: true !default;
+$button-info-enabled: true !default;
+$button-warning-enabled: true !default;
+$button-danger-enabled: true !default;
+$button-white-enabled: true !default;
+
+///
+/// Base
+///
+
 $button-font-family: inherit !default;
 $button-font-size: $font-size-base !default;
 $button-font-weight: 500 !default;
@@ -13,9 +34,9 @@ $button-padding: $button-padding-y $button-padding-x !default;
 $button-min-width: 120px !default;
 $button-transition: all 100ms ease !default;
 
-/**
- * Colors
- */
+///
+/// Colors
+///
 
 // Default
 $button-color: $primary !default;
@@ -61,9 +82,9 @@ $button-white-color: $white !default;
 $button-white-border-color: transparent !default;
 $button-white-background-color: rgba($white, 0.15) !default;
 
-/**
- * Styles
- */
+///
+/// Styles
+///
 
 // button-outline
 $button-outline-border-color: var(--component-border-color, #{$component-border-color}) !default;
@@ -81,14 +102,14 @@ $button-box-shadow-hover: $component-box-shadow-hover !default;
 $button-box-shadow-active: $component-box-shadow-active !default;
 $button-box-shadow-disabled: $component-box-shadow !default;
 
-/**
- * button-list
- */
+///
+/// button-list
+///
 $button-list-gap: 4px !default;
 
-/**
- * Sizes
- */
+///
+/// Sizes
+///
 $button-scale-ratio: utils.$ratio-major-third !default;
 
 // button-xs

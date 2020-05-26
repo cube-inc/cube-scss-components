@@ -1,24 +1,26 @@
 @import 'variables';
 
-.button {
-  &-xs {
-    font-size: $button-font-size-xs;
-    padding: $button-padding-xs;
-    min-width: $button-min-width-xs;
-  }
-  &-sm {
-    font-size: $button-font-size-sm;
-    padding: $button-padding-sm;
-    min-width: $button-min-width-sm;
-  }
-  &-md {
-    font-size: $button-font-size-md;
-    padding: $button-padding-md;
-    min-width: $button-min-width-md;
-  }
-  &-lg {
-    font-size: $button-font-size-lg;
-    padding: $button-padding-lg;
-    min-width: $button-min-width-lg;
+@if ($button-enabled and $button-size-enabled) {
+  .button {
+    &-xs {
+      font-size: $button-font-size-xs;
+      padding: $button-padding-xs;
+      min-width: $button-min-width-xs;
+    }
+    &-sm {
+      font-size: $button-font-size-sm;
+      padding: $button-padding-sm;
+      min-width: $button-min-width-sm;
+    }
+    &-md {
+      font-size: $button-font-size-md;
+      padding: $button-padding-md;
+      min-width: $button-min-width-md;
+    }
+    &-lg {
+      font-size: $button-font-size-lg;
+      padding: $button-padding-lg;
+      min-width: $button-min-width-lg;
+    }
   }
 }

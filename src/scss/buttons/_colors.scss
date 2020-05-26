@@ -1,0 +1,117 @@
+@use 'sass:color';
+@use 'mixins';
+@import 'variables';
+
+@if ($button-enabled and $button-white-enabled) {
+  .button-white {
+    @include mixins.button-css-vars(
+      $color: $white,
+      $color-hover: $white,
+      $color-active: $white,
+      $color-disabled: $white,
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($white, 0.075),
+      $background-color-hover: rgba($white, 0.125),
+      $background-color-active: rgba($white, 0.15),
+      $background-color-disabled: rgba($white, 0.075)
+    );
+  }
+}
+
+@if ($button-enabled and $button-secondary-enabled) {
+  .button-secondary {
+    @include mixins.button-css-vars(
+      $color: $secondary,
+      $color-hover: $secondary,
+      $color-active: $secondary,
+      $color-disabled: color.grayscale($secondary),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($secondary, 0.15),
+      $background-color-hover: color.scale(rgba($secondary, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($secondary, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($secondary, 0.15), $saturation: -100%)
+    );
+  }
+}
+
+@if ($button-enabled and $button-success-enabled) {
+  .button-success {
+    @include mixins.button-css-vars(
+      $color: $success,
+      $color-hover: $success,
+      $color-active: $success,
+      $color-disabled: color.grayscale($success),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($success, 0.15),
+      $background-color-hover: color.scale(rgba($success, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($success, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($success, 0.15), $saturation: -100%)
+    );
+  }
+}
+
+@if ($button-enabled and $button-info-enabled) {
+  .button-info {
+    @include mixins.button-css-vars(
+      $color: $info,
+      $color-hover: $info,
+      $color-active: $info,
+      $color-disabled: color.grayscale($info),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($info, 0.15),
+      $background-color-hover: color.scale(rgba($info, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($info, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($info, 0.15), $saturation: -100%)
+    );
+  }
+}
+
+@if ($button-enabled and $button-warning-enabled) {
+  .button-warning {
+    @include mixins.button-css-vars(
+      $color: $warning,
+      $color-hover: $warning,
+      $color-active: $warning,
+      $color-disabled: color.grayscale($warning),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($warning, 0.15),
+      $background-color-hover: color.scale(rgba($warning, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($warning, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($warning, 0.15), $saturation: -100%)
+    );
+  }
+}
+
+@if ($button-enabled and $button-danger-enabled) {
+  .button-danger {
+    @include mixins.button-css-vars(
+      $color: $danger,
+      $color-hover: $danger,
+      $color-active: $danger,
+      $color-disabled: color.grayscale($danger),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: rgba($danger, 0.15),
+      $background-color-hover: color.scale(rgba($danger, 0.15), $lightness: 10%, $alpha: 10%),
+      $background-color-active: color.scale(rgba($danger, 0.15), $lightness: 5%, $alpha: 20%),
+      $background-color-disabled: color.scale(rgba($danger, 0.15), $saturation: -100%)
+    );
+  }
+}

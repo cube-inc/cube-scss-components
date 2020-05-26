@@ -1,20 +1,22 @@
 @import 'variables';
 
-.card-footer {
-  padding: $card-padding;
-  &-space-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+@if ($card-enabled) {
+  .card-footer {
+    padding: $card-padding;
+    &-space-between {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
   }
 }

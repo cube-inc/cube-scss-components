@@ -1,9 +1,11 @@
 @import 'variables';
 
-.card-body {
-  padding: 0 $card-padding;
-  flex-grow: 1;
-  .title {
-    margin: $card-title-margin 0;
+@if ($card-enabled) {
+  .card-body {
+    padding: 0 $card-padding;
+    flex-grow: 1;
+    .title {
+      margin: $card-title-margin 0;
+    }
   }
 }

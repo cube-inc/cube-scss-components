@@ -1,29 +1,31 @@
 @import 'variables';
 
-.button-group {
-  display: flex;
-  > .button {
-    flex-shrink: 0;
-    border-radius: 0;
-    + .button {
-      margin-left: -1px;
-    }
-    &.active:not(:disabled),
-    &:active:not(:disabled) {
-      z-index: 1;
-    }
-    &:first-child:not(.button-text) {
-      border-top-left-radius: $component-border-radius;
-      border-bottom-left-radius: $component-border-radius;
-    }
-    &:last-child:not(.button-text) {
-      border-top-right-radius: $component-border-radius;
-      border-bottom-right-radius: $component-border-radius;
-    }
-  }
-  &-grow {
+@if ($button-enabled) {
+  .button-group {
+    display: flex;
     > .button {
-      flex-grow: 1;
+      flex-shrink: 0;
+      border-radius: 0;
+      + .button {
+        margin-left: -1px;
+      }
+      &.active:not(:disabled),
+      &:active:not(:disabled) {
+        z-index: 1;
+      }
+      &:first-child:not(.button-text) {
+        border-top-left-radius: $component-border-radius;
+        border-bottom-left-radius: $component-border-radius;
+      }
+      &:last-child:not(.button-text) {
+        border-top-right-radius: $component-border-radius;
+        border-bottom-right-radius: $component-border-radius;
+      }
+    }
+    &-grow {
+      > .button {
+        flex-grow: 1;
+      }
     }
   }
 }

@@ -1,31 +1,33 @@
 @import 'variables';
 
-.badge {
-  display: inline-block;
-  width: $badge-size;
-  height: $badge-size;
-  line-height: $badge-size;
-  text-align: center;
-  vertical-align: bottom;
-  border-radius: $badge-border-radius;
-  background-color: $badge-background-color;
-  color: $badge-color;
-  font-size: $badge-font-size;
-  font-weight: $badge-font-weight;
-  &-success {
-    background-color: $badge-success-background-color;
-    color: $badge-success-color;
-  }
-  &-info {
-    background-color: $badge-info-background-color;
-    color: $badge-info-color;
-  }
-  &-warning {
-    background-color: $badge-warning-background-color;
-    color: $badge-warning-color;
-  }
-  &-danger {
-    background-color: $badge-danger-background-color;
-    color: $badge-danger-color;
+@if ($badge-enabled) {
+  .badge {
+    display: inline-block;
+    width: $badge-size;
+    height: $badge-size;
+    line-height: $badge-size;
+    text-align: center;
+    vertical-align: bottom;
+    border-radius: $badge-border-radius;
+    background-color: $badge-background-color;
+    color: $badge-color;
+    font-size: $badge-font-size;
+    font-weight: $badge-font-weight;
+    &-success {
+      background-color: $badge-success-background-color;
+      color: $badge-success-color;
+    }
+    &-info {
+      background-color: $badge-info-background-color;
+      color: $badge-info-color;
+    }
+    &-warning {
+      background-color: $badge-warning-background-color;
+      color: $badge-warning-color;
+    }
+    &-danger {
+      background-color: $badge-danger-background-color;
+      color: $badge-danger-color;
+    }
   }
 }

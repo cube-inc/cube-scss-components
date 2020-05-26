@@ -1,3 +1,5 @@
+$table-enabled: true !default;
+
 $table-color: var(--text-color, #{$text-color}) !default;
 $table-cell-padding-y: $spacer-xs !default;
 $table-cell-padding-x: $spacer-sm !default;

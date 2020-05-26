@@ -14,9 +14,13 @@ $ratio-minor-seventh: 1.778; // 9:16
 $ratio-major-seventh: 1.875; // 8:15
 $ratio-octave: 2; // 1:2
 
-/**
- * Scale a $value to a multiple of $ratio
- */
+///
+/// Scale a $value to a multiple of $ratio
+///
+/// @param {*} $value
+/// @param {*} $scale
+/// @param {*} $ratio
+
 @function scale($value, $scale, $ratio) {
   @return ($value * math.pow($ratio, $scale));
 }

@@ -1,0 +1,92 @@
+@use 'sass:color';
+@use 'mixins';
+@import 'variables';
+
+@if ($button-enabled and $button-filled-enabled) {
+  .button-filled {
+    @include mixins.button-css-vars(
+      $color: $white,
+      $color-hover: $white,
+      $color-active: $white,
+      $color-disabled: color.scale($white, $saturation: -100%),
+      $border-color: transparent,
+      $border-color-hover: transparent,
+      $border-color-active: transparent,
+      $border-color-disabled: transparent,
+      $background-color: $primary,
+      $background-color-hover: color.scale($primary, $lightness: 12%),
+      $background-color-active: color.scale($primary, $lightness: -6%),
+      $background-color-disabled: color.scale($primary, $saturation: -100%)
+    );
+
+    @if ($button-white-enabled) {
+      &.button-white {
+        @include mixins.button-css-vars(
+          $color: $primary,
+          $color-hover: $primary,
+          $color-active: $primary,
+          $color-disabled: color.scale($primary, $saturation: -100%),
+          $background-color: $white,
+          $background-color-hover: rgba($white, 0.9),
+          $background-color-active: rgba($white, 0.8),
+          $background-color-disabled: $white
+        );
+      }
+    }
+
+    @if ($button-secondary-enabled) {
+      &.button-secondary {
+        @include mixins.button-css-vars(
+          $background-color: $secondary,
+          $background-color-hover: color.scale($secondary, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($secondary, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($secondary, $saturation: -100%)
+        );
+      }
+    }
+
+    @if ($button-success-enabled) {
+      &.button-success {
+        @include mixins.button-css-vars(
+          $background-color: $success,
+          $background-color-hover: color.scale($success, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($success, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($success, $saturation: -100%)
+        );
+      }
+    }
+
+    @if ($button-info-enabled) {
+      &.button-info {
+        @include mixins.button-css-vars(
+          $background-color: $info,
+          $background-color-hover: color.scale($info, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($info, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($info, $saturation: -100%)
+        );
+      }
+    }
+
+    @if ($button-warning-enabled) {
+      &.button-warning {
+        @include mixins.button-css-vars(
+          $background-color: $warning,
+          $background-color-hover: color.scale($warning, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($warning, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($warning, $saturation: -100%)
+        );
+      }
+    }
+
+    @if ($button-danger-enabled) {
+      &.button-danger {
+        @include mixins.button-css-vars(
+          $background-color: $danger,
+          $background-color-hover: color.scale($danger, $lightness: 10%, $alpha: 10%),
+          $background-color-active: color.scale($danger, $lightness: 5%, $alpha: 20%),
+          $background-color-disabled: color.scale($danger, $saturation: -100%)
+        );
+      }
+    }
+  }
+}

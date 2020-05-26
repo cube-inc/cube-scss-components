@@ -1,7 +1,8 @@
 @use "../utils";
 
 // Config
-$enable-responsive-fonts: true !default;
+$type-enabled: true !default;
+$type-responsive-fonts-enabled: true !default;
 
 // Colors
 $text-color: $gray-900 !default;
@@ -28,9 +29,9 @@ $font-family-h5: $font-family-headings !default;
 $font-family-h6: $font-family-headings !default;
 $font-variant-numeric: normal !default;
 
-/**
- * Sizes
- */
+///
+/// Sizes
+///
 
 // Base size
 $font-size-base: 1em !default;

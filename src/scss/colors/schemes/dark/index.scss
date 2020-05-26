@@ -36,16 +36,18 @@
   --form-control-select-arrow-image: #{$form-control-select-arrow-image-dark};
 }
 
-@if ($enable-dark-color-scheme) {
-  .dark-color-scheme {
-    @include dark-color-scheme;
-  }
-}
-
-@if ($enable-prefers-color-scheme) {
-  @media (prefers-color-scheme: dark) {
-    :root {
+@if ($color-enabled) {
+  @if ($dark-color-scheme-enabled) {
+    .dark-color-scheme {
       @include dark-color-scheme;
+    }
+  }
+
+  @if ($prefers-color-scheme-enabled) {
+    @media (prefers-color-scheme: dark) {
+      :root {
+        @include dark-color-scheme;
+      }
     }
   }
 }

@@ -1,44 +1,10 @@
-/**
- * Config
- */
-
-// Enable to write the .dark-color-scheme css class
-$enable-dark-color-scheme: true !default;
-
-// Switch to dark mode regarding the system preferences
-$enable-prefers-color-scheme: $enable-dark-color-scheme !default;
-
-// Enable smaller font size for screen < $breakpoint-xs
-$enable-responsive-fonts: true !default;
-
-/**
- * Spacers
- */
 @import 'spacers';
-
-/**
- * Breakpoints
- */
 @import 'breakpoints';
-
-/**
- * Colors
- */
 @import 'colors/variables';
-
-/**
- * Reset
- */
 @import 'reset/variables';
-
-/**
- * Types
- */
 @import 'types/variables';
 
-/**
- * Components
- */
+// Components
 @import 'component';
 @import 'badges/variables';
 @import 'bullets/variables';

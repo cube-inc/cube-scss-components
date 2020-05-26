@@ -1,9 +1,11 @@
 @import '../variables';
 
-.form-group-stacked {
-  display: flex;
-  flex-direction: column;
-  > * + * {
-    margin-top: $form-control-spacer;
+@if ($form-enabled) {
+  .form-group-stacked {
+    display: flex;
+    flex-direction: column;
+    > * + * {
+      margin-top: $form-control-spacer;
+    }
   }
 }

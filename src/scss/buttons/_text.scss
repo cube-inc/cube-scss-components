@@ -1,0 +1,11 @@
+@use 'mixins';
+@import 'variables';
+
+@if ($button-enabled and $button-text-enabled) {
+  .button-text {
+    margin-left: -$button-padding-x;
+    margin-right: -$button-padding-x;
+    min-width: unset;
+    @include mixins.button-css-vars($background-color: transparent, $background-color-disabled: transparent);
+  }
+}

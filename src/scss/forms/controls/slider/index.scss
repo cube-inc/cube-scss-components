@@ -1,95 +1,97 @@
 @import 'variables';
 
-.slider {
-  appearance: none;
-  width: 100%;
-  height: max($slider-track-height, $slider-thumb-height);
-  background: transparent;
-  outline: none;
-  margin: 0;
-  overflow: visible;
-
-  /**
-   * Track
-   */
-  &::-webkit-slider-runnable-track {
-    width: 100%;
-    height: $slider-track-height;
-    cursor: pointer;
-    background: $slider-track-background-color;
-    border: $slider-track-border;
-    border-radius: $slider-track-border-radius;
-    border: 0 none;
-  }
-  &::-moz-range-track {
-    width: 100%;
-    height: $slider-track-height;
-    cursor: pointer;
-    background: $slider-track-background-color;
-    border: $slider-track-border;
-    border-radius: $slider-track-border-radius;
-    border: 0 none;
-  }
-  &::-ms-track {
-    width: 100%;
-    height: $slider-track-height;
-    cursor: pointer;
-    background: $slider-track-background-color;
-    border: $slider-track-border;
-    border-radius: $slider-track-border-radius;
-    border: 0 none;
-  }
-
-  /**
-   * Thumb
-   */
-  &::-webkit-slider-thumb {
-    width: $slider-thumb-width;
-    height: $slider-thumb-height;
-    background: $slider-thumb-background-color;
-    border-radius: $slider-thumb-border-radius;
-    border: $slider-thumb-border;
-    cursor: pointer;
+@if ($form-enabled) {
+  .slider {
     appearance: none;
-    margin-top: round($slider-track-height/2 - $slider-thumb-height/2);
-    transition: all 100ms ease;
-  }
-  &::-moz-range-thumb {
-    width: $slider-thumb-width;
-    height: $slider-thumb-height;
-    background: $slider-thumb-background-color;
-    border-radius: $slider-thumb-border-radius;
-    border: $slider-thumb-border;
-    cursor: pointer;
-    transition: all 100ms ease;
-  }
-  &::-ms-thumb {
+    width: 100%;
+    height: max($slider-track-height, $slider-thumb-height);
+    background: transparent;
+    outline: none;
     margin: 0;
-  }
+    overflow: visible;
 
-  /**
-   * Focus
-   */
-  &:focus {
-    outline: inherit;
+    ///
+    /// Track
+    ///
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: $slider-track-height;
+      cursor: pointer;
+      background: $slider-track-background-color;
+      border: $slider-track-border;
+      border-radius: $slider-track-border-radius;
+      border: 0 none;
+    }
+    &::-moz-range-track {
+      width: 100%;
+      height: $slider-track-height;
+      cursor: pointer;
+      background: $slider-track-background-color;
+      border: $slider-track-border;
+      border-radius: $slider-track-border-radius;
+      border: 0 none;
+    }
+    &::-ms-track {
+      width: 100%;
+      height: $slider-track-height;
+      cursor: pointer;
+      background: $slider-track-background-color;
+      border: $slider-track-border;
+      border-radius: $slider-track-border-radius;
+      border: 0 none;
+    }
+
+    ///
+    /// Thumb
+    ///
     &::-webkit-slider-thumb {
-      box-shadow: $slider-thumb-outline;
+      width: $slider-thumb-width;
+      height: $slider-thumb-height;
+      background: $slider-thumb-background-color;
+      border-radius: $slider-thumb-border-radius;
+      border: $slider-thumb-border;
+      cursor: pointer;
+      appearance: none;
+      margin-top: round($slider-track-height/2 - $slider-thumb-height/2);
+      transition: all 100ms ease;
     }
     &::-moz-range-thumb {
-      box-shadow: $slider-thumb-outline;
+      width: $slider-thumb-width;
+      height: $slider-thumb-height;
+      background: $slider-thumb-background-color;
+      border-radius: $slider-thumb-border-radius;
+      border: $slider-thumb-border;
+      cursor: pointer;
+      transition: all 100ms ease;
     }
-  }
+    &::-ms-thumb {
+      margin: 0;
+    }
 
-  /**
-   * Active
-   */
-  &:active {
-    outline: inherit;
-    &::-webkit-slider-thumb {
-      transform: scale(0.95);
+    ///
+    /// Focus
+    ///
+    &:focus {
+      outline: inherit;
+      &::-webkit-slider-thumb {
+        box-shadow: $slider-thumb-outline;
+      }
+      &::-moz-range-thumb {
+        box-shadow: $slider-thumb-outline;
+      }
     }
-    &::-moz-range-thumb {
-      transform: scale(0.95);
+
+    ///
+    /// Active
+    ///
+    &:active {
+      outline: inherit;
+      &::-webkit-slider-thumb {
+        transform: scale(0.95);
+      }
+      &::-moz-range-thumb {
+        transform: scale(0.95);
+      }
     }
   }
 }

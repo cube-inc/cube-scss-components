@@ -1,28 +1,32 @@
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  -webkit-tap-highlight-color: var(--tap-highlight-color, #{$tap-highlight-color});
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  color: var(--body-color, #{$body-color});
-  background-color: var(--body-background-color, #{$body-background-color});
-}
+@import 'variables';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@if ($reset-enabled) {
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-tap-highlight-color: var(--tap-highlight-color, #{$tap-highlight-color});
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    color: var(--body-color, #{$body-color});
+    background-color: var(--body-background-color, #{$body-background-color});
+  }
 
-hr {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: var(--component-border-color, #{$component-border-color});
-  border: 0 none;
-  margin: 0 auto;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--component-border-color, #{$component-border-color});
+    border: 0 none;
+    margin: 0 auto;
+  }
 }

@@ -2,6 +2,7 @@
 
 ## Key features
 
+- Dart Sass
 - Mobile first
 - Modern
 - Fluid
@@ -14,13 +15,11 @@
 
 ## Why
 
-Because at Cube we manage several web apps and we worry about UI consistency, this project aims to provide basic SCSS components, tailored for SPA and mobile environment.
+Because at Cube we manage many web apps and we worry about consistency, this project aims to provide basic SCSS scaffoldings and components, tailored for SPA and mobile web projects.
 
-And because we know you'll customize any CSS framework you use, we strive to keep it as simple and basic as possible.
+## Demo
 
-## Documentation
-
-See the [Documentation Reference](https://cube-scss-components.netlify.com).
+See the [demo](https://cube-scss-components.netlify.com).
 
 ## Installation
 
@@ -30,28 +29,16 @@ yarn add cube-scss-components
 
 ## Getting Started
 
-Usually you import SCSS components you need and you customize variables to match with your visual identity. There is several ways to do so ; here is one way to make it described below.
+Here is one way to get started with Cube SCSS Components.
 
-From your global `index.scss`:
+From your main `index.scss` file:
 
 ```scss
-// Imports your custom "_variables.scss", overrides !defaults
+// Imports your custom "_variables.scss" and overrides !defaults
 @import 'variables';
 
-// Imports the components you need
-@import 'node_modules/cube-scss-components/src/scss/scaffoldings';
-@import 'node_modules/cube-scss-components/src/scss/badge';
-@import 'node_modules/cube-scss-components/src/scss/bullets';
-@import 'node_modules/cube-scss-components/src/scss/buttons';
-@import 'node_modules/cube-scss-components/src/scss/buttons_variants';
-@import 'node_modules/cube-scss-components/src/scss/cards';
-@import 'node_modules/cube-scss-components/src/scss/forms';
-@import 'node_modules/cube-scss-components/src/scss/labels';
-@import 'node_modules/cube-scss-components/src/scss/list_group';
-@import 'node_modules/cube-scss-components/src/scss/pagination';
-@import 'node_modules/cube-scss-components/src/scss/slider';
-@import 'node_modules/cube-scss-components/src/scss/tables';
-@import 'node_modules/cube-scss-components/src/scss/types';
+// Imports Cube SCSS Components
+@import 'node_modules/cube-scss-components/src/scss';
 
 // Your other imports here…
 ```
@@ -59,6 +46,41 @@ From your global `index.scss`:
 Your `_variables.scss` file may looks like:
 
 ```scss
+// Loads the "disabled" preset (all components disabled by default), otherwise all components will be written down on your SCSS
+@import 'node_modules/cube-scss-components/src/scss/disabled';
+
+// Then, enable the components you need
+$badge-enabled: true;
+$bullet-enabled: true;
+$button-enabled: true;
+$button-size-enabled: true;
+$button-text-enabled: true;
+$button-outline-enabled: true;
+$button-filled-enabled: true;
+$button-shadow-enabled: true;
+$button-secondary-enabled: true;
+$button-success-enabled: true;
+$button-info-enabled: true;
+$button-warning-enabled: true;
+$button-danger-enabled: true;
+$button-white-enabled: true;
+$card-enabled: true;
+$color-enabled: true;
+$dark-color-scheme-enabled: true;
+$prefers-color-scheme-enabled: true;
+$form-enabled: true;
+$label-enabled: true;
+$layout-enabled: true;
+$list-group-enabled: true;
+$pagination-enabled: true;
+$table-enabled: true;
+$type-enabled: true;
+$type-responsive-fonts-enabled: true;
+
+///
+/// Override defaults
+///
+
 // Colors
 $gray-700: hsl(210, 10%, 30%);
 $primary: #8d1760;
@@ -82,6 +104,7 @@ $button-primary-color: $primary;
 $component-border-radius: 4px;
 $component-box-shadow: 0px 3px 16px -2px $gray-700;
 
-// Imports other cube-scss-components variables
+// Imports other cube-scss-components variables.
+// Should be imported at the end of your own custom variables because of variables dependencies
 @import 'node_modules/cube-scss-components/src/scss/_variables.scss';
 ```

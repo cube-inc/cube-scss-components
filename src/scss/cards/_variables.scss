@@ -1,3 +1,5 @@
+$card-enabled: true !default;
+
 $card-border-radius: $component-border-radius !default;
 $card-border-size: $component-border-width !default;
 $card-border-color: var(--component-border-color, #{$component-border-color}) !default;

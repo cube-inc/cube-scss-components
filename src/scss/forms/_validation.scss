@@ -1,18 +1,19 @@
 @import 'variables';
 
-.form-control {
-  &.has-error,
-  &:invalid:not(:placeholder-shown):not(select):not([type='checkbox']):not([type='radio']) {
-    border-color: $form-control-danger-color;
-  }
-}
-
-.validate {
-  &.form-control,
+@if ($form-enabled) {
   .form-control {
     &.has-error,
-    &:invalid {
+    &:invalid:not(:placeholder-shown):not(select):not([type='checkbox']):not([type='radio']) {
       border-color: $form-control-danger-color;
+    }
+  }
+  .validate {
+    &.form-control,
+    .form-control {
+      &.has-error,
+      &:invalid {
+        border-color: $form-control-danger-color;
+      }
     }
   }
 }

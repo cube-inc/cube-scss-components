@@ -1,4 +1,4 @@
-@if ($enable-responsive-fonts) {
+@if ($type-responsive-fonts-enabled) {
   @media (max-width: $breakpoint-xs) {
     h1 {
       font-size: $font-size-h1-xs;

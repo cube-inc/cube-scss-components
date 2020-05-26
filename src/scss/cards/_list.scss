@@ -1,11 +1,13 @@
 @import 'variables';
 
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  margin: -$card-list-gap / 2;
-  > .card {
-    margin: $card-list-gap / 2;
+@if ($card-enabled) {
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: -$card-list-gap / 2;
+    > .card {
+      margin: $card-list-gap / 2;
+    }
   }
 }

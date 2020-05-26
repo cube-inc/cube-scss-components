@@ -1,3 +1,7 @@
+$color-enabled: true !default;
+$dark-color-scheme-enabled: true !default;
+$prefers-color-scheme-enabled: $dark-color-scheme-enabled !default;
+
 // Colors
 $navy: #1a004f !default;
 $blue: #157efb !default;

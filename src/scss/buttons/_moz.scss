@@ -1,3 +1,7 @@
-.button::-moz-focus-inner {
-  border: none;
+@import 'variables';
+
+@if ($button-enabled) {
+  .button::-moz-focus-inner {
+    border: none;
+  }
 }

@@ -36,18 +36,20 @@
   --form-control-select-arrow-image: #{$form-control-select-arrow-image};
 }
 
-.light-color-scheme {
-  @include light-color-scheme;
-}
+@if ($color-enabled) {
+  .light-color-scheme {
+    @include light-color-scheme;
+  }
 
-@if ($enable-prefers-color-scheme) {
-  @media (prefers-color-scheme: light) {
+  @if ($prefers-color-scheme-enabled) {
+    @media (prefers-color-scheme: light) {
+      :root {
+        @include light-color-scheme;
+      }
+    }
+  } @else {
     :root {
       @include light-color-scheme;
     }
-  }
-} @else {
-  :root {
-    @include light-color-scheme;
   }
 }

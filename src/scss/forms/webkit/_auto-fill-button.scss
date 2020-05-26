@@ -1,16 +1,18 @@
 @import '../variables';
 
-input::-webkit-contacts-auto-fill-button,
-input::-webkit-credentials-auto-fill-button,
-input::-webkit-credit-card-auto-fill-button {
-  background-color: $form-control-muted-color;
-  transition: all 250ms ease;
-  @media (hover: hover) {
-    &:hover {
-      background-color: $form-control-color;
+@if ($form-enabled) {
+  input::-webkit-contacts-auto-fill-button,
+  input::-webkit-credentials-auto-fill-button,
+  input::-webkit-credit-card-auto-fill-button {
+    background-color: $form-control-muted-color;
+    transition: all 250ms ease;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $form-control-color;
+      }
     }
-  }
-  &:active {
-    background-color: rgba($form-control-color, 0.75);
+    &:active {
+      background-color: rgba($form-control-color, 0.75);
+    }
   }
 }

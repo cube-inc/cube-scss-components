@@ -1,14 +1,16 @@
-.label {
-  &-sm {
-    font-size: $label-font-size-sm;
-  }
-  &-xs {
-    font-size: $label-font-size-xs;
-  }
-  &-md {
-    font-size: $label-font-size-md;
-  }
-  &-lg {
-    font-size: $label-font-size-lg;
+@if ($label-enabled) {
+  .label {
+    &-sm {
+      font-size: $label-font-size-sm;
+    }
+    &-xs {
+      font-size: $label-font-size-xs;
+    }
+    &-md {
+      font-size: $label-font-size-md;
+    }
+    &-lg {
+      font-size: $label-font-size-lg;
+    }
   }
 }

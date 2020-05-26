@@ -1,14 +1,16 @@
 @import 'variables';
 
 @import 'base';
-@import 'styles';
+@import 'icon';
+@import 'colors';
+@import 'text';
+@import 'outline';
+@import 'filled';
+@import 'shadow';
 
-// Layouts
 @import 'list';
 @import 'group';
 
-// Sizes
 @import 'sizes';
 
-// Moz hacks
 @import 'moz';
