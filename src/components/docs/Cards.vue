@@ -5,7 +5,7 @@
     <Example>
       <div class="card">
         <main class="card-body">
-          <h3 class="title">Card title</h3>
+          <h3 class="card-title">Card title</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
         <footer class="card-footer text-muted">
@@ -18,7 +18,7 @@
     <Example>
       <a class="card card-hover">
         <main class="card-body">
-          <h3 class="title">Card title</h3>
+          <h3 class="card-title">Card title</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
         <footer class="card-footer text-muted">
@@ -44,7 +44,7 @@
           </div>
         </aside>
         <main class="card-body">
-          <h4 class="title">Card title</h4>
+          <h4 class="card-title">Card title</h4>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
         <footer class="card-footer card-footer-space-between">
@@ -65,7 +65,7 @@
           <img class="card-media-image" :src="`${randomPhotoUrl}?random=borderless`" />
         </header>
         <main class="card-body">
-          <h2 class="title">Card title</h2>
+          <h2 class="card-title">Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
         <footer class="card-footer">
@@ -84,7 +84,7 @@
           <img class="card-media-image" :src="`${randomPhotoUrl}?random=shadow`" />
         </header>
         <main class="card-body">
-          <h2 class="title">Card title</h2>
+          <h2 class="card-title">Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
       </div>
@@ -97,7 +97,7 @@
           <img class="card-media-image" :src="`${randomPhotoUrl}?random=shadow-hover`" />
         </header>
         <main class="card-body">
-          <h2 class="title">Card title</h2>
+          <h2 class="card-title">Card title</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
         </main>
       </a>
@@ -108,7 +108,7 @@
       <div class="card-list card-list-example">
         <div class="card">
           <main class="card-body">
-            <h2 class="title">Card 1</h2>
+            <h2 class="card-title">Card 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
           <footer class="card-footer">
@@ -117,13 +117,13 @@
         </div>
         <div class="card">
           <main class="card-body">
-            <h2 class="title">Card 2</h2>
+            <h2 class="card-title">Card 2</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
         </div>
         <div class="card">
           <main class="card-body">
-            <h2 class="title">Card 3</h2>
+            <h2 class="card-title">Card 3</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
           <footer class="card-footer">
@@ -142,19 +142,19 @@
       <div class="card-grid card-grid-example">
         <div class="card">
           <main class="card-body">
-            <h2 class="title">Card 1</h2>
+            <h2 class="card-title">Card 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
         </div>
         <div class="card">
           <main class="card-body">
-            <h2 class="title">Card 2</h2>
+            <h2 class="card-title">Card 2</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
         </div>
         <div class="card">
           <main class="card-body">
-            <h2 class="title">Card 3</h2>
+            <h2 class="card-title">Card 3</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae qui culpa placeat! Velit in consequuntur maiores totam, distinctio a! Ipsam explicabo assumenda repellendus quae aliquid ducimus expedita dolor non architecto!</p>
           </main>
