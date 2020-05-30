@@ -85,6 +85,9 @@
           margin-top: 0;
           margin-bottom: 0;
         }
+        > * {
+          flex: 1 1 auto;
+        }
       }
       &-subheader {
         display: flex;
@@ -112,11 +115,19 @@
         font-size: $list-group-footer-font-size;
       }
       &-accessory {
+        flex: 0 0 auto;
+        line-break: normal;
         display: flex;
         align-items: center;
         text-transform: uppercase;
         text-decoration: none;
         color: $list-group-accessory-color;
+        &:first-child {
+          margin-right: $spacer-0750;
+        }
+        &:last-child {
+          margin-left: $spacer-0750;
+        }
         .action {
           font-size: $list-group-action-font-size;
           font-weight: $list-group-action-font-weight;
@@ -132,12 +143,6 @@
           margin: 0;
           padding: 0;
           transition: all 250ms ease;
-        }
-        &:first-child {
-          margin-right: $spacer-0750;
-        }
-        &:last-child {
-          margin-left: auto;
         }
         a.action,
         button.action {
