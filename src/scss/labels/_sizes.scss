@@ -2,9 +2,11 @@
   .label {
     &-sm {
       font-size: $label-font-size-sm;
+      border-radius: $label-border-radius-xs;
     }
     &-xs {
       font-size: $label-font-size-xs;
+      border-radius: $label-border-radius-xs;
     }
     &-md {
       font-size: $label-font-size-md;
