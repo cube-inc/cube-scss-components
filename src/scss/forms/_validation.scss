@@ -4,7 +4,7 @@
   .form-control {
     &.has-error,
     &:invalid:not(:placeholder-shown):not(select):not([type='checkbox']):not([type='radio']) {
-      border-color: $form-control-danger-color;
+      border-color: $form-control-color-danger;
     }
   }
   .validate {
@@ -12,7 +12,7 @@
     .form-control {
       &.has-error,
       &:invalid {
-        border-color: $form-control-danger-color;
+        border-color: $form-control-color-danger;
       }
     }
   }
