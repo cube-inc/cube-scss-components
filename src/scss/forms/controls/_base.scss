@@ -26,27 +26,27 @@
     }
     &:read-only:not(select):not(div):not([type='checkbox']):not([type='radio']) {
       cursor: default;
-      color: $form-control-muted-color;
+      color: $form-control-color-muted;
     }
     &.disabled,
     &:disabled {
       cursor: not-allowed;
-      color: $form-control-muted-color;
+      color: $form-control-color-muted;
       background-color: $form-control-background-color-disabled;
       opacity: 0.4; /* Safari already applies an opacity */
     }
     &::placeholder {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: $form-control-muted-color;
+      color: $form-control-color-muted;
       opacity: 1; /* Firefox */
     }
     &:-ms-input-placeholder {
       /* Internet Explorer 10-11 */
-      color: $form-control-muted-color;
+      color: $form-control-color-muted;
     }
     &::-ms-input-placeholder {
       /* Microsoft Edge */
-      color: $form-control-muted-color;
+      color: $form-control-color-muted;
     }
   }
 }

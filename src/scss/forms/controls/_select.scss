@@ -11,7 +11,7 @@
     padding-right: calc(#{$form-control-padding-x} + #{$background-size} + #{$form-control-padding-x});
     &:invalid {
       // Simulate placeholder
-      color: $form-control-muted-color;
+      color: $form-control-color-muted;
     }
     &:-moz-focusring {
       color: transparent !important;

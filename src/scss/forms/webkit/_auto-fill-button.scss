@@ -4,7 +4,7 @@
   input::-webkit-contacts-auto-fill-button,
   input::-webkit-credentials-auto-fill-button,
   input::-webkit-credit-card-auto-fill-button {
-    background-color: $form-control-muted-color;
+    background-color: $form-control-color-muted;
     transition: all 250ms ease;
     @media (hover: hover) {
       &:hover {

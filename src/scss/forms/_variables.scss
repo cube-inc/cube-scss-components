@@ -3,13 +3,13 @@ $form-enabled: true !default;
 $form-group-margin: $spacer-1750 0 !default;
 
 $form-control-color: var(--text-color, #{$text-color}) !default;
+$form-control-color-muted: var(--text-muted, #{$text-muted}) !default;
+$form-control-color-danger: var(--text-danger, #{$text-danger}) !default;
 $form-control-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $form-control-border-color-focus: var(--primary, #{$primary}) !default;
 $form-control-border-radius: $component-border-radius-sm !default;
 $form-control-background-color: var(--component-background-color, #{$component-background-color}) !default;
 $form-control-background-color-disabled: var(--component-background-color-disabled, #{$component-background-color-disabled}) !default;
-$form-control-muted-color: var(--text-muted, #{$text-muted}) !default;
-$form-control-danger-color: var(--text-danger, #{$text-danger}) !default;
 
 $form-control-padding-y: $component-padding-sm !default;
 $form-control-padding-x: $component-padding !default;
@@ -32,7 +32,7 @@ $form-switch-inner-padding: 2px !default;
 
 $form-control-select-arrow-image: var(
   --form-control-select-arrow-image,
-  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-muted-color}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>')
+  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-color-muted}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>')
 );
 
 @import 'controls/slider/variables';
