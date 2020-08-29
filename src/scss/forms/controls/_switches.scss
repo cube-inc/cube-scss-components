@@ -51,10 +51,10 @@
     & + .form-text {
       display: inline-block;
       font-weight: $form-control-font-weight;
-      padding-left: $spacer-0500;
+      padding-left: $form-control-spacer;
       vertical-align: middle;
       line-height: inherit;
-      max-width: calc(100% - #{$form-switch-size} - #{$spacer-0500});
+      max-width: calc(100% - #{$form-switch-size} - #{$form-control-spacer});
     }
   }
   input[type='radio'].form-control {
