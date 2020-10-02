@@ -20,6 +20,7 @@
     font-weight: $form-control-font-weight;
     line-height: $form-control-line-height;
     color: $form-control-color;
+    &.focus,
     &:focus:not(:disabled) {
       border-color: $form-control-border-color-focus;
       box-shadow: $form-control-ouline;
