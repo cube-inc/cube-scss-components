@@ -20,7 +20,7 @@
     text-align: center;
     white-space: nowrap;
     line-height: $button-line-height;
-    border-width: 1px;
+    border-width: $button-border-width;
     border-style: solid;
     border-radius: $button-border-radius;
     transition: $button-transition;

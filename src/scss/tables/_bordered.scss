@@ -2,13 +2,13 @@
 
 @if ($table-enabled) {
   .table-bordered {
-    border: $table-border-size solid $table-border-color;
+    border: $table-border-width solid $table-border-color;
     border-radius: $table-border-radius;
     > thead {
       > tr {
         > th,
         > td {
-          border: $table-border-size solid $table-border-color;
+          border: $table-border-width solid $table-border-color;
         }
       }
     }
@@ -16,7 +16,7 @@
       > tr {
         > th,
         > td {
-          border: $table-border-size solid $table-border-color;
+          border: $table-border-width solid $table-border-color;
         }
       }
     }
@@ -24,7 +24,7 @@
       > tr {
         > th,
         > td {
-          border: $table-border-size solid $table-border-color;
+          border: $table-border-width solid $table-border-color;
         }
       }
     }
