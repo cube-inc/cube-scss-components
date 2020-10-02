@@ -24,6 +24,7 @@
     border-style: solid;
     border-radius: $button-border-radius;
     transition: $button-transition;
+    touch-action: manipulation;
     @include mixins.button-colors(
       $color: var(--button-color, #{$button-color}),
       $color-hover: var(--button-color-hover, #{$button-color-hover}),
