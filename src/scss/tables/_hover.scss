@@ -5,7 +5,7 @@
     .table-hover {
       > tbody {
         > tr:hover {
-          transition: background-color 250ms ease;
+          transition: background-color $timing-fast ease;
           background-color: $table-cell-hover-background-color;
         }
       }

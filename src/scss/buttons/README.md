@@ -93,7 +93,7 @@ $button-min-width-xs: 80px !default;
 $button-min-width-sm: 100px !default;
 $button-min-width-md: 140px !default;
 $button-min-width-lg: 140px !default;
-$button-transition: all 100ms ease !default;
+$button-transition: all $timing-very-fast ease !default;
 
 // button colors
 $button-primary-color: $primary !default;

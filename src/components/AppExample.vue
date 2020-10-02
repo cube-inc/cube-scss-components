@@ -122,7 +122,7 @@ $code-attr-val-color: $red;
     padding: 4px 8px;
     font-size: 9px;
     text-transform: uppercase;
-    transition: all 250ms ease;
+    transition: all $timing-fast ease;
   }
   &-preview {
     overflow: auto;
@@ -130,7 +130,7 @@ $code-attr-val-color: $red;
     padding: $example-padding;
     color: $example-preview-color;
     background-color: $example-preview-background-color;
-    transition: all 250ms ease;
+    transition: all $timing-fast ease;
     &-transparency-grid {
       background-image: linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%),
         linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%);

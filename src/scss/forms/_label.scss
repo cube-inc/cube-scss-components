@@ -7,7 +7,7 @@
     cursor: pointer;
     color: inherit;
     line-height: $form-label-line-height;
-    transition: all 250ms ease;
+    transition: all $timing-fast ease;
     @media (hover: hover) {
       // &-hover { // Does not work very well
       //   margin: (-$spacer-sm) (-$spacer-sm);

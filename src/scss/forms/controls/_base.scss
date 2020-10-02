@@ -2,7 +2,7 @@
 
 @if ($form-enabled) {
   .form-control {
-    transition: all 0.2s;
+    transition: all $timing-fast ease;
     outline: none;
     appearance: none;
     box-shadow: none;

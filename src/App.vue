@@ -50,10 +50,10 @@ footer {
 <style lang="scss">
 .fade {
   &-enter-active {
-    transition: all 250ms ease;
+    transition: all $timing-fast ease;
   }
   &-leave-active {
-    transition: all 100ms ease;
+    transition: all $timing-very-fast ease;
   }
   &-enter,
   &-leave-to {

@@ -32,7 +32,7 @@ $button-padding-y: $component-padding-sm !default;
 $button-padding-x: $component-padding !default;
 $button-padding: $button-padding-y $button-padding-x !default;
 $button-min-width: 120px !default;
-$button-transition: all 100ms ease !default;
+$button-transition: all $timing-very-fast ease !default;
 
 ///
 /// Colors

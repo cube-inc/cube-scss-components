@@ -32,7 +32,7 @@
       bottom: $form-switch-inner-padding;
       left: $form-switch-inner-padding;
       border-radius: calc(#{$form-control-border-radius} - #{$form-switch-inner-padding});
-      transition: all 250ms ease;
+      transition: all $timing-fast ease;
     }
     &:checked {
       &::before {

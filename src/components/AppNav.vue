@@ -24,7 +24,7 @@
     padding: 4px 8px;
     margin: 0 -8px;
     border-radius: $component-border-radius;
-    transition: all 250ms ease;
+    transition: all $timing-fast ease;
     &:hover {
       text-decoration: none;
       background-color: var(--component-background-color-hover);

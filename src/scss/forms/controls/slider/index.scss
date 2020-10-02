@@ -53,7 +53,7 @@
       cursor: pointer;
       appearance: none;
       margin-top: round($slider-track-height/2 - $slider-thumb-height/2);
-      transition: all 100ms ease;
+      transition: all $timing-very-fast ease;
     }
     &::-moz-range-thumb {
       width: $slider-thumb-width;
@@ -62,7 +62,7 @@
       border-radius: $slider-thumb-border-radius;
       border: $slider-thumb-border;
       cursor: pointer;
-      transition: all 100ms ease;
+      transition: all $timing-very-fast ease;
     }
     &::-ms-thumb {
       margin: 0;
