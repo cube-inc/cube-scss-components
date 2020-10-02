@@ -11,7 +11,7 @@
     width: 100%;
     min-width: 0;
     border-radius: $form-control-border-radius;
-    border: 1px solid $form-control-border-color;
+    border: $form-control-border-width solid $form-control-border-color;
     background-color: $form-control-background-color;
     margin: 0;
     padding: $form-control-padding;

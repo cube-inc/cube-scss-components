@@ -5,6 +5,7 @@ $form-group-margin: $spacer-1750 0 !default;
 $form-control-color: var(--text-color, #{$text-color}) !default;
 $form-control-color-muted: var(--text-muted, #{$text-muted}) !default;
 $form-control-color-danger: var(--text-danger, #{$text-danger}) !default;
+$form-control-border-width: $component-border-width !default;
 $form-control-border-color: var(--component-border-color, #{$component-border-color}) !default;
 $form-control-border-color-focus: var(--primary, #{$primary}) !default;
 $form-control-border-radius: $component-border-radius-sm !default;
