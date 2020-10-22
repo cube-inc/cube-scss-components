@@ -52,7 +52,8 @@
         border-bottom-right-radius: $list-group-border-radius;
       }
       > a {
-        display: inline-block;
+        display: block;
+        overflow: auto; // Avoids margin collapse
         width: 100%;
         cursor: pointer;
         color: inherit;
