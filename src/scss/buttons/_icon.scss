@@ -1,22 +1,47 @@
 @import 'variables';
 
-@if ($button-enabled) {
-  .button {
+@if ($button-enabled and $button-icon-enabled) {
+  .button-icon {
+    padding: 0;
+    min-width: 0;
+    border: 0 none;
+    background: none;
     .icon {
-      display: block;
-      font-size: inherit;
-      height: $button-line-height;
-      width: $button-line-height;
-      object-fit: contain;
-      &-xs {
-        padding: ($button-line-height * 0.5 * 0.5) 0;
-        // height: $button-line-height * 0.5;
-        width: $button-line-height * 0.5;
+      height: $button-font-size * $button-icon-scale-ratio;
+      width: auto;
+    }
+    @if ($button-enabled and $button-size-enabled) {
+      &.button-xs {
+        padding: 0;
+        min-width: 0;
+        .icon {
+          height: $button-font-size-xs * $button-icon-scale-ratio;
+          width: $button-font-size-xs * $button-icon-scale-ratio;
+        }
       }
-      &-sm {
-        padding: ($button-line-height * 0.25 * 0.5) 0;
-        // height: $button-line-height * 0.75;
-        width: $button-line-height * 0.75;
+      &.button-sm {
+        padding: 0;
+        min-width: 0;
+        .icon {
+          height: $button-font-size-sm * $button-icon-scale-ratio;
+          width: $button-font-size-sm * $button-icon-scale-ratio;
+        }
+      }
+      &.button-md {
+        padding: 0;
+        min-width: 0;
+        .icon {
+          height: $button-font-size-md * $button-icon-scale-ratio;
+          width: $button-font-size-md * $button-icon-scale-ratio;
+        }
+      }
+      &.button-lg {
+        padding: 0;
+        min-width: 0;
+        .icon {
+          height: $button-font-size-lg * $button-icon-scale-ratio;
+          width: $button-font-size-lg * $button-icon-scale-ratio;
+        }
       }
     }
   }

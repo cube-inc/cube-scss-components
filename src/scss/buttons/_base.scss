@@ -50,6 +50,30 @@
     > * + * {
       margin-left: $spacer;
     }
+    > .icon {
+      display: block;
+      font-size: inherit;
+      height: $button-line-height;
+      width: $button-line-height;
+      object-fit: contain;
+      color: inherit;
+      &-fill {
+        fill: currentColor;
+      }
+      &-stroke {
+        stroke: currentColor;
+      }
+      &-xs {
+        padding: ($button-line-height * 0.5 * 0.5) 0;
+        // height: $button-line-height * 0.5;
+        width: $button-line-height * 0.5;
+      }
+      &-sm {
+        padding: ($button-line-height * 0.25 * 0.5) 0;
+        // height: $button-line-height * 0.75;
+        width: $button-line-height * 0.75;
+      }
+    }
   }
 
   ///

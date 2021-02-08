@@ -7,6 +7,7 @@
 
 $button-enabled: true !default;
 $button-size-enabled: true !default;
+$button-icon-enabled: true !default;
 $button-text-enabled: true !default;
 $button-outline-enabled: true !default;
 $button-filled-enabled: true !default;
@@ -52,6 +53,10 @@ $button-background-color: rgba($primary, 0.15) !default;
 $button-background-color-hover: color.scale($button-background-color, $lightness: 10%, $alpha: 10%) !default;
 $button-background-color-active: color.scale($button-background-color, $lightness: 5%, $alpha: 20%) !default;
 $button-background-color-disabled: color.scale($button-background-color, $saturation: -100%) !default;
+$button-icon-color: $primary !default;
+$button-icon-color-hover: color.scale($button-icon-color, $lightness: 10%, $alpha: 10%) !default;
+$button-icon-color-active: color.scale($button-icon-color, $lightness: 5%, $alpha: 20%) !default;
+$button-icon-color-disabled: color.scale($button-icon-color, $saturation: -100%) !default;
 
 // Secondary
 $button-secondary-color: $secondary !default;
@@ -112,6 +117,7 @@ $button-list-gap: 4px !default;
 /// Sizes
 ///
 $button-scale-ratio: utils.$ratio-major-third !default;
+$button-icon-scale-ratio: 3 !default;
 
 // button-xs
 $button-font-size-xs: utils.scale($button-font-size, -2, $button-scale-ratio) !default;

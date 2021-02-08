@@ -90,6 +90,10 @@
 /// @param {*} $color-hover [null]
 /// @param {*} $color-active [null]
 /// @param {*} $color-disabled [null]
+/// @param {*} $color-icon [null]
+/// @param {*} $color-icon-hover [null]
+/// @param {*} $color-icon-active [null]
+/// @param {*} $color-icon-disabled [null]
 /// @param {*} $border-color [null]
 /// @param {*} $border-color-hover [null]
 /// @param {*} $border-color-active [null]
@@ -107,20 +111,4 @@
   @each $name, $value in meta.keywords($vars) {
     @include button-css-var($name, $value);
   }
-  // --color: #{$color};
-  // --color-hover: #{$color-hover};
-  // --color-active: #{$color-active};
-  // --color-disabled: #{$color-disabled};
-  // --border-color: #{$border-color};
-  // --border-color-hover: #{$border-color-hover};
-  // --border-color-active: #{$border-color-active};
-  // --border-color-disabled: #{$border-color-disabled};
-  // --background-color: #{$background-color};
-  // --background-color-hover: #{$background-color-hover};
-  // --background-color-active: #{$background-color-active};
-  // --background-color-disabled: #{$background-color-disabled};
-  // --box-shadow: #{$box-shadow};
-  // --box-shadow-hover: #{$box-shadow-hover};
-  // --box-shadow-active: #{$box-shadow-active};
-  // --box-shadow-disabled: #{$box-shadow-disabled};
 }
