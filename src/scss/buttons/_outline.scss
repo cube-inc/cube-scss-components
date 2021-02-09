@@ -1,0 +1,24 @@
+@use 'mixins';
+@import 'variables';
+
+@if ($button-enabled and $button-outline-enabled) {
+  .button-outline {
+    @include mixins.button-css-vars(
+      $border-color: $button-outline-border-color,
+      $border-color-disabled: $button-outline-border-color,
+      $background-color: $button-outline-background-color,
+      $background-color-disabled: $button-outline-background-color
+    );
+    @if ($button-white-enabled) {
+      &.button-white {
+        @include mixins.button-css-vars(
+          $border-color: $white,
+          $border-color-hover: $white,
+          $border-color-active: $white,
+          $border-color-disabled: $white,
+          $background-color: transparent
+        );
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+$pagination-enabled: true !default;
+
+$pagination-line-height: $line-height-base !default;
+$pagination-font-size: $font-size-sm !default;
+$pagination-font-family: $font-family-base !default;
+
+$pagination-color: var(--component-color, #{$component-color}) !default;
+$pagination-color-hover: var(--component-color, #{$component-color}) !default;
+$pagination-color-focus: $pagination-color-hover !default;
+$pagination-color-disabled: var(--text-muted, #{$text-muted}) !default;
+
+$pagination-border-width: $component-border-width !default;
+$pagination-border-radius: $component-border-radius !default;
+
+$pagination-border-color: var(--component-border-color, #{$component-border-color}) !default;
+$pagination-border-color-hover: var(--component-border-color, #{$component-border-color}) !default;
+$pagination-border-color-focus: $pagination-border-color-hover !default;
+
+$pagination-background-color: var(--component-background-color, #{$component-background-color}) !default;
+$pagination-background-color-hover: var(--component-background-color-hover, #{$component-background-color-hover}) !default;
+$pagination-background-color-focus: $pagination-background-color-hover !default;
+
+$pagination-active-box-shadow: 0.125rem 0.125rem 0.5rem rgba(black, 0.15) inset !default;
+
+$pagination-padding-y: $component-padding-sm !default;
+$pagination-padding-x: $component-padding !default;
+$pagination-padding: $pagination-padding-y $pagination-padding-x !default;

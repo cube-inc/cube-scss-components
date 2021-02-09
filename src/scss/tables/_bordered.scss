@@ -1,0 +1,32 @@
+@import 'variables';
+
+@if ($table-enabled) {
+  .table-bordered {
+    border: $table-border-width solid $table-border-color;
+    border-radius: $table-border-radius;
+    > thead {
+      > tr {
+        > th,
+        > td {
+          border: $table-border-width solid $table-border-color;
+        }
+      }
+    }
+    > tbody {
+      > tr {
+        > th,
+        > td {
+          border: $table-border-width solid $table-border-color;
+        }
+      }
+    }
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border: $table-border-width solid $table-border-color;
+        }
+      }
+    }
+  }
+}

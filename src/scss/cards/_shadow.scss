@@ -1,0 +1,7 @@
+@import 'variables';
+
+@if ($card-enabled) {
+  .card-shadow {
+    box-shadow: $card-box-shadow;
+  }
+}

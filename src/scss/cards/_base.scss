@@ -1,0 +1,28 @@
+@import 'variables';
+
+@if ($card-enabled) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: $card-border-radius;
+    border: $card-border-size solid $card-border-color;
+    background-color: $card-background-color;
+    color: $card-text-color;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 0; // with position: relative, avoid img transition issue with border-radius (overflow not hidden has expected)
+    transition: all $timing-fast ease, box-shadow $timing-very-fast ease;
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  a.card {
+    color: inherit;
+    text-decoration: none;
+  }
+}

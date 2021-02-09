@@ -1,108 +1,19 @@
-// Colors
-$navy:   #1a004f !default;
-$blue:   #2c00ca !default;
-$indigo: #738cff !default;
-$purple: #6f42c1 !default;
-$pink:   #e83e8c !default;
-$red:    #ff405e !default;
-$orange: #fd7e14 !default;
-$yellow: #f2d30c !default;
-$green:  #28a745 !default;
-$teal:   #20c997 !default;
-$cyan:   #17a2b8 !default;
-
-// Grays
-$gray-020: hsl(210, 10%,  98%) !default;
-$gray-050: hsl(210, 10%,  95%) !default;
-$gray-070: hsl(210, 10%,  93%) !default;
-$gray-100: hsl(210, 10%,  90%) !default;
-$gray-200: hsl(210, 10%,  80%) !default;
-$gray-300: hsl(210, 10%,  70%) !default;
-$gray-400: hsl(210, 10%,  60%) !default;
-$gray-500: hsl(210, 10%,  50%) !default;
-$gray-600: hsl(210, 10%,  40%) !default;
-$gray-700: hsl(210, 10%,  30%) !default;
-$gray-800: hsl(210, 10%,  20%) !default;
-$gray-900: hsl(210, 10%,  10%) !default;
-
-// Brand colors
-$brand-primary:   $blue !default;
-$brand-secondary: $yellow !default;
-$brand-success:   $teal !default;
-$brand-info:      $indigo !default;
-$brand-warning:   $yellow !default;
-$brand-danger:    $red !default;
-
-// Text
-$text-color: rgba(black, .9) !default;
-$text-muted: mix(rgba($text-color, .8), white) !default;
-$text-success: $brand-success !default;
-$text-info: $brand-info !default;
-$text-warning: $brand-warning !default;
-$text-danger: $brand-danger !default;
-$link-color: $red !default;
-
-// Font families
-$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"  !default;
-$font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-headings: $font-family-base !default;
-$font-family-h1: $font-family-headings !default;
-$font-family-h2: $font-family-headings !default;
-$font-family-h3: $font-family-headings !default;
-$font-family-h4: $font-family-headings !default;
-$font-family-h5: $font-family-headings !default;
-$font-family-h6: $font-family-headings !default;
-$font-variant-numeric: normal !default;
-
-// Font sizes
-$font-size-base: 1em !default;
-$font-size-sm: $font-size-base * .875 !default;
-$font-size-xs: $font-size-base * .625 !default;
-$font-size-lead: 120% !default;
-$font-size-code: $font-size-base * .875 !default;
-$font-size-code-block: $font-size-base * .75 !default;
-$font-size-h1: $font-size-base * 3 !default;
-$font-size-h2: $font-size-base * 2 !default;
-$font-size-h3: $font-size-base * 1.5 !default;
-$font-size-h4: $font-size-base !default;
-$font-size-h5: $font-size-base !default;
-$font-size-h6: $font-size-base !default;
-
-// Line heights
-$line-height-base: 1.5 !default;
-$line-height-headings: $line-height-base !default;
-
-// Font weights
-$font-weight-base: 400 !default;
-$font-weight-medium: 500 !default;
-$font-weight-semibold: 600 !default;
-$font-weight-bold: 700 !default;
-$font-weight-headings: $font-weight-bold !default;
-$font-weight-h1: $font-weight-headings !default;
-$font-weight-h2: $font-weight-headings !default;
-$font-weight-h3: $font-weight-headings !default;
-$font-weight-h4: $font-weight-headings !default;
-$font-weight-h5: $font-weight-headings !default;
-$font-weight-h6: $font-weight-headings !default;
-
-// Margins
-$paragraph-margin-top: 1em !default;
-$paragraph-margin-bottom: 1em !default;
-$headings-margin-top: 1em !default;
-$headings-margin-bottom: 1em !default;
+@import 'spacers';
+@import 'breakpoints';
+@import 'timing';
+@import 'colors/variables';
+@import 'reset/variables';
+@import 'types/variables';
 
 // Components
-$component-border-size: 1px !default;
-$component-border-color: $gray-100 !default;
-$component-bg-color: white !default;
-$component-filter-saturate: 300% !default;
-$component-filter-blur: 20px !default;
-$component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;
-$component-border-radius: 6px !default;
-$component-border-radius-sm: 3px !default;
-$component-padding-y: 12px !default;
-$component-padding-x: 16px !default;
-$component-padding: $component-padding-y $component-padding-x !default;
-$component-box-shadow: 0px 3px 6px -2px $gray-700 !default;
-$component-outline-color: rgba(black, .2) !default;
-$component-outline: 0 0 1rem $component-outline-color !default;
+@import 'component';
+@import 'badges/variables';
+@import 'bullets/variables';
+@import 'buttons/variables';
+@import 'cards/variables';
+@import 'forms/variables';
+@import 'labels/variables';
+@import 'layouts/variables';
+@import 'list-group/variables';
+@import 'pagination/variables';
+@import 'tables/variables';

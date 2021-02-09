@@ -1,0 +1,23 @@
+@import 'variables';
+
+@if ($bullet-enabled) {
+  .bullet {
+    display: inline-block;
+    width: $bullet-size;
+    height: $bullet-size;
+    background-color: $bullet-color;
+    border-radius: 50%;
+    &-success {
+      background-color: $success;
+    }
+    &-info {
+      background-color: $info;
+    }
+    &-warning {
+      background-color: $warning;
+    }
+    &-danger {
+      background-color: $danger;
+    }
+  }
+}

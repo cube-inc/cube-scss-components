@@ -1,0 +1,53 @@
+@import 'variables';
+
+@mixin dark-color-scheme {
+  --primary: #{$primary-dark};
+  --secondary: #{$secondary-dark};
+  --success: #{$success-dark};
+  --info: #{$info-dark};
+  --warning: #{$warning-dark};
+  --danger: #{$danger-dark};
+
+  --body-color: #{$body-color-dark};
+  --body-background-color: #{$body-background-color-dark};
+  --tap-highlight-color: #{$tap-highlight-color-dark};
+
+  --text-color: #{$text-color-dark};
+  --text-muted: #{$text-muted-dark};
+  --text-success: #{$text-success-dark};
+  --text-info: #{$text-info-dark};
+  --text-warning: #{$text-warning-dark};
+  --text-danger: #{$text-danger-dark};
+  --link-color: #{$link-color-dark};
+  --code-color: #{$code-color-dark};
+  --code-block-color: #{$code-block-color-dark};
+  --code-background-color: #{$code-background-color-dark};
+
+  --component-color: #{$component-color-dark};
+  --component-border-color: #{$component-border-color-dark};
+  --component-background-color: #{$component-background-color-dark};
+  --component-background-color-disabled: #{$component-background-color-disabled-dark};
+  --component-background-color-alt: #{$component-background-color-alt-dark};
+  --component-box-shadow-color: #{$component-box-shadow-color-dark};
+  --component-backdrop-background-color: #{$component-backdrop-background-color-dark};
+
+  --label-background-color: #{$label-background-color-dark};
+
+  --form-control-select-arrow-image: #{$form-control-select-arrow-image-dark};
+}
+
+@if ($color-enabled) {
+  @if ($dark-color-scheme-enabled) {
+    .dark-color-scheme {
+      @include dark-color-scheme;
+    }
+  }
+
+  @if ($prefers-color-scheme-enabled) {
+    @media (prefers-color-scheme: dark) {
+      :root {
+        @include dark-color-scheme;
+      }
+    }
+  }
+}

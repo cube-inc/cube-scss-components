@@ -1,0 +1,11 @@
+@import 'variables';
+
+@if ($card-enabled) {
+  .card-body {
+    padding: 0 $card-padding;
+    flex-grow: 1;
+    .card-title {
+      margin: $card-title-margin 0;
+    }
+  }
+}

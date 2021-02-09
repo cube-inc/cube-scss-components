@@ -1,0 +1,21 @@
+@import '../variables';
+
+@if ($form-enabled) {
+  .form-group {
+    min-width: 0; // override user-agent stylesheet in webkit for fieldset
+    margin: $form-group-margin;
+    padding: 0;
+    display: block;
+    position: relative;
+    border: 0 none;
+    // &:first-child {
+    //   margin-top: 0;
+    // }
+    > .form-text {
+      display: block;
+    }
+  }
+}
+
+@import 'stacked';
+@import 'inline';
