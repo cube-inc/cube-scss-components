@@ -5,6 +5,8 @@
   .button-outline {
     @include mixins.button-css-vars(
       $border-color: $button-outline-border-color,
+      $border-color-hover: $button-outline-border-color,
+      $border-color-active: $button-outline-border-color,
       $border-color-disabled: $button-outline-border-color,
       $background-color: $button-outline-background-color,
       $background-color-disabled: $button-outline-background-color
