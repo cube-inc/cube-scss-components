@@ -94,6 +94,7 @@ $button-white-background-color: rgba($white, 0.15) !default;
 
 // button-outline
 $button-outline-border-color: var(--component-border-color, #{$component-border-color}) !default;
+$button-outline-border-color-disabled: var(--component-border-color, #{$component-border-color}) !default;
 $button-outline-background-color: transparent !default;
 
 // button-filled
