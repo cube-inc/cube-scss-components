@@ -1,6 +1,7 @@
 @import '../variables';
 
 @if ($form-enabled) {
+  .select.form-control,
   select.form-control {
     $background-size: $form-control-line-height;
     cursor: pointer;
