@@ -34,11 +34,6 @@
       border-radius: calc(#{$form-control-border-radius} - #{$form-switch-inner-padding});
       transition: all $timing-fast ease;
     }
-    &:checked {
-      &::before {
-        background-color: $form-switch-active-color;
-      }
-    }
     &:disabled {
       cursor: not-allowed;
       &::before {
@@ -46,6 +41,11 @@
       }
       & + .form-text {
         cursor: not-allowed;
+      }
+    }
+    &:checked {
+      &::before {
+        background-color: $form-switch-active-color;
       }
     }
     & + .form-text {
