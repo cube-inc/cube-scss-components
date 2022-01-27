@@ -1,6 +1,7 @@
 @import '../variables';
 
 @if ($form-enabled) {
+  input.form-control,
   .form-control {
     transition: all $timing-fast ease;
     outline: none;
@@ -21,18 +22,17 @@
     line-height: $form-control-line-height;
     color: $form-control-color;
     &.focus,
-    &:focus:not(:disabled) {
+    &:focus:not(:disabled):not(.disabled) {
       border-color: $form-control-border-color-focus;
       box-shadow: $form-control-ouline;
     }
-    &:read-only:not(select):not(div):not([type='checkbox']):not([type='radio']) {
+    &:read-only:not(:disabled):not(.disabled):not(select):not(.select):not(div):not([type='checkbox']):not([type='radio']) {
       cursor: default;
       color: $form-control-color-muted;
     }
     &.disabled,
     &:disabled {
       cursor: not-allowed;
-      color: $form-control-color-muted;
       background-color: $form-control-background-color-disabled;
       opacity: 0.4; /* Safari already applies an opacity */
     }
