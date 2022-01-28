@@ -1,7 +1,6 @@
 @import '../variables';
 
 @if ($form-enabled) {
-  input.form-control,
   .form-control {
     transition: all $timing-fast ease;
     outline: none;

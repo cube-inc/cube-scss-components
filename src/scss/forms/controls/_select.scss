@@ -4,12 +4,14 @@
   .select.form-control,
   select.form-control {
     $background-size: $form-control-line-height;
-    cursor: pointer;
     background-position: right $form-control-padding-x center;
     background-repeat: no-repeat;
     background-size: $background-size;
     background-image: $form-control-select-arrow-image;
     padding-right: calc(#{$form-control-padding-x} + #{$background-size} + #{$form-control-padding-x});
+    &:not(:disabled):not(.disabled) {
+      cursor: pointer;
+    }
     &:invalid {
       // Simulate placeholder
       color: $form-control-color-muted;
