@@ -1,3 +1,4 @@
+@use "sass:math";
 @import 'variables';
 
 @if ($form-enabled) {
@@ -52,7 +53,7 @@
       border: $slider-thumb-border;
       cursor: pointer;
       appearance: none;
-      margin-top: round($slider-track-height/2 - $slider-thumb-height/2);
+      margin-top: math.round(math.div($slider-track-height, 2) - math.div($slider-thumb-height, 2));
       transition: all $timing-very-fast ease;
     }
     &::-moz-range-thumb {

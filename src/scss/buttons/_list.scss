@@ -1,14 +1,15 @@
+@use "sass:math";
 @import 'variables';
 
 @if ($button-enabled) {
   .button-list {
-    margin: -$button-list-gap / 2;
+    margin: math.div(-$button-list-gap, 2);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     > .button,
     > .button-group {
-      margin: $button-list-gap / 2;
+      margin: math.div($button-list-gap, 2);
     }
     &-column {
       flex-direction: column;
