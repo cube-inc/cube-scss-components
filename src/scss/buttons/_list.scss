@@ -13,6 +13,7 @@
     }
     &-column {
       flex-direction: column;
+      flex-wrap: nowrap;
     }
     &-left {
       justify-content: flex-start;
