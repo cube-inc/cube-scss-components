@@ -15,6 +15,7 @@ $list-group-subheader-color: var(--text-muted, #{$text-muted}) !default;
 $list-group-subheader-padding: $component-padding-lg $component-padding $component-padding-sm $component-padding !default;
 $list-group-subheader-font-size: $font-size-sm !default;
 
+$list-group-accessory-text-transform: uppercase !default;
 $list-group-accessory-color: var(--text-muted, #{$text-muted}) !default;
 $list-group-accessory-color-hover: var(--link-color, #{$link-color}) !default;
 $list-group-action-font-size: $font-size-xs !default;

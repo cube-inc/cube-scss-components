@@ -120,7 +120,7 @@
         line-break: normal;
         display: flex;
         align-items: center;
-        text-transform: uppercase;
+        text-transform: $list-group-accessory-text-transform;
         text-decoration: none;
         color: $list-group-accessory-color;
         &:first-child {
