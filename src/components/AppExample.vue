@@ -93,6 +93,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use 'sass:math';
 @import '~@/scss/variables';
 $example-padding: 16px !default;
 $example-color: var(--component-color, #{$component-color}) !default;
@@ -135,7 +136,7 @@ $code-attr-val-color: $red;
       background-image: linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%),
         linear-gradient(45deg, rgba($gray-300, 0.05) 25%, transparent 25%, transparent 75%, rgba($gray-300, 0.05) 75%);
       background-size: $example-preview-background-square-size $example-preview-background-square-size;
-      background-position: 0 0, ($example-preview-background-square-size / 2) ($example-preview-background-square-size / 2);
+      background-position: 0 0, math.div($example-preview-background-square-size, 2) math.div($example-preview-background-square-size, 2);
     }
     &-background-dark {
       background-color: $example-preview-background-color-dark;
