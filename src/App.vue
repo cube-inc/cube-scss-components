@@ -48,6 +48,7 @@ footer {
 </style>
 
 <style lang="scss">
+@import '~@/scss/variables';
 .fade {
   &-enter-active {
     transition: all $timing-fast ease;
