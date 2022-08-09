@@ -20,33 +20,56 @@
     font-weight: $form-control-font-weight;
     line-height: $form-control-line-height;
     color: $form-control-color;
+  }
+
+  ///
+  /// Placeholder
+  ///
+  .form-control {
+    &::-ms-input-placeholder,
+    &:-ms-input-placeholder,
+    &::placeholder {
+      color: $form-control-color-muted;
+      opacity: 1;
+    }
+  }
+
+  ///
+  /// Focus
+  ///
+  .form-control {
     &.focus,
-    &:focus:not(:disabled):not(.disabled) {
+    &:focus {
       border-color: $form-control-border-color-focus;
       box-shadow: $form-control-ouline;
     }
-    &:read-only:not(:disabled):not(.disabled):not(select):not(.select):not(div):not([type='checkbox']):not([type='radio']) {
-      cursor: default;
-      color: $form-control-color-muted;
-    }
+  }
+
+  ///
+  /// Readonly
+  ///
+  .form-control.read-only,
+  input.form-control:read-only,
+  textarea.form-control:read-only {
+    cursor: default;
+    color: $form-control-color-muted;
+    border: $form-control-border-width solid $form-control-border-color;
+    background-color: $form-control-background-color;
+    box-shadow: none;
+  }
+
+  ///
+  /// Disabled
+  ///
+  .form-control {
     &.disabled,
     &:disabled {
       cursor: not-allowed;
+      color: $form-control-color;
+      border: $form-control-border-width solid $form-control-border-color;
       background-color: $form-control-background-color-disabled;
       opacity: 0.4; /* Safari already applies an opacity */
-    }
-    &::placeholder {
-      /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: $form-control-color-muted;
-      opacity: 1; /* Firefox */
-    }
-    &:-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
-      color: $form-control-color-muted;
-    }
-    &::-ms-input-placeholder {
-      /* Microsoft Edge */
-      color: $form-control-color-muted;
+      box-shadow: none;
     }
   }
 }
