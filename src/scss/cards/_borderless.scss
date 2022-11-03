@@ -1,0 +1,26 @@
+@use "sass:math";
+@import 'variables';
+
+@if ($card-enabled) {
+  .card {
+    &-borderless {
+      border: 0 none;
+      .card-footer {
+        border-top: 0 none;
+      }
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin: math.div(-$card-list-gap, 2);
+      > .card {
+        margin: math.div($card-list-gap, 2);
+      }
+    }
+    &-grid {
+      display: grid;
+      grid-gap: $card-list-gap;
+    }
+  }
+}

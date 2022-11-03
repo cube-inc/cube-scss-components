@@ -1,0 +1,76 @@
+@import 'variables';
+
+@if ($pagination-enabled) {
+  // Hover for supported devices
+  @media (hover: hover) {
+    .pagination {
+      .page {
+        &-button {
+          &:hover:not(:disabled) {
+            z-index: 2;
+            text-decoration: none;
+            color: $pagination-color-hover;
+            background-color: $pagination-background-color-hover;
+            border-color: $pagination-border-color-hover;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    .page {
+      &-item {
+        outline: none;
+        position: relative;
+        display: block;
+        padding: $pagination-padding;
+        margin: 0 0 0 (-$pagination-border-width);
+        line-height: $pagination-line-height;
+        font-size: $pagination-font-size;
+        font-family: $pagination-font-family;
+        text-align: center;
+        color: $pagination-color;
+        background-color: $pagination-background-color;
+        border: $pagination-border-width solid $pagination-border-color;
+        &:first-child {
+          margin-left: 0;
+          border-top-left-radius: $pagination-border-radius;
+          border-bottom-left-radius: $pagination-border-radius;
+        }
+        &:last-child {
+          border-top-right-radius: $pagination-border-radius;
+          border-bottom-right-radius: $pagination-border-radius;
+        }
+      }
+      &-button {
+        text-transform: uppercase;
+        transition: all $timing-fast ease, box-shadow $timing-very-fast ease;
+        &:focus:not(:disabled) {
+          z-index: 2;
+          text-decoration: none;
+          color: $pagination-color-focus;
+          background-color: $pagination-background-color-focus;
+          border-color: $pagination-border-color-focus;
+        }
+        &:active:not(:disabled) {
+          box-shadow: $pagination-active-box-shadow;
+        }
+        .disabled,
+        &:disabled {
+          color: $pagination-color-disabled;
+        }
+        &:not(:disabled) {
+          cursor: pointer;
+        }
+      }
+      &-info {
+        flex-grow: 1;
+        flex-basis: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+}

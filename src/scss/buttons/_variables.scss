@@ -1,0 +1,141 @@
+@use 'sass:color';
+@use '../utils';
+
+///
+/// Config
+///
+
+$button-enabled: true !default;
+$button-size-enabled: true !default;
+$button-icon-enabled: true !default;
+$button-text-enabled: true !default;
+$button-outline-enabled: true !default;
+$button-filled-enabled: true !default;
+$button-shadow-enabled: true !default;
+$button-secondary-enabled: true !default;
+$button-success-enabled: true !default;
+$button-info-enabled: true !default;
+$button-warning-enabled: true !default;
+$button-danger-enabled: true !default;
+$button-white-enabled: true !default;
+
+///
+/// Base
+///
+
+$button-font-family: inherit !default;
+$button-font-size: $font-size-base !default;
+$button-font-weight: 500 !default;
+$button-line-height: 1.5em !default;
+$button-text-transform: uppercase !default;
+$button-border-width: $component-border-width !default;
+$button-border-radius: $component-border-radius-sm !default;
+$button-padding-y: $component-padding-sm !default;
+$button-padding-x: $component-padding !default;
+$button-padding: $button-padding-y $button-padding-x !default;
+$button-min-width: 120px !default;
+$button-transition: all $timing-very-fast ease !default;
+
+///
+/// Colors
+///
+
+// Default
+$button-color: $primary !default;
+$button-color-hover: $primary !default;
+$button-color-active: $primary !default;
+$button-color-disabled: color.grayscale($primary) !default;
+$button-border-color: transparent !default;
+$button-border-color-hover: transparent !default;
+$button-border-color-active: transparent !default;
+$button-border-color-disabled: transparent !default;
+$button-background-color: rgba($primary, 0.15) !default;
+$button-background-color-hover: color.scale($button-background-color, $lightness: 10%, $alpha: 10%) !default;
+$button-background-color-active: color.scale($button-background-color, $lightness: 5%, $alpha: 20%) !default;
+$button-background-color-disabled: color.scale($button-background-color, $saturation: -100%) !default;
+$button-icon-color: $primary !default;
+$button-icon-color-hover: color.scale($button-icon-color, $lightness: 10%, $alpha: 10%) !default;
+$button-icon-color-active: color.scale($button-icon-color, $lightness: 5%, $alpha: 20%) !default;
+$button-icon-color-disabled: color.scale($button-icon-color, $saturation: -100%) !default;
+
+// Secondary
+$button-secondary-color: $secondary !default;
+$button-secondary-border-color: transparent !default;
+$button-secondary-background-color: rgba($secondary, 0.15) !default;
+
+// Success
+$button-success-color: $success !default;
+$button-success-border-color: transparent !default;
+$button-success-background-color: rgba($success, 0.15) !default;
+
+// Info
+$button-info-color: $info !default;
+$button-info-border-color: transparent !default;
+$button-info-background-color: rgba($info, 0.15) !default;
+
+// Warning
+$button-warning-color: $warning !default;
+$button-warning-border-color: transparent !default;
+$button-warning-background-color: rgba($warning, 0.15) !default;
+
+// Danger
+$button-danger-color: $danger !default;
+$button-danger-border-color: transparent !default;
+$button-danger-background-color: rgba($danger, 0.15) !default;
+
+// White
+$button-white-color: $white !default;
+$button-white-border-color: transparent !default;
+$button-white-background-color: rgba($white, 0.15) !default;
+
+///
+/// Styles
+///
+
+// button-outline
+$button-outline-border-color: var(--component-border-color, #{$component-border-color}) !default;
+$button-outline-border-color-disabled: var(--component-border-color, #{$component-border-color}) !default;
+$button-outline-background-color: transparent !default;
+
+// button-filled
+$button-filled-color: $white !default;
+$button-filled-color-disabled: lighten(grayscale($button-filled-color), 25%) !default;
+$button-filled-background-color: $primary !default;
+$button-filled-background-color-disabled: lighten(grayscale($button-filled-background-color), 25%) !default;
+
+// button-shadow
+$button-box-shadow: $component-box-shadow !default;
+$button-box-shadow-hover: $component-box-shadow-hover !default;
+$button-box-shadow-active: $component-box-shadow-active !default;
+$button-box-shadow-disabled: $component-box-shadow !default;
+
+///
+/// button-list
+///
+$button-list-gap: 4px !default;
+
+///
+/// Sizes
+///
+$button-scale-ratio: utils.$ratio-major-third !default;
+$button-icon-scale-ratio: 3 !default;
+
+// button-xs
+$button-font-size-xs: utils.scale($button-font-size, -2, $button-scale-ratio) !default;
+$button-padding-xs: utils.scale($button-padding-y, -2, $button-scale-ratio) utils.scale($button-padding-x, -2, $button-scale-ratio) !default;
+$button-min-width-xs: utils.scale($button-min-width, -2, $button-scale-ratio) !default;
+
+// button-sm
+$button-font-size-sm: utils.scale($button-font-size, -1, $button-scale-ratio) !default;
+$button-padding-sm: utils.scale($button-padding-y, -1, $button-scale-ratio) utils.scale($button-padding-x, -1, $button-scale-ratio) !default;
+$button-min-width-sm: utils.scale($button-min-width, -1, $button-scale-ratio) !default;
+
+// button-md
+$button-font-size-md: utils.scale($button-font-size, 1, $button-scale-ratio) !default;
+$button-padding-md: utils.scale($button-padding-y, 1, $button-scale-ratio) utils.scale($button-padding-x, 1, $button-scale-ratio) !default;
+$button-min-width-md: utils.scale($button-min-width, 1, $button-scale-ratio) !default;
+
+// button-lg
+$button-font-size-lg: utils.scale($button-font-size, 2, $button-scale-ratio) !default;
+$button-padding-lg: utils.scale($button-padding-y, 2, $button-scale-ratio) utils.scale($button-padding-x, 2, $button-scale-ratio) !default;
+$button-min-width-lg: utils.scale($button-min-width, 2, $button-scale-ratio) !default;

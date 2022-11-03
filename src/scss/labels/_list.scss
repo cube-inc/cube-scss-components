@@ -1,0 +1,6 @@
+@if ($label-enabled) {
+  .label-list {
+    display: flex;
+    align-items: center;
+  }
+}

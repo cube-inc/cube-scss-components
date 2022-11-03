@@ -1,0 +1,16 @@
+$badge-enabled: true !default;
+
+$badge-size: 24px !default;
+$badge-font-size: $font-size-xs !default;
+$badge-font-weight: $font-weight-base !default;
+$badge-border-radius: 50% !default;
+$badge-color: rgba($white, 0.9) !default;
+$badge-background-color: $gray-400 !default;
+$badge-success-background-color: var(--success, #{$success}) !default;
+$badge-success-color: $white !default;
+$badge-info-background-color: var(--info, #{$info}) !default;
+$badge-info-color: $white !default;
+$badge-warning-background-color: var(--warning, #{$warning}) !default;
+$badge-warning-color: $white !default;
+$badge-danger-background-color: var(--danger, #{$danger}) !default;
+$badge-danger-color: $white !default;

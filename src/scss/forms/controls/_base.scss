@@ -1,0 +1,75 @@
+@import '../variables';
+
+@if ($form-enabled) {
+  .form-control {
+    transition: all $timing-fast ease;
+    outline: none;
+    appearance: none;
+    box-shadow: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    border-radius: $form-control-border-radius;
+    border: $form-control-border-width solid $form-control-border-color;
+    background-color: $form-control-background-color;
+    margin: 0;
+    padding: $form-control-padding;
+    font-size: $form-control-font-size;
+    font-family: $form-control-font-family;
+    font-weight: $form-control-font-weight;
+    line-height: $form-control-line-height;
+    color: $form-control-color;
+  }
+
+  ///
+  /// Placeholder
+  ///
+  .form-control {
+    &::-ms-input-placeholder,
+    &:-ms-input-placeholder,
+    &::placeholder {
+      color: $form-control-color-muted;
+      opacity: 1;
+    }
+  }
+
+  ///
+  /// Focus
+  ///
+  .form-control {
+    &.focus,
+    &:focus {
+      border-color: $form-control-border-color-focus;
+      box-shadow: $form-control-ouline;
+    }
+  }
+
+  ///
+  /// Readonly
+  ///
+  .form-control.read-only,
+  input.form-control:read-only,
+  textarea.form-control:read-only {
+    cursor: default;
+    color: $form-control-color-muted;
+    border: $form-control-border-width solid $form-control-border-color;
+    background-color: $form-control-background-color;
+    box-shadow: none;
+  }
+
+  ///
+  /// Disabled
+  ///
+  .form-control {
+    &.disabled,
+    &:disabled {
+      cursor: not-allowed;
+      color: $form-control-color;
+      border: $form-control-border-width solid $form-control-border-color;
+      background-color: $form-control-background-color-disabled;
+      opacity: 0.4; /* Safari already applies an opacity */
+      box-shadow: none;
+    }
+  }
+}

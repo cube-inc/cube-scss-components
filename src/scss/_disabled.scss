@@ -1,0 +1,84 @@
+///
+/// Badges
+///
+$badge-enabled: false !default;
+
+///
+/// Bullets
+///
+$bullet-enabled: false !default;
+
+///
+/// Buttons
+///
+$button-enabled: false !default;
+
+// Styles
+$button-size-enabled: false !default;
+$button-icon-enabled: false !default;
+$button-text-enabled: false !default;
+$button-outline-enabled: false !default;
+$button-filled-enabled: false !default;
+$button-shadow-enabled: false !default;
+
+// Colors
+$button-secondary-enabled: false !default;
+$button-success-enabled: false !default;
+$button-info-enabled: false !default;
+$button-warning-enabled: false !default;
+$button-danger-enabled: false !default;
+$button-white-enabled: false !default;
+
+///
+/// Cards
+///
+$card-enabled: false !default;
+
+///
+/// Colors
+///
+$color-enabled: false !default;
+
+// Enable to write the .dark-color-scheme css class
+$dark-color-scheme-enabled: false !default;
+
+// Switch to the same color scheme as the system
+$prefers-color-scheme-enabled: $dark-color-scheme-enabled !default;
+
+///
+/// Forms
+///
+$form-enabled: false !default;
+
+///
+/// Labels
+///
+$label-enabled: false !default;
+
+///
+/// Layouts
+///
+$layout-enabled: false !default;
+
+///
+/// List group
+///
+$list-group-enabled: false !default;
+
+///
+/// Pagination
+///
+$pagination-enabled: false !default;
+
+///
+/// Table
+///
+$table-enabled: false !default;
+
+///
+/// Types
+///
+$type-enabled: false !default;
+
+// Font sizes adapted for xs screens
+$type-responsive-fonts-enabled: false !default;

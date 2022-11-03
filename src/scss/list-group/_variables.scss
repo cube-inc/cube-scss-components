@@ -1,0 +1,25 @@
+$list-group-enabled: true !default;
+
+$list-group-padding: $component-padding-sm $component-padding !default;
+$list-group-margin: 0 !default;
+
+$list-group-color: var(--component-color, #{$component-color}) !default;
+$list-group-border-color: var(--component-border-color, #{$component-border-color}) !default;
+$list-group-border-size: $component-border-width !default;
+$list-group-border-radius: $component-border-radius !default;
+$list-group-background-color: var(--component-background-color, #{$component-background-color}) !default;
+$list-group-background-color-hover: var(--component-background-color-hover, #{$component-background-color-hover}) !default;
+$list-group-background-color-active: var(--component-background-color-active, #{$component-background-color-active}) !default;
+
+$list-group-subheader-color: var(--text-muted, #{$text-muted}) !default;
+$list-group-subheader-padding: $component-padding-lg $component-padding $component-padding-sm $component-padding !default;
+$list-group-subheader-font-size: $font-size-sm !default;
+
+$list-group-accessory-text-transform: uppercase !default;
+$list-group-accessory-color: var(--text-muted, #{$text-muted}) !default;
+$list-group-accessory-color-hover: var(--link-color, #{$link-color}) !default;
+$list-group-action-font-size: $font-size-xs !default;
+$list-group-action-font-weight: 500 !default;
+
+$list-group-footer-color: var(--text-muted, #{$text-muted}) !default;
+$list-group-footer-font-size: $font-size-sm !default;

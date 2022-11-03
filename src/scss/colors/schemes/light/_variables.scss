@@ -1,0 +1,44 @@
+// Brand colors
+$primary: $blue !default;
+$secondary: $pink !default;
+$success: $teal !default;
+$info: $indigo !default;
+$warning: $yellow !default;
+$danger: $red !default;
+
+// Body colors
+$body-color: $gray-900 !default;
+$body-background-color: $white !default;
+$tap-highlight-color: rgba($primary, 0.05) !default;
+
+// Text colors
+$text-color: $body-color !default;
+$text-muted: rgba($text-color, 0.4) !default;
+$text-secondary: $secondary !default;
+$text-success: $success !default;
+$text-info: $info !default;
+$text-warning: $warning !default;
+$text-danger: $danger !default;
+$link-color: $blue !default;
+$code-color: $red !default;
+$code-block-color: rgba($black, 0.8) !default;
+$code-background-color: hsl(210, 29%, 97%) !default;
+
+// Component colors
+$component-color: $text-color !default;
+$component-border-color: darken($body-background-color, 14%) !default;
+$component-background-color: rgba($white, 0.98) !default;
+$component-background-color-alt: rgba($black, 0.04) !default;
+$component-background-color-hover: rgba($primary, 0.15) !default;
+$component-background-color-active: rgba($primary, 0.3) !default;
+$component-background-color-disabled: rgba($black, 0.05) !default;
+$component-backdrop-background-color: rgba($white, 0.6) !default;
+$component-box-shadow-color: rgba($black, 0.175) !default;
+$component-box-shadow-color-hover: rgba($black, 0.25) !default;
+$component-box-shadow-color-active: rgba($black, 0.25) !default;
+$component-outline-color: rgba($black, 0.1) !default;
+
+// Forms
+$form-control-select-arrow-image-fill: 'rgba(' + red($text-muted) + ', ' + green($text-muted) + ', ' + blue($text-muted) + ', ' +
+  alpha($text-muted) + ')' !default;
+$form-control-select-arrow-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#{$form-control-select-arrow-image-fill}" viewBox="0 0 512 512"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"/></svg>') !default;

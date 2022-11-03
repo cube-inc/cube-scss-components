@@ -1,0 +1,8 @@
+@import 'variables';
+
+@if ($card-enabled) {
+  .card-grid {
+    display: grid;
+    grid-gap: $card-list-gap;
+  }
+}

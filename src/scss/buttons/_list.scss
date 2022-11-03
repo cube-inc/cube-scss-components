@@ -1,0 +1,45 @@
+@use "sass:math";
+@import 'variables';
+
+@if ($button-enabled) {
+  .button-list {
+    margin: math.div(-$button-list-gap, 2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    > .button,
+    > .button-group {
+      margin: math.div($button-list-gap, 2);
+    }
+    &-column {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    &-left {
+      justify-content: flex-start;
+      &.button-list-column {
+        align-items: flex-start;
+      }
+    }
+    &-center {
+      justify-content: center;
+      &.button-list-column {
+        align-items: center;
+      }
+    }
+    &-space-between {
+      justify-content: space-between;
+    }
+    &-right {
+      justify-content: flex-end;
+      &.button-list-column {
+        align-items: flex-end;
+      }
+    }
+    &-grow {
+      > .button {
+        flex-grow: 1;
+      }
+    }
+  }
+}

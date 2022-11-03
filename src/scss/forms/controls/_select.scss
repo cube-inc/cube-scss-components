@@ -1,0 +1,30 @@
+@import '../variables';
+
+@if ($form-enabled) {
+  .select.form-control,
+  select.form-control {
+    $background-size: $form-control-line-height;
+    background-position: right $form-control-padding-x center;
+    background-repeat: no-repeat;
+    background-size: $background-size;
+    background-image: $form-control-select-arrow-image;
+    padding-right: calc(#{$form-control-padding-x} + #{$background-size} + #{$form-control-padding-x});
+    &:not(:disabled):not(.disabled) {
+      cursor: pointer;
+    }
+    &:invalid {
+      // Simulate placeholder
+      color: $form-control-color-muted;
+    }
+    &:-moz-focusring {
+      color: transparent !important;
+      text-shadow: 0 0 0 $form-control-color !important;
+    }
+    > option {
+      color: $text-color; // Fixes a Firefox color issue in dark mode where the background color is white
+      &.placeholder {
+        display: none;
+      }
+    }
+  }
+}

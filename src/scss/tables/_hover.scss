@@ -1,0 +1,14 @@
+@import 'variables';
+
+@if ($table-enabled) {
+  @media (hover: hover) {
+    .table-hover {
+      > tbody {
+        > tr:hover {
+          transition: background-color $timing-fast ease;
+          background-color: $table-cell-hover-background-color;
+        }
+      }
+    }
+  }
+}

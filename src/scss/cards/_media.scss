@@ -1,0 +1,34 @@
+@import 'variables';
+
+@if ($card-enabled) {
+  .card-media {
+    background-color: $card-background-color;
+    position: relative;
+    &-image {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+    }
+  }
+}

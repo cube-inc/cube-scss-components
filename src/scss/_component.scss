@@ -1,0 +1,25 @@
+@use 'utils';
+
+$component-border-width: 1px !default;
+
+$component-filter-saturate: 300% !default;
+$component-filter-blur: 20px !default;
+$component-backdrop-filter: saturate($component-filter-saturate) blur($component-filter-blur) !default;
+
+$component-border-radius: $spacer-0500 !default;
+$component-border-radius-sm: $spacer-0250 !default;
+$component-border-radius-xs: $spacer-0125 !default;
+
+$component-padding: $spacer !default;
+$component-scale-ratio: utils.$ratio-fifth !default;
+$component-padding-xs: utils.scale($component-padding, -2, $component-scale-ratio) !default;
+$component-padding-sm: utils.scale($component-padding, -1, $component-scale-ratio) !default;
+$component-padding-md: utils.scale($component-padding, 1, $component-scale-ratio) !default;
+$component-padding-lg: utils.scale($component-padding, 2, $component-scale-ratio) !default;
+$component-padding-xl: utils.scale($component-padding, 3, $component-scale-ratio) !default;
+
+$component-box-shadow: 0 $spacer-0125 $spacer 0 var(--component-box-shadow-color, #{$component-box-shadow-color}) !default;
+$component-box-shadow-hover: 0 $spacer-0250 $spacer 0 var(--component-box-shadow-color-hover, #{$component-box-shadow-color-hover}) !default;
+$component-box-shadow-active: 0 $spacer-0125 $spacer-0500 0 var(--component-box-shadow-color-active, #{$component-box-shadow-color-active}) !default;
+
+$component-outline: 0 0 $spacer $component-outline-color !default;

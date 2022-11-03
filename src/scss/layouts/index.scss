@@ -1,0 +1,60 @@
+@import 'variables';
+
+@if ($layout-enabled) {
+  // Containers
+  .container {
+    width: 100%;
+    max-width: $container-breakpoint;
+    padding-right: env(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+    margin: 0 auto;
+  }
+  .container-xs {
+    max-width: $breakpoint-xs;
+  }
+  .container-sm {
+    max-width: $breakpoint-sm;
+  }
+  .container-md {
+    max-width: $breakpoint-md;
+  }
+  .container-lg {
+    max-width: $breakpoint-lg;
+  }
+  .container-xl {
+    max-width: $breakpoint-xl;
+  }
+
+  // Content
+  .content {
+    padding: $content-padding;
+  }
+
+  // Sections
+  .section {
+    width: 100%;
+  }
+
+  // (alpha) Fixed
+  // TODO: add margins to "content" behind
+  .fixed-top {
+    position: fixed;
+    z-index: $zindex-fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+  }
+  .fixed-bottom {
+    position: fixed;
+    z-index: $zindex-fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+  }
+}

@@ -1,0 +1,33 @@
+@import '../variables';
+
+@if ($form-enabled) {
+  ///
+  /// @warn This doesn't work on fieldset elements for Google Chrome and Microsoft Edge.
+  /// @see https://github.com/w3c/csswg-drafts/issues/321
+  /// @see https://bugs.chromium.org/p/chromium/issues/detail?id=375693
+  ///
+  .form-group-inline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin-bottom: -$form-control-spacer;
+    margin-left: -$form-control-spacer;
+    > * {
+      margin: 0 0 $form-control-spacer $form-control-spacer;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    > .form-control {
+      flex-grow: 1;
+      flex-shrink: 0;
+      min-width: 0;
+      width: 0;
+    }
+    > .button {
+      min-width: 0;
+    }
+  }
+}

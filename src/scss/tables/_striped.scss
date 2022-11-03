@@ -1,0 +1,11 @@
+@import 'variables';
+
+@if ($table-enabled) {
+  .table-striped {
+    > tbody {
+      > tr:nth-of-type(odd) {
+        background-color: $table-cell-striped-background-color;
+      }
+    }
+  }
+}

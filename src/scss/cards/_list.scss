@@ -1,0 +1,14 @@
+@use "sass:math";
+@import 'variables';
+
+@if ($card-enabled) {
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: math.div(-$card-list-gap, 2);
+    > .card {
+      margin: math.div($card-list-gap, 2);
+    }
+  }
+}

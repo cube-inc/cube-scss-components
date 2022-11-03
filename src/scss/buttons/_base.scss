@@ -1,0 +1,90 @@
+@use 'mixins';
+@import 'variables';
+
+@if ($button-enabled) {
+  .button {
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    margin: 0;
+    padding: $button-padding;
+    min-width: $button-min-width;
+    font-size: $button-font-size;
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    text-transform: $button-text-transform;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    line-height: $button-line-height;
+    border-width: $button-border-width;
+    border-style: solid;
+    border-radius: $button-border-radius;
+    transition: $button-transition;
+    touch-action: manipulation;
+    @include mixins.button-colors(
+      $color: var(--button-color, #{$button-color}),
+      $color-hover: var(--button-color-hover, #{$button-color-hover}),
+      $color-active: var(--button-color-active, #{$button-color-active}),
+      $color-disabled: var(--button-color-disabled, #{$button-color-disabled}),
+      $border-color: var(--button-border-color, #{$button-border-color}),
+      $border-color-hover: var(--button-border-color-hover, #{$button-border-color-hover}),
+      $border-color-active: var(--button-border-color-active, #{$button-border-color-active}),
+      $border-color-disabled: var(--button-border-color-disabled, #{$button-border-color-disabled}),
+      $background-color: var(--button-background-color, #{$button-background-color}),
+      $background-color-hover: var(--button-background-color-hover, #{$button-background-color-hover}),
+      $background-color-active: var(--button-background-color-active, #{$button-background-color-active}),
+      $background-color-disabled: var(--button-background-color-disabled, #{$button-background-color-disabled}),
+      $box-shadow: var(--button-box-shadow, none),
+      $box-shadow-hover: var(--button-box-shadow-hover, var(--button-box-shadow, none)),
+      $box-shadow-active: var(--button-box-shadow-active, var(--button-box-shadow, none)),
+      $box-shadow-disabled: var(--button-box-shadow-disabled, var(--button-box-shadow, none))
+    );
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    > * + * {
+      margin-left: .5em;
+    }
+    > .icon {
+      display: block;
+      font-size: inherit;
+      height: $button-line-height;
+      width: $button-line-height;
+      object-fit: contain;
+      color: inherit;
+      &-fill {
+        fill: currentColor;
+      }
+      &-stroke {
+        stroke: currentColor;
+      }
+      &-xs {
+        padding: ($button-line-height * 0.5 * 0.5) 0;
+        // height: $button-line-height * 0.5;
+        width: $button-line-height * 0.5;
+      }
+      &-sm {
+        padding: ($button-line-height * 0.25 * 0.5) 0;
+        // height: $button-line-height * 0.75;
+        width: $button-line-height * 0.75;
+      }
+    }
+  }
+
+  ///
+  /// Reset a.button
+  ///
+  a.button {
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

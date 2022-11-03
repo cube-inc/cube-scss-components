@@ -1,0 +1,6 @@
+@if ($form-enabled) {
+  textarea.form-control {
+    resize: vertical;
+    min-height: 6em;
+  }
+}
