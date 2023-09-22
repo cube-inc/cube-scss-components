@@ -1,11 +1,10 @@
 @import 'variables';
 
 @if ($reset-enabled) {
+  html,
   body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-overflow-style: -ms-autohiding-scrollbar;
